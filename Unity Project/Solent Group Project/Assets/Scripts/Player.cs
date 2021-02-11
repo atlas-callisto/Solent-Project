@@ -14,6 +14,7 @@ public class Player : MonoBehaviour
     public bool isGrounded = false;
     public bool canDoubleJump;
     public bool doubleJumpSkill;
+    bool wolf = false;
 
     // Start is called before the first frame update
     private void Awake()
@@ -29,20 +30,24 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //myAnimator.SetBool("Wolf", Input.GetKeyDown(KeyCode.J));
+       
         PlayerMovement();
         PlayerJump();
         PlayerAttack();
         CheckForGrounded();
+        Transform();
     }
+
 
     private void PlayerMovement()
     {
         float horizontalMov = Input.GetAxisRaw("Horizontal");
+        float verticalMov = Input.GetAxisRaw("Vertical");
 
         bool isWalking = horizontalMov != 0 ? true : false;
         myAnimator.SetBool("isWalking", isWalking);
 
+        
         if (horizontalMov > 0)
         {
             transform.localScale = new Vector3(1, 1, 1);
@@ -71,7 +76,17 @@ public class Player : MonoBehaviour
     }
     private void PlayerAttack()
     {
-        if (Input.GetButtonDown("Fire1"))
+        if (Input.GetButtonDown("Basic Attack"))
+        {
+            myAnimator.SetTrigger("attack");
+            //Basic Attack
+        }
+        if (Input.GetButtonDown("Heavy Attack"))
+        {
+            myAnimator.SetTrigger("attack");
+            //Attack
+        }
+        if (Input.GetButtonDown("Special Attack"))
         {
             myAnimator.SetTrigger("attack");
             //Attack
@@ -93,5 +108,30 @@ public class Player : MonoBehaviour
             isGrounded = false;
         }
 
+    }
+    private void Transform()
+    {        
+        if(Input.GetButtonDown("Transform"))
+        {
+            myAnimator.SetBool("Transform" , wolf);
+            wolf = !wolf;
+        }
+
+    }
+
+    private void Interact(Collider2D collision)
+    {
+        if(Input.GetButton("Interact"))
+        {
+            collision.GetComponent<Interactable>().Interact();
+        }
+    }
+
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if(collision.tag == "Interactable")
+        {
+            Interact(collision);
+        }        
     }
 }
