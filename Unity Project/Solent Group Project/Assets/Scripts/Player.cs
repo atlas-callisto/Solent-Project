@@ -2,20 +2,29 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Player : MonoBehaviour
+public class Player : MonoBehaviour, IDamageable
 {
-    Rigidbody2D myRB;
-    Animator myAnimator;
-    SpriteRenderer mySpriteRenderer;
-
+    //Params
     public float moveSpeed = 4f;
     public float jumpForce = 5f;
     public float raycastHitDistance = 0.6f;
     public bool isGrounded = false;
     public bool canDoubleJump;
     public bool doubleJumpSkill;
-    bool wolf = false;
+    bool wolf = false; //Transform to wolf
 
+
+    //temp
+    float timer = 0.2f;
+
+    //Comp Ref
+    Rigidbody2D myRB;
+    Animator myAnimator;
+    SpriteRenderer mySpriteRenderer;
+
+    //Ref Objs
+    public GameObject attackTrigger;
+ 
     // Start is called before the first frame update
     private void Awake()
     {
@@ -56,8 +65,7 @@ public class Player : MonoBehaviour
         {
             transform.localScale = new Vector3(-1, 1, 1);
         }
-        myRB.velocity = new Vector2(horizontalMov * moveSpeed, myRB.velocity.y);
-        Debug.Log(horizontalMov);
+        myRB.velocity = new Vector2(horizontalMov * moveSpeed, myRB.velocity.y);        
     }
 
     private void PlayerJump()
@@ -79,16 +87,19 @@ public class Player : MonoBehaviour
         if (Input.GetButtonDown("Basic Attack"))
         {
             myAnimator.SetTrigger("attack");
+            AttackTrigger(timer);
             //Basic Attack
         }
         if (Input.GetButtonDown("Heavy Attack"))
         {
             myAnimator.SetTrigger("attack");
+            AttackTrigger(timer);
             //Attack
         }
         if (Input.GetButtonDown("Special Attack"))
         {
             myAnimator.SetTrigger("attack");
+            AttackTrigger(timer);
             //Attack
         }
     }
@@ -127,6 +138,19 @@ public class Player : MonoBehaviour
         }
     }
 
+    private void AttackTrigger(float time)
+    {
+        attackTrigger.SetActive(true);
+        StartCoroutine(AttackTriggerTimer(time));
+    }
+
+    IEnumerator AttackTriggerTimer(float time)
+    {
+        yield return new WaitForSeconds(time);
+        attackTrigger.SetActive(false);
+
+    }
+
     private void OnTriggerStay2D(Collider2D collision)
     {
         if(collision.tag == "Interactable")
@@ -134,4 +158,11 @@ public class Player : MonoBehaviour
             Interact(collision);
         }        
     }
+
+    public void Damage(int damage) //Interface take damage
+    {
+
+    }
+
+
 }
