@@ -5,12 +5,13 @@ using UnityEngine;
 public class Player : MonoBehaviour, IDamageable
 {
     //Params
-    public float moveSpeed = 4f;
-    public float jumpForce = 5f;
-    public float raycastHitDistance = 0.6f;
-    public bool isGrounded = false;
-    public bool canDoubleJump;
-    public bool doubleJumpSkill;
+    [SerializeField] float moveSpeed = 4f;
+    [SerializeField] float jumpForce = 5f;
+    [SerializeField] float rayCastHeightOffset = 0.1f;
+    [SerializeField] bool isGrounded = false;
+    [SerializeField] bool canDoubleJump;
+    [SerializeField] bool doubleJumpSkill;
+    [SerializeField] int Health = 10;
     bool wolf = false; //Transform to wolf
 
 
@@ -21,6 +22,7 @@ public class Player : MonoBehaviour, IDamageable
     Rigidbody2D myRB;
     Animator myAnimator;
     SpriteRenderer mySpriteRenderer;
+    BoxCollider2D myBoxCollider2D;
 
     //Ref Objs
     public GameObject attackTrigger;
@@ -30,6 +32,7 @@ public class Player : MonoBehaviour, IDamageable
     {
         myRB = GetComponent<Rigidbody2D>();
         myAnimator = GetComponent<Animator>();
+        myBoxCollider2D = GetComponent<BoxCollider2D>();
     }
     void Start()
     {
@@ -38,8 +41,7 @@ public class Player : MonoBehaviour, IDamageable
 
     // Update is called once per frame
     void Update()
-    {
-       
+    {       
         PlayerMovement();
         PlayerJump();
         PlayerAttack();
@@ -54,7 +56,7 @@ public class Player : MonoBehaviour, IDamageable
         float verticalMov = Input.GetAxisRaw("Vertical");
 
         bool isWalking = horizontalMov != 0 ? true : false;
-        myAnimator.SetBool("isWalking", isWalking);
+        myAnimator.SetBool("IsWalking", isWalking);
 
         
         if (horizontalMov > 0)
@@ -79,26 +81,25 @@ public class Player : MonoBehaviour, IDamageable
             myRB.velocity = new Vector2(myRB.velocity.x, jumpForce);
             canDoubleJump = false;
         }
-
-
     }
+
     private void PlayerAttack()
     {
         if (Input.GetButtonDown("Basic Attack"))
         {
-            myAnimator.SetTrigger("attack");
+            myAnimator.SetTrigger("Attack");
             AttackTrigger(timer);
             //Basic Attack
         }
         if (Input.GetButtonDown("Heavy Attack"))
         {
-            myAnimator.SetTrigger("attack");
+            myAnimator.SetTrigger("Attack");
             AttackTrigger(timer);
             //Attack
         }
         if (Input.GetButtonDown("Special Attack"))
         {
-            myAnimator.SetTrigger("attack");
+            myAnimator.SetTrigger("Attack");
             AttackTrigger(timer);
             //Attack
         }
@@ -106,10 +107,16 @@ public class Player : MonoBehaviour, IDamageable
 
     private void CheckForGrounded()
     {
-        // This helps to adjust the raycastHitDistance based on the sprite size. Disable this later.
-        Debug.DrawRay(transform.position, Vector2.down * raycastHitDistance, Color.green);
-        RaycastHit2D hitInfo = Physics2D.Raycast(transform.position, Vector2.down, raycastHitDistance, LayerMask.GetMask("Ground")); // ground layer must be applied to ground tilemap
-        if (hitInfo)
+        RaycastHit2D hitInfo;
+        RaycastHit2D hitInfo2;
+        Vector3 offset = new Vector3(0.1f, 0, 0);
+        hitInfo = Physics2D.BoxCast(myBoxCollider2D.bounds.center, myBoxCollider2D.bounds.size, 0f, Vector2.down, rayCastHeightOffset,
+            LayerMask.GetMask("Ground"));
+        hitInfo2 = Physics2D.BoxCast(myBoxCollider2D.bounds.center, myBoxCollider2D.bounds.size, 0f, Vector2.down,
+            rayCastHeightOffset, LayerMask.GetMask("Transparent Platform"));
+        // ground layer must be applied to ground tilemap
+        //Debug.DrawRay(myBoxCollider2D.bounds.center, Vector2.down);
+        if (hitInfo || hitInfo2)
         {
             isGrounded = true;
             canDoubleJump = true;
@@ -127,12 +134,12 @@ public class Player : MonoBehaviour, IDamageable
             myAnimator.SetBool("Transform" , wolf);
             wolf = !wolf;
         }
-
     }
 
     private void Interact(Collider2D collision)
     {
-        if(Input.GetButton("Interact"))
+        Interactable interactableObj = collision.GetComponent<Interactable>();       
+        if (interactableObj != null && Input.GetButton("Interact"))
         {
             collision.GetComponent<Interactable>().Interact();
         }
@@ -155,13 +162,19 @@ public class Player : MonoBehaviour, IDamageable
     {
         if(collision.tag == "Interactable")
         {
+            
             Interact(collision);
         }        
     }
 
     public void Damage(int damage) //Interface take damage
     {
-
+        Health -= damage;
+        if (Health <= 0)
+        {
+            //Player Dies
+            myAnimator.SetBool("Dead", true);
+        }
     }
 
 
