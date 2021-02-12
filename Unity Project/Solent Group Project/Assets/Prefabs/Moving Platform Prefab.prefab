@@ -105,7 +105,7 @@ GameObject:
   - component: {fileID: 784721579710125823}
   - component: {fileID: 784721579710125822}
   - component: {fileID: 784721579710125821}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Moving Platform
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -167,7 +167,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.3773585, g: 0.18689924, b: 0.18689924, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -186,7 +186,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 784721579710125817}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 34bb540c39e722e40b800870a7f9e574, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0

@@ -12,8 +12,9 @@ public class Player : MonoBehaviour, IDamageable
     [SerializeField] bool canDoubleJump;
     [SerializeField] bool doubleJumpSkill;
     [SerializeField] int Health = 10;
-    bool wolf = false; //Transform to wolf
 
+    bool wolf = false; //Transform to wolf
+    [SerializeField] bool playerAlive = true;
 
     //temp
     float timer = 0.2f;
@@ -33,6 +34,7 @@ public class Player : MonoBehaviour, IDamageable
         myRB = GetComponent<Rigidbody2D>();
         myAnimator = GetComponent<Animator>();
         myBoxCollider2D = GetComponent<BoxCollider2D>();
+        mySpriteRenderer = GetComponent<SpriteRenderer>();
     }
     void Start()
     {
@@ -41,7 +43,8 @@ public class Player : MonoBehaviour, IDamageable
 
     // Update is called once per frame
     void Update()
-    {       
+    {
+        if (!playerAlive) return;
         PlayerMovement();
         PlayerJump();
         PlayerAttack();
@@ -170,11 +173,21 @@ public class Player : MonoBehaviour, IDamageable
     public void Damage(int damage) //Interface take damage
     {
         Health -= damage;
-        if (Health <= 0)
+        StartCoroutine(playerTookDamageIndicator());
+        if (Health <= 0 && playerAlive)
         {
             //Player Dies
-            myAnimator.SetBool("Dead", true);
+            playerAlive = false;
+            Debug.Log("Player took damage");
+            myAnimator.SetTrigger("Dead");
         }
+    }
+
+    IEnumerator playerTookDamageIndicator()
+    {
+        mySpriteRenderer.color = Color.red;
+        yield return new WaitForSeconds(0.1f);
+        mySpriteRenderer.color = Color.white;
     }
 
 
