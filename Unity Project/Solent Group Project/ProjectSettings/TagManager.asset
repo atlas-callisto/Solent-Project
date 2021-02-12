@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Ground
   - Interactable
+  - Enemy
   layers:
   - Default
   - TransparentFX
@@ -18,7 +19,7 @@ TagManager:
   - Ground
   - Player
   - Transparent Platform
-  - 
+  - Enemy
   - 
   - 
   - 

@@ -146,6 +146,7 @@ MonoBehaviour:
   canDoubleJump: 0
   doubleJumpSkill: 0
   Health: 10
+  playerAlive: 1
   attackTrigger: {fileID: 6260531744811009317}
 --- !u!61 &1611082283
 BoxCollider2D:

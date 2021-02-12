@@ -11,9 +11,9 @@ public class Player : MonoBehaviour, IDamageable
     [SerializeField] bool isGrounded = false;
     [SerializeField] bool canDoubleJump;
     [SerializeField] bool doubleJumpSkill;
-    [SerializeField] int Health = 10;
+    [SerializeField] int health = 10;
 
-    bool wolf = false; //Transform to wolf
+    [SerializeField] public bool wolf = false; //Transform to wolf
     [SerializeField] bool playerAlive = true;
 
     //temp
@@ -134,9 +134,9 @@ public class Player : MonoBehaviour, IDamageable
     {        
         if(Input.GetButtonDown("Transform"))
         {
-            myAnimator.SetBool("Transform" , wolf);
             wolf = !wolf;
         }
+        myAnimator.SetBool("Transform", wolf);
     }
 
     private void Interact(Collider2D collision)
@@ -172,14 +172,16 @@ public class Player : MonoBehaviour, IDamageable
 
     public void Damage(int damage) //Interface take damage
     {
-        Health -= damage;
-        StartCoroutine(playerTookDamageIndicator());
-        if (Health <= 0 && playerAlive)
+        if (health > 0 && playerAlive)
         {
-            //Player Dies
+            health -= damage;
+            StartCoroutine(playerTookDamageIndicator());
+            if(health <=0)
+            {
+                
             playerAlive = false;
-            Debug.Log("Player took damage");
             myAnimator.SetTrigger("Dead");
+            }
         }
     }
 

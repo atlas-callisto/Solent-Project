@@ -7,7 +7,7 @@ public class Acid : MonoBehaviour
     [SerializeField] int acidDamage = 1;
     [SerializeField] float acidDamageTickRate = 3f;
     [SerializeField] float timer = 0;
-    [SerializeField] IDamageable otherObj;
+    [SerializeField] IDamageable iDamageableObj;
     void Start()
     {
         
@@ -21,8 +21,8 @@ public class Acid : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        otherObj = collision.GetComponent<IDamageable>();
-        if (otherObj != null)
+        iDamageableObj = collision.GetComponent<IDamageable>();
+        if (iDamageableObj != null)
         {
             if (timer < acidDamageTickRate)
             {
@@ -32,11 +32,9 @@ public class Acid : MonoBehaviour
                 {
                     Debug.Log("Acid Damage called");
                     timer = 0;
-                    otherObj.Damage(acidDamage);
+                    iDamageableObj.Damage(acidDamage);
                 }
-
             }
         }
-
     }
 }
