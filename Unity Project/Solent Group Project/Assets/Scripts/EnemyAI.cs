@@ -40,6 +40,7 @@ public class EnemyAI : MonoBehaviour, IDamageable
     {
         Vector3 distanceVect = player.transform.position - transform.position;
         distanceToThePlayer = Mathf.Abs(distanceVect.x);
+        // distancetoThePlayer = Vector3.Distance(player.transform.position - this.gameObject.transform.position);
 
         //Vector3.Normalize(distanceVect) Remove it later;
         playerIsOnRightSide = distanceVect.x > 0 ? true : false;
