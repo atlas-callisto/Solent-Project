@@ -24,6 +24,7 @@ public class Player : MonoBehaviour, IDamageable
     Animator myAnimator;
     SpriteRenderer mySpriteRenderer;
     BoxCollider2D myBoxCollider2D;
+    // PlayerAnim myPlayerAnim;
 
     //Ref Objs
     public GameObject attackTrigger;
@@ -34,11 +35,7 @@ public class Player : MonoBehaviour, IDamageable
         myRB = GetComponent<Rigidbody2D>();
         myAnimator = GetComponent<Animator>();
         myBoxCollider2D = GetComponent<BoxCollider2D>();
-        mySpriteRenderer = GetComponent<SpriteRenderer>();
-    }
-    void Start()
-    {
-
+        mySpriteRenderer = GetComponent<SpriteRenderer>();        
     }
 
     // Update is called once per frame
