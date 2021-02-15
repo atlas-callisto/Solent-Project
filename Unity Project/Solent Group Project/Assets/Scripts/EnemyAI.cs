@@ -73,7 +73,7 @@ public class EnemyAI : MonoBehaviour, IDamageable
         iDamageableObj = collision.gameObject.GetComponent<IDamageable>();
         if (iDamageableObj != null)
         {
-            if (timer < damageTickRate)
+            if (timer <= damageTickRate)
             {
                 timer += Time.deltaTime;
                 if (timer >= damageTickRate)
