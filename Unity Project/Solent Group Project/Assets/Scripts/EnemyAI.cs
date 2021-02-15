@@ -15,7 +15,7 @@ public class EnemyAI : MonoBehaviour, IDamageable
     [SerializeField] float distanceToThePlayer;
     [SerializeField] bool playerIsOnRightSide;
 
-    [SerializeField] GameObject player;
+    [SerializeField] Player player;
     [SerializeField] IDamageable otherObj;
 
     Rigidbody2D myRB;

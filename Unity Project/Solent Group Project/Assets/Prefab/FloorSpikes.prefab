@@ -10,8 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 2632598827203846809}
   - component: {fileID: 9209920128173720364}
-  - component: {fileID: 8995280236720043853}
   - component: {fileID: 2500668583105232647}
+  - component: {fileID: 1315618699012668889}
+  - component: {fileID: 1804873589}
   m_Layer: 0
   m_Name: FloorSpikes
   m_TagString: Untagged
@@ -26,9 +27,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2421835427357875404}
-  m_LocalRotation: {x: -0, y: -0, z: 0.58254296, w: 0.81279993}
+  m_LocalRotation: {x: 0, y: 0, z: 0.5825415, w: 0.81280094}
   m_LocalPosition: {x: 2.8262603, y: 0.08000541, z: 0}
-  m_LocalScale: {x: 0.5875, y: 1, z: 1}
+  m_LocalScale: {x: 0.58750004, y: 0.53330004, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -84,21 +85,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &8995280236720043853
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2421835427357875404}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a74e01c8506faf947b034ba2b6cb975d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  acidDamage: 1
-  acidDamageTickRate: 3
-  timer: 0
 --- !u!60 &2500668583105232647
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -127,3 +113,39 @@ PolygonCollider2D:
     - - {x: 0, y: 0.5}
       - {x: -0.4330127, y: -0.25000003}
       - {x: 0.43301272, y: -0.24999996}
+--- !u!114 &1315618699012668889
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2421835427357875404}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 610957d1b20028248a2d73f782a89fd0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timer: 1
+  damageTickRate: 1
+  damage: 1
+--- !u!50 &1804873589
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2421835427357875404}
+  m_BodyType: 2
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0

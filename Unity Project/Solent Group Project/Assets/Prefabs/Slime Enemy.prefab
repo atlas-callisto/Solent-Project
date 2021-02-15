@@ -29,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 1591418635905663523}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -3.323, y: -2.442, z: 0}
-  m_LocalScale: {x: 0.139639, y: 0.139639, z: 0.139639}
+  m_LocalScale: {x: 0.13964, y: 0.13964, z: 0.13964}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -150,7 +150,7 @@ MonoBehaviour:
   damageTickRate: 1
   timer: 0
   isAlive: 1
-  chaseDistance: 4
+  chaseDistance: 20
   distanceToThePlayer: 0
   playerIsOnRightSide: 0
-  player: {fileID: 2160318093421502432, guid: ec9628dc761ae034597c0d60d9cc1e23, type: 3}
+  player: {fileID: 2160318093421502463, guid: ec9628dc761ae034597c0d60d9cc1e23, type: 3}
