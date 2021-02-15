@@ -28,7 +28,8 @@ public class Player : MonoBehaviour, IDamageable
 
     //Ref Objs
     public GameObject attackTrigger;
- 
+    public GameObject projectilePrefab;
+
     // Start is called before the first frame update
     private void Awake()
     {
@@ -58,14 +59,13 @@ public class Player : MonoBehaviour, IDamageable
         bool isWalking = horizontalMov != 0 ? true : false;
         myAnimator.SetBool("IsWalking", isWalking);
 
-        
         if (horizontalMov > 0)
         {
-            transform.localScale = new Vector3(1, 1, 1);
+            transform.localRotation = Quaternion.Euler(new Vector3(0, 0, 0));
         }
         if (horizontalMov < 0)
         {
-            transform.localScale = new Vector3(-1, 1, 1);
+            transform.localRotation = Quaternion.Euler(new Vector3(0, 180, 0));
         }
         myRB.velocity = new Vector2(horizontalMov * moveSpeed, myRB.velocity.y);        
     }
@@ -93,8 +93,9 @@ public class Player : MonoBehaviour, IDamageable
         }
         if (Input.GetButtonDown("Heavy Attack"))
         {
-            myAnimator.SetTrigger("Attack");
-            AttackTrigger(timer);
+            // myAnimator.SetTrigger("Attack");
+            // AttackTrigger(timer);
+            ShootProjectile();
             //Attack
         }
         if (Input.GetButtonDown("Special Attack"))
@@ -118,7 +119,6 @@ public class Player : MonoBehaviour, IDamageable
         //Debug.DrawRay(myBoxCollider2D.bounds.center, Vector2.down);
         if (hitInfo || hitInfo2)
         {
-            Debug.Log("Hello" + Time.deltaTime);
             isGrounded = true;
             canDoubleJump = true;
         }
@@ -179,6 +179,10 @@ public class Player : MonoBehaviour, IDamageable
                 myAnimator.SetTrigger("Dead");
             }
         }
+    }
+    public void ShootProjectile()
+    {
+        GameObject projectile = Instantiate(projectilePrefab, transform.position, transform.localRotation);
     }
 
     IEnumerator playerTookDamageIndicator()

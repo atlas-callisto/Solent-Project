@@ -149,6 +149,7 @@ MonoBehaviour:
   wolf: 0
   playerAlive: 1
   attackTrigger: {fileID: 6260531744811009317}
+  projectilePrefab: {fileID: 0}
 --- !u!61 &2682788842559565526
 BoxCollider2D:
   m_ObjectHideFlags: 0

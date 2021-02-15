@@ -54,7 +54,6 @@ public class PlayerAnim : MonoBehaviour
         {
             isGrounded = false;
         }
-
     }
 
 }
