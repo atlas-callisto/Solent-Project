@@ -22,7 +22,7 @@ public class Bullet : MonoBehaviour
         IDamageable iDamageable = collision.GetComponent<IDamageable>();
         if (iDamageable != null)
         {
-            iDamageable.Damage(bulletDamage);
+            iDamageable.TakeDamage(bulletDamage);
         }
         Destroy(this.gameObject);
     }

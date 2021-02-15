@@ -32,19 +32,18 @@ public class EnemyAI : MonoBehaviour, IDamageable
     // Update is called once per frame
     void Update()
     {
-        if (!isAlive) Destroy(this.gameObject);
+        if (!isAlive) return;
         ChasePlayer();
     }
 
     private void ChasePlayer()
     {
         Vector3 distanceVect = player.transform.position - transform.position;
-        distanceToThePlayer = Mathf.Abs(distanceVect.x);
+        distanceToThePlayer = Vector3.Distance(player.transform.position, transform.position);
 
         //Vector3.Normalize(distanceVect) Remove it later;
         playerIsOnRightSide = distanceVect.x > 0 ? true : false;
         moveSpeed = playerIsOnRightSide ? Mathf.Abs(moveSpeed) : moveSpeed = - Mathf.Abs(moveSpeed);
-
         if (distanceToThePlayer <= chaseDistance)
         {
             myRB.velocity = new Vector2(moveSpeed, myRB.velocity.y);
@@ -55,13 +54,15 @@ public class EnemyAI : MonoBehaviour, IDamageable
         }
     }
 
-    public void Damage(int damage)
+    public void TakeDamage(int damage) //Take Damage
     {
         if(health > 0 && isAlive)
         {
             StartCoroutine(enemyTookDamageIndicator());
             health -= damage;
             if (health <= 0) isAlive = false;
+            SoundManager.mySoundManager.PlaySFX("SlimeDeathSound", 1f);
+            Destroy(this.gameObject);
             //Death anim           
         }
     }
@@ -78,7 +79,7 @@ public class EnemyAI : MonoBehaviour, IDamageable
                 if (timer >= damageTickRate)
                 {
                     timer = 0;
-                    iDamageableObj.Damage(damage);
+                    iDamageableObj.TakeDamage(damage);
                 }
             }
         }       

@@ -32,7 +32,7 @@ public class Acid : MonoBehaviour
                 {
                     Debug.Log("Acid Damage called");
                     timer = 0;
-                    iDamageableObj.Damage(acidDamage);
+                    iDamageableObj.TakeDamage(acidDamage);
                 }
             }
         }

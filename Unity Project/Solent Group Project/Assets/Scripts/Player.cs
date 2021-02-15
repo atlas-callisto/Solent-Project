@@ -8,16 +8,17 @@ public class Player : MonoBehaviour, IDamageable
     [SerializeField] float moveSpeed = 4f;
     [SerializeField] float jumpForce = 5f;
     [SerializeField] float rayCastHeightOffset = 0.1f;
-    [SerializeField] bool isGrounded = false;
-    [SerializeField] bool canDoubleJump;
-    [SerializeField] bool doubleJumpSkill;
     [SerializeField] int health = 10;
 
     [SerializeField] public bool wolf = false; //Transform to wolf
     [SerializeField] bool playerAlive = true;
 
+    bool isGrounded = false;
+    bool canDoubleJump;
+    bool doubleJumpSkill;
+
     //temp
-    float timer = 0.2f;
+    float timer = 0.2f; //timer to enable hitbox duration to match attack animation
 
     //Comp Ref
     Rigidbody2D myRB;
@@ -27,8 +28,8 @@ public class Player : MonoBehaviour, IDamageable
     // PlayerAnim myPlayerAnim;
 
     //Ref Objs
-    public GameObject attackTrigger;
-    public GameObject projectilePrefab;
+    public GameObject attackTrigger;    //Attack hitbox child
+    public GameObject projectilePrefab; // bullet to spwan during attack 2
 
     // Start is called before the first frame update
     private void Awake()
@@ -54,7 +55,7 @@ public class Player : MonoBehaviour, IDamageable
     private void PlayerMovement()
     {
         float horizontalMov = Input.GetAxisRaw("Horizontal");
-        float verticalMov = Input.GetAxisRaw("Vertical");
+        float verticalMov = Input.GetAxisRaw("Vertical"); // Unused game mechanics at the moment.
 
         bool isWalking = horizontalMov != 0 ? true : false;
         myAnimator.SetBool("IsWalking", isWalking);
@@ -89,20 +90,20 @@ public class Player : MonoBehaviour, IDamageable
         {
             myAnimator.SetTrigger("Attack");
             AttackTrigger(timer);
-            //Basic Attack
+            //Basic Attack????
         }
         if (Input.GetButtonDown("Heavy Attack"))
         {
             // myAnimator.SetTrigger("Attack");
             // AttackTrigger(timer);
             ShootProjectile();
-            //Attack
+            //Attack????
         }
         if (Input.GetButtonDown("Special Attack"))
         {
             myAnimator.SetTrigger("Attack");
             AttackTrigger(timer);
-            //Attack
+            //Attack???
         }
     }
 
@@ -110,13 +111,15 @@ public class Player : MonoBehaviour, IDamageable
     {
         RaycastHit2D hitInfo;
         RaycastHit2D hitInfo2;
-        Vector3 offset = new Vector3(0.1f, 0, 0);
+        Vector3 offset = new Vector3(0.1f, 0, 0); //offset not used atm, but might be used in boxcast to remove hitinfo when colliding on wall's sides
+
         hitInfo = Physics2D.BoxCast(myBoxCollider2D.bounds.center, myBoxCollider2D.bounds.size, 0f, Vector2.down, rayCastHeightOffset,
             LayerMask.GetMask("Ground"));
         hitInfo2 = Physics2D.BoxCast(myBoxCollider2D.bounds.center, myBoxCollider2D.bounds.size, 0f, Vector2.down,
             rayCastHeightOffset, LayerMask.GetMask("Transparent Platform"));
         // ground layer must be applied to ground tilemap
         //Debug.DrawRay(myBoxCollider2D.bounds.center, Vector2.down);
+
         if (hitInfo || hitInfo2)
         {
             isGrounded = true;
@@ -148,6 +151,7 @@ public class Player : MonoBehaviour, IDamageable
 
     private void AttackTrigger(float time)
     {
+        SoundManager.mySoundManager.PlaySFX("SwordSound" , 0.2f);
         attackTrigger.SetActive(true);
         StartCoroutine(AttackTriggerTimer(time));
     }
@@ -167,21 +171,24 @@ public class Player : MonoBehaviour, IDamageable
         }        
     }
 
-    public void Damage(int damage) //Interface take damage
+    public void TakeDamage(int damage) //Interface take damage
     {
         if (health > 0 && playerAlive)
         {
             health -= damage;
             StartCoroutine(playerTookDamageIndicator());
             if(health <=0)
-            {                
+            {
+                SoundManager.mySoundManager.PlaySFX("PlayerDeathSound", 1f);
                 playerAlive = false;
                 myAnimator.SetTrigger("Dead");
+                FindObjectOfType<LevelLoader>().RestartLevelAfterAPause();
             }
         }
     }
     public void ShootProjectile()
     {
+        SoundManager.mySoundManager.PlaySFX("BulletSound", 0.2f);
         GameObject projectile = Instantiate(projectilePrefab, transform.position, transform.localRotation);
     }
 
