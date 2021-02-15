@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 2190614024402352242}
   - component: {fileID: 4989554051418298823}
-  - component: {fileID: -1639738896442646116}
-  m_Layer: 0
+  - component: {fileID: 5819672885944780508}
+  m_Layer: 8
   m_Name: Wall Platform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -83,8 +83,8 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &-1639738896442646116
-BoxCollider2D:
+--- !u!60 &5819672885944780508
+PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -92,7 +92,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 1977738892332926503}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 6200000, guid: 34bb540c39e722e40b800870a7f9e574, type: 2}
+  m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -106,6 +106,8 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0, y: 0.5}
+      - {x: -0.4330127, y: -0.25000003}
+      - {x: 0.43301272, y: -0.24999996}
