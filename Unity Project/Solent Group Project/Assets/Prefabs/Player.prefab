@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 1611082283}
   m_Layer: 9
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -145,7 +145,8 @@ MonoBehaviour:
   isGrounded: 0
   canDoubleJump: 0
   doubleJumpSkill: 0
-  Health: 10
+  health: 10
+  wolf: 0
   playerAlive: 1
   attackTrigger: {fileID: 6260531744811009317}
 --- !u!61 &1611082283
@@ -161,7 +162,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.16410527, y: 0}
+  m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}

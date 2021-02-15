@@ -6,23 +6,20 @@ public class EnemyAI : MonoBehaviour, IDamageable
 {
     [SerializeField] int health = 4;
     [SerializeField] float moveSpeed = 1f;
-
     [SerializeField] int damage = 1;    
     [SerializeField] float damageTickRate = 3f;
     [SerializeField] float timer = 0;
-
-
-    [SerializeField] IDamageable otherObj;
-    SpriteRenderer mySpriteRenderer;
-
+        
     [SerializeField] bool isAlive = true;
-
     [SerializeField] float chaseDistance = 4f;
     [SerializeField] float distanceToThePlayer;
     [SerializeField] bool playerIsOnRightSide;
 
     [SerializeField] GameObject player;
+    [SerializeField] IDamageable otherObj;
+
     Rigidbody2D myRB;
+    SpriteRenderer mySpriteRenderer;
 
 
     // Start is called before the first frame update
@@ -78,17 +75,15 @@ public class EnemyAI : MonoBehaviour, IDamageable
             if (timer < damageTickRate)
             {
                 timer += Time.deltaTime;
-                Debug.Log(timer);
                 if (timer >= damageTickRate)
                 {
-                    Debug.Log("Acid Damage called");
                     timer = 0;
                     iDamageableObj.Damage(damage);
                 }
-
             }
         }       
     }
+
     IEnumerator enemyTookDamageIndicator()
     {
         mySpriteRenderer.color = Color.red;

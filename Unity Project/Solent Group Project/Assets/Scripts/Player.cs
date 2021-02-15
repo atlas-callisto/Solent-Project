@@ -121,6 +121,7 @@ public class Player : MonoBehaviour, IDamageable
         //Debug.DrawRay(myBoxCollider2D.bounds.center, Vector2.down);
         if (hitInfo || hitInfo2)
         {
+            Debug.Log("Hello" + Time.deltaTime);
             isGrounded = true;
             canDoubleJump = true;
         }
@@ -164,8 +165,7 @@ public class Player : MonoBehaviour, IDamageable
     private void OnTriggerStay2D(Collider2D collision)
     {
         if(collision.tag == "Interactable")
-        {
-            
+        {            
             Interact(collision);
         }        
     }
@@ -177,10 +177,9 @@ public class Player : MonoBehaviour, IDamageable
             health -= damage;
             StartCoroutine(playerTookDamageIndicator());
             if(health <=0)
-            {
-                
-            playerAlive = false;
-            myAnimator.SetTrigger("Dead");
+            {                
+                playerAlive = false;
+                myAnimator.SetTrigger("Dead");
             }
         }
     }

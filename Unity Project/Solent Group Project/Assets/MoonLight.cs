@@ -13,9 +13,7 @@ public class MoonLight : MonoBehaviour
     {        
         if (collision.tag == "Player")
         {
-            Debug.Log("player");
-        }
             player.wolf = true;
-
+        }         
     }
 }
