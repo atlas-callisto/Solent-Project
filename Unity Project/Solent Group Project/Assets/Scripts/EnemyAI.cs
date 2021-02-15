@@ -25,6 +25,7 @@ public class EnemyAI : MonoBehaviour, IDamageable
     // Start is called before the first frame update
     void Awake()
     {
+        player = FindObjectOfType<Player>();
         myRB = GetComponent<Rigidbody2D>();
         mySpriteRenderer = GetComponent<SpriteRenderer>();
     }
@@ -71,7 +72,7 @@ public class EnemyAI : MonoBehaviour, IDamageable
     {
         IDamageable iDamageableObj;
         iDamageableObj = collision.gameObject.GetComponent<IDamageable>();
-        if (iDamageableObj != null)
+        if (iDamageableObj != null && collision.gameObject.tag != "Enemy")
         {
             if (timer <= damageTickRate)
             {
