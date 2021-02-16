@@ -139,12 +139,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b39cd6d1fb0a3674aa7508c7cea763a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 4
-  jumpForce: 5
+  moveSpeed: 2
+  jumpForce: 4
   rayCastHeightOffset: 0.1
-  isGrounded: 0
-  canDoubleJump: 0
-  doubleJumpSkill: 0
   health: 10
   wolf: 0
   playerAlive: 1

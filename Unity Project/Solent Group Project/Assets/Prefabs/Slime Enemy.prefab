@@ -29,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 1591418635905663523}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -3.323, y: -2.442, z: 0}
-  m_LocalScale: {x: 0.13964, y: 0.13964, z: 0.13964}
+  m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -144,13 +144,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 453a3d97846492747bdcd958b9a9d978, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 4
-  moveSpeed: 2
+  health: 3
+  moveSpeed: 1
   damage: 2
   damageTickRate: 1
   timer: 0
-  isAlive: 1
-  chaseDistance: 20
+  isAlive: 0
+  chaseDistance: 6
   distanceToThePlayer: 0
   playerIsOnRightSide: 0
   player: {fileID: 2160318093421502463, guid: ec9628dc761ae034597c0d60d9cc1e23, type: 3}

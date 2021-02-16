@@ -25,7 +25,6 @@ public class EnemyAI : MonoBehaviour, IDamageable
     // Start is called before the first frame update
     void Awake()
     {
-        player = FindObjectOfType<Player>();
         myRB = GetComponent<Rigidbody2D>();
         mySpriteRenderer = GetComponent<SpriteRenderer>();
     }
@@ -35,6 +34,11 @@ public class EnemyAI : MonoBehaviour, IDamageable
     {
         if (!isAlive) return;
         ChasePlayer();
+    }
+
+    private void Start()
+    {
+        player = FindObjectOfType<Player>();
     }
 
     private void ChasePlayer()
