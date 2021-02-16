@@ -149,7 +149,7 @@ MonoBehaviour:
   damage: 2
   damageTickRate: 1
   timer: 0
-  isAlive: 0
+  isAlive: 1
   chaseDistance: 6
   distanceToThePlayer: 0
   playerIsOnRightSide: 0
