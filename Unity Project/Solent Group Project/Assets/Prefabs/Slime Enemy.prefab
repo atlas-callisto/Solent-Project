@@ -123,7 +123,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 0.3
   m_LinearDrag: 1
   m_AngularDrag: 0.05
   m_GravityScale: 1
@@ -145,12 +145,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 3
-  moveSpeed: 1
+  moveSpeed: 0.6
   damage: 2
   damageTickRate: 1
   timer: 0
   isAlive: 1
-  chaseDistance: 6
+  chaseDistance: 2
   distanceToThePlayer: 0
   playerIsOnRightSide: 0
   player: {fileID: 2160318093421502463, guid: ec9628dc761ae034597c0d60d9cc1e23, type: 3}
