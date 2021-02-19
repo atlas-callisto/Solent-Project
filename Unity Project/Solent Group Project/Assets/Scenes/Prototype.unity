@@ -1069,6 +1069,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1459817452}
     m_Modifications:
+    - target: {fileID: 1591418635905663520, guid: 924afc8c5a5d60743995237e4af527f7, type: 3}
+      propertyPath: chaseDistance
+      value: 0.01
+      objectReference: {fileID: 0}
     - target: {fileID: 1591418635905663523, guid: 924afc8c5a5d60743995237e4af527f7, type: 3}
       propertyPath: m_Name
       value: Slime Enemy (4)
@@ -2841,15 +2845,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5719220299127448302, guid: b9e34ba4a04c47e4c8ac4e828491d267, type: 3}
       propertyPath: m_LocalScale.x
-      value: 3.3910506
+      value: 123.09513
       objectReference: {fileID: 0}
     - target: {fileID: 5719220299127448302, guid: b9e34ba4a04c47e4c8ac4e828491d267, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 7.28
+      value: 13.68
       objectReference: {fileID: 0}
     - target: {fileID: 5719220299127448302, guid: b9e34ba4a04c47e4c8ac4e828491d267, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.3
+      value: 2.37
       objectReference: {fileID: 0}
     - target: {fileID: 5719220299127448302, guid: b9e34ba4a04c47e4c8ac4e828491d267, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2902,23 +2906,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2160318093421502459, guid: ec9628dc761ae034597c0d60d9cc1e23, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.40648857
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2160318093421502459, guid: ec9628dc761ae034597c0d60d9cc1e23, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.40648857
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2160318093421502459, guid: ec9628dc761ae034597c0d60d9cc1e23, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.40648857
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2160318093421502459, guid: ec9628dc761ae034597c0d60d9cc1e23, type: 3}
       propertyPath: m_LocalPosition.x
+<<<<<<< Updated upstream
       value: -8.39
       objectReference: {fileID: 0}
     - target: {fileID: 2160318093421502459, guid: ec9628dc761ae034597c0d60d9cc1e23, type: 3}
       propertyPath: m_LocalPosition.y
       value: -4.43
+=======
+      value: 14.42
+      objectReference: {fileID: 0}
+    - target: {fileID: 2160318093421502459, guid: ec9628dc761ae034597c0d60d9cc1e23, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 7.12
+>>>>>>> Stashed changes
       objectReference: {fileID: 0}
     - target: {fileID: 2160318093421502459, guid: ec9628dc761ae034597c0d60d9cc1e23, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2964,7 +2976,8 @@ PrefabInstance:
       propertyPath: projectilePrefab
       value: 
       objectReference: {fileID: 3099315621163623433, guid: 1e9b4710b01bbe747aa64808885a852a, type: 3}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2682788842559565526, guid: ec9628dc761ae034597c0d60d9cc1e23, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: ec9628dc761ae034597c0d60d9cc1e23, type: 3}
 --- !u!4 &998800154 stripped
 Transform:
@@ -3244,6 +3257,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1459817452}
     m_Modifications:
+    - target: {fileID: 1591418635905663520, guid: 924afc8c5a5d60743995237e4af527f7, type: 3}
+      propertyPath: chaseDistance
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1591418635905663523, guid: 924afc8c5a5d60743995237e4af527f7, type: 3}
       propertyPath: m_Name
       value: Slime Enemy (5)
@@ -3253,12 +3270,24 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1591418635905663526, guid: 924afc8c5a5d60743995237e4af527f7, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1591418635905663526, guid: 924afc8c5a5d60743995237e4af527f7, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1591418635905663526, guid: 924afc8c5a5d60743995237e4af527f7, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1591418635905663526, guid: 924afc8c5a5d60743995237e4af527f7, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -7.12
+      value: 25.76
       objectReference: {fileID: 0}
     - target: {fileID: 1591418635905663526, guid: 924afc8c5a5d60743995237e4af527f7, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.611
+      value: 5.51
       objectReference: {fileID: 0}
     - target: {fileID: 1591418635905663526, guid: 924afc8c5a5d60743995237e4af527f7, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3976,7 +4005,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1591418635905663526, guid: 924afc8c5a5d60743995237e4af527f7, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -4.27
+      value: -4.24
       objectReference: {fileID: 0}
     - target: {fileID: 1591418635905663526, guid: 924afc8c5a5d60743995237e4af527f7, type: 3}
       propertyPath: m_LocalPosition.y
@@ -4161,6 +4190,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b9e34ba4a04c47e4c8ac4e828491d267, type: 3}
+--- !u!1 &1624003713 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2160318093421502432, guid: ec9628dc761ae034597c0d60d9cc1e23, type: 3}
+  m_PrefabInstance: {fileID: 998664106}
+  m_PrefabAsset: {fileID: 0}
+--- !u!70 &1624003714
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1624003713}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_Size: {x: 0.4, y: 1}
+  m_Direction: 0
 --- !u!4 &1629616391 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2190614024402352242, guid: 881cfd4da722bb542a7dbfe515a5ace8, type: 3}

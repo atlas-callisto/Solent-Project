@@ -5,8 +5,7 @@ using UnityEngine;
 public class CameraScript : MonoBehaviour
 {
     private GameObject followTarget;
-    public float offset = -10f;
-    public bool culltest; //Temp
+    private float offset = -10f;
 
     void Awake()
     {
@@ -16,17 +15,12 @@ public class CameraScript : MonoBehaviour
     void Update()
     {
         if (followTarget != null)
-            transform.position = new Vector3(followTarget.transform.position.x, followTarget.transform.position.y, offset);
-        if(culltest)
-        {
-            ToggleInvsibleLayer();
-            culltest = false;
-        }
+            transform.position = new Vector3(followTarget.transform.position.x, followTarget.transform.position.y, offset);        
     }
 
     public void ToggleInvsibleLayer()
     {
+        Debug.Log("yo");
         GetComponent<Camera>().cullingMask += 1 << 10;
-    }
-    
+    }    
 }

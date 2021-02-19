@@ -11,8 +11,6 @@ public class Bullet : MonoBehaviour
     {
         Destroy(this.gameObject, bulletLifeDuration);
     }
-
-    // Update is called once per frame
     void Update()
     {
         transform.Translate(Vector3.right * bulletSpeed * Time.deltaTime);
