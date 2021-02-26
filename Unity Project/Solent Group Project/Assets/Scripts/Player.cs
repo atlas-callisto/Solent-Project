@@ -8,12 +8,26 @@ public class Player : MonoBehaviour, IDamageable
     [Header("Stats")]
     [SerializeField] float moveSpeed = 4f;
     [SerializeField] float jumpForce = 5f;
-    [SerializeField] int health = 10;
+    [SerializeField] public int maxHealth = 10;
+    [SerializeField] public int currentHealth = 10;
+    [SerializeField] public float maxWolfBar = 10;
+    [SerializeField] public float currentWolfBar = 10;
+    [SerializeField] public float wolfBarRegenRate = 0.1f;
 
     //Ref Objs
     [Header("Objects Ref")]
     public GameObject attackTrigger;    //Attack hitbox child
     public GameObject projectilePrefab; // bullet to spwan during attack 2
+    public PlayerWeapon playerWep;
+
+    [Header("Cool Downs")]
+    [SerializeField] private float basicAttackCoolDown = 2f;
+    [SerializeField] private float heavyAttackCoolDown = 5f;
+    [SerializeField] private float specialAttakCoolDown = 10f;
+    private float basicAttackTimer = 0f;
+    private float heavyAttackTimer = 0f;
+    private float specialAttackTimer = 0f;
+
 
     internal bool wolf = false; //Transform to wolf, also called by moonlight script
     private bool playerAlive = true;
@@ -21,7 +35,7 @@ public class Player : MonoBehaviour, IDamageable
     internal bool isGrounded = false; // is modified by playerGroundCheck
     internal bool canDoubleJump = false;// is modified by playerGroundCheck
 
-    private bool doubleJumpSkill; // enable double jump after skill is unlocked??? for later use
+    internal bool doubleJumpSkillAcquired = false; // enable double jump after skill is unlocked??? for later use
     private bool playerCanTakeDmg = true;
     private float timer = 0.2f; //timer to enable hitbox duration to match attack animation
     private float playerInvunerabletimer = 0.5f; // timer to stop player playing from getting damage after taking a hit
@@ -30,8 +44,14 @@ public class Player : MonoBehaviour, IDamageable
     private Rigidbody2D myRB;
     private Animator myAnimator;
     private SpriteRenderer mySpriteRenderer;
+    
 
-
+    void Start()
+    {
+        basicAttackTimer = basicAttackCoolDown;
+        heavyAttackTimer = heavyAttackCoolDown;
+        specialAttackTimer = specialAttakCoolDown;
+    }
     private void Awake()
     {
         myRB = GetComponent<Rigidbody2D>();
@@ -43,6 +63,7 @@ public class Player : MonoBehaviour, IDamageable
         if (!playerAlive) return;
         PlayerMovement();
         PlayerJump();
+        CoolDownChecker();
         PlayerAttack();
         Transform();
     }
@@ -72,7 +93,7 @@ public class Player : MonoBehaviour, IDamageable
         {
             myRB.velocity = new Vector2(myRB.velocity.x, jumpForce);
         }
-        else if (Input.GetButtonDown("Jump") && canDoubleJump)
+        else if (Input.GetButtonDown("Jump") && canDoubleJump && doubleJumpSkillAcquired)
         {
             myRB.velocity = new Vector2(myRB.velocity.x, jumpForce);
             canDoubleJump = false;
@@ -91,28 +112,92 @@ public class Player : MonoBehaviour, IDamageable
     #region Player Attacks
     private void PlayerAttack()
     {
-        if (Input.GetButtonDown("Basic Attack"))
+        if(!wolf)
         {
-            myAnimator.SetTrigger("Attack");
-            AttackTrigger(timer);
-            //Basic Attack????
+            if (Input.GetButtonDown("Basic Attack"))  // 1 = Basic attack, 2 = heavy attack, 3 = special attack
+            {
+                if(basicAttackTimer >= basicAttackCoolDown)
+                {
+                    myAnimator.SetTrigger("Attack");
+                    AttackTrigger(timer);
+
+                    AttackWithType(1);// 1 = Basic attack, sending the type of attack it is supposed to be
+                }
+                
+            }
+            if (Input.GetButtonDown("Heavy Attack"))
+            {
+                if (heavyAttackTimer >= heavyAttackCoolDown)
+                {
+                    myAnimator.SetTrigger("Attack");
+                    AttackTrigger(timer);
+
+                    AttackWithType(2); // 2 = heavy attack, Sending the type of attack it is supposed to be
+                }
+                
+            }
+            if (Input.GetButtonDown("Special Attack"))
+            {
+                if (specialAttackTimer >= specialAttakCoolDown)
+                {
+                    //shooting animation                    
+                    ShootProjectile();
+
+                    specialAttackTimer = 0;
+                }
+            }
         }
-        if (Input.GetButtonDown("Heavy Attack"))
+        else // If player has transformed to wolf
         {
-            // myAnimator.SetTrigger("Attack");
-            // AttackTrigger(timer);
-            ShootProjectile();
-            //Attack????
-        }
-        if (Input.GetButtonDown("Special Attack"))
-        {
-            myAnimator.SetTrigger("Attack");
-            AttackTrigger(timer);
-            //Attack???
-        }
+            if (Input.GetButtonDown("Basic Attack"))
+            {
+                if (basicAttackTimer >= basicAttackCoolDown)
+                {
+
+                }
+            }
+            if (Input.GetButtonDown("Heavy Attack"))
+            {
+                if (heavyAttackTimer >= heavyAttackCoolDown)
+                {
+
+                }
+            }
+            if (Input.GetButtonDown("Special Attack"))
+            {
+
+                if (specialAttackTimer >= specialAttakCoolDown)
+                {
+
+                }
+            }
+        }       
     }
 
-    private void AttackTrigger(float time) // Enables Attack trigger 
+    private void AttackWithType(int attackType)
+    {
+        playerWep.gameObject.SetActive(true);
+        playerWep.SetDamage(attackType); // 2 = heavy attack, Sending the type of attack it is supposed to be
+        playerWep.Attack(attackType);
+        switch (attackType) //Sets the attack timer to 0 depending on the type of attack used
+        {
+            case 1:
+                basicAttackTimer = 0;
+                break;
+
+            case 2:
+                heavyAttackTimer = 0;
+                break;
+
+            case 3:
+                specialAttackTimer = 0;
+                break;
+                
+            default:
+                break;
+        }
+    }
+    private void AttackTrigger(float time) // Enables Attack trigger, Will be adjusted later
     {
         SoundManager.mySoundManager.PlaySFX("SwordSound", 0.2f);
         attackTrigger.SetActive(true);
@@ -123,6 +208,25 @@ public class Player : MonoBehaviour, IDamageable
     {
         yield return new WaitForSeconds(time);
         attackTrigger.SetActive(false);
+    }
+
+    private void CoolDownChecker()
+    {
+        basicAttackTimer  = Mathf.Clamp(basicAttackTimer + Time.deltaTime ,0,basicAttackCoolDown);//Clamping values for precise UI display
+        heavyAttackTimer = Mathf.Clamp(heavyAttackTimer + Time.deltaTime, 0, heavyAttackCoolDown);
+        specialAttackTimer = Mathf.Clamp(specialAttackTimer + Time.deltaTime, 0, specialAttakCoolDown);
+        if(wolf) //Player is in wolf form, decreases wolf bar in wolf form
+        {
+            currentWolfBar = Mathf.Clamp(currentWolfBar -= Time.deltaTime, 0 , maxWolfBar);
+        }
+        else // Slowly Regenerate wolf bar when not in wolf form
+        {
+            currentWolfBar = Mathf.Clamp(currentWolfBar += Time.deltaTime * wolfBarRegenRate, 0, maxWolfBar);
+        }
+        if(currentWolfBar == 0) // Automatically transform into human when wolf bar reaches 0
+        {
+            wolf = false;
+        }
     }
 
     public void ShootProjectile()
@@ -145,19 +249,18 @@ public class Player : MonoBehaviour, IDamageable
         if (interactableObj != null && Input.GetButtonDown("Interact"))
         {
             collision.GetComponent<Interactable>().Interact();
-            Debug.Log("helloo1111");
         }
     }
 
     #region Player Take Damage
     public void TakeDamage(int damage) //Interface take damage
     {
-        if (health > 0 && playerCanTakeDmg && playerAlive)
+        if (currentHealth > 0 && playerCanTakeDmg && playerAlive)
         {
-            health -= damage;
+            currentHealth -= damage;
             StartCoroutine(playerTookDamageIndicator());
             StartCoroutine(playerInvunerableDuration());
-            if (health <= 0)
+            if (currentHealth <= 0)
             {
                 SoundManager.mySoundManager.PlaySFX("PlayerDeathSound", 1f);
                 playerAlive = false;
