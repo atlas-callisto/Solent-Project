@@ -4,24 +4,28 @@ using UnityEngine;
 
 public class EnemyAI : MonoBehaviour, IDamageable
 {
+    [Header("Stats")]
     [SerializeField] int health = 4;
-    [SerializeField] float moveSpeed = 1f;
+    [SerializeField] public float moveSpeed = 1f;
     [SerializeField] int damage = 1;    
-    [SerializeField] float damageTickRate = 3f;
-    [SerializeField] float timer = 0;
-        
-    [SerializeField] bool isAlive = true;
     [SerializeField] float chaseDistance = 4f;
-    [SerializeField] float distanceToThePlayer;
-    [SerializeField] bool playerIsOnRightSide;
 
-    [SerializeField] GameObject player;
-    [SerializeField] IDamageable otherObj;
+    private bool isAlive = true;
+    private float distanceToThePlayer;
+    private bool playerIsOnRightSide;
 
-    Rigidbody2D myRB;
-    SpriteRenderer mySpriteRenderer;
+    [Header("Patrol")]
+    public GameObject leftPatrolPoint;
+    public GameObject rightPatrolPoint;
 
+    private Vector3 pointA = new Vector3(0, 0, 0);
+    private Vector3 pointB = new Vector3(0, 0, 0);
+    private bool moveTowardspointB = true;    
 
+    private Player player;
+    private Rigidbody2D myRB;
+    private SpriteRenderer mySpriteRenderer;
+        
     // Start is called before the first frame update
     void Awake()
     {
@@ -32,63 +36,80 @@ public class EnemyAI : MonoBehaviour, IDamageable
     // Update is called once per frame
     void Update()
     {
-        if (!isAlive) Destroy(this.gameObject);
+        if (!isAlive) return;
         ChasePlayer();
     }
 
+    private void Start()
+    {
+        player = FindObjectOfType<Player>();
+        pointA = leftPatrolPoint.transform.position;
+        pointB = rightPatrolPoint.transform.position;
+    }
+
+    #region Enemy A.I.
     private void ChasePlayer()
     {
         Vector3 distanceVect = player.transform.position - transform.position;
-        distanceToThePlayer = Mathf.Abs(distanceVect.x);
-        // distancetoThePlayer = Vector3.Distance(player.transform.position - this.gameObject.transform.position);
+        distanceToThePlayer = Vector3.Distance(player.transform.position, transform.position);
 
-        //Vector3.Normalize(distanceVect) Remove it later;
+        //Vector3.Normalize(distanceVect) Remove it later?
         playerIsOnRightSide = distanceVect.x > 0 ? true : false;
-        moveSpeed = playerIsOnRightSide ? Mathf.Abs(moveSpeed) : moveSpeed = - Mathf.Abs(moveSpeed);
-
         if (distanceToThePlayer <= chaseDistance)
+        {
+            if (playerIsOnRightSide) myRB.velocity = new Vector2(moveSpeed, myRB.velocity.y);
+            if (!playerIsOnRightSide) myRB.velocity = new Vector2(-moveSpeed, myRB.velocity.y);
+        }
+        else
+        {
+            EnemyPatrol();
+        }
+    }
+
+    private void EnemyPatrol()
+    {
+        if (pointA == null || pointB == null) return;
+        if (transform.position.x <= pointA.x) moveTowardspointB = true;
+        if (transform.position.x >= pointB.x) moveTowardspointB = false;
+        if (moveTowardspointB)
         {
             myRB.velocity = new Vector2(moveSpeed, myRB.velocity.y);
         }
         else
         {
-            myRB.velocity = new Vector2(0, myRB.velocity.y);
+            myRB.velocity = new Vector2(-moveSpeed, myRB.velocity.y);
         }
-    }
+    } 
+    #endregion
 
-    public void Damage(int damage)
-    {
-        if(health > 0 && isAlive)
-        {
-            StartCoroutine(enemyTookDamageIndicator());
-            health -= damage;
-            if (health <= 0) isAlive = false;
-            //Death anim           
-        }
-    }
-
+    #region Enemy Damage
     private void OnCollisionStay2D(Collision2D collision)
     {
         IDamageable iDamageableObj;
         iDamageableObj = collision.gameObject.GetComponent<IDamageable>();
-        if (iDamageableObj != null)
+        if (iDamageableObj != null && collision.gameObject.tag != "Enemy")
         {
-            if (timer < damageTickRate)
-            {
-                timer += Time.deltaTime;
-                if (timer >= damageTickRate)
-                {
-                    timer = 0;
-                    iDamageableObj.Damage(damage);
-                }
-            }
-        }       
+            iDamageableObj.TakeDamage(damage);
+        }
     }
-
+    public void TakeDamage(int damage) //Take Damage
+    {
+        if (health > 0 && isAlive)
+        {
+            StartCoroutine(enemyTookDamageIndicator());
+            health -= damage;
+            if (health <= 0) isAlive = false;
+            SoundManager.mySoundManager.PlaySFX("SlimeDeathSound", 1f);
+            Destroy(this.gameObject);
+            //Death anim           
+        }
+    }
     IEnumerator enemyTookDamageIndicator()
     {
         mySpriteRenderer.color = Color.red;
         yield return new WaitForSeconds(0.1f);
         mySpriteRenderer.color = Color.white;
-    }
+    } 
+    #endregion
+
 }

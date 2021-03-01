@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1939664326529868541}
   - component: {fileID: 1939664326529868514}
   - component: {fileID: 1680375058}
+  - component: {fileID: 169467041}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -60,11 +61,11 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 5.604421
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 823
+    m_Bits: 2871
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
@@ -96,5 +97,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70513046e4afa6c42a96a1fd442f319a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  offset: -10
-  culltest: 0
+--- !u!114 &169467041
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1939664326529868515}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 762936a1f93895240b79d1281993763f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sfxNameList:
+  - PlayerDeathSound
+  - SlimeDeathSound
+  - BulletSound
+  - SwordSound
+  sfxFileList:
+  - {fileID: 8300000, guid: a1c98b0af276d6e4fbc9f2ed1ce9085e, type: 3}
+  - {fileID: 8300000, guid: 89f286b69e8a9f948bd186b066516f27, type: 3}
+  - {fileID: 8300000, guid: 87fe6a750abcab548a1cb062ca2897be, type: 3}
+  - {fileID: 8300000, guid: 5e609659a1cd01a42a39c6c7114e10a3, type: 3}

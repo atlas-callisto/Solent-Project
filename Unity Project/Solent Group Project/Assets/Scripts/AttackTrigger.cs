@@ -22,7 +22,7 @@ public class AttackTrigger : MonoBehaviour
         IDamageable iDamageable = collision.GetComponent<IDamageable>();
         if(iDamageable != null)
         {
-            iDamageable.Damage(damage);
+            iDamageable.TakeDamage(damage);
         }
     }
 }
