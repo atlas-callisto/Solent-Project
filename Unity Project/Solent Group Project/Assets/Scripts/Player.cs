@@ -258,6 +258,7 @@ public class Player : MonoBehaviour, IDamageable
         if (currentHealth > 0 && playerCanTakeDmg && playerAlive)
         {
             currentHealth -= damage;
+            KnockBackEffect();
             StartCoroutine(playerTookDamageIndicator());
             StartCoroutine(playerInvunerableDuration());
             if (currentHealth <= 0)
@@ -268,6 +269,10 @@ public class Player : MonoBehaviour, IDamageable
                 FindObjectOfType<LevelLoader>().RestartLevelAfterAPause();
             }
         }
+    }
+    private void KnockBackEffect()
+    {
+        myRB.AddForce(new Vector2(100f, 100f));
     }
     IEnumerator playerTookDamageIndicator()
     {

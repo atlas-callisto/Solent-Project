@@ -15,12 +15,10 @@ public class EnemyPatrol : MonoBehaviour
     private bool moveTowardspointB = true;
 
     private Rigidbody2D myRB;
-    private SpriteRenderer mySpriteRenderer;
 
     void Awake()
     {
         myRB = GetComponent<Rigidbody2D>();
-        mySpriteRenderer = GetComponent<SpriteRenderer>();
     }
     private void Start()
     {
