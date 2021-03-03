@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 1591418635905663522}
   - component: {fileID: 1591418635905663521}
   - component: {fileID: 1591418635905663520}
+  - component: {fileID: 1247381036426761344}
   m_Layer: 8
   m_Name: Slime Enemy
   m_TagString: Enemy
@@ -147,14 +148,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 3
-  moveSpeed: 0.6
+  moveSpeed: 2
   damage: 2
-  chaseDistance: 8
+  chaseDistance: 5
+--- !u!114 &1247381036426761344
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1591418635905663523}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9c73dadb99931849a9e2301e7bcc08b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   leftPatrolPoint: {fileID: 5072957814832358707}
   rightPatrolPoint: {fileID: 7486940385638071849}
-  pointA: {x: 0, y: 0, z: 0}
-  pointB: {x: 0, y: 0, z: 0}
-  moveTowardspointB: 1
+  shouldPatrol: 1
+  patrolmoveSpeed: 0.2
 --- !u!1 &5072957814832358707
 GameObject:
   m_ObjectHideFlags: 0

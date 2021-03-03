@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class PlayerWeapon : MonoBehaviour
 {
-    internal int basicAttackDamage = 1;
-    internal int heavyAttackDamage = 2;
-    internal int specialAttackDamage = 4;
-    internal int damage = 1;
-    Animator myAnimator;
+    public int basicAttackDamage = 1;
+    public int heavyAttackDamage = 2;
+    public int specialAttackDamage = 4;
+    private int damage = 1;
+    private Animator myAnimator;
 
     void Awake()
     {

@@ -74,7 +74,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -761887118410055393, guid: c8b3cc214319ff64ca74dd357dbd2610, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 7236315eec5a02e419a31b1f6af3771d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -119,9 +119,9 @@ PolygonCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2.19, y: 1.93}
+    border: {x: 1.05, y: 0.96, z: 0, w: 0}
+    pivot: {x: 0.66937673, y: 0.6558266}
+    oldSize: {x: 3, y: 3}
     newSize: {x: 6.78, y: 7.11}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -129,12 +129,14 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: -0.42466128, y: -0.0023240745}
-      - {x: -0.8404412, y: -0.735897}
-      - {x: -0.6125421, y: -0.97269124}
-      - {x: 0.09373462, y: -0.59164673}
-      - {x: 0.77477556, y: 0.36940804}
-      - {x: 0.7046763, y: 0.95651454}
+    - - {x: -0.37094456, y: 0.018594094}
+      - {x: -0.4739686, y: -0.31931937}
+      - {x: -0.81684643, y: -0.71305966}
+      - {x: -0.6837672, y: -0.85377437}
+      - {x: -0.31148732, y: -0.45779786}
+      - {x: -0.13891861, y: -0.40350294}
+      - {x: 0.91262174, y: 0.70692587}
+      - {x: 0.7911903, y: 1.0520673}
 --- !u!114 &1911803656
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -306,13 +308,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 4
   jumpForce: 6
-  health: 10
+  maxHealth: 10
+  currentHealth: 10
+  maxWolfBar: 10
+  currentWolfBar: 10
+  wolfBarRegenRate: 0.1
   attackTrigger: {fileID: 6260531744811009317}
   projectilePrefab: {fileID: 3099315621163623433, guid: 1e9b4710b01bbe747aa64808885a852a, type: 3}
   playerWep: {fileID: 1911803656}
-  basicAttackTimer: 0
-  heavyAttackTimer: 0
-  specialAttackTimer: 0
+  basicAttackCoolDown: 2
+  heavyAttackCoolDown: 5
+  specialAttakCoolDown: 10
 --- !u!1 &5999511783106820429
 GameObject:
   m_ObjectHideFlags: 0

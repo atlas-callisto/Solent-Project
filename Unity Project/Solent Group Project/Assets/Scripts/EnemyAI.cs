@@ -10,76 +10,65 @@ public class EnemyAI : MonoBehaviour, IDamageable
     [SerializeField] int damage = 1;    
     [SerializeField] float chaseDistance = 4f;
 
-    private bool isAlive = true;
-    private float distanceToThePlayer;
-    private bool playerIsOnRightSide;
+    protected bool isAlive = true;
+    protected float distanceToThePlayer;
+    protected bool playerIsOnRightSide;
 
-    [Header("Patrol")]
-    public GameObject leftPatrolPoint;
-    public GameObject rightPatrolPoint;
+    private EnemyPatrol myEnemyPatrol;
 
-    private Vector3 pointA = new Vector3(0, 0, 0);
-    private Vector3 pointB = new Vector3(0, 0, 0);
-    private bool moveTowardspointB = true;    
+    protected Player player;
+    protected Rigidbody2D myRB;
+    protected SpriteRenderer mySpriteRenderer;
+    protected Animator myAnimator;
 
-    private Player player;
-    private Rigidbody2D myRB;
-    private SpriteRenderer mySpriteRenderer;
-        
     // Start is called before the first frame update
-    void Awake()
+    protected virtual void Awake()
     {
         myRB = GetComponent<Rigidbody2D>();
         mySpriteRenderer = GetComponent<SpriteRenderer>();
+        myEnemyPatrol = GetComponent<EnemyPatrol>();
+        myAnimator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
-    void Update()
+    protected virtual void Update()
     {
         if (!isAlive) return;
         ChasePlayer();
     }
 
-    private void Start()
+    protected virtual void Start()
     {
         player = FindObjectOfType<Player>();
-        pointA = leftPatrolPoint.transform.position;
-        pointB = rightPatrolPoint.transform.position;
     }
 
     #region Enemy A.I.
-    private void ChasePlayer()
+    protected virtual void ChasePlayer()
     {
         Vector3 distanceVect = player.transform.position - transform.position;
         distanceToThePlayer = Vector3.Distance(player.transform.position, transform.position);
 
-        //Vector3.Normalize(distanceVect) Remove it later?
+        //Vector3.Normalize(distanceVect) Remove or use it later?
         playerIsOnRightSide = distanceVect.x > 0 ? true : false;
         if (distanceToThePlayer <= chaseDistance)
         {
-            if (playerIsOnRightSide) myRB.velocity = new Vector2(moveSpeed, myRB.velocity.y);
-            if (!playerIsOnRightSide) myRB.velocity = new Vector2(-moveSpeed, myRB.velocity.y);
+            if (playerIsOnRightSide)
+            {
+                transform.localRotation = Quaternion.Euler(new Vector3(0, 0, 0));
+                myRB.velocity = new Vector2(moveSpeed, myRB.velocity.y);
+            }
+            if (!playerIsOnRightSide)
+            {
+                transform.localRotation = Quaternion.Euler(new Vector3(0, 180, 0));
+                myRB.velocity = new Vector2(-moveSpeed, myRB.velocity.y);
+            }
         }
-        else
+        else if (myEnemyPatrol != null && myEnemyPatrol.shouldPatrol)
         {
-            EnemyPatrol();
+            myEnemyPatrol.Patrol();
         }
     }
 
-    private void EnemyPatrol()
-    {
-        if (pointA == null || pointB == null) return;
-        if (transform.position.x <= pointA.x) moveTowardspointB = true;
-        if (transform.position.x >= pointB.x) moveTowardspointB = false;
-        if (moveTowardspointB)
-        {
-            myRB.velocity = new Vector2(moveSpeed, myRB.velocity.y);
-        }
-        else
-        {
-            myRB.velocity = new Vector2(-moveSpeed, myRB.velocity.y);
-        }
-    } 
     #endregion
 
     #region Enemy Damage
