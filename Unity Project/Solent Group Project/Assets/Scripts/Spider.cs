@@ -5,15 +5,28 @@ using UnityEngine;
 
 public class Spider : EnemyAI
 {
-    [SerializeField] public float aggroDistance;
+    [Header("Spider Stats")]
+    [SerializeField] private float aggroDistance;
     [SerializeField] private float verticalMoveSpeed;
+    [SerializeField] private float returnSpeed;
+
+    private float attackTimer = 0;
+    private Vector3 restingPoint;
 
     [SerializeField] private GameObject webPrefab;
     [SerializeField] private float shootingInterval;
+
+    protected override void Start()
+    {
+        base.Start();
+        restingPoint = transform.position;
+        attackTimer = shootingInterval; // Enemy can immediately shoot in the begining
+    }
     protected override void Update()
     {
         if (!base.isAlive) return;
         SpiderAI();
+        attackTimer += Time.deltaTime;
     }
     private void SpiderAI()
     {
@@ -31,17 +44,31 @@ public class Spider : EnemyAI
                 transform.localRotation = Quaternion.Euler(new Vector3(0, 0, 0));
                 myRB.velocity = new Vector2(0, verticalMoveSpeed);
             }
-            if (!playerIsOnRightSide)
+            else if (!playerIsOnRightSide)
             {
                 transform.localRotation = Quaternion.Euler(new Vector3(0, 180, 0));
                 myRB.velocity = new Vector2(0, verticalMoveSpeed);
             }
-            ShootWeb();
+            
+            if (transform.position.y <= player.transform.position.y + 1f || transform.position.y >= player.transform.position.y - 1f)
+            {
+                ShootWeb();
+            }
+        }
+        else if (transform.position != restingPoint) // Return to original point when player out of range
+        {
+            Debug.Log(restingPoint);
+            myRB.velocity = Vector3.zero;            
+            transform.position = Vector3.MoveTowards(transform.position, restingPoint, Mathf.Abs(returnSpeed) * Time.deltaTime);
         }
     }
 
     private void ShootWeb()
-    {
-        Instantiate(webPrefab, transform.position, transform.localRotation);
+    {        
+        if(attackTimer >= shootingInterval)
+        {
+            Instantiate(webPrefab, transform.position, transform.localRotation);
+            attackTimer = 0;
+        }
     }
 }

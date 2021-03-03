@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EnemyAI : MonoBehaviour, IDamageable
 {
-    [Header("Stats")]
+    [Header("Enemy Stats")]
     [SerializeField] int health = 4;
     [SerializeField] public float moveSpeed = 1f;
     [SerializeField] int damage = 1;    
@@ -72,11 +72,11 @@ public class EnemyAI : MonoBehaviour, IDamageable
     #endregion
 
     #region Enemy Damage
-    private void OnCollisionStay2D(Collision2D collision)
+    virtual protected void OnCollisionStay2D(Collision2D collision) // Enemy damages anything that have hp when it collides
     {
         IDamageable iDamageableObj;
         iDamageableObj = collision.gameObject.GetComponent<IDamageable>();
-        if (iDamageableObj != null && collision.gameObject.tag != "Enemy")
+        if (iDamageableObj != null && collision.gameObject.tag != "Enemy") // Excluding objects with enemy tag of course
         {
             iDamageableObj.TakeDamage(damage);
         }
