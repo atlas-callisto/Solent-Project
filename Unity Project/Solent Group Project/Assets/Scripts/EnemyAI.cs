@@ -8,13 +8,13 @@ public class EnemyAI : MonoBehaviour, IDamageable
     [SerializeField] int health = 4;
     [SerializeField] public float moveSpeed = 1f;
     [SerializeField] int damage = 1;    
-    [SerializeField] float chaseDistance = 4f;
+    [SerializeField] protected float chaseDistance = 4f;
 
     protected bool isAlive = true;
     protected float distanceToThePlayer;
     protected bool playerIsOnRightSide;
 
-    private EnemyPatrol myEnemyPatrol;
+    protected EnemyPatrol myEnemyPatrol;
 
     protected Player player;
     protected Rigidbody2D myRB;
@@ -28,25 +28,24 @@ public class EnemyAI : MonoBehaviour, IDamageable
         mySpriteRenderer = GetComponent<SpriteRenderer>();
         myEnemyPatrol = GetComponent<EnemyPatrol>();
         myAnimator = GetComponent<Animator>();
+        player = FindObjectOfType<Player>();
     }
-
-    // Update is called once per frame
+    protected virtual void Start()
+    {
+        distanceToThePlayer = Vector3.Distance(player.transform.position, transform.position);        
+    }
     protected virtual void Update()
     {
         if (!isAlive) return;
+        MeasureDistanceToThePlayer();
         ChasePlayer();
     }
 
-    protected virtual void Start()
-    {
-        player = FindObjectOfType<Player>();
-    }
 
     #region Enemy A.I.
     protected virtual void ChasePlayer()
     {
-        Vector3 distanceVect = player.transform.position - transform.position;
-        distanceToThePlayer = Vector3.Distance(player.transform.position, transform.position);
+        Vector3 distanceVect = player.transform.position - transform.position;       
 
         //Vector3.Normalize(distanceVect) Remove or use it later?
         playerIsOnRightSide = distanceVect.x > 0 ? true : false;
@@ -69,6 +68,11 @@ public class EnemyAI : MonoBehaviour, IDamageable
         }
     }
 
+    protected void MeasureDistanceToThePlayer() // Needs to be called in the update or else the AI won't work, Needs to be called in the inherited objects as well
+    {
+        distanceToThePlayer = Vector3.Distance(player.transform.position, transform.position);
+    }
+
     #endregion
 
     #region Enemy Damage
@@ -87,9 +91,12 @@ public class EnemyAI : MonoBehaviour, IDamageable
         {
             StartCoroutine(enemyTookDamageIndicator());
             health -= damage;
-            if (health <= 0) isAlive = false;
-            SoundManager.mySoundManager.PlaySFX("SlimeDeathSound", 1f);
-            Destroy(this.gameObject);
+            if (health <= 0)
+            {
+                isAlive = false;
+                SoundManager.mySoundManager.PlaySFX("SlimeDeathSound", 1f);
+                Destroy(this.gameObject);
+            }
             //Death anim           
         }
     }
