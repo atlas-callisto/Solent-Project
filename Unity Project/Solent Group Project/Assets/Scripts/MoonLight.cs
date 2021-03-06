@@ -3,9 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class MoonLight : MonoBehaviour
-{
-    [SerializeField] Player player;
+{    
     [SerializeField] float moonLightRegenRate = 2f;
+
+    Player player;
     void Awake()
     {
         player = FindObjectOfType<Player>();

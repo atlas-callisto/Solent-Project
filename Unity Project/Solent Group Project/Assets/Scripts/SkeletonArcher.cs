@@ -89,6 +89,8 @@ public class SkeletonArcher : EnemyAI
 
     private void TurnTowardsPlayer()
     {
+        Vector3 distanceVect = player.transform.position - transform.position;
+        playerIsOnRightSide = distanceVect.x > 0 ? true : false;
         if (playerIsOnRightSide)
         {
             transform.localRotation = Quaternion.Euler(new Vector3(0, 0, 0));

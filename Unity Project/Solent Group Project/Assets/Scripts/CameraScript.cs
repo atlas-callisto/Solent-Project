@@ -14,7 +14,7 @@ public class CameraScript : MonoBehaviour
 
     void Update()
     {
-        if (followTarget != null)
+        if (followTarget != null )
             transform.position = new Vector3(followTarget.transform.position.x, followTarget.transform.position.y, offset);        
     }
 
@@ -23,4 +23,20 @@ public class CameraScript : MonoBehaviour
         Debug.Log("yo");
         GetComponent<Camera>().cullingMask += 1 << 10;
     }    
+
+    public IEnumerator CameraShake(float duration, float magnitude)
+    {
+        Vector3 originalPos = transform.position;
+        float elapsed = 0.0f;
+
+        while (elapsed < duration)
+        {
+            float x = UnityEngine.Random.Range(-1f, 1f) * magnitude;
+            float y = UnityEngine.Random.Range(-1f, 1f) * magnitude;
+            transform.position = originalPos + new Vector3(x, y, 0);
+
+            elapsed += Time.deltaTime;
+            yield return null;
+        }
+    }
 }

@@ -57,7 +57,6 @@ public class Spider : EnemyAI
         }
         else if (transform.position != restingPoint) // Return to original point when player out of range
         {
-            Debug.Log(restingPoint);
             myRB.velocity = Vector3.zero;            
             transform.position = Vector3.MoveTowards(transform.position, restingPoint, Mathf.Abs(returnSpeed) * Time.deltaTime);
         }
