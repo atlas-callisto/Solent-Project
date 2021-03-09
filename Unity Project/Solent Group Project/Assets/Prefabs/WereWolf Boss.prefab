@@ -227,6 +227,8 @@ MonoBehaviour:
   moveSpeed: 1
   damage: 2
   chaseDistance: 4
+  healthPotions: {fileID: 1187938275048797783, guid: ba123d3fc0894404f8a1e689890c7d44, type: 3}
+  chanceToSpawnHealthPotions: 30
   clawAttackRange: 5
   clawAttackInterval: 2
   boulderAttackRange: 10

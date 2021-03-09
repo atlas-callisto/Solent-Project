@@ -355,6 +355,8 @@ MonoBehaviour:
   moveSpeed: 2
   damage: 1
   chaseDistance: 4
+  healthPotions: {fileID: 1187938275048797783, guid: ba123d3fc0894404f8a1e689890c7d44, type: 3}
+  chanceToSpawnHealthPotions: 30
   attackRange: 1
   attackInterval: 2
   weapon: {fileID: 1951015802281766033}

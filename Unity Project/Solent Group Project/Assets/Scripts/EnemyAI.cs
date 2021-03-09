@@ -9,6 +9,9 @@ public class EnemyAI : MonoBehaviour, IDamageable
     [SerializeField] public float moveSpeed = 1f;
     [SerializeField] int damage = 1;    
     [SerializeField] protected float chaseDistance = 4f;
+    [SerializeField] protected GameObject healthPotions;
+    [Header("Chance is in Percentage from 0 to 100")]
+    [SerializeField] float chanceToSpawnHealthPotions = 30f; // percentage from 1 to 100
 
     protected bool isAlive = true;
     protected float distanceToThePlayer;
@@ -95,6 +98,7 @@ public class EnemyAI : MonoBehaviour, IDamageable
             {
                 isAlive = false;
                 SoundManager.mySoundManager.PlaySFX("SlimeDeathSound", 1f);
+                SpawnHealingPotions();
                 Destroy(this.gameObject);
             }
             //Death anim           
@@ -106,6 +110,16 @@ public class EnemyAI : MonoBehaviour, IDamageable
         yield return new WaitForSeconds(0.1f);
         mySpriteRenderer.color = Color.white;
     } 
+
+    private void SpawnHealingPotions()
+    {
+        float i = Random.Range(0, 100);
+        if(i < chanceToSpawnHealthPotions)
+        {
+            Instantiate(healthPotions, transform.position, Quaternion.identity);
+        }
+        
+    }
     #endregion
 
 }

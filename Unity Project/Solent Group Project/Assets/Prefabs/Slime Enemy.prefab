@@ -151,6 +151,8 @@ MonoBehaviour:
   moveSpeed: 2
   damage: 2
   chaseDistance: 5
+  healthPotions: {fileID: 1187938275048797783, guid: ba123d3fc0894404f8a1e689890c7d44, type: 3}
+  chanceToSpawnHealthPotions: 30
 --- !u!114 &1247381036426761344
 MonoBehaviour:
   m_ObjectHideFlags: 0
