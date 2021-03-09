@@ -168,11 +168,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2de6deedbfa77a541bc37585ed621735, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 4
-  moveSpeed: 1
+  health: 3
+  moveSpeed: 2
   damage: 1
-  chaseDistance: 4
-  attackRange: 12
+  chaseDistance: 10
+  attackRange: 6
   attackInterval: 2
   runAwayRange: 4
   wallChecker: {fileID: 1510952542114923625}
@@ -192,7 +192,7 @@ MonoBehaviour:
   leftPatrolPoint: {fileID: 1510952542125906790}
   rightPatrolPoint: {fileID: 1510952540428723396}
   shouldPatrol: 1
-  patrolmoveSpeed: 2
+  patrolmoveSpeed: 1
 --- !u!1 &1510952542114923627
 GameObject:
   m_ObjectHideFlags: 0

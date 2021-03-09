@@ -148,8 +148,8 @@ MonoBehaviour:
   moveSpeed: 1
   damage: 1
   chaseDistance: 4
-  aggroDistance: 8
-  verticalMoveSpeed: 1
-  returnSpeed: 10
+  aggroDistance: 12
+  verticalMoveSpeed: 2
+  returnSpeed: 4
   webPrefab: {fileID: 5958209697578809459, guid: f7d0718bcb25a884ca6194d05b7176c9, type: 3}
   shootingInterval: 4

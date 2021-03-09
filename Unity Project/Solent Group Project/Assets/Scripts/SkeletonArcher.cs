@@ -35,22 +35,30 @@ public class SkeletonArcher : EnemyAI
             myEnemyPatrol.Patrol();
         }
         else if (distanceToThePlayer > runAwayRange) // Player is withing attack range but outside runAway range so enemy will attack
-        {            
-            var hits2D = Physics2D.RaycastAll(this.transform.position, Vector2.right, attackRange);
-            foreach (RaycastHit2D hit in hits2D)
-            {               
-                if (hit.transform.gameObject.tag == "Player")
-                {
-                    myRB.velocity = new Vector2(0, myRB.velocity.y); // The skeleton stops moving
-                    TurnTowardsPlayer();
-                    if (attackTimer >= attackInterval)
-                    {
-                        // Attack Animation Maybe
-                        GameObject enemyArrow = Instantiate(arrowPrefab, transform.position, transform.localRotation);
-                        attackTimer = 0;
-                    }
-                }
+        {
+            myRB.velocity = new Vector2(0, myRB.velocity.y); // The skeleton stops moving
+            TurnTowardsPlayer();
+            if (attackTimer >= attackInterval)
+            {
+                // Attack Animation Maybe
+                GameObject enemyArrow = Instantiate(arrowPrefab, transform.position, transform.localRotation);
+                attackTimer = 0;
             }
+            //var hits2D = Physics2D.RaycastAll(this.transform.position, Vector2.right, attackRange);
+            //foreach (RaycastHit2D hit in hits2D)
+            //{               
+            //    if (hit.transform.gameObject.tag == "Player")
+            //    {
+            //        myRB.velocity = new Vector2(0, myRB.velocity.y); // The skeleton stops moving
+            //        TurnTowardsPlayer();
+            //        if (attackTimer >= attackInterval)
+            //        {
+            //            // Attack Animation Maybe
+            //            GameObject enemyArrow = Instantiate(arrowPrefab, transform.position, transform.localRotation);
+            //            attackTimer = 0;
+            //        }
+            //    }
+            //}
 
         }
         else if (distanceToThePlayer <= runAwayRange && !wallChecker.IsTouchingLayers(LayerMask.GetMask("Ground"))) // Player is too close so runaway from the player. Unless near the wall
