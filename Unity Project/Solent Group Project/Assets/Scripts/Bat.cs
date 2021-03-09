@@ -9,8 +9,8 @@ public class Bat : EnemyAI
     [SerializeField] private float horizontalFlightSpeed;
     [SerializeField] private float verticalFlightSpeed;
     [SerializeField] private float runAwaySpeed;
-    [SerializeField] private Vector3 randomPoint;
-    [SerializeField] private Vector3 restingPoint;
+    private Vector3 randomPoint;
+    private Vector3 restingPoint;
     private Vector3 randomOffset;
     bool chasePlayer = true;
 
@@ -23,6 +23,7 @@ public class Bat : EnemyAI
     {
         if (!base.isAlive) return;
         BatAI();
+        IsMovingAnimation();
     }
     private void BatAI()
     {
@@ -33,6 +34,7 @@ public class Bat : EnemyAI
         playerIsOnRightSide = distanceVect.x > 0 ? true : false;
         if (distanceToThePlayer <= aggroDistance && chasePlayer)
         {
+
             if (distanceVect.y > 0) verticalFlightSpeed = Mathf.Abs(verticalFlightSpeed);
             else if (distanceVect.y < 0) verticalFlightSpeed = Mathf.Abs(verticalFlightSpeed) * -1;
             if (playerIsOnRightSide)
@@ -75,5 +77,17 @@ public class Bat : EnemyAI
         }
     }
 
+    private void IsMovingAnimation()
+    {
+        //if(myRB.velocity.x != 0 || myRB.velocity.y != 0)
+        if (transform.position != restingPoint)
+        {
+            myAnimator.SetBool("isMoving", true);
+        }
+        else
+        {
+            myAnimator.SetBool("isMoving", false);
+        }
+    }
 
 }

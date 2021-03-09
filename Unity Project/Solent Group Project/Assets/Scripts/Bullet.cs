@@ -23,5 +23,9 @@ public class Bullet : MonoBehaviour
             iDamageable.TakeDamage(bulletDamage);
             Destroy(this.gameObject);
         }
+        if (collision.gameObject.layer == 8) // Colliding with the ground layer
+        {
+            Destroy(this.gameObject);
+        }
     }
 }

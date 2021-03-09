@@ -19,6 +19,7 @@ public class Player : MonoBehaviour, IDamageable
     public GameObject attackTrigger;    //Attack hitbox child
     public GameObject projectilePrefab; // bullet to spwan during attack 2
     public PlayerWeapon playerWep;
+    public PlayerWolfWeapon playerWolfWep;
 
     [Header("Cool Downs")]
     [SerializeField] private float basicAttackCoolDown = 2f;
@@ -27,6 +28,7 @@ public class Player : MonoBehaviour, IDamageable
     private float basicAttackTimer = 0f;
     private float heavyAttackTimer = 0f;
     private float specialAttackTimer = 0f;
+    [SerializeField] private float currentMoveSpeed = 4f;
 
 
     internal bool wolf = false; //Transform to wolf, also called by moonlight script
@@ -51,6 +53,7 @@ public class Player : MonoBehaviour, IDamageable
         basicAttackTimer = basicAttackCoolDown;
         heavyAttackTimer = heavyAttackCoolDown;
         specialAttackTimer = specialAttakCoolDown;
+        currentMoveSpeed = moveSpeed;
     }
     private void Awake()
     {
@@ -85,7 +88,7 @@ public class Player : MonoBehaviour, IDamageable
         {
             transform.localRotation = Quaternion.Euler(new Vector3(0, 180, 0));
         }
-        myRB.velocity = new Vector2(horizontalMov * moveSpeed, myRB.velocity.y);
+        myRB.velocity = new Vector2(horizontalMov * currentMoveSpeed, myRB.velocity.y);
     }
     private void PlayerJump()
     {
@@ -153,14 +156,18 @@ public class Player : MonoBehaviour, IDamageable
             {
                 if (basicAttackTimer >= basicAttackCoolDown)
                 {
-
+                    playerWolfWep.gameObject.SetActive(true);
+                    playerWolfWep.SetDamage(1);
+                    playerWolfWep.Attack(1);
                 }
             }
             if (Input.GetButtonDown("Heavy Attack"))
             {
                 if (heavyAttackTimer >= heavyAttackCoolDown)
                 {
-
+                    playerWolfWep.gameObject.SetActive(true);
+                    playerWolfWep.SetDamage(2);
+                    playerWolfWep.Attack(2);
                 }
             }
             if (Input.GetButtonDown("Special Attack"))
@@ -287,5 +294,17 @@ public class Player : MonoBehaviour, IDamageable
         playerCanTakeDmg = true;
     }
     #endregion
+
+    public void SlowMoveSpeedDebuff(float SlowPercentage, float slowDuration)
+    {
+        StartCoroutine(SlowMoveSpeed(SlowPercentage, slowDuration));
+    }
+    private IEnumerator SlowMoveSpeed(float SlowPercentage, float slowDuration)
+    {
+        currentMoveSpeed = currentMoveSpeed * (SlowPercentage/100);
+        yield return new WaitForSeconds(slowDuration);
+        currentMoveSpeed = moveSpeed;
+    }
+
 
 }

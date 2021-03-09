@@ -352,7 +352,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 4
-  moveSpeed: 1
+  moveSpeed: 2
   damage: 1
   chaseDistance: 4
   attackRange: 1
@@ -373,4 +373,4 @@ MonoBehaviour:
   leftPatrolPoint: {fileID: 1951015803370111211}
   rightPatrolPoint: {fileID: 1951015803707984177}
   shouldPatrol: 1
-  patrolmoveSpeed: 2
+  patrolmoveSpeed: 1
