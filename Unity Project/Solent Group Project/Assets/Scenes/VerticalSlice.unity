@@ -47319,18 +47319,6 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2160318093421502459, guid: ec9628dc761ae034597c0d60d9cc1e23, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1.7845565
-      objectReference: {fileID: 0}
-    - target: {fileID: 2160318093421502459, guid: ec9628dc761ae034597c0d60d9cc1e23, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1.7845565
-      objectReference: {fileID: 0}
-    - target: {fileID: 2160318093421502459, guid: ec9628dc761ae034597c0d60d9cc1e23, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1.7845565
-      objectReference: {fileID: 0}
-    - target: {fileID: 2160318093421502459, guid: ec9628dc761ae034597c0d60d9cc1e23, type: 3}
       propertyPath: m_LocalPosition.x
       value: -5.068
       objectReference: {fileID: 0}
@@ -47371,12 +47359,20 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2160318093421502463, guid: ec9628dc761ae034597c0d60d9cc1e23, type: 3}
-      propertyPath: jumpForce
-      value: 8
+      propertyPath: currentMoveSpeed
+      value: 5
       objectReference: {fileID: 0}
-    - target: {fileID: 4439046340874876529, guid: ec9628dc761ae034597c0d60d9cc1e23, type: 3}
-      propertyPath: m_IsActive
-      value: 0
+    - target: {fileID: 2160318093421502463, guid: ec9628dc761ae034597c0d60d9cc1e23, type: 3}
+      propertyPath: basicAttackCoolDown
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 2160318093421502463, guid: ec9628dc761ae034597c0d60d9cc1e23, type: 3}
+      propertyPath: heavyAttackCoolDown
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2160318093421502463, guid: ec9628dc761ae034597c0d60d9cc1e23, type: 3}
+      propertyPath: specialAttakCoolDown
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ec9628dc761ae034597c0d60d9cc1e23, type: 3}
