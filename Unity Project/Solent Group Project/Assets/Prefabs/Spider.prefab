@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 8412005961085261960}
   - component: {fileID: 8412005961085261961}
   - component: {fileID: 8412005961085261962}
-  - component: {fileID: 8412005961085261963}
   - component: {fileID: 8412005961085262006}
+  - component: {fileID: 8027500909484550645}
   m_Layer: 11
   m_Name: Spider
   m_TagString: Enemy
@@ -106,32 +106,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 5
---- !u!61 &8412005961085261963
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8412005961085262007}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.29, y: 1.035}
-    newSize: {x: 2.58, y: 2.07}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1.29, y: 1.035}
-  m_EdgeRadius: 0
 --- !u!114 &8412005961085262006
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -155,3 +129,19 @@ MonoBehaviour:
   returnSpeed: 4
   webPrefab: {fileID: 5958209697578809459, guid: f7d0718bcb25a884ca6194d05b7176c9, type: 3}
   shootingInterval: 4
+--- !u!58 &8027500909484550645
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8412005961085262007}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.0023403168, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.558403
