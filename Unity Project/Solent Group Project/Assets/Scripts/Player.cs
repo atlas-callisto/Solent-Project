@@ -273,7 +273,9 @@ public class Player : MonoBehaviour, IDamageable
                 SoundManager.mySoundManager.PlaySFX("PlayerDeathSound", 1f);
                 playerAlive = false;
                 myAnimator.SetTrigger("Dead");
-                FindObjectOfType<LevelLoader>().RestartLevelAfterAPause();
+                
+                // Needs fixing - keeps not assigning reference
+                //FindObjectOfType<LevelLoader>().RestartLevelAfterAPause();
             }
         }
     }
