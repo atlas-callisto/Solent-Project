@@ -10,6 +10,7 @@ public class EnemyAI : MonoBehaviour, IDamageable
     [SerializeField] int damage = 1;    
     [SerializeField] protected float chaseDistance = 4f;
     [SerializeField] protected GameObject healthPotions;
+
     [Header("Chance is in Percentage from 0 to 100")]
     [SerializeField] float chanceToSpawnHealthPotions = 30f; // percentage from 1 to 100
 
@@ -23,6 +24,7 @@ public class EnemyAI : MonoBehaviour, IDamageable
     protected Rigidbody2D myRB;
     protected SpriteRenderer mySpriteRenderer;
     protected Animator myAnimator;
+    protected Vector3 distanceVect;
 
     // Start is called before the first frame update
     protected virtual void Awake()
@@ -48,32 +50,41 @@ public class EnemyAI : MonoBehaviour, IDamageable
     #region Enemy A.I.
     protected virtual void ChasePlayer()
     {
-        Vector3 distanceVect = player.transform.position - transform.position;       
-
-        //Vector3.Normalize(distanceVect) Remove or use it later?
-        playerIsOnRightSide = distanceVect.x > 0 ? true : false;
         if (distanceToThePlayer <= chaseDistance)
         {
+            TurnTowardsPlayer();
             if (playerIsOnRightSide)
             {
-                transform.localRotation = Quaternion.Euler(new Vector3(0, 0, 0));
                 myRB.velocity = new Vector2(moveSpeed, myRB.velocity.y);
             }
             if (!playerIsOnRightSide)
             {
-                transform.localRotation = Quaternion.Euler(new Vector3(0, 180, 0));
                 myRB.velocity = new Vector2(-moveSpeed, myRB.velocity.y);
             }
         }
-        else if (myEnemyPatrol != null && myEnemyPatrol.shouldPatrol)
+        else if (myEnemyPatrol != null)
         {
             myEnemyPatrol.Patrol();
         }
     }
 
-    protected void MeasureDistanceToThePlayer() // Needs to be called in the update or else the AI won't work, Needs to be called in the inherited objects as well
+    protected virtual void MeasureDistanceToThePlayer() // Needs to be called in the update or else the AI won't work, Needs to be called in the inherited objects as well
     {
         distanceToThePlayer = Vector3.Distance(player.transform.position, transform.position);
+    }
+
+    protected virtual void TurnTowardsPlayer()
+    {
+        distanceVect = player.transform.position - transform.position;
+        playerIsOnRightSide = distanceVect.x > 0 ? true : false;
+        if (playerIsOnRightSide)
+        {
+            transform.localRotation = Quaternion.Euler(new Vector3(0, 0, 0));
+        }
+        if (!playerIsOnRightSide)
+        {
+            transform.localRotation = Quaternion.Euler(new Vector3(0, 180, 0));
+        }
     }
 
     #endregion

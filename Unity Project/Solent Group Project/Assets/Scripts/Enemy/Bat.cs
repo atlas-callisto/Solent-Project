@@ -27,30 +27,23 @@ public class Bat : EnemyAI
     }
     private void BatAI()
     {
-        Vector3 distanceVect = base.player.transform.position - transform.position;
-        distanceToThePlayer = Vector3.Distance(base.player.transform.position, transform.position);
-
-        //Vector3.Normalize(distanceVect) Remove it later?
-        playerIsOnRightSide = distanceVect.x > 0 ? true : false;
+        MeasureDistanceToThePlayer();
         if (distanceToThePlayer <= aggroDistance && chasePlayer)
         {
-
+            TurnTowardsPlayer();
             if (distanceVect.y > 0) verticalFlightSpeed = Mathf.Abs(verticalFlightSpeed);
             else if (distanceVect.y < 0) verticalFlightSpeed = Mathf.Abs(verticalFlightSpeed) * -1;
             if (playerIsOnRightSide)
             {
-                transform.localRotation = Quaternion.Euler(new Vector3(0, 0, 0));
                 myRB.velocity = new Vector2(horizontalFlightSpeed, verticalFlightSpeed);
             }
             if (!playerIsOnRightSide)
             {
-                transform.localRotation = Quaternion.Euler(new Vector3(0, 180, 0));
                 myRB.velocity = new Vector2(-horizontalFlightSpeed, verticalFlightSpeed);
             }
         }
         else if (distanceToThePlayer <= aggroDistance && !chasePlayer) // Return to original point when player out of range
-        {
-            
+        {            
             myRB.velocity = Vector3.zero;
             transform.position = Vector3.MoveTowards(transform.position, randomPoint, Mathf.Abs(runAwaySpeed) * Time.deltaTime);
             if (transform.position == randomPoint)

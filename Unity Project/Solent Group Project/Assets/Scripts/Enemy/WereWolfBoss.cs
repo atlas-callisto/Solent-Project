@@ -46,9 +46,9 @@ public class WereWolfBoss : EnemyAI
         boulderAttackTimer += Time.deltaTime;
         if (distanceToThePlayer > boulderAttackRange)
         {
-            myEnemyPatrol.Patrol();
+            base.ChasePlayer();
         }
-        else if (distanceToThePlayer <= boulderAttackRange && distanceToThePlayer > clawAttackRange) // Player is within boulder attack range but outside melee range
+        else if (distanceToThePlayer <= boulderAttackRange && distanceToThePlayer > clawAttackRange && boulderAttackTimer >= boulderAttackInterval) // Player is within boulder attack range but outside melee range
         {
             TurnTowardsPlayer();
             myRB.velocity = new Vector2(0, myRB.velocity.y);
@@ -65,7 +65,11 @@ public class WereWolfBoss : EnemyAI
             }
 
         }
-        else
+        else if (distanceToThePlayer > clawAttackRange && boulderAttackTimer < boulderAttackInterval)
+        {
+            base.ChasePlayer();
+        }
+        else if (distanceToThePlayer <= clawAttackRange)
         {
             TurnTowardsPlayer();
             myRB.velocity = new Vector2(0, myRB.velocity.y);
@@ -74,21 +78,6 @@ public class WereWolfBoss : EnemyAI
                 clawAttackTimer = 0;
                 weapon.SetActive(true);
             }
-
-        }
-    }
-
-    private void TurnTowardsPlayer()
-    {
-        Vector3 distanceVect = player.transform.position - transform.position;
-        playerIsOnRightSide = distanceVect.x > 0 ? true : false;
-        if (playerIsOnRightSide)
-        {
-            transform.localRotation = Quaternion.Euler(new Vector3(0, 0, 0));
-        }
-        if (!playerIsOnRightSide)
-        {
-            transform.localRotation = Quaternion.Euler(new Vector3(0, 180, 0));
         }
     }
 }

@@ -30,26 +30,20 @@ public class Spider : EnemyAI
     }
     private void SpiderAI()
     {
-        Vector3 distanceVect = base.player.transform.position - transform.position;
-        distanceToThePlayer = Vector3.Distance(base.player.transform.position, transform.position);
-
-        //Vector3.Normalize(distanceVect) Remove it later?
-        playerIsOnRightSide = distanceVect.x > 0 ? true : false;
+        MeasureDistanceToThePlayer();
         if (distanceToThePlayer <= aggroDistance)
         {
+            TurnTowardsPlayer();
             if (distanceVect.y > 0) verticalMoveSpeed = Mathf.Abs(verticalMoveSpeed);
             else if (distanceVect.y < 0) verticalMoveSpeed = Mathf.Abs(verticalMoveSpeed) * -1;
             if (playerIsOnRightSide)
             {
-                transform.localRotation = Quaternion.Euler(new Vector3(0, 0, 0));
                 myRB.velocity = new Vector2(0, verticalMoveSpeed);
             }
             else if (!playerIsOnRightSide)
             {
-                transform.localRotation = Quaternion.Euler(new Vector3(0, 180, 0));
                 myRB.velocity = new Vector2(0, verticalMoveSpeed);
-            }
-            
+            }            
             if (transform.position.y <= player.transform.position.y + 1f || transform.position.y >= player.transform.position.y - 1f)
             {
                 ShootWeb();

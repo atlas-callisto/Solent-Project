@@ -27,6 +27,7 @@ public class EnemyPatrol : MonoBehaviour
     }
     public void Patrol()
     {
+        if (!shouldPatrol) return;
         if (pointA == null || pointB == null) return;
         if (transform.position.x <= pointA.x) moveTowardspointB = true;
         if (transform.position.x >= pointB.x) moveTowardspointB = false;

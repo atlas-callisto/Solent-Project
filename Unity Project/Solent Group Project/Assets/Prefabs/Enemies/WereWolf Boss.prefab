@@ -226,13 +226,13 @@ MonoBehaviour:
   health: 20
   moveSpeed: 1
   damage: 2
-  chaseDistance: 4
+  chaseDistance: 10
   healthPotions: {fileID: 1187938275048797783, guid: ba123d3fc0894404f8a1e689890c7d44, type: 3}
   chanceToSpawnHealthPotions: 30
-  clawAttackRange: 5
+  clawAttackRange: 3.5
   clawAttackInterval: 2
   boulderAttackRange: 10
-  boulderAttackInterval: 3
+  boulderAttackInterval: 6
   numberOfRocksToSpawn: 5
   weapon: {fileID: 4500949304066037030}
   fallingRockPrefab: {fileID: 544664676110184732, guid: 6a63e3a16e985f144879342d6ed32a2b, type: 3}

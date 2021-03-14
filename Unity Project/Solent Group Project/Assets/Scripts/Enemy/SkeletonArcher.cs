@@ -64,22 +64,16 @@ public class SkeletonArcher : EnemyAI
         else if (distanceToThePlayer <= runAwayRange && !wallChecker.IsTouchingLayers(LayerMask.GetMask("Ground"))) // Player is too close so runaway from the player. Unless near the wall
         {
             Vector3 distanceVect = player.transform.position - transform.position;
-            distanceToThePlayer = Vector3.Distance(player.transform.position, transform.position);
-
-            //Vector3.Normalize(distanceVect) Remove or use it later?
             playerIsOnRightSide = distanceVect.x > 0 ? true : false;
-            if (distanceToThePlayer <= chaseDistance)
+            if (playerIsOnRightSide)
             {
-                if (playerIsOnRightSide)
-                {
-                    transform.localRotation = Quaternion.Euler(new Vector3(0, 180, 0));
-                    myRB.velocity = new Vector2(-moveSpeed, myRB.velocity.y);
-                }
-                if (!playerIsOnRightSide)
-                {
-                    transform.localRotation = Quaternion.Euler(new Vector3(0, 0, 0));
-                    myRB.velocity = new Vector2(moveSpeed, myRB.velocity.y);
-                }
+                transform.localRotation = Quaternion.Euler(new Vector3(0, 180, 0));
+                myRB.velocity = new Vector2(-moveSpeed, myRB.velocity.y);
+            }
+            if (!playerIsOnRightSide)
+            {
+                transform.localRotation = Quaternion.Euler(new Vector3(0, 0, 0));
+                myRB.velocity = new Vector2(moveSpeed, myRB.velocity.y);
             }
         }
         else // this means no where left to run, so just attack the player
@@ -93,19 +87,5 @@ public class SkeletonArcher : EnemyAI
                 attackTimer = 0;
             }
         }        
-    }
-
-    private void TurnTowardsPlayer()
-    {
-        Vector3 distanceVect = player.transform.position - transform.position;
-        playerIsOnRightSide = distanceVect.x > 0 ? true : false;
-        if (playerIsOnRightSide)
-        {
-            transform.localRotation = Quaternion.Euler(new Vector3(0, 0, 0));
-        }
-        if (!playerIsOnRightSide)
-        {
-            transform.localRotation = Quaternion.Euler(new Vector3(0, 180, 0));
-        }
     }
 }
