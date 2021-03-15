@@ -6,6 +6,7 @@ public class PassablePlatform : MonoBehaviour
 {
     private PlatformEffector2D myPlatformEffector2D;
     private Rigidbody2D playerRB;
+    private bool platformCanFlip = true;
 
     private void Awake()
     {
@@ -13,26 +14,33 @@ public class PassablePlatform : MonoBehaviour
     }
     void Start()
     {
-        myPlatformEffector2D = GetComponent<PlatformEffector2D>();        
+        myPlatformEffector2D = GetComponent<PlatformEffector2D>();
     }
 
     private void OnCollisionStay2D(Collision2D collision)
     {
-        if(collision.gameObject.tag == "Player")
+        if (collision.gameObject.tag == "Player" && platformCanFlip)
         {
-            if(Input.GetAxis("Vertical") <= -0.2 && playerRB.velocity.y <= 0)
+            if (Input.GetAxis("Vertical") <= -0.2 && playerRB.velocity.y <= 0)
             {
                 myPlatformEffector2D.rotationalOffset = 180;
+                StartCoroutine(ResetPlatformOrientation());
             }
         }
     }
 
     private void OnCollisionExit2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "Player")
+        if (collision.gameObject.tag == "Player" && platformCanFlip)
         {
             myPlatformEffector2D.rotationalOffset = 0;
         }
     }
+    IEnumerator ResetPlatformOrientation()
+    {
+        platformCanFlip = false;
+        yield return new WaitForSeconds(0.2f);
+        platformCanFlip = true;
 
+    }
 }
