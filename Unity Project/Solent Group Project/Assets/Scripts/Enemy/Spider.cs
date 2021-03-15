@@ -31,8 +31,13 @@ public class Spider : EnemyAI
     private void SpiderAI()
     {
         MeasureDistanceToThePlayer();
-        if (distanceToThePlayer <= aggroDistance)
+        if(fearDebuff)
         {
+            myRB.gravityScale = 1;
+        }
+        else if (distanceToThePlayer <= aggroDistance)
+        {
+            myRB.gravityScale = 0;
             TurnTowardsPlayer();
             if (distanceVect.y > 0) verticalMoveSpeed = Mathf.Abs(verticalMoveSpeed);
             else if (distanceVect.y < 0) verticalMoveSpeed = Mathf.Abs(verticalMoveSpeed) * -1;
@@ -51,6 +56,7 @@ public class Spider : EnemyAI
         }
         else if (transform.position != restingPoint) // Return to original point when player out of range
         {
+            myRB.gravityScale = 0;
             myRB.velocity = Vector3.zero;            
             transform.position = Vector3.MoveTowards(transform.position, restingPoint, Mathf.Abs(returnSpeed) * Time.deltaTime);
         }

@@ -30,7 +30,11 @@ public class SkeletonArcher : EnemyAI
     private void SkeletonArcherAI()
     {
         attackTimer += Time.deltaTime;
-        if (distanceToThePlayer > attackRange)
+        if (fearDebuff)
+        {
+            RunAwayFromPlayer();
+        }
+        else if (distanceToThePlayer > attackRange)
         {
             myEnemyPatrol.Patrol();
         }
@@ -41,6 +45,7 @@ public class SkeletonArcher : EnemyAI
             if (attackTimer >= attackInterval)
             {
                 // Attack Animation Maybe
+                // Attack SFX
                 GameObject enemyArrow = Instantiate(arrowPrefab, transform.position, transform.localRotation);
                 attackTimer = 0;
             }
@@ -63,18 +68,7 @@ public class SkeletonArcher : EnemyAI
         }
         else if (distanceToThePlayer <= runAwayRange && !wallChecker.IsTouchingLayers(LayerMask.GetMask("Ground"))) // Player is too close so runaway from the player. Unless near the wall
         {
-            Vector3 distanceVect = player.transform.position - transform.position;
-            playerIsOnRightSide = distanceVect.x > 0 ? true : false;
-            if (playerIsOnRightSide)
-            {
-                transform.localRotation = Quaternion.Euler(new Vector3(0, 180, 0));
-                myRB.velocity = new Vector2(-moveSpeed, myRB.velocity.y);
-            }
-            if (!playerIsOnRightSide)
-            {
-                transform.localRotation = Quaternion.Euler(new Vector3(0, 0, 0));
-                myRB.velocity = new Vector2(moveSpeed, myRB.velocity.y);
-            }
+            RunAwayFromPlayer();
         }
         else // this means no where left to run, so just attack the player
         {

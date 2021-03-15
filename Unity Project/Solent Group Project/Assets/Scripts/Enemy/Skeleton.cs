@@ -25,9 +25,13 @@ public class Skeleton : EnemyAI
     private void SkeletonAI()
     {
         attackTimer += Time.deltaTime;
-        if (distanceToThePlayer > attackRange)
+        if(fearDebuff)
         {
-            base.ChasePlayer();
+            RunAwayFromPlayer();
+        }
+        else if (distanceToThePlayer > attackRange)
+        {
+            base.EnemyAIChaseOrPatrol();
         }
         else if (distanceToThePlayer <= attackRange)
         {

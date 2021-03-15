@@ -17,6 +17,8 @@ public class EnemyAI : MonoBehaviour, IDamageable
     protected bool isAlive = true;
     protected float distanceToThePlayer;
     protected bool playerIsOnRightSide;
+    [SerializeField] protected bool fearDebuff = false; // When player uses scream, enemy gets fear debuff so enemy runs away from player.
+
 
     protected EnemyPatrol myEnemyPatrol;
 
@@ -43,13 +45,13 @@ public class EnemyAI : MonoBehaviour, IDamageable
     {
         if (!isAlive) return;
         MeasureDistanceToThePlayer();
-        ChasePlayer();
+        if (fearDebuff) RunAwayFromPlayer();       
+        else EnemyAIChaseOrPatrol();        
     }
-
-
+    
     #region Enemy A.I.
-    protected virtual void ChasePlayer()
-    {
+    protected virtual void EnemyAIChaseOrPatrol()
+    {        
         if (distanceToThePlayer <= chaseDistance)
         {
             TurnTowardsPlayer();
@@ -84,6 +86,22 @@ public class EnemyAI : MonoBehaviour, IDamageable
         if (!playerIsOnRightSide)
         {
             transform.localRotation = Quaternion.Euler(new Vector3(0, 180, 0));
+        }
+    }
+
+    protected virtual void RunAwayFromPlayer()
+    {
+        Vector3 distanceVect = player.transform.position - transform.position;
+        playerIsOnRightSide = distanceVect.x > 0 ? true : false;
+        if (playerIsOnRightSide)
+        {
+            transform.localRotation = Quaternion.Euler(new Vector3(0, 180, 0));
+            myRB.velocity = new Vector2(-moveSpeed, myRB.velocity.y);
+        }
+        if (!playerIsOnRightSide)
+        {
+            transform.localRotation = Quaternion.Euler(new Vector3(0, 0, 0));
+            myRB.velocity = new Vector2(moveSpeed, myRB.velocity.y);
         }
     }
 
@@ -128,8 +146,14 @@ public class EnemyAI : MonoBehaviour, IDamageable
         if(i < chanceToSpawnHealthPotions)
         {
             Instantiate(healthPotions, transform.position, Quaternion.identity);
-        }
-        
+        }        
+    }
+
+    public IEnumerator ApplyFearDebuff(float Fearduration) // Player skill apply fear debuff that makes enemy runaway
+    {
+        fearDebuff = true;
+        yield return new WaitForSeconds(Fearduration);
+        fearDebuff = false;
     }
     #endregion
 
