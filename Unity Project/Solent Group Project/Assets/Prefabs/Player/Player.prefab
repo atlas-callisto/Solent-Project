@@ -316,7 +316,7 @@ MonoBehaviour:
   currentWolfBar: 10
   wolfBarRegenRate: 0.1
   humanMoveSpeed: 4
-  humanJumpForce: 6
+  humanJumpForce: 7.5
   wolfMoveSpeed: 6
   wolfJumpForce: 8
   attackTrigger: {fileID: 6260531744811009317}
