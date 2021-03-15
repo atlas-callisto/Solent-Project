@@ -46,7 +46,7 @@ public class WereWolfBoss : EnemyAI
         boulderAttackTimer += Time.deltaTime;
         if (distanceToThePlayer > boulderAttackRange)
         {
-            base.ChasePlayer();
+            base.EnemyAIChaseOrPatrol();
         }
         else if (distanceToThePlayer <= boulderAttackRange && distanceToThePlayer > clawAttackRange && boulderAttackTimer >= boulderAttackInterval) // Player is within boulder attack range but outside melee range
         {
@@ -67,7 +67,7 @@ public class WereWolfBoss : EnemyAI
         }
         else if (distanceToThePlayer > clawAttackRange && boulderAttackTimer < boulderAttackInterval)
         {
-            base.ChasePlayer();
+            base.EnemyAIChaseOrPatrol();
         }
         else if (distanceToThePlayer <= clawAttackRange)
         {

@@ -6,52 +6,59 @@ using UnityEngine.SceneManagement;
 public class LevelLoader : MonoBehaviour
 {
     int currentScene = 0;
+    float sceneTransitionDelay = 2f;
+    string playerSpwanLocationName;
+    GameObject playerRef;
+    
+    public void NewGame() // Load new game
+    {
+        SceneManager.LoadScene("level1"); 
+    }
+    private void OnLevelWasLoaded()
+    {
+        playerRef = FindObjectOfType<Player>().gameObject;
+        if(GameObject.Find(playerSpwanLocationName)) playerRef.transform.position = GameObject.Find(playerSpwanLocationName).transform.position;
+    }
 
-    void Start()
+    public void RestartLevel()
     {
         currentScene = SceneManager.GetActiveScene().buildIndex;
-    }
-
-    private IEnumerator RestartLevelAfterPause()
-    {
-        yield return new WaitForSeconds(2);
         SceneManager.LoadScene(currentScene);
-    }
-    public void StartGame()
-    {
-        SceneManager.LoadScene("level1");
     }
     public void RestartLevelAfterAPause()
     {
         StartCoroutine(RestartLevelAfterPause());
     }
-    public void RestartLevel()
+    private IEnumerator RestartLevelAfterPause()
     {
+        currentScene = SceneManager.GetActiveScene().buildIndex;
+        yield return new WaitForSeconds(sceneTransitionDelay);
         SceneManager.LoadScene(currentScene);
     }
-    IEnumerator LoadNextLevel()
+   
+    public void LoadLevelWithName(string levelName , string spawnLocation)
     {
-        currentScene++;
+        playerSpwanLocationName = spawnLocation;
+        StartCoroutine(LoadNextLevel(levelName));
+    }
+    private IEnumerator LoadNextLevel(string levelName)
+    {
         yield return new WaitForSeconds(2);
-        //if (currentScene == SceneManager.sceneCountInBuildSettings)
-        //{
-        //    LoadMainMenu();
-        //}
-        SceneManager.LoadScene(currentScene);
-    }
-    public void LoadOptionsMenu()
-    {
-        SceneManager.LoadScene("OptionsMenu");
+        SceneManager.LoadScene(levelName);
     }
 
     public void LoadMainMenu()
     {
         SceneManager.LoadScene("MainMenu");
     }
+    public void LoadOptionsMenu()
+    {
+        SceneManager.LoadScene("OptionsMenu");
+    }   
 
     IEnumerator LoadGameOver()
     {
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(sceneTransitionDelay);
         SceneManager.LoadScene("GameOverScene");
     }
     public void QuitGame()

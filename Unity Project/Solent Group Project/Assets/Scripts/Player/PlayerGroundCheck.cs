@@ -18,7 +18,6 @@ public class PlayerGroundCheck : MonoBehaviour
             playerRef.canDoubleJump = true;
         }
     }
-
     private void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.gameObject.layer == 8 || collision.gameObject.layer == 10)

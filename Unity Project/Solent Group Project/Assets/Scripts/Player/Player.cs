@@ -18,6 +18,7 @@ public class Player : MonoBehaviour, IDamageable
     [Header("Wolf Stats")]
     [SerializeField] float wolfMoveSpeed = 6f;
     [SerializeField] float wolfJumpForce = 8f;
+    [SerializeField] float screamDuration = 2f; // Remove it later... Use the animation for the scream duration
 
 
     private float jumpForce = 5f;
@@ -29,6 +30,7 @@ public class Player : MonoBehaviour, IDamageable
     public GameObject projectilePrefab; // bullet to spwan during attack 2
     public PlayerWeapon playerWep;
     public PlayerWolfWeapon playerWolfWep;
+    public GameObject fearDebuffApplier;
 
     [Header("Cool Downs")]
     [SerializeField] private float basicAttackCoolDown = 2f;
@@ -201,15 +203,24 @@ public class Player : MonoBehaviour, IDamageable
             }
             if (Input.GetButtonDown("Special Attack"))
             {
-
                 if (specialAttackTimer >= specialAttakCoolDown)
                 {
-
+                    // fearDebuffApplier.SetActive(true); // Later On I won't need Coroutine
+                    StartCoroutine(UseWolfSpecialAttack());
                 }
             }
         }       
     }
-
+    public void FinishedScreaming() // Just like me after doing the code for this attack // Will be called through Animation Event
+    {
+        fearDebuffApplier.SetActive(false);
+    }
+    private IEnumerator UseWolfSpecialAttack()
+    {
+        fearDebuffApplier.SetActive(true);
+        yield return new WaitForSeconds(screamDuration);
+        fearDebuffApplier.SetActive(false);
+    }
     private void AttackWithType(int attackType)
     {
         playerWep.gameObject.SetActive(true);

@@ -28,8 +28,14 @@ public class Bat : EnemyAI
     private void BatAI()
     {
         MeasureDistanceToThePlayer();
-        if (distanceToThePlayer <= aggroDistance && chasePlayer)
+        if (fearDebuff)
         {
+            myRB.gravityScale = 1;
+            myRB.velocity = new Vector2(0, myRB.velocity.y);
+        }
+        else if (distanceToThePlayer <= aggroDistance && chasePlayer)
+        {
+            myRB.gravityScale = 0;
             TurnTowardsPlayer();
             if (distanceVect.y > 0) verticalFlightSpeed = Mathf.Abs(verticalFlightSpeed);
             else if (distanceVect.y < 0) verticalFlightSpeed = Mathf.Abs(verticalFlightSpeed) * -1;
@@ -43,7 +49,8 @@ public class Bat : EnemyAI
             }
         }
         else if (distanceToThePlayer <= aggroDistance && !chasePlayer) // Return to original point when player out of range
-        {            
+        {
+            myRB.gravityScale = 0;
             myRB.velocity = Vector3.zero;
             transform.position = Vector3.MoveTowards(transform.position, randomPoint, Mathf.Abs(runAwaySpeed) * Time.deltaTime);
             if (transform.position == randomPoint)
@@ -53,8 +60,9 @@ public class Bat : EnemyAI
         }
         else if (transform.position != restingPoint)
         {
-            chasePlayer = true;
+            myRB.gravityScale = 0;
             myRB.velocity = Vector3.zero;
+            chasePlayer = true;
             transform.position = Vector3.MoveTowards(transform.position, restingPoint, Mathf.Abs(runAwaySpeed) * Time.deltaTime);
         }
     }
