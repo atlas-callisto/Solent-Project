@@ -166,7 +166,6 @@ GameObject:
   - component: {fileID: 2160318093421502458}
   - component: {fileID: 6136028760170683767}
   - component: {fileID: 2160318093421502463}
-  - component: {fileID: 1795296415}
   m_Layer: 9
   m_Name: Player
   m_TagString: Player
@@ -232,7 +231,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -4266600461133651570, guid: a8b1391ca4d5ab148979d2dedb5562cc, type: 3}
+  m_Sprite: {fileID: 8798550677619067091, guid: 9242b6413c545114186911618ec6e6d2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -296,7 +295,7 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.09}
+  m_Offset: {x: 0, y: 0}
   m_Size: {x: 0.42, y: 0.83}
   m_Direction: 0
 --- !u!114 &2160318093421502463
@@ -311,13 +310,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b39cd6d1fb0a3674aa7508c7cea763a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 4
-  jumpForce: 8
   maxHealth: 10
   currentHealth: 10
   maxWolfBar: 10
   currentWolfBar: 10
   wolfBarRegenRate: 0.1
+  humanMoveSpeed: 4
+  humanJumpForce: 6
+  wolfMoveSpeed: 6
+  wolfJumpForce: 8
   attackTrigger: {fileID: 6260531744811009317}
   projectilePrefab: {fileID: 3099315621163623433, guid: 1e9b4710b01bbe747aa64808885a852a, type: 3}
   playerWep: {fileID: 1911803656}
@@ -325,20 +326,6 @@ MonoBehaviour:
   basicAttackCoolDown: 0.8
   heavyAttackCoolDown: 3
   specialAttakCoolDown: 5
-  currentMoveSpeed: 5
---- !u!114 &1795296415
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2160318093421502432}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 616c24f02879b2440aac79696e269fe8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: 0
 --- !u!1 &4439046340874876529
 GameObject:
   m_ObjectHideFlags: 0
@@ -638,7 +625,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5999511783106820429}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0.104, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2160318093421502459}

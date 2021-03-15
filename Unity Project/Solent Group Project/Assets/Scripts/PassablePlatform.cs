@@ -20,7 +20,7 @@ public class PassablePlatform : MonoBehaviour
     {
         if(collision.gameObject.tag == "Player")
         {
-            if (Input.GetKey(KeyCode.S) && playerRB.velocity.y <= 0)
+            if(Input.GetAxis("Vertical") <= -0.2 && playerRB.velocity.y <= 0)
             {
                 myPlatformEffector2D.rotationalOffset = 180;
             }

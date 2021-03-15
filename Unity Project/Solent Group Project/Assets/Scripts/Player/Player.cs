@@ -6,13 +6,22 @@ public class Player : MonoBehaviour, IDamageable
 {
     //Params
     [Header("Stats")]
-    [SerializeField] float moveSpeed = 4f;
-    [SerializeField] float jumpForce = 5f;
     [SerializeField] public int maxHealth = 10;
     [SerializeField] public int currentHealth = 10;
     [SerializeField] public float maxWolfBar = 10;
     [SerializeField] public float currentWolfBar = 10;
     [SerializeField] public float wolfBarRegenRate = 0.1f;
+
+    [Header("Human Stats")]
+    [SerializeField] float humanMoveSpeed = 4f;
+    [SerializeField] float humanJumpForce = 5f;
+    [Header("Wolf Stats")]
+    [SerializeField] float wolfMoveSpeed = 6f;
+    [SerializeField] float wolfJumpForce = 8f;
+
+
+    private float jumpForce = 5f;
+    private bool slowDebuff = false;
 
     //Ref Objs
     [Header("Objects Ref")]
@@ -28,7 +37,7 @@ public class Player : MonoBehaviour, IDamageable
     private float basicAttackTimer = 0f;
     private float heavyAttackTimer = 0f;
     private float specialAttackTimer = 0f;
-    [SerializeField] private float currentMoveSpeed = 4f;
+    private float currentMoveSpeed;
 
 
     internal bool wolf = false; //Transform to wolf, also called by moonlight script
@@ -53,7 +62,6 @@ public class Player : MonoBehaviour, IDamageable
         basicAttackTimer = basicAttackCoolDown;
         heavyAttackTimer = heavyAttackCoolDown;
         specialAttackTimer = specialAttakCoolDown;
-        currentMoveSpeed = moveSpeed;
     }
     private void Awake()
     {
@@ -69,6 +77,7 @@ public class Player : MonoBehaviour, IDamageable
         CoolDownChecker();
         PlayerAttack();
         Transform();
+        AdjustTransformStats();
     }
 
     #region Player Movement
@@ -103,6 +112,8 @@ public class Player : MonoBehaviour, IDamageable
         }
     }
     #endregion
+
+    #region
     private void Transform() // Wolf Transformation
     {
         if (Input.GetButtonDown("Transform"))
@@ -111,6 +122,24 @@ public class Player : MonoBehaviour, IDamageable
         }
         myAnimator.SetBool("Transform", wolf);
     }
+
+    private void AdjustTransformStats()
+    {
+        if(wolf)
+        {
+            jumpForce = wolfJumpForce;
+            if(!slowDebuff) currentMoveSpeed = wolfMoveSpeed;
+        }
+        else if(!wolf)
+        {
+            jumpForce = humanJumpForce;
+            if (!slowDebuff) currentMoveSpeed = humanMoveSpeed;
+        }
+    }
+
+
+
+    #endregion
 
     #region Player Attacks
     private void PlayerAttack()
@@ -303,9 +332,10 @@ public class Player : MonoBehaviour, IDamageable
     }
     private IEnumerator SlowMoveSpeed(float SlowPercentage, float slowDuration)
     {
+        slowDebuff = true;
         currentMoveSpeed = currentMoveSpeed * (SlowPercentage/100);
         yield return new WaitForSeconds(slowDuration);
-        currentMoveSpeed = moveSpeed;
+        slowDebuff = false;
     }
 
 
