@@ -15,49 +15,46 @@ public class Player : MonoBehaviour, IDamageable
     [Header("Human Stats")]
     [SerializeField] float humanMoveSpeed = 4f;
     [SerializeField] float humanJumpForce = 5f;
+
     [Header("Wolf Stats")]
     [SerializeField] float wolfMoveSpeed = 6f;
     [SerializeField] float wolfJumpForce = 8f;
     [SerializeField] float screamDuration = 2f; // Remove it later... Use the animation for the scream duration
-
-
-    private float jumpForce = 5f;
-    private bool slowDebuff = false;
+    
+    [Header("Cool Downs")]
+    [SerializeField] private float basicAttackCoolDown = 2f;  //Cool Downs for the attacks
+    [SerializeField] private float heavyAttackCoolDown = 5f;
+    [SerializeField] private float specialAttakCoolDown = 10f;
 
     //Ref Objs
     [Header("Objects Ref")]
-    public GameObject attackTrigger;    //Attack hitbox child
     public GameObject projectilePrefab; // bullet to spwan during attack 2
     public PlayerWeapon playerWep;
     public PlayerWolfWeapon playerWolfWep;
     public GameObject fearDebuffApplier;
 
-    [Header("Cool Downs")]
-    [SerializeField] private float basicAttackCoolDown = 2f;
-    [SerializeField] private float heavyAttackCoolDown = 5f;
-    [SerializeField] private float specialAttakCoolDown = 10f;
-    private float basicAttackTimer = 0f;
+    //Internal params
+    private float basicAttackTimer = 0f; //Timer to check enable attacks as per the cool downs
     private float heavyAttackTimer = 0f;
     private float specialAttackTimer = 0f;
     private float currentMoveSpeed;
-
+    private float jumpForce = 5f;
+    private bool slowDebuff = false; // SlowDebuff applied by enemy(spider) attacks
 
     internal bool wolf = false; //Transform to wolf, also called by moonlight script
     private bool playerAlive = true;
 
     internal bool isGrounded = false; // is modified by playerGroundCheck
     internal bool canDoubleJump = false;// is modified by playerGroundCheck
+    internal bool doubleJumpSkillAcquired = false; // enable double jump after air treaders(boots) are found Modified by Air Treaders
 
-    internal bool doubleJumpSkillAcquired = false; // enable double jump after skill is unlocked??? for later use
-    private bool playerCanTakeDmg = true;
-    private float timer = 0.2f; //timer to enable hitbox duration to match attack animation
-    private float playerInvunerabletimer = 0.5f; // timer to stop player playing from getting damage after taking a hit
+    private bool playerCanTakeDmg = true; // bool to stop player playing from getting damage after taking a hit for a short duration
+    private float playerInvunerabletimer = 0.5f; // The duration during which player cannot take damage // Used to stop multiple collision damage on the same frame
 
     //Comp Ref
     private Rigidbody2D myRB;
     private Animator myAnimator;
-    private SpriteRenderer mySpriteRenderer;
-    
+    private SpriteRenderer mySpriteRenderer;    
 
     void Start()
     {
@@ -115,7 +112,7 @@ public class Player : MonoBehaviour, IDamageable
     }
     #endregion
 
-    #region
+    #region Player Transformation
     private void Transform() // Wolf Transformation
     {
         if (Input.GetButtonDown("Transform"))
@@ -138,80 +135,61 @@ public class Player : MonoBehaviour, IDamageable
             if (!slowDebuff) currentMoveSpeed = humanMoveSpeed;
         }
     }
-
-
-
     #endregion
 
     #region Player Attacks
     private void PlayerAttack()
     {
-        if(!wolf)
+        if (Input.GetButtonDown("Basic Attack"))  // 1 = Basic attack, 2 = heavy attack, 3 = special attack
         {
-            if (Input.GetButtonDown("Basic Attack"))  // 1 = Basic attack, 2 = heavy attack, 3 = special attack
+            if (basicAttackTimer >= basicAttackCoolDown)
             {
-                if(basicAttackTimer >= basicAttackCoolDown)
-                {
-                    myAnimator.SetTrigger("Attack");
-                    AttackTrigger(timer);
-
-                    AttackWithType(1);// 1 = Basic attack, sending the type of attack it is supposed to be
-                }
-                
-            }
-            if (Input.GetButtonDown("Heavy Attack"))
-            {
-                if (heavyAttackTimer >= heavyAttackCoolDown)
-                {
-                    myAnimator.SetTrigger("Attack");
-                    AttackTrigger(timer);
-
-                    AttackWithType(2); // 2 = heavy attack, Sending the type of attack it is supposed to be
-                }
-                
-            }
-            if (Input.GetButtonDown("Special Attack"))
-            {
-                if (specialAttackTimer >= specialAttakCoolDown)
-                {
-                    //shooting animation                    
-                    ShootProjectile();
-
-                    specialAttackTimer = 0;
-                }
+                AttackWithType(1);
+                AttackTrigger(); // Used for SFX , will be adjusted later
             }
         }
-        else // If player has transformed to wolf
+        if (Input.GetButtonDown("Heavy Attack"))
         {
-            if (Input.GetButtonDown("Basic Attack"))
+            if (heavyAttackTimer >= heavyAttackCoolDown)
             {
-                if (basicAttackTimer >= basicAttackCoolDown)
-                {
-                    playerWolfWep.gameObject.SetActive(true);
-                    playerWolfWep.SetDamage(1);
-                    playerWolfWep.Attack(1);
-                }
+                AttackWithType(2);
+                AttackTrigger();
+                heavyAttackTimer = 0;
             }
-            if (Input.GetButtonDown("Heavy Attack"))
+        }
+        if (Input.GetButtonDown("Special Attack"))
+        {
+            if (specialAttackTimer >= specialAttakCoolDown)
             {
-                if (heavyAttackTimer >= heavyAttackCoolDown)
+                if (!wolf)
                 {
-                    playerWolfWep.gameObject.SetActive(true);
-                    playerWolfWep.SetDamage(2);
-                    playerWolfWep.Attack(2);
+                    ShootProjectile();     // 2 = player does ranged attack                    
                 }
-            }
-            if (Input.GetButtonDown("Special Attack"))
-            {
-                if (specialAttackTimer >= specialAttakCoolDown)
-                {
+                else
+                {                    
                     // fearDebuffApplier.SetActive(true); // Later On I won't need Coroutine
                     StartCoroutine(UseWolfSpecialAttack());
-                }
+                }                
+                specialAttackTimer = 0;
             }
-        }       
+        }  
     }
-    public void FinishedScreaming() // Just like me after doing the code for this attack // Will be called through Animation Event
+    private void AttackWithType(int attackType)
+    {
+        if(!wolf)
+        {
+            playerWep.gameObject.SetActive(true);
+            playerWep.SetDamage(attackType); // 2 = heavy attack, Sending the type of attack it is supposed to be
+            playerWep.Attack(attackType);
+        }
+        else // if the player is in wolf form
+        {
+            playerWolfWep.gameObject.SetActive(true);
+            playerWolfWep.SetDamage(attackType);
+            playerWolfWep.Attack(attackType);
+        }
+    }
+    public void FinishedScreaming() // Just like me after doing the code for this attack // Will be called through Animation Event instead of Co-routine
     {
         fearDebuffApplier.SetActive(false);
     }
@@ -221,74 +199,24 @@ public class Player : MonoBehaviour, IDamageable
         yield return new WaitForSeconds(screamDuration);
         fearDebuffApplier.SetActive(false);
     }
-    private void AttackWithType(int attackType)
-    {
-        playerWep.gameObject.SetActive(true);
-        playerWep.SetDamage(attackType); // 2 = heavy attack, Sending the type of attack it is supposed to be
-        playerWep.Attack(attackType);
-        switch (attackType) //Sets the attack timer to 0 depending on the type of attack used
-        {
-            case 1:
-                basicAttackTimer = 0;
-                break;
-
-            case 2:
-                heavyAttackTimer = 0;
-                break;
-
-            case 3:
-                specialAttackTimer = 0;
-                break;
-                
-            default:
-                break;
-        }
-    }
-    private void AttackTrigger(float time) // Enables Attack trigger, Will be adjusted later
+    private void AttackTrigger() // Only used for SFX, Will be adjusted later
     {
         SoundManager.mySoundManager.PlaySFX("SwordSound", 0.2f);
-        attackTrigger.SetActive(true);
-        StartCoroutine(AttackTriggerTimer(time));
     }
-
-    IEnumerator AttackTriggerTimer(float time) //Sets Attack timer or time between attack
-    {
-        yield return new WaitForSeconds(time);
-        attackTrigger.SetActive(false);
-    }
-
-    private void CoolDownChecker()
-    {
-        basicAttackTimer  = Mathf.Clamp(basicAttackTimer + Time.deltaTime ,0,basicAttackCoolDown);//Clamping values for precise UI display
-        heavyAttackTimer = Mathf.Clamp(heavyAttackTimer + Time.deltaTime, 0, heavyAttackCoolDown);
-        specialAttackTimer = Mathf.Clamp(specialAttackTimer + Time.deltaTime, 0, specialAttakCoolDown);
-        if(wolf) //Player is in wolf form, decreases wolf bar in wolf form
-        {
-            currentWolfBar = Mathf.Clamp(currentWolfBar -= Time.deltaTime, 0 , maxWolfBar);
-        }
-        else // Slowly Regenerate wolf bar when not in wolf form
-        {
-            currentWolfBar = Mathf.Clamp(currentWolfBar += Time.deltaTime * wolfBarRegenRate, 0, maxWolfBar);
-        }
-        if(currentWolfBar == 0) // Automatically transform into human when wolf bar reaches 0
-        {
-            wolf = false;
-        }
-    }
-
     public void ShootProjectile()
     {
         SoundManager.mySoundManager.PlaySFX("BulletSound", 0.2f);
         GameObject projectile = Instantiate(projectilePrefab, transform.position, transform.localRotation);
-    }     
+    }
     #endregion
 
+    #region Player Interact
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if(collision.tag == "Interactable")
+        if (collision.tag == "Interactable")
         {
             Interact(collision);
-        }        
+        }
     }
     private void Interact(Collider2D collision)
     {
@@ -298,6 +226,7 @@ public class Player : MonoBehaviour, IDamageable
             collision.GetComponent<Interactable>().Interact();
         }
     }
+    #endregion
 
     #region Player Take Damage
     public void TakeDamage(int damage) //Interface take damage
@@ -338,6 +267,25 @@ public class Player : MonoBehaviour, IDamageable
     }
     #endregion
 
+    #region Player Stats/Debuff Adjustments
+    private void CoolDownChecker()
+    {
+        basicAttackTimer = Mathf.Clamp(basicAttackTimer + Time.deltaTime, 0, basicAttackCoolDown);//Clamping values for precise UI display if it ever gets used in UI in future
+        heavyAttackTimer = Mathf.Clamp(heavyAttackTimer + Time.deltaTime, 0, heavyAttackCoolDown);
+        specialAttackTimer = Mathf.Clamp(specialAttackTimer + Time.deltaTime, 0, specialAttakCoolDown);
+        if (wolf) //Player is in wolf form, decreases wolf bar in wolf form
+        {
+            currentWolfBar = Mathf.Clamp(currentWolfBar -= Time.deltaTime, 0, maxWolfBar); // Clamping so as to to overincrease the value
+        }
+        else // Slowly Regenerate wolf bar when not in wolf form
+        {
+            currentWolfBar = Mathf.Clamp(currentWolfBar += Time.deltaTime * wolfBarRegenRate, 0, maxWolfBar);
+        }
+        if (currentWolfBar == 0) // Automatically transform into human when wolf bar reaches 0
+        {
+            wolf = false;
+        }
+    }
     public void SlowMoveSpeedDebuff(float SlowPercentage, float slowDuration)
     {
         StartCoroutine(SlowMoveSpeed(SlowPercentage, slowDuration));
@@ -345,10 +293,9 @@ public class Player : MonoBehaviour, IDamageable
     private IEnumerator SlowMoveSpeed(float SlowPercentage, float slowDuration)
     {
         slowDebuff = true;
-        currentMoveSpeed = currentMoveSpeed * (SlowPercentage/100);
+        currentMoveSpeed = currentMoveSpeed * (SlowPercentage / 100);
         yield return new WaitForSeconds(slowDuration);
         slowDebuff = false;
     }
-
-
+    #endregion
 }

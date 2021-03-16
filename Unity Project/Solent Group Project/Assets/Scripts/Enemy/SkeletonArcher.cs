@@ -11,7 +11,6 @@ public class SkeletonArcher : EnemyAI
     [SerializeField] private float runAwayRange; // If player is within this range, the skeleton tries to run away from the player
 
     [SerializeField] BoxCollider2D wallChecker; // If the box collider is touching the wall, it means skeleton is near the wall and cannot run beyond it
-
     [SerializeField] private GameObject arrowPrefab;
 
     private float attackTimer;
@@ -64,7 +63,6 @@ public class SkeletonArcher : EnemyAI
             //        }
             //    }
             //}
-
         }
         else if (distanceToThePlayer <= runAwayRange && !wallChecker.IsTouchingLayers(LayerMask.GetMask("Ground"))) // Player is too close so runaway from the player. Unless near the wall
         {

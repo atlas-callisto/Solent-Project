@@ -71,10 +71,18 @@ public class Bat : EnemyAI
     {
         base.OnCollisionStay2D(collision);
         if (chasePlayer == true)
-        { 
-        randomOffset = new Vector3 (UnityEngine.Random.Range(-2f,2f), UnityEngine.Random.Range(1f, 2f), 0);
-        randomPoint = player.transform.position + randomOffset;
-        chasePlayer = false;
+        {            
+            //var hitbox = Physics2D.BoxCast(randomOffset, new Vector2(1f, 1f), 0f , new Vector2(0,0), 0, 8);
+            //if (hitbox)
+            //{
+            //    UnityEngine.Random.InitState(Random.Range(0, 100));
+            //    randomOffset = new Vector3(UnityEngine.Random.Range(-2f, 2f), UnityEngine.Random.Range(1f, 2f), 0);
+            //    hitbox = Physics2D.BoxCast(randomOffset, new Vector2(1f, 1f), 0f, new Vector2(0, 0));
+            //}
+
+            randomOffset = new Vector3(UnityEngine.Random.Range(-2f, 2f), UnityEngine.Random.Range(1f, 2f), 0);
+            randomPoint = player.transform.position + randomOffset;
+            chasePlayer = false;
         }
     }
 

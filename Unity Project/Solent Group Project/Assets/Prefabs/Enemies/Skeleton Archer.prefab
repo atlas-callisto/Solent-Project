@@ -153,7 +153,7 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.23553658, y: -0.05255556}
+  m_Offset: {x: 0, y: -0.05255556}
   m_Size: {x: 0.8166313, y: 1.2484436}
   m_Direction: 0
 --- !u!114 &1510952540990081877
@@ -174,6 +174,7 @@ MonoBehaviour:
   chaseDistance: 10
   healthPotions: {fileID: 1187938275048797783, guid: ba123d3fc0894404f8a1e689890c7d44, type: 3}
   chanceToSpawnHealthPotions: 30
+  fearDebuff: 0
   attackRange: 6
   attackInterval: 2
   runAwayRange: 4

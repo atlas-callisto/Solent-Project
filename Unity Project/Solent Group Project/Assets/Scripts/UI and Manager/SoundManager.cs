@@ -39,4 +39,10 @@ public class SoundManager : MonoBehaviour
             AudioSource.PlayClipAtPoint(sfxCollection[clipName], this.gameObject.transform.position, volume);
         }
     }
+    public void PlaySFXWithTheGivenClip(AudioClip audioClip, float volume)
+    {
+        AudioSource.PlayClipAtPoint(audioClip, this.gameObject.transform.position, volume);
+    }
+
+
 }
