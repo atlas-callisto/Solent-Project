@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class LevelLoader : MonoBehaviour
 {
     int currentScene = 0;
-    float sceneTransitionDelay = 2f;
+    float sceneTransitionDelay = 0f;
     string playerSpwanLocationName;
     GameObject playerRef;
     
@@ -14,10 +14,11 @@ public class LevelLoader : MonoBehaviour
     {
         SceneManager.LoadScene("level1"); 
     }
-    private void OnLevelWasLoaded()
+    void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
         playerRef = FindObjectOfType<Player>().gameObject;
-        if(GameObject.Find(playerSpwanLocationName)) playerRef.transform.position = GameObject.Find(playerSpwanLocationName).transform.position;
+        if (GameObject.Find(playerSpwanLocationName)) playerRef.transform.position = GameObject.Find(playerSpwanLocationName).transform.position;
+        SceneManager.sceneLoaded -= OnSceneLoaded;
     }
 
     public void RestartLevel()
@@ -43,7 +44,8 @@ public class LevelLoader : MonoBehaviour
     }
     private IEnumerator LoadNextLevel(string levelName)
     {
-        yield return new WaitForSeconds(2);
+        SceneManager.sceneLoaded += OnSceneLoaded;
+        yield return new WaitForSeconds(0.1f);
         SceneManager.LoadScene(levelName);
     }
 

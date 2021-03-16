@@ -39,7 +39,6 @@ public class PassablePlatform : MonoBehaviour
     }
     IEnumerator ResetPlatformOrientation()
     {
-        Debug.Log("Co-Called");
         yield return new WaitForSeconds(0.1f);
         platformCanFlip = true;
 

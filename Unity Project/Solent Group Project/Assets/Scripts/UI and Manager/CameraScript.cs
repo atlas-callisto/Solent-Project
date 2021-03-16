@@ -18,12 +18,6 @@ public class CameraScript : MonoBehaviour
             transform.position = new Vector3(followTarget.transform.position.x, followTarget.transform.position.y, offset);        
     }
 
-    public void ToggleInvsibleLayer()
-    {
-        Debug.Log("yo");
-        GetComponent<Camera>().cullingMask += 1 << 10;
-    }    
-
     public IEnumerator CameraShake(float duration, float magnitude)
     {
         Vector3 originalPos = transform.position;
