@@ -105,7 +105,7 @@ GameObject:
   - component: {fileID: 784721579710125823}
   - component: {fileID: 784721579710125822}
   - component: {fileID: 784721579710125821}
-  m_Layer: 10
+  m_Layer: 8
   m_Name: Moving Platform
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -218,4 +218,4 @@ MonoBehaviour:
   pointA: {fileID: 784721578937791159}
   pointB: {fileID: 784721578589151748}
   moveSpeed: 1
-  moveTowardspointB: 1
+  isEnabled: 0

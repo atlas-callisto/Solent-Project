@@ -7,6 +7,7 @@ public class LevelLoader : MonoBehaviour
 {
     int currentScene = 0;
     float sceneTransitionDelay = 0f;
+    float restartSceneDelay = 2f;
     string playerSpwanLocationName;
     GameObject playerRef;
     
@@ -33,7 +34,7 @@ public class LevelLoader : MonoBehaviour
     private IEnumerator RestartLevelAfterPause()
     {
         currentScene = SceneManager.GetActiveScene().buildIndex;
-        yield return new WaitForSeconds(sceneTransitionDelay);
+        yield return new WaitForSeconds(restartSceneDelay);
         SceneManager.LoadScene(currentScene);
     }
    
@@ -45,7 +46,7 @@ public class LevelLoader : MonoBehaviour
     private IEnumerator LoadNextLevel(string levelName)
     {
         SceneManager.sceneLoaded += OnSceneLoaded;
-        yield return new WaitForSeconds(0.1f);
+        yield return new WaitForSeconds(sceneTransitionDelay);
         SceneManager.LoadScene(levelName);
     }
 
@@ -60,7 +61,7 @@ public class LevelLoader : MonoBehaviour
 
     IEnumerator LoadGameOver()
     {
-        yield return new WaitForSeconds(sceneTransitionDelay);
+        yield return new WaitForSeconds(restartSceneDelay);
         SceneManager.LoadScene("GameOverScene");
     }
     public void QuitGame()

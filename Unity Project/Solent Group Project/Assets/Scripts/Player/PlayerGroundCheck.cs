@@ -12,7 +12,7 @@ public class PlayerGroundCheck : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.layer == 8 || collision.gameObject.layer == 10) // 8 = "Ground" layer, 10 = "Transparent Platform"
+        if (collision.gameObject.layer == 8) // 8 = "Ground" layer
         {
             playerRef.isGrounded = true;
             playerRef.canDoubleJump = true;
@@ -20,7 +20,7 @@ public class PlayerGroundCheck : MonoBehaviour
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.gameObject.layer == 8 || collision.gameObject.layer == 10)
+        if (collision.gameObject.layer == 8)
         {
             playerRef.isGrounded = false;
         }

@@ -310,6 +310,7 @@ public class Player : MonoBehaviour, IDamageable
             StartCoroutine(playerInvunerableDuration());
             if (currentHealth <= 0)
             {
+                myRB.velocity = new Vector2(0, myRB.velocity.y); // Stops player corpse from sliding
                 SoundManager.mySoundManager.PlaySFX("PlayerDeathSound", 1f);
                 playerAlive = false;
                 myAnimator.SetTrigger("Dead");
