@@ -54,6 +54,7 @@ public class EnemyAI : MonoBehaviour, IDamageable
     {        
         if (distanceToThePlayer <= chaseDistance)
         {
+            Debug.Log("Hello");
             TurnTowardsPlayer();
             if (playerIsOnRightSide)
             {
