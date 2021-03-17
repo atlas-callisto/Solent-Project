@@ -4,14 +4,24 @@ using UnityEngine;
 
 public class Item : MonoBehaviour , Interactable
 {
-    GameObject movingPlatform;
+    List<GameObject> movingPlatformList = new List<GameObject>();
     void Awake()
     {
-        movingPlatform = FindObjectOfType<MovingPlatform>().gameObject;
+        var movingPlatforms = FindObjectsOfType<MovingPlatform>();
+        foreach(MovingPlatform movingPlatform in movingPlatforms)
+        {
+            movingPlatformList.Add(movingPlatform.gameObject);
+        }
     }
     public void Interact()
     {
-        movingPlatform.SetActive(true);
+        if(movingPlatformList.Count > 0)
+        {
+            foreach (GameObject movingPlatformGameObject in movingPlatformList)
+            {
+                movingPlatformGameObject.SetActive(true);
+            }
+        }        
         Destroy(gameObject);
     }
 }
