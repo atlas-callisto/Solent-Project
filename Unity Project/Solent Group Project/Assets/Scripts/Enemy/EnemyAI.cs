@@ -54,7 +54,6 @@ public class EnemyAI : MonoBehaviour, IDamageable
     {        
         if (distanceToThePlayer <= chaseDistance)
         {
-            Debug.Log("Hello");
             TurnTowardsPlayer();
             if (playerIsOnRightSide)
             {
@@ -118,7 +117,7 @@ public class EnemyAI : MonoBehaviour, IDamageable
             iDamageableObj.TakeDamage(damage);
         }
     }
-    public void TakeDamage(int damage) //Take Damage
+    virtual public void TakeDamage(int damage) //Take Damage
     {
         if (health > 0 && isAlive)
         {
