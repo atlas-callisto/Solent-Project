@@ -90,7 +90,7 @@ public class EnemyAI : MonoBehaviour, IDamageable
     }
 
     protected virtual void RunAwayFromPlayer()
-    {
+    {        
         Vector3 distanceVect = player.transform.position - transform.position;
         playerIsOnRightSide = distanceVect.x > 0 ? true : false;
         if (playerIsOnRightSide)

@@ -237,11 +237,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92c460a7e2fbc6c418d9fc7c78f7b78c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 4
+  health: 40
   moveSpeed: 1
   damage: 1
   chaseDistance: 8
-  healthPotions: {fileID: 0}
+  healthPotions: {fileID: 1187938275048797783, guid: ba123d3fc0894404f8a1e689890c7d44, type: 3}
   chanceToSpawnHealthPotions: 30
   fearDebuff: 0
   meleeAttackRange: 2
@@ -250,14 +250,19 @@ MonoBehaviour:
   rangedAttackInterval: 3
   numOfZombiesToSpawn: 3
   numOfBatsToSpawn: 3
-  numOfWaves: 0
+  numOfSkeletonsToSpawn: 3
+  numOfWaves: 3
   magicalBarrierIsOn: 0
   summoningMinions: 0
   magicalBarrierGameObject: {fileID: 1317257139404686090}
-  zombieAIPrefab: {fileID: 1951015803762913734, guid: 8a8f7b621564c3847baeafdce185fa24, type: 3}
-  BatAIPrefab: {fileID: 8495587268032491136, guid: 1f075cf188a788a4cb3ddfb745b40d71, type: 3}
+  zombieAIPrefab: {fileID: 1591418635905663523, guid: f97d2479617edd944bb205e59e61355f, type: 3}
+  batAIPrefab: {fileID: 8495587268032491136, guid: 1f075cf188a788a4cb3ddfb745b40d71, type: 3}
+  skeletonAIPrefab: {fileID: 1951015803762913734, guid: 8a8f7b621564c3847baeafdce185fa24, type: 3}
   zombieSpawnLocations:
   - {fileID: 0}
   batSpawnLocations:
   - {fileID: 0}
+  skeletonSpawnLocations:
+  - {fileID: 0}
   minionCounter: 0
+  currentWave: 1
