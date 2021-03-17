@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 8412005961085261960}
   - component: {fileID: 8412005961085261961}
   - component: {fileID: 8412005961085261962}
-  - component: {fileID: 8412005961085262006}
   - component: {fileID: 8027500909484550645}
+  - component: {fileID: 8412005961085262006}
   m_Layer: 11
   m_Name: Spider
   m_TagString: Enemy
@@ -106,29 +106,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 5
---- !u!114 &8412005961085262006
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8412005961085262007}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b1f6632a7308bfa49a32f8e8bfbe8f32, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: 4
-  moveSpeed: 1
-  damage: 1
-  chaseDistance: 4
-  healthPotions: {fileID: 1187938275048797783, guid: ba123d3fc0894404f8a1e689890c7d44, type: 3}
-  chanceToSpawnHealthPotions: 30
-  aggroDistance: 12
-  verticalMoveSpeed: 2
-  returnSpeed: 4
-  webPrefab: {fileID: 5958209697578809459, guid: f7d0718bcb25a884ca6194d05b7176c9, type: 3}
-  shootingInterval: 4
 --- !u!58 &8027500909484550645
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -145,3 +122,28 @@ CircleCollider2D:
   m_Offset: {x: 0.0023403168, y: 0}
   serializedVersion: 2
   m_Radius: 0.558403
+--- !u!114 &8412005961085262006
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8412005961085262007}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1f6632a7308bfa49a32f8e8bfbe8f32, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 4
+  moveSpeed: 1
+  damage: 1
+  chaseDistance: 6
+  healthPotions: {fileID: 1187938275048797783, guid: ba123d3fc0894404f8a1e689890c7d44, type: 3}
+  chanceToSpawnHealthPotions: 30
+  fearDebuff: 0
+  aggroDistance: 8
+  verticalMoveSpeed: 2
+  returnSpeed: 4
+  maxVerticalMoveDistance: 5
+  webPrefab: {fileID: 5958209697578809459, guid: f7d0718bcb25a884ca6194d05b7176c9, type: 3}
+  shootingInterval: 4
