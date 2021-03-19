@@ -45,7 +45,7 @@ public class Player : MonoBehaviour, IDamageable
 
 
     internal bool wolf = false; //Transform to wolf, also called by moonlight script
-    private bool playerAlive = true;
+    public bool playerAlive = true;
 
     internal bool isGrounded = false; // is modified by playerGroundCheck
     internal bool canDoubleJump = false;// is modified by playerGroundCheck
@@ -360,6 +360,7 @@ public class Player : MonoBehaviour, IDamageable
 
     private IEnumerator Die()
     {
+        currentHealth = 0;
         yield return new WaitForSeconds(playerRespawnDelay);
 
         Scene scene = SceneManager.GetActiveScene(); 
