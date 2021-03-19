@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour, IDamageable
 {
@@ -40,6 +41,7 @@ public class Player : MonoBehaviour, IDamageable
     private float heavyAttackTimer = 0f;
     private float specialAttackTimer = 0f;
     private float currentMoveSpeed;
+    public float playerRespawnDelay;
 
 
     internal bool wolf = false; //Transform to wolf, also called by moonlight script
@@ -57,7 +59,7 @@ public class Player : MonoBehaviour, IDamageable
     private Rigidbody2D myRB;
     private Animator myAnimator;
     private SpriteRenderer mySpriteRenderer;
-    
+
 
     void Start()
     {
@@ -73,7 +75,13 @@ public class Player : MonoBehaviour, IDamageable
     }
     void Update()
     {
-        if (!playerAlive) return;
+        if (!playerAlive)
+        {
+            StartCoroutine(Die());
+            
+            return;
+        }
+
         PlayerMovement();
         PlayerJump();
         CoolDownChecker();
@@ -350,5 +358,11 @@ public class Player : MonoBehaviour, IDamageable
         slowDebuff = false;
     }
 
+    private IEnumerator Die()
+    {
+        yield return new WaitForSeconds(playerRespawnDelay);
 
+        Scene scene = SceneManager.GetActiveScene(); 
+        SceneManager.LoadScene(scene.name);
+    }
 }
