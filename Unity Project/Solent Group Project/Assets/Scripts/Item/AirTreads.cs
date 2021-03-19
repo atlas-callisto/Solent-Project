@@ -6,7 +6,7 @@ public class AirTreads : MonoBehaviour , Interactable
 {
     public void Interact()
     {
-        FindObjectOfType<Player>().doubleJumpSkillAcquired = true; ;
+        FindObjectOfType<Player>().doubleJumpSkillAcquired = true;
         Destroy(gameObject);
     }
 }
