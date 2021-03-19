@@ -11,6 +11,19 @@ public class PickupHovering : MonoBehaviour
 
     public bool IsReturning;
 
+    private void Start()
+    {
+        // Sets default values incase people forget to assign them in the inspector
+        if(VerticalMovementSpeed == 0)
+        {
+            VerticalMovementSpeed = 0.5f;
+        }
+        if(MaxTravelDistance == 0)
+        {
+            MaxTravelDistance = 35;
+        }
+    }
+
     void Update()
     {
         // Up and down wobbling
