@@ -12,7 +12,7 @@ public class EnemyAI : MonoBehaviour, IDamageable
     [SerializeField] protected GameObject healthPotions;
 
     [Header("Chance is in Percentage from 0 to 100")]
-    [SerializeField] float chanceToSpawnHealthPotions = 30f; // percentage from 1 to 100
+    [SerializeField] float chanceToSpawnHealthPotions = 20f; // percentage from 1 to 100
 
     protected bool isAlive = true;
     protected float distanceToThePlayer;

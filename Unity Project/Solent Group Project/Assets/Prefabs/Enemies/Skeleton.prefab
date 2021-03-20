@@ -281,7 +281,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 391f8b711b39ee442aa9429d735ab583, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c4c11317532cbf44ca5f656d4779677e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -330,7 +330,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.5429688, y: 1.5234375}
+    oldSize: {x: 0.96, y: 1.53}
     newSize: {x: 7.9, y: 7.8}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -357,6 +357,7 @@ MonoBehaviour:
   chaseDistance: 4
   healthPotions: {fileID: 1187938275048797783, guid: ba123d3fc0894404f8a1e689890c7d44, type: 3}
   chanceToSpawnHealthPotions: 30
+  fearDebuff: 0
   attackRange: 1
   attackInterval: 2
   weapon: {fileID: 1951015802281766033}
