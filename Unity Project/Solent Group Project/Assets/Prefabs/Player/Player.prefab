@@ -277,7 +277,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 2.5
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -317,9 +317,9 @@ MonoBehaviour:
   currentWolfBar: 10
   wolfBarRegenRate: 0.1
   humanMoveSpeed: 4
-  humanJumpForce: 7.5
+  humanJumpForce: 12
   wolfMoveSpeed: 6
-  wolfJumpForce: 8
+  wolfJumpForce: 14
   screamDuration: 2
   attackTrigger: {fileID: 6260531744811009317}
   projectilePrefab: {fileID: 3099315621163623433, guid: 1e9b4710b01bbe747aa64808885a852a, type: 3}
@@ -329,6 +329,8 @@ MonoBehaviour:
   basicAttackCoolDown: 0.8
   heavyAttackCoolDown: 3
   specialAttakCoolDown: 5
+  playerRespawnDelay: 2
+  playerAlive: 1
 --- !u!1 &4439046340874876529
 GameObject:
   m_ObjectHideFlags: 0
@@ -659,7 +661,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.31}
+  m_Offset: {x: 0.023332238, y: -0.29782662}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -670,7 +672,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.37, y: 0.46}
+  m_Size: {x: 0.4247799, y: 0.43565327}
   m_EdgeRadius: 0
 --- !u!1 &6260531744811009317
 GameObject:
@@ -718,7 +720,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.4, y: 0}
+  m_Offset: {x: 0.4720256, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -729,7 +731,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.6, y: 0.3}
+  m_Size: {x: 0.74405116, y: 0.3}
   m_EdgeRadius: 0
 --- !u!50 &6798482400165889271
 Rigidbody2D:

@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 2691536555842065405}
   - component: {fileID: 2691536555842065403}
   - component: {fileID: 2691536555842065400}
+  - component: {fileID: 1485508176}
   m_Layer: 0
   m_Name: SpecialItem
   m_TagString: Interactable
@@ -28,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 2691536555842065404}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -4.14, y: -2.15, z: 0}
-  m_LocalScale: {x: 0.39366, y: 0.39366, z: 0}
+  m_LocalScale: {x: 0.901105, y: 0.901105, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -74,7 +75,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: a74bd0d2c6128854380879e26f4043ba, type: 3}
-  m_Color: {r: 0.23949803, g: 0.24528301, b: 0.23965093, a: 1}
+  m_Color: {r: 0.9317267, g: 1, b: 0.7028302, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -97,7 +98,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.013956964, y: -0.004659295}
+  m_Offset: {x: 0.025908351, y: 0.17048967}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -108,7 +109,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.0915774, y: 1.7716234}
+  m_Size: {x: 2.9487884, y: 6.0154476}
   m_EdgeRadius: 0
 --- !u!114 &2691536555842065400
 MonoBehaviour:
@@ -122,3 +123,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: adeb90adb7ebab2469f7ecb263e1137f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1485508176
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2691536555842065404}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43669fb6ea6329940b021d6df1e789c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  VerticalMovementSpeed: 0.5
+  MaxTravelDistance: 35
+  IsReturning: 0

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour, IDamageable
 {
@@ -40,10 +41,11 @@ public class Player : MonoBehaviour, IDamageable
     private float heavyAttackTimer = 0f;
     private float specialAttackTimer = 0f;
     private float currentMoveSpeed;
+    public float playerRespawnDelay;
 
 
     internal bool wolf = false; //Transform to wolf, also called by moonlight script
-    private bool playerAlive = true;
+    public bool playerAlive = true;
 
     internal bool isGrounded = false; // is modified by playerGroundCheck
     internal bool canDoubleJump = false;// is modified by playerGroundCheck
@@ -51,13 +53,13 @@ public class Player : MonoBehaviour, IDamageable
     internal bool doubleJumpSkillAcquired = false; // enable double jump after skill is unlocked??? for later use
     private bool playerCanTakeDmg = true;
     private float timer = 0.2f; //timer to enable hitbox duration to match attack animation
-    private float playerInvunerabletimer = 0.5f; // timer to stop player playing from getting damage after taking a hit
+    private float playerInvunerabletimer = 1.5f; // timer to stop player playing from getting damage after taking a hit
 
     //Comp Ref
     private Rigidbody2D myRB;
     private Animator myAnimator;
     private SpriteRenderer mySpriteRenderer;
-    
+
 
     void Start()
     {
@@ -73,7 +75,13 @@ public class Player : MonoBehaviour, IDamageable
     }
     void Update()
     {
-        if (!playerAlive) return;
+        if (!playerAlive)
+        {
+            StartCoroutine(Die());
+            
+            return;
+        }
+
         PlayerMovement();
         PlayerJump();
         CoolDownChecker();
@@ -350,5 +358,12 @@ public class Player : MonoBehaviour, IDamageable
         slowDebuff = false;
     }
 
+    private IEnumerator Die()
+    {
+        currentHealth = 0;
+        yield return new WaitForSeconds(playerRespawnDelay);
 
+        Scene scene = SceneManager.GetActiveScene(); 
+        SceneManager.LoadScene(scene.name);
+    }
 }

@@ -4,6 +4,16 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+    [Header("Completed Events")]
+    public bool werewolfBossDefeated;
+    public bool necromancerBossDefeated;
+    public bool lordProtectorBossDefeated;
+
+    [Header("Unlocked Abilities")]
+    public bool airTreaders;
+    public bool moonsEyeMonacle;
+
+
     private void Awake()
     {
         SetUpSingleton();
