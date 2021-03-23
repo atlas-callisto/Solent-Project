@@ -6,6 +6,6 @@ public class MinionCounter : MonoBehaviour
 {
     private void OnDestroy()
     {
-        FindObjectOfType<NecroMancerBoss>().minionCounter--;
+        if(FindObjectOfType<NecroMancerBoss>()) FindObjectOfType<NecroMancerBoss>().minionCounter--;
     }
 }

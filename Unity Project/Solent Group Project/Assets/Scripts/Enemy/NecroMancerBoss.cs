@@ -15,6 +15,7 @@ public class NecroMancerBoss : EnemyAI
     [SerializeField] int numOfBatsToSpawn;
     [SerializeField] int numOfSkeletonsToSpawn;
     [SerializeField] int numOfWaves;
+    [SerializeField] private float summoningDuration;
 
     [SerializeField] bool magicalBarrierIsOn = false; // Remove Expose later on
     [SerializeField] bool summoningMinions = false;   // Remove Expose later on
@@ -34,8 +35,11 @@ public class NecroMancerBoss : EnemyAI
     Collider2D myCollider2D;
     private float rangedAttackTimer;
     private float meleeAttackTimer;
-    [SerializeField] public int minionCounter = 0;
-    [SerializeField] private int currentWave = 1;
+    internal int minionCounter = 0; // internal becaused its accessed by minion counter
+    private int currentWave = 1;
+
+    [SerializeField] private AudioClip fireBallSFX;
+    [SerializeField] private AudioClip staffAttackSFX;
 
     protected override void Start()
     {
@@ -86,7 +90,7 @@ public class NecroMancerBoss : EnemyAI
             base.EnemyAIChaseOrPatrol();
             myAnimator.SetBool("isWalking", true);
         }
-        else if (distanceToThePlayer <= rangeAttackRange && distanceToThePlayer > meleeAttackRange) // Player is within boulder attack range but outside melee range
+        else if (distanceToThePlayer <= rangeAttackRange && distanceToThePlayer > meleeAttackRange) // Player is within projectile attack range but outside melee range
         {
             myAnimator.SetBool("isWalking", false);
             TurnTowardsPlayer();
@@ -95,6 +99,8 @@ public class NecroMancerBoss : EnemyAI
             if (rangedAttackTimer >= rangedAttackInterval)
             {
                 //do ranged attack
+                //SFX??
+                // AudioSource.PlayClipAtPoint(fireBallSFX, Camera.main.transform.position);
                 GameObject enemyFireBall = Instantiate(fireBallProjectilePrefab, transform.position, transform.localRotation);
                 rangedAttackTimer = 0;                
             }
@@ -106,6 +112,7 @@ public class NecroMancerBoss : EnemyAI
             if (meleeAttackTimer >= meleeAttackInterval)
             {
                 //Attack with staff
+                //AudioSource.PlayClipAtPoint(staffAttackSFX, Camera.main.transform.position);
                 staffWeaponPrefab.SetActive(true);
                 meleeAttackTimer = 0;
             }
@@ -117,43 +124,45 @@ public class NecroMancerBoss : EnemyAI
         summoningMinions = true;
         ToggleMagicalShield(false);
         myAnimator.SetBool("summoning", true);
+        yield return new WaitForSeconds(summoningDuration);
+
+        if (currentWave == 3) numOfZombiesToSpawn = 2;
         for (int i = 0; i < numOfZombiesToSpawn; i++)
         {
-            GameObject minion = Instantiate(zombieAIPrefab, zombieSpawnLocations[0].position, Quaternion.identity);
+            GameObject minion = Instantiate(zombieAIPrefab, zombieSpawnLocations[i].position, Quaternion.identity);
+            minion.GetComponent<EnemyAI>().chaseDistance = 20f;
             minion.AddComponent<MinionCounter>();
             minionCounter++;
-            yield return new WaitForSeconds(1.5f);
         }
         if (currentWave >= 2) // Bats are summond in 2nd wave and after
         {
             for (int i = 0; i < numOfBatsToSpawn; i++)
-            {
-                GameObject minion = Instantiate(batAIPrefab, batSpawnLocations[0].position, Quaternion.identity);
+            {                
+                GameObject minion = Instantiate(batAIPrefab, batSpawnLocations[i].position, Quaternion.identity);
+                minion.GetComponent<EnemyAI>().chaseDistance = 20f;
                 minion.AddComponent<MinionCounter>();
                 minionCounter++;
-                yield return new WaitForSeconds(1.5f);
             }
         }
         if(currentWave >= 3) // Skeleton are summond in 3rd wave
         {
             for (int i = 0; i < numOfSkeletonsToSpawn; i++)
             {
-                GameObject minion = Instantiate(skeletonAIPrefab, skeletonSpawnLocations[0].position, Quaternion.identity);
+                GameObject minion = Instantiate(skeletonAIPrefab, skeletonSpawnLocations[i].position, Quaternion.identity);
+                minion.GetComponent<EnemyAI>().chaseDistance = 20f;
                 minion.AddComponent<MinionCounter>();
                 minionCounter++;
-                yield return new WaitForSeconds(1.5f);
             }       
         }
         currentWave++;
         summoningMinions = false;
-        ToggleMagicalShield(true);
+        if(currentWave != 4) ToggleMagicalShield(true);
         myAnimator.SetBool("summoning", false);        
     }
     private void SummonEnemies()
     {
         StartCoroutine(StartSummoning());
-    }
-    
+    }    
     private void ToggleMagicalShield(bool toggle)
     {
         magicalBarrierIsOn = toggle;

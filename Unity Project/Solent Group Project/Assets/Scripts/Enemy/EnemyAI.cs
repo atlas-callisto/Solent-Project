@@ -8,7 +8,7 @@ public class EnemyAI : MonoBehaviour, IDamageable
     [SerializeField] int health = 4;
     [SerializeField] public float moveSpeed = 1f;
     [SerializeField] int damage = 1;    
-    [SerializeField] protected float chaseDistance = 4f;
+    [SerializeField] public float chaseDistance = 4f;
     [SerializeField] protected GameObject healthPotions;
 
     [Header("Chance is in Percentage from 0 to 100")]
