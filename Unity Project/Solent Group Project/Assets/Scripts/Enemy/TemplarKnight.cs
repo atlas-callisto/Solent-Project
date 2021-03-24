@@ -10,10 +10,13 @@ public class TemplarKnight : EnemyAI
     [SerializeField] private float chargeRange;
     [SerializeField] private float shieldAttackRange;
     [SerializeField] private float shieldAttackInterval;
-    [SerializeField] private float chargeSpeed;
+    [SerializeField] private float chargeAttackMoveSpeed;
     [Tooltip("The delay before the knight charges")]
     [SerializeField] private float preChargeDuration;
+    [Tooltip("The duration till which the knight charges forward")]
     [SerializeField] private float chargeDuration;
+    [Tooltip("The delay before the knight waits before turning towards the player")] 
+    [SerializeField] private float afterChargeWaitDuration;
 
     [Header("Templar Knight Objects Ref")]
     [SerializeField] private GameObject spear;
@@ -22,8 +25,9 @@ public class TemplarKnight : EnemyAI
     [Header("Templar Knight SFX")]
     [SerializeField] private AudioClip chargeAttackSFX;
     [SerializeField] private AudioClip shieldAttackSFX;
-    private bool chargingTowardsPlayer = false;    
+    public bool chargingTowardsPlayer = false;    
     private float shieldAttackTimer;
+    private IEnumerator attackEnemy;
 
     protected override void Start()
     {
@@ -40,42 +44,52 @@ public class TemplarKnight : EnemyAI
         MeasureDistanceToThePlayer();
         shieldAttackTimer += Time.deltaTime;
 
-        if (distanceToThePlayer > chaseDistance)
+        if (distanceToThePlayer > chaseDistance && !chargingTowardsPlayer)
         {
             base.EnemyAIChaseOrPatrol();
         }
-        else if (distanceToThePlayer <= chargeRange && distanceToThePlayer > shieldAttackRange)
+        else if (distanceToThePlayer <= chargeRange && distanceToThePlayer > shieldAttackRange && !chargingTowardsPlayer)
         {
-            if(!chargingTowardsPlayer)
-            {
-                StartCoroutine(ChargeTowardsPlayer());
-            }
+            attackEnemy = ChargeTowardsPlayer();
+            StartCoroutine(attackEnemy); 
         }
         else if (!chargingTowardsPlayer && distanceToThePlayer <= shieldAttackRange)
         {
+            base.EnemyAIChaseOrPatrol();
             if ( shieldAttackTimer >= shieldAttackInterval) ShieldBash();
         }
     }
-    private IEnumerator ChargeTowardsPlayer()
+    private IEnumerator ChargeTowardsPlayer() 
     {
+        PlaySFX(chargeAttackSFX);
         chargingTowardsPlayer = true;
-        spear.SetActive(true);
         myRB.velocity = new Vector2(0, myRB.velocity.y);
-        yield return new WaitForSeconds(preChargeDuration);
         TurnTowardsPlayer();
-        myRB.velocity = new Vector2(chargeSpeed, myRB.velocity.y);
+        spear.SetActive(true);
+
+        yield return new WaitForSeconds(preChargeDuration);
+        if (playerIsOnRightSide) myRB.velocity = new Vector2(chargeAttackMoveSpeed, myRB.velocity.y);
+        else if (!playerIsOnRightSide) myRB.velocity = new Vector2(-chargeAttackMoveSpeed, myRB.velocity.y);
+
         yield return new WaitForSeconds(chargeDuration);
+        myRB.velocity = new Vector2(0, myRB.velocity.y);
+
+        yield return new WaitForSeconds(afterChargeWaitDuration);
         chargingTowardsPlayer = false;
         spear.SetActive(false);
-
     }
     private void ShieldBash()
     {
+        PlaySFX(shieldAttackSFX);
         shieldAttackTimer = 0;
-        //myAnimator.SetTrigger("Attack");
         shield.SetActive(true);
     }
-
+    public void StopChargingTowardsPlayer()
+    {
+        StopCoroutine(attackEnemy);
+        chargingTowardsPlayer = false;
+        myRB.velocity = new Vector2(0, myRB.velocity.y);        
+    }
     protected override void OnCollisionStay2D(Collision2D collision)
     {
         IDamageable iDamageableObj;
@@ -89,4 +103,5 @@ public class TemplarKnight : EnemyAI
             }
         }
     }
+
 }

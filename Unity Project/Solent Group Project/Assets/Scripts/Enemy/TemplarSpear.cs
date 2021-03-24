@@ -6,6 +6,12 @@ public class TemplarSpear : MonoBehaviour
 {
     [SerializeField] private int damage = 1;
     public bool playerWasHit = false;
+    private TemplarKnight myTemplarKnightRef;
+
+    void Start()
+    {
+        myTemplarKnightRef = GetComponentInParent<TemplarKnight>();
+    }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         IDamageable iDamageable = collision.GetComponent<IDamageable>();
@@ -16,6 +22,9 @@ public class TemplarSpear : MonoBehaviour
             {
                 playerWasHit = true;
                 collision.gameObject.GetComponent<Player>().KnockBackEffect(collision.gameObject.transform.position - this.transform.position);
+
+                myTemplarKnightRef.StopChargingTowardsPlayer();
+                gameObject.SetActive(false);
             }
         }
     }
