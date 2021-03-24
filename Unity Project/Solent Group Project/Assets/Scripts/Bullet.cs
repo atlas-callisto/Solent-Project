@@ -21,6 +21,10 @@ public class Bullet : MonoBehaviour
         if (iDamageable != null)
         {
             iDamageable.TakeDamage(bulletDamage);
+            if (collision.gameObject.GetComponent<Player>())
+            {
+                collision.gameObject.GetComponent<Player>().KnockBackEffect(collision.gameObject.transform.position - this.transform.position);
+            }
             Destroy(this.gameObject);
         }
         if (collision.gameObject.layer == 8) // Colliding with the ground layer
