@@ -351,9 +351,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c74865e18c084f244a6c4ae1eb6dc34e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 4
+  maxHealth: 4
+  currentHealth: 4
   moveSpeed: 2
-  damage: 1
+  collisionDamage: 1
   chaseDistance: 4
   healthPotions: {fileID: 1187938275048797783, guid: ba123d3fc0894404f8a1e689890c7d44, type: 3}
   chanceToSpawnHealthPotions: 30

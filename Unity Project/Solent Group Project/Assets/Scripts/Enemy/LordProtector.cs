@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class LordProtector : EnemyAI
 {
-
     [Header("Lord Protector Attack Stats")]
     [SerializeField] private float swordAttackRange;
     [SerializeField] private float swordAttackInterval;
@@ -35,10 +34,6 @@ public class LordProtector : EnemyAI
     private float groundSlamAttackTimer;
     private int numOfBatsToSpawn = 3;
 
-    //WereWolfBoss Created. The Boss Patrols between two points, 
-    //if the player moves within its boulder attack range, 
-    //it screams (Dont have the sound or animations) and summons a 
-    //number of boulders above the player
     protected override void Start()
     {
         base.Start();
@@ -112,5 +107,27 @@ public class LordProtector : EnemyAI
             GameObject minion = Instantiate(batAIPrefab, batSpawnLocations[i].position, Quaternion.identity);
             minion.GetComponent<EnemyAI>().chaseDistance = 20f;
         }
+    }
+    public override void TakeDamage(int damage)
+    {
+        if (currentHealth > 0 && isAlive)
+        {
+            StartCoroutine(tookDamageIndicator());
+            currentHealth -= damage;
+            if (currentHealth <= 0)
+            {
+                isAlive = false;
+                PlaySFX(enemyDeathSFX);
+                SpawnHealingPotions();
+                Destroy(this.gameObject);
+            }
+            //Death anim               
+        }
+    }
+    private IEnumerator tookDamageIndicator()
+    {
+        mySpriteRenderer.color = Color.red;
+        yield return new WaitForSeconds(0.1f);
+        mySpriteRenderer.color = new Color(1f, 0f, 0.9f);
     }
 }

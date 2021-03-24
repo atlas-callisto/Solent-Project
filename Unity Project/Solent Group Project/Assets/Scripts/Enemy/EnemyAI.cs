@@ -17,7 +17,7 @@ public class EnemyAI : MonoBehaviour, IDamageable
     [SerializeField] float chanceToSpawnHealthPotions = 20f; // percentage from 1 to 100
 
     [Header("SFX Lists")]
-    [SerializeField] AudioClip enemyDeathSFX;
+    [SerializeField] protected AudioClip enemyDeathSFX;
 
 
     protected bool isAlive = true;
@@ -142,15 +142,15 @@ public class EnemyAI : MonoBehaviour, IDamageable
             //Death anim           
         }
     }
-    
+
     IEnumerator enemyTookDamageIndicator()
     {
         mySpriteRenderer.color = Color.red;
         yield return new WaitForSeconds(0.1f);
         mySpriteRenderer.color = Color.white;
-    } 
+    }
 
-    private void SpawnHealingPotions()
+    virtual protected void SpawnHealingPotions()
     {
         float i = Random.Range(0, 100);
         if(i < chanceToSpawnHealthPotions)
