@@ -1049,6 +1049,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2160318093421502460, guid: ec9628dc761ae034597c0d60d9cc1e23, type: 3}
+      propertyPath: m_Size.x
+      value: 1.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 2160318093421502460, guid: ec9628dc761ae034597c0d60d9cc1e23, type: 3}
+      propertyPath: m_Size.y
+      value: 1.2109375
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ec9628dc761ae034597c0d60d9cc1e23, type: 3}
 --- !u!1 &1751187694
@@ -4214,6 +4222,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: NecroMancerBoss
       objectReference: {fileID: 0}
+    - target: {fileID: 1317257139735436874, guid: 9f7f8ce54823aea409ea9e9bcc5e6cdb, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 4264410159867503848, guid: 1134f82d56234dc46927688501fc670d, type: 3}
     - target: {fileID: 1317257139735436885, guid: 9f7f8ce54823aea409ea9e9bcc5e6cdb, type: 3}
       propertyPath: m_RootOrder
       value: 24
