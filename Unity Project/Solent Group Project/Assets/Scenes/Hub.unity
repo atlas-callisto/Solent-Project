@@ -8644,7 +8644,7 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: df188d880ce94f2478ba1d2c7d551704, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
@@ -26584,6 +26584,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8192544368020329099, guid: ec9628dc761ae034597c0d60d9cc1e23, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.083
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ec9628dc761ae034597c0d60d9cc1e23, type: 3}
 --- !u!4 &927445344 stripped
@@ -26804,7 +26808,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2014338476683759791, guid: 90214ec56ad3e394faaac17cf81064b7, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -18.09314
+      value: -17.887
       objectReference: {fileID: 0}
     - target: {fileID: 2014338476683759791, guid: 90214ec56ad3e394faaac17cf81064b7, type: 3}
       propertyPath: m_LocalPosition.y

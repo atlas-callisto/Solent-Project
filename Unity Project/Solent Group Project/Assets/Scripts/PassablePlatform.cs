@@ -19,9 +19,9 @@ public class PassablePlatform : MonoBehaviour
 
     private void OnCollisionStay2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "Player" && platformCanFlip)
+        if (collision.gameObject.tag == "Player" && platformCanFlip && playerRB.velocity.y <=0)
         {
-            if (Input.GetAxis("Vertical") <= -0.2 && playerRB.velocity.y <= 0)
+            if (Input.GetAxis("Vertical") <= -0.2)
             {
                 platformCanFlip = false;
                 myPlatformEffector2D.rotationalOffset = 180;
@@ -29,18 +29,10 @@ public class PassablePlatform : MonoBehaviour
             }
         }
     }
-
-    private void OnCollisionExit2D(Collision2D collision)
-    {
-        if (collision.gameObject.tag == "Player")
-        {
-            myPlatformEffector2D.rotationalOffset = 0;
-        }
-    }
     IEnumerator ResetPlatformOrientation()
     {
-        yield return new WaitForSeconds(0.1f);
+        yield return new WaitForSeconds(0.3f);
+        myPlatformEffector2D.rotationalOffset = 0;
         platformCanFlip = true;
-
     }
 }
