@@ -5,21 +5,26 @@ using UnityEngine;
 public class EnemyAI : MonoBehaviour, IDamageable
 {
     [Header("Enemy Stats")]
-    [SerializeField] int health = 4;
+    [SerializeField] protected int maxHealth = 4;
+    [SerializeField] protected int currentHealth = 4;
     [SerializeField] public float moveSpeed = 1f;
-    [SerializeField] int damage = 1;    
+    [SerializeField] [Tooltip("The damage the enemy does to the player when touching the player")]
+    protected int collisionDamage = 1;    
     [SerializeField] public float chaseDistance = 4f;
     [SerializeField] protected GameObject healthPotions;
 
     [Header("Chance is in Percentage from 0 to 100")]
     [SerializeField] float chanceToSpawnHealthPotions = 20f; // percentage from 1 to 100
 
+    [Header("SFX Lists")]
+    [SerializeField] AudioClip enemyDeathSFX;
+
+
     protected bool isAlive = true;
     protected float distanceToThePlayer;
     protected bool playerIsOnRightSide;
-    [SerializeField] protected bool fearDebuff = false; // When player uses scream, enemy gets fear debuff so enemy runs away from player.
-
-
+    public bool fearDebuff = false; // When player uses scream, enemy gets fear debuff so enemy runs away from player.
+    
     protected EnemyPatrol myEnemyPatrol;
 
     protected Player player;
@@ -114,25 +119,30 @@ public class EnemyAI : MonoBehaviour, IDamageable
         iDamageableObj = collision.gameObject.GetComponent<IDamageable>();
         if (iDamageableObj != null && collision.gameObject.tag != "Enemy") // Excluding objects with enemy tag of course
         {
-            iDamageableObj.TakeDamage(damage);
+            iDamageableObj.TakeDamage(collisionDamage);
+            if(collision.gameObject.GetComponent<Player>())
+            {
+                collision.gameObject.GetComponent<Player>().KnockBackEffect(collision.gameObject.transform.position - this.transform.position);
+            }
         }
     }
     virtual public void TakeDamage(int damage) //Take Damage
     {
-        if (health > 0 && isAlive)
+        if (currentHealth > 0 && isAlive)
         {
             StartCoroutine(enemyTookDamageIndicator());
-            health -= damage;
-            if (health <= 0)
+            currentHealth -= damage;
+            if (currentHealth <= 0)
             {
                 isAlive = false;
-                SoundManager.mySoundManager.PlaySFX("SlimeDeathSound", 1f);
+                PlaySFX(enemyDeathSFX);
                 SpawnHealingPotions();
                 Destroy(this.gameObject);
             }
             //Death anim           
         }
     }
+    
     IEnumerator enemyTookDamageIndicator()
     {
         mySpriteRenderer.color = Color.red;
@@ -156,5 +166,9 @@ public class EnemyAI : MonoBehaviour, IDamageable
         fearDebuff = false;
     }
     #endregion
+    protected void PlaySFX(AudioClip clipName)
+    {
+        AudioSource.PlayClipAtPoint(clipName, Camera.main.transform.position, 0.5f);
+    }
 
 }

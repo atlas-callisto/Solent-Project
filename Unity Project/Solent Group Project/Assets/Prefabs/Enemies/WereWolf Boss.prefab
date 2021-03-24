@@ -229,6 +229,7 @@ MonoBehaviour:
   chaseDistance: 10
   healthPotions: {fileID: 1187938275048797783, guid: ba123d3fc0894404f8a1e689890c7d44, type: 3}
   chanceToSpawnHealthPotions: 30
+  enemyDeathSFX: {fileID: 8300000, guid: a1c98b0af276d6e4fbc9f2ed1ce9085e, type: 3}
   fearDebuff: 0
   clawAttackRange: 3.5
   clawAttackInterval: 2

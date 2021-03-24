@@ -80,7 +80,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 3.2, y: 3.2}
+  m_Size: {x: 0.61538464, y: 0.61538464}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -160,6 +160,8 @@ MonoBehaviour:
   chaseDistance: 4
   healthPotions: {fileID: 1187938275048797783, guid: ba123d3fc0894404f8a1e689890c7d44, type: 3}
   chanceToSpawnHealthPotions: 30
+  enemyDeathSFX: {fileID: 8300000, guid: 89f286b69e8a9f948bd186b066516f27, type: 3}
+  fearDebuff: 0
   aggroDistance: 4
   horizontalFlightSpeed: 2
   verticalFlightSpeed: 3

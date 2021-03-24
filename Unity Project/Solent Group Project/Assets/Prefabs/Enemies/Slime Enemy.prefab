@@ -153,6 +153,8 @@ MonoBehaviour:
   chaseDistance: 5
   healthPotions: {fileID: 1187938275048797783, guid: ba123d3fc0894404f8a1e689890c7d44, type: 3}
   chanceToSpawnHealthPotions: 30
+  enemyDeathSFX: {fileID: 8300000, guid: 89f286b69e8a9f948bd186b066516f27, type: 3}
+  fearDebuff: 0
 --- !u!114 &1247381036426761344
 MonoBehaviour:
   m_ObjectHideFlags: 0

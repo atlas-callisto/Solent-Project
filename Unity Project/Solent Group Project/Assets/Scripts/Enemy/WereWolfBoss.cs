@@ -12,8 +12,6 @@ public class WereWolfBoss : EnemyAI
     [SerializeField] private float boulderAttackInterval;
     [SerializeField] private int numberOfRocksToSpawn;
 
-
-
     [SerializeField] private GameObject weapon;
     [SerializeField] private GameObject fallingRockPrefab;
 
@@ -30,20 +28,21 @@ public class WereWolfBoss : EnemyAI
     protected override void Start()
     {
         base.Start();
-        myCam = FindObjectOfType<CameraScript>();
+        myCam = Camera.main.gameObject.GetComponent<CameraScript>();
         clawAttackTimer = clawAttackInterval;
         boulderAttackTimer = boulderAttackInterval;
     }
     protected override void Update()
     {
         if (!base.isAlive) return;
-        MeasureDistanceToThePlayer();
         WereWolfBossAI();
     }
     private void WereWolfBossAI()
     {
+        MeasureDistanceToThePlayer();
         clawAttackTimer += Time.deltaTime;
         boulderAttackTimer += Time.deltaTime;
+
         if (distanceToThePlayer > boulderAttackRange)
         {
             base.EnemyAIChaseOrPatrol();
@@ -54,7 +53,7 @@ public class WereWolfBoss : EnemyAI
             myRB.velocity = new Vector2(0, myRB.velocity.y);
             if(boulderAttackTimer >= boulderAttackInterval)
             {
-                StartCoroutine(myCam.CameraShake(1f, 0.5f));
+                myCam.StartCoroutine(myCam.CameraShake(1f, 0.5f));
                 boulderAttackTimer = 0;
                 for(int i = 0; i < numberOfRocksToSpawn; i++)
                 {
