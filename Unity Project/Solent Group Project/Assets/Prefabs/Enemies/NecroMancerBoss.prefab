@@ -387,6 +387,7 @@ MonoBehaviour:
   chaseDistance: 16
   healthPotions: {fileID: 1187938275048797783, guid: ba123d3fc0894404f8a1e689890c7d44, type: 3}
   chanceToSpawnHealthPotions: 30
+  enemyDeathSFX: {fileID: 8300000, guid: 89f286b69e8a9f948bd186b066516f27, type: 3}
   fearDebuff: 0
   meleeAttackRange: 2
   rangeAttackRange: 10
@@ -397,14 +398,14 @@ MonoBehaviour:
   numOfSkeletonsToSpawn: 2
   numOfWaves: 3
   summoningDuration: 5
-  magicalBarrierIsOn: 0
-  summoningMinions: 0
   magicalBarrierGameObject: {fileID: 1317257139404686090}
   zombieAIPrefab: {fileID: 1591418635905663523, guid: f97d2479617edd944bb205e59e61355f, type: 3}
   batAIPrefab: {fileID: 8495587268032491136, guid: 1f075cf188a788a4cb3ddfb745b40d71, type: 3}
   skeletonAIPrefab: {fileID: 1951015803762913734, guid: 8a8f7b621564c3847baeafdce185fa24, type: 3}
   fireBallProjectilePrefab: {fileID: 4337763258346118061, guid: 94170f550282eba48b84d0b37ae6eb5a, type: 3}
   staffWeaponPrefab: {fileID: 803437855}
+  fireBallSFX: {fileID: 8300000, guid: 87fe6a750abcab548a1cb062ca2897be, type: 3}
+  staffAttackSFX: {fileID: 8300000, guid: 5e609659a1cd01a42a39c6c7114e10a3, type: 3}
   zombieSpawnLocations:
   - {fileID: 0}
   - {fileID: 0}
@@ -416,5 +417,3 @@ MonoBehaviour:
   skeletonSpawnLocations:
   - {fileID: 0}
   - {fileID: 0}
-  minionCounter: 0
-  currentWave: 1

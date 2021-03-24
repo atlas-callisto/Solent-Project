@@ -7,19 +7,17 @@ public class NecroMancerBoss : EnemyAI
     [Header("NecroMancer Stats")]
     [SerializeField] private float meleeAttackRange;
     [SerializeField] private float rangeAttackRange;
-
     [SerializeField] float meleeAttackInterval;
     [SerializeField] float rangedAttackInterval;
 
+    [Header("Summoning Stats")]
     [SerializeField] int numOfZombiesToSpawn;
     [SerializeField] int numOfBatsToSpawn;
     [SerializeField] int numOfSkeletonsToSpawn;
     [SerializeField] int numOfWaves;
-    [SerializeField] private float summoningDuration;
+    [SerializeField] private float summoningDuration;   
 
-    [SerializeField] bool magicalBarrierIsOn = false; // Remove Expose later on
-    [SerializeField] bool summoningMinions = false;   // Remove Expose later on
-
+    [Header("Object Refs")]
     [SerializeField] GameObject magicalBarrierGameObject;
     [SerializeField] GameObject zombieAIPrefab;
     [SerializeField] GameObject batAIPrefab;
@@ -27,19 +25,21 @@ public class NecroMancerBoss : EnemyAI
     [SerializeField] GameObject fireBallProjectilePrefab;
     [SerializeField] GameObject staffWeaponPrefab;
 
+    [Header("SFX Refs")]
+    [SerializeField] private AudioClip fireBallSFX;
+    [SerializeField] private AudioClip staffAttackSFX;
 
     [SerializeField] List<Transform> zombieSpawnLocations = new List<Transform>();
     [SerializeField] List<Transform> batSpawnLocations = new List<Transform>();
     [SerializeField] List<Transform> skeletonSpawnLocations = new List<Transform>();
 
-    Collider2D myCollider2D;
+    private bool magicalBarrierIsOn = false;
+    private bool summoningMinions = false;    
     private float rangedAttackTimer;
     private float meleeAttackTimer;
     internal int minionCounter = 0; // internal becaused its accessed by minion counter
     private int currentWave = 1;
-
-    [SerializeField] private AudioClip fireBallSFX;
-    [SerializeField] private AudioClip staffAttackSFX;
+    Collider2D myCollider2D;   
 
     protected override void Start()
     {
@@ -79,7 +79,6 @@ public class NecroMancerBoss : EnemyAI
             NecroMancerFightAI();
         }            
     }
-
     private void NecroMancerFightAI()
     {
         MeasureDistanceToThePlayer();
@@ -118,7 +117,6 @@ public class NecroMancerBoss : EnemyAI
             }
         }
     }
-
     private IEnumerator StartSummoning()
     {
         summoningMinions = true;

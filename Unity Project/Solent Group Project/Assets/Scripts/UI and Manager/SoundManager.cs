@@ -25,13 +25,6 @@ public class SoundManager : MonoBehaviour
             sfxCollection.Add(sfxNameList[i], sfxFileList[i]);
         }
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     public void PlaySFX(string clipName, float volume)
     {
         if (sfxCollection.ContainsKey(clipName))

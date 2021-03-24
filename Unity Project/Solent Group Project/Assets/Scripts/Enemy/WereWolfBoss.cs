@@ -12,8 +12,6 @@ public class WereWolfBoss : EnemyAI
     [SerializeField] private float boulderAttackInterval;
     [SerializeField] private int numberOfRocksToSpawn;
 
-
-
     [SerializeField] private GameObject weapon;
     [SerializeField] private GameObject fallingRockPrefab;
 
