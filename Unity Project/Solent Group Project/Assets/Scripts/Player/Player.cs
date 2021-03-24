@@ -60,7 +60,6 @@ public class Player : MonoBehaviour, IDamageable
 
     internal bool doubleJumpSkillAcquired = false; // enable double jump after skill is unlocked??? for later use
     private bool playerCanTakeDmg = true;
-    private float timer = 0.2f; //timer to enable hitbox duration to match attack animation
     private float playerInvunerabletimer = 1.5f; // timer to stop player playing from getting damage after taking a hit
 
     //Comp Ref

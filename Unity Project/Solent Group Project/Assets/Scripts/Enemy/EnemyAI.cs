@@ -5,9 +5,11 @@ using UnityEngine;
 public class EnemyAI : MonoBehaviour, IDamageable
 {
     [Header("Enemy Stats")]
-    [SerializeField] int health = 4;
+    [SerializeField] protected int maxHealth = 4;
+    [SerializeField] protected int currentHealth = 4;
     [SerializeField] public float moveSpeed = 1f;
-    [SerializeField] int damage = 1;    
+    [SerializeField] [Tooltip("The damage the enemy does to the player when touching the player")]
+    protected int collisionDamage = 1;    
     [SerializeField] public float chaseDistance = 4f;
     [SerializeField] protected GameObject healthPotions;
 
@@ -16,6 +18,7 @@ public class EnemyAI : MonoBehaviour, IDamageable
 
     [Header("SFX Lists")]
     [SerializeField] AudioClip enemyDeathSFX;
+
 
     protected bool isAlive = true;
     protected float distanceToThePlayer;
@@ -116,7 +119,7 @@ public class EnemyAI : MonoBehaviour, IDamageable
         iDamageableObj = collision.gameObject.GetComponent<IDamageable>();
         if (iDamageableObj != null && collision.gameObject.tag != "Enemy") // Excluding objects with enemy tag of course
         {
-            iDamageableObj.TakeDamage(damage);
+            iDamageableObj.TakeDamage(collisionDamage);
             if(collision.gameObject.GetComponent<Player>())
             {
                 collision.gameObject.GetComponent<Player>().KnockBackEffect(collision.gameObject.transform.position - this.transform.position);
@@ -125,11 +128,11 @@ public class EnemyAI : MonoBehaviour, IDamageable
     }
     virtual public void TakeDamage(int damage) //Take Damage
     {
-        if (health > 0 && isAlive)
+        if (currentHealth > 0 && isAlive)
         {
             StartCoroutine(enemyTookDamageIndicator());
-            health -= damage;
-            if (health <= 0)
+            currentHealth -= damage;
+            if (currentHealth <= 0)
             {
                 isAlive = false;
                 PlaySFX(enemyDeathSFX);
@@ -163,7 +166,7 @@ public class EnemyAI : MonoBehaviour, IDamageable
         fearDebuff = false;
     }
     #endregion
-    private void PlaySFX(AudioClip clipName)
+    protected void PlaySFX(AudioClip clipName)
     {
         AudioSource.PlayClipAtPoint(clipName, Camera.main.transform.position, 0.5f);
     }

@@ -32,6 +32,7 @@ public class Spider : EnemyAI
     {
         if (!base.isAlive) return;
         SpiderAI();
+        MeasureDistanceToThePlayer();
         TurnTowardsPlayer();
         attackTimer += Time.deltaTime;
     }

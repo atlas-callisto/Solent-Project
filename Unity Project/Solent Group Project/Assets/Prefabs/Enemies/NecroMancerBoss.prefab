@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 803437860}
   - component: {fileID: 803437859}
   - component: {fileID: 803437858}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Red Staff
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -153,7 +153,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1317257139404686100}
   - component: {fileID: 1317257139404686101}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: shieldWhite_Edit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -302,7 +302,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -9172951268983041223, guid: 859a10e37ad12e0488609668f27abd14, type: 3}
+  m_Sprite: {fileID: 4264410159867503848, guid: 1134f82d56234dc46927688501fc670d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

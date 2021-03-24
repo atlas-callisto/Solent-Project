@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 8100100378652271542}
   - component: {fileID: 7747583675736760012}
   m_Layer: 11
-  m_Name: Arrow
+  m_Name: Lord Protector Arrow
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -73,9 +73,9 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 10
   m_Sprite: {fileID: 21300000, guid: 892b6b0daeceb574f9b576f2355b02b3, type: 3}
-  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_Color: {r: 0.99340725, g: 0, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -145,5 +145,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulletSpeed: 4
-  bulletDamage: 1
+  bulletDamage: 3
   bulletLifeDuration: 6
