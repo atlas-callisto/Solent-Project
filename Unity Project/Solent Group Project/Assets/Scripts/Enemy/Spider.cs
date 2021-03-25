@@ -31,8 +31,9 @@ public class Spider : EnemyAI
     protected override void Update()
     {
         if (!base.isAlive) return;
-        SpiderAI();
         MeasureDistanceToThePlayer();
+        AdjustHealthBarOrientation();
+        SpiderAI();
         TurnTowardsPlayer();
         attackTimer += Time.deltaTime;
     }

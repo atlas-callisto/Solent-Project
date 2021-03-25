@@ -25,6 +25,7 @@ public class SkeletonArcher : EnemyAI
     {
         if (!base.isAlive) return;
         MeasureDistanceToThePlayer();
+        AdjustHealthBarOrientation();
         SkeletonArcherAI();
     }
     private void SkeletonArcherAI()

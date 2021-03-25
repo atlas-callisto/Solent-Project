@@ -35,6 +35,7 @@ public class WereWolfBoss : EnemyAI
     protected override void Update()
     {
         if (!base.isAlive) return;
+        AdjustHealthBarOrientation();
         WereWolfBossAI();
     }
     private void WereWolfBossAI()

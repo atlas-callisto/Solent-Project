@@ -45,6 +45,7 @@ public class LordProtector : EnemyAI
     protected override void Update()
     {
         if (!base.isAlive) return;
+        AdjustHealthBarOrientation();
         LordProtectorAI();
     }
     private void LordProtectorAI()
@@ -113,6 +114,9 @@ public class LordProtector : EnemyAI
         if (currentHealth > 0 && isAlive)
         {
             StartCoroutine(tookDamageIndicator());
+            if (healthDisplayer != null) StopCoroutine(healthDisplayer); // stops previous co-routine to stop health bar from flickering
+            healthDisplayer = UpdateHealthBar();
+            StartCoroutine(healthDisplayer);
             currentHealth -= damage;
             if (currentHealth <= 0)
             {

@@ -37,13 +37,20 @@ public class TemplarKnight : EnemyAI
     protected override void Update()
     {
         if (!base.isAlive) return;
+        AdjustHealthBarOrientation();
+        if (fearDebuff)
+        {
+            RunAwayFromPlayer();
+            return;
+        }
         LordProtectorAI();
     }
     private void LordProtectorAI()
     {
+
         MeasureDistanceToThePlayer();
         shieldAttackTimer += Time.deltaTime;
-
+        
         if (distanceToThePlayer > chaseDistance && !chargingTowardsPlayer)
         {
             base.EnemyAIChaseOrPatrol();

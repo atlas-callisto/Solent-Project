@@ -20,6 +20,7 @@ public class Skeleton : EnemyAI
     {
         if (!base.isAlive) return;
         MeasureDistanceToThePlayer();
+        AdjustHealthBarOrientation();
         SkeletonAI();
     }
     private void SkeletonAI()

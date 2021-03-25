@@ -22,8 +22,8 @@ public class Bat : EnemyAI
     protected override void Update()
     {
         if (!base.isAlive) return;
+        AdjustHealthBarOrientation();
         BatAI();
-        IsMovingAnimation();
     }
     private void BatAI()
     {
@@ -77,18 +77,4 @@ public class Bat : EnemyAI
         chasePlayer = false;
         }
     }
-
-    private void IsMovingAnimation()
-    {
-        //if(myRB.velocity.x != 0 || myRB.velocity.y != 0)
-        if (transform.position != restingPoint)
-        {
-            myAnimator.SetBool("isMoving", true);
-        }
-        else
-        {
-            myAnimator.SetBool("isMoving", false);
-        }
-    }
-
 }

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class EnemyAI : MonoBehaviour, IDamageable
 {
@@ -20,10 +21,14 @@ public class EnemyAI : MonoBehaviour, IDamageable
     [SerializeField] protected AudioClip enemyDeathSFX;
 
 
+    [SerializeField] private GameObject heatlhBarGameObject;
+    [SerializeField] protected Slider healthBar; 
+    
+
     protected bool isAlive = true;
     protected float distanceToThePlayer;
     protected bool playerIsOnRightSide;
-    public bool fearDebuff = false; // When player uses scream, enemy gets fear debuff so enemy runs away from player.
+    internal bool fearDebuff = false; // When player uses scream, enemy gets fear debuff so enemy runs away from player.
     
     protected EnemyPatrol myEnemyPatrol;
 
@@ -32,6 +37,7 @@ public class EnemyAI : MonoBehaviour, IDamageable
     protected SpriteRenderer mySpriteRenderer;
     protected Animator myAnimator;
     protected Vector3 distanceVect;
+    protected IEnumerator healthDisplayer;
 
     // Start is called before the first frame update
     protected virtual void Awake()
@@ -50,6 +56,7 @@ public class EnemyAI : MonoBehaviour, IDamageable
     {
         if (!isAlive) return;
         MeasureDistanceToThePlayer();
+        AdjustHealthBarOrientation();
         if (fearDebuff) RunAwayFromPlayer();       
         else EnemyAIChaseOrPatrol();        
     }
@@ -130,8 +137,12 @@ public class EnemyAI : MonoBehaviour, IDamageable
     {
         if (currentHealth > 0 && isAlive)
         {
-            StartCoroutine(enemyTookDamageIndicator());
             currentHealth -= damage;
+            StartCoroutine(enemyTookDamageIndicator());
+            
+            if(healthDisplayer != null) StopCoroutine(healthDisplayer); // stops previous co-routine to stop health bar from flickering
+            healthDisplayer = UpdateHealthBar();
+            StartCoroutine(healthDisplayer);
             if (currentHealth <= 0)
             {
                 isAlive = false;
@@ -149,7 +160,19 @@ public class EnemyAI : MonoBehaviour, IDamageable
         yield return new WaitForSeconds(0.1f);
         mySpriteRenderer.color = Color.white;
     }
+    virtual protected void AdjustHealthBarOrientation()
+    {
+        heatlhBarGameObject.transform.rotation = Quaternion.Euler(new Vector2(0, 0));
+    }
+    protected IEnumerator UpdateHealthBar()
+    {        
+        heatlhBarGameObject.SetActive(true);
+        healthBar.value = (float)currentHealth / (float)maxHealth;
 
+        yield return new WaitForSeconds(3f); // Magic number, It's Magic
+
+        heatlhBarGameObject.SetActive(false);
+    }
     virtual protected void SpawnHealingPotions()
     {
         float i = Random.Range(0, 100);
