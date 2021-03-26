@@ -43,9 +43,9 @@ public class TemplarKnight : EnemyAI
             RunAwayFromPlayer();
             return;
         }
-        LordProtectorAI();
+        TemplarKnightAI();
     }
-    private void LordProtectorAI()
+    private void TemplarKnightAI()
     {
 
         MeasureDistanceToThePlayer();
@@ -110,5 +110,21 @@ public class TemplarKnight : EnemyAI
             }
         }
     }
+
+    public override void TakeDamage(int damage)
+    {
+        Vector3 distanceVect = player.transform.position - transform.position;
+        playerIsOnRightSide = distanceVect.x > 0 ? true : false;
+        // Halves the damage that the enemy takes if the player 
+        if ((playerIsOnRightSide && transform.rotation.y == 0) || (!playerIsOnRightSide && transform.rotation.y != 0))
+        {
+            print(damage);
+            damage = damage/2;
+            print(damage);
+        }
+        base.TakeDamage(damage);
+        
+    }
+
 
 }
