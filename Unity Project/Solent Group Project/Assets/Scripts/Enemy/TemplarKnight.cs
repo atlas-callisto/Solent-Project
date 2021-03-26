@@ -116,15 +116,7 @@ public class TemplarKnight : EnemyAI
         Vector3 distanceVect = player.transform.position - transform.position;
         playerIsOnRightSide = distanceVect.x > 0 ? true : false;
         // Halves the damage that the enemy takes if the player 
-        if ((playerIsOnRightSide && transform.rotation.y == 0) || (!playerIsOnRightSide && transform.rotation.y != 0))
-        {
-            print(damage);
-            damage = damage/2;
-            print(damage);
-        }
-        base.TakeDamage(damage);
-        
+        if ((playerIsOnRightSide && transform.rotation.y == 0) || (!playerIsOnRightSide && transform.rotation.y != 0))damage = damage / 2;
+        base.TakeDamage(damage);        
     }
-
-
 }

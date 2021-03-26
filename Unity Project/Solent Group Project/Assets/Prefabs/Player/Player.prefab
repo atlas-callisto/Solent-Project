@@ -231,7 +231,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e5d277cb6b5dc34e99eea01048f139a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  basicAttackDamage: 10
+  basicAttackDamage: 1
   heavyAttackDamage: 2
   specialAttackDamage: 4
 --- !u!1 &2160318093421502432
@@ -393,8 +393,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b39cd6d1fb0a3674aa7508c7cea763a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 10
-  currentHealth: 10
+  maxHealth: 20
+  currentHealth: 20
   maxWolfBar: 10
   currentWolfBar: 10
   wolfBarRegenRate: 0.1
