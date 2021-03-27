@@ -82,12 +82,7 @@ public class Player : MonoBehaviour, IDamageable
     
     void Update()
     {
-        if (!playerAlive)
-        {
-            StartCoroutine(Die());            
-            return;
-        }
-
+        if (!playerAlive) return;
         PlayerMovement();
         PlayerJump();
         CoolDownChecker();
@@ -283,15 +278,11 @@ public class Player : MonoBehaviour, IDamageable
     {
         if (collision.tag == "Interactable")
         {
-            Interact(collision);
-        }
-    }
-    private void Interact(Collider2D collision)
-    {
-        Interactable interactableObj = collision.GetComponent<Interactable>();
-        if (interactableObj != null && Input.GetButtonDown("Interact"))
-        {
-            collision.GetComponent<Interactable>().Interact();
+            Interactable interactableObj = collision.GetComponent<Interactable>();
+            if (interactableObj != null && Input.GetButtonDown("Interact"))
+            {
+                collision.GetComponent<Interactable>().Interact();
+            }
         }
     }
     #endregion
@@ -311,7 +302,7 @@ public class Player : MonoBehaviour, IDamageable
                 playerAlive = false;
                 myAnimator.SetTrigger("Dead");                
                 // Needs fixing - keeps not assigning reference
-                //FindObjectOfType<LevelLoader>().RestartLevelAfterAPause();
+                FindObjectOfType<LevelLoader>().RestartLevelAfterAPause();
             }
         }
     }
@@ -350,13 +341,5 @@ public class Player : MonoBehaviour, IDamageable
     private void PlaySFX(AudioClip clipName)
     {
         AudioSource.PlayClipAtPoint(clipName, Camera.main.transform.position, 0.5f);
-    }
-    private IEnumerator Die()
-    {
-        currentHealth = 0;
-        yield return new WaitForSeconds(playerRespawnDelay);
-
-        Scene scene = SceneManager.GetActiveScene(); 
-        SceneManager.LoadScene(scene.name);
     }
 }

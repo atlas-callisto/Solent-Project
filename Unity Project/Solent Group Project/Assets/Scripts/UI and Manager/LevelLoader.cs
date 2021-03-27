@@ -43,6 +43,8 @@ public class LevelLoader : MonoBehaviour
     {
         currentScene = SceneManager.GetActiveScene().buildIndex;
         yield return new WaitForSeconds(restartSceneDelay);
+        Player.currentHealth = Player.maxHealth;
+        Player.currentWolfBar = Player.maxWolfBar;
         SceneManager.LoadScene(currentScene);
     }
    

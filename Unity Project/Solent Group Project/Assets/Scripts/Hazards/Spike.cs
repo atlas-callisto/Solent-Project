@@ -8,18 +8,6 @@ public class Spike : MonoBehaviour
     public float damageTickRate;
     public int damage;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     private void OnCollisionStay2D(Collision2D collision)
     {
         IDamageable iDamageableObj;
@@ -35,7 +23,6 @@ public class Spike : MonoBehaviour
                     iDamageableObj.TakeDamage(damage);
                 }
             }
-            print("Collision");
         }
     }
 
