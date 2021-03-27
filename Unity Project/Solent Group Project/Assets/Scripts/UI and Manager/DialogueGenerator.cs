@@ -67,13 +67,21 @@ public class DialogueGenerator : MonoBehaviour
             default:
                 CurrentSentence = "Error, invalid page assigned";
                 break;
-        }  UpdatePage(); CurrentPage++;
+        }  UpdatePage();
     }
 
     private void UpdatePage()
     {
-        DialogueText.text = CurrentSentence; 
-        PageNumberText.text = CurrentPage + "/3";
+        if (CurrentSentence == "")
+        {
+            CloseDialogue();
+        }
+        else 
+        {
+            DialogueText.text = CurrentSentence;
+            PageNumberText.text = "Page " + CurrentPage;
+            CurrentPage++;
+        }
     }
 
     private void CloseDialogue()

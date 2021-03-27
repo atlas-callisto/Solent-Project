@@ -292,7 +292,7 @@ MonoBehaviour:
   DialoguePanel: {fileID: 5562303957522117703}
   NPC_Name: Mr Rock
   Page1_Dialogue: Hey, Im a rock.
-  Page2_Dialogue: I do rock things.
+  Page2_Dialogue: This is a 2nd page.
   Page3_Dialogue: Like. I dunno. I couldn't think of default text to put here okay!
 --- !u!61 &5562303957256457907
 BoxCollider2D:
@@ -307,7 +307,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.013436556, y: -0.14963591}
+  m_Offset: {x: 0.0065401793, y: -0.008528709}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -318,7 +318,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.1250935, y: 1.3029764}
+  m_Size: {x: 2.2804692, y: 2.0354736}
   m_EdgeRadius: 0
 --- !u!212 &5562303957256457910
 SpriteRenderer:
