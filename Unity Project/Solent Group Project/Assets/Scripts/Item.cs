@@ -11,12 +11,24 @@ public class Item : MonoBehaviour , Interactable
         foreach(MovingPlatform movingPlatform in movingPlatforms)
         {
             movingPlatformList.Add(movingPlatform.gameObject);
+        }                 
+    }
+    void Start()
+    {
+        if (GameManager.myGameManager.moonsEyeMonacle == true)
+        {
+            foreach (var movingPlafrom in movingPlatformList)
+            {
+                movingPlafrom.SetActive(true);
+            }
         }
+        if (GameManager.myGameManager.moonsEyeMonacle) Destroy(gameObject);
     }
     public void Interact()
     {
         if(movingPlatformList.Count > 0)
         {
+            GameManager.myGameManager.moonsEyeMonacle = true;
             foreach (GameObject movingPlatformGameObject in movingPlatformList)
             {
                 movingPlatformGameObject.SetActive(true);

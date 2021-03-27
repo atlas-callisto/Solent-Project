@@ -10,7 +10,14 @@ public class LevelLoader : MonoBehaviour
     float restartSceneDelay = 2f;
     string playerSpwanLocationName;
     GameObject playerRef;
-    
+    public static LevelLoader myLevelLoader;
+
+    private void Awake()
+    {
+        myLevelLoader = this;
+        if (FindObjectsOfType<LevelLoader>().Length > 1) Destroy(this.gameObject);
+        else DontDestroyOnLoad(this.gameObject);
+    }
     public void NewGame() // Load new game
     {
         SceneManager.LoadScene("level1"); 
@@ -18,6 +25,7 @@ public class LevelLoader : MonoBehaviour
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
         playerRef = FindObjectOfType<Player>().gameObject;
+        print(playerSpwanLocationName);
         if (GameObject.Find(playerSpwanLocationName)) playerRef.transform.position = GameObject.Find(playerSpwanLocationName).transform.position;
         SceneManager.sceneLoaded -= OnSceneLoaded;
     }

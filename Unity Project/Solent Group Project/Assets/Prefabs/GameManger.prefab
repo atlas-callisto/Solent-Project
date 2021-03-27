@@ -44,12 +44,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2e00596e8c06be409f40a113e00a8af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healtText: {fileID: 0}
-  staminaText: {fileID: 0}
-  ammoText: {fileID: 0}
-  health: 5
-  stamina: 5
-  bulletAmmo: 0
+  werewolfBossDefeated: 0
+  necromancerBossDefeated: 0
+  lordProtectorBossDefeated: 0
+  airTreaders: 0
+  moonsEyeMonacle: 0
 --- !u!114 &6728815063806566276
 MonoBehaviour:
   m_ObjectHideFlags: 0

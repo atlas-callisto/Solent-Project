@@ -22,7 +22,7 @@ public class MoonLight : MonoBehaviour
     {
         if (collision.tag == "Player")
         {
-            Mathf.Clamp(player.currentWolfBar += Time.deltaTime * moonLightRegenRate, 0, player.maxWolfBar);
+            Mathf.Clamp(Player.currentWolfBar += Time.deltaTime * moonLightRegenRate, 0, Player.maxWolfBar);
         }
 
     }

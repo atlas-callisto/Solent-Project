@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CameraScript : MonoBehaviour
 {
-    private GameObject followTarget;
+    public GameObject followTarget;
     private float offset = -10f;
 
     void Awake()
@@ -16,6 +16,11 @@ public class CameraScript : MonoBehaviour
     {
         if (followTarget != null)
             transform.position = new Vector3(followTarget.transform.position.x, followTarget.transform.position.y, offset);        
+    }
+
+    public void SetupFollowTarget()
+    {
+        followTarget = FindObjectOfType<Player>().gameObject;
     }
 
     public IEnumerator CameraShake(float duration, float magnitude)

@@ -25,6 +25,15 @@ public class WereWolfBoss : EnemyAI
     //if the player moves within its boulder attack range, 
     //it screams (Dont have the sound or animations) and summons a 
     //number of boulders above the player
+    protected override void Awake()
+    {
+        base.Awake();
+        if (GameManager.myGameManager.werewolfBossDefeated)
+        {
+            Destroy(this.gameObject);
+            return;
+        }
+    }
     protected override void Start()
     {
         base.Start();
@@ -34,7 +43,7 @@ public class WereWolfBoss : EnemyAI
     }
     protected override void Update()
     {
-        if (!base.isAlive) return;
+        if (!isAlive) return;
         AdjustHealthBarOrientation();
         WereWolfBossAI();
     }
@@ -77,6 +86,26 @@ public class WereWolfBoss : EnemyAI
             {
                 clawAttackTimer = 0;
                 weapon.SetActive(true);
+            }
+        }
+    }
+    public override void TakeDamage(int damage) //Take Damage
+    {
+        if (currentHealth > 0 && isAlive)
+        {
+            currentHealth -= damage;
+            StartCoroutine(enemyTookDamageIndicator());
+
+            if (healthDisplayer != null) StopCoroutine(healthDisplayer); // stops previous co-routine to stop health bar from flickering
+            healthDisplayer = UpdateHealthBar();
+            StartCoroutine(healthDisplayer);
+            if (currentHealth <= 0)
+            {
+                isAlive = false;
+                PlaySFX(enemyDeathSFX);
+                SpawnHealingPotions();
+                GameManager.myGameManager.werewolfBossDefeated = true;
+                Destroy(gameObject);
             }
         }
     }

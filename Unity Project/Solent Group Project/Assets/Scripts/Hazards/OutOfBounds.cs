@@ -9,7 +9,7 @@ public class OutOfBounds : MonoBehaviour
         if(collision.gameObject.tag == "Player")
         {
             collision.gameObject.GetComponent<Player>().playerAlive = false;
-            collision.gameObject.GetComponent<Player>().currentHealth = 0;
+            Player.currentHealth = 0;
         }
     }
 }

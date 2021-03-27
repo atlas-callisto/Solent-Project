@@ -39,8 +39,17 @@ public class NecroMancerBoss : EnemyAI
     private float meleeAttackTimer;
     internal int minionCounter = 0; // internal becaused its accessed by minion counter
     private int currentWave = 1;
-    Collider2D myCollider2D;   
+    Collider2D myCollider2D;
 
+    protected override void Awake()
+    {
+        base.Awake();
+        if (GameManager.myGameManager.necromancerBossDefeated)
+        {
+            Destroy(this.gameObject);
+            return;
+        }
+    }
     protected override void Start()
     {
         myCollider2D = GetComponent<Collider2D>();
@@ -48,6 +57,7 @@ public class NecroMancerBoss : EnemyAI
     }
     protected override void Update()
     {
+        if (!isAlive) return;
         if(summoningMinions)
         {
             myRB.velocity = Vector3.zero;
@@ -165,5 +175,25 @@ public class NecroMancerBoss : EnemyAI
     {
         magicalBarrierIsOn = toggle;
         magicalBarrierGameObject.SetActive(toggle);
+    }
+    public override void TakeDamage(int damage) //Take Damage
+    {
+        if (currentHealth > 0 && isAlive)
+        {
+            currentHealth -= damage;
+            StartCoroutine(enemyTookDamageIndicator());
+
+            if (healthDisplayer != null) StopCoroutine(healthDisplayer); // stops previous co-routine to stop health bar from flickering
+            healthDisplayer = UpdateHealthBar();
+            StartCoroutine(healthDisplayer);
+            if (currentHealth <= 0)
+            {
+                isAlive = false;
+                PlaySFX(enemyDeathSFX);
+                SpawnHealingPotions();
+                GameManager.myGameManager.necromancerBossDefeated = true;
+                Destroy(gameObject);
+            }        
+        }
     }
 }

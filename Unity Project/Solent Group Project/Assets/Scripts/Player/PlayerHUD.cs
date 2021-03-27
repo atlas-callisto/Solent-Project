@@ -6,14 +6,8 @@ using UnityEngine.UI;
 
 public class PlayerHUD : MonoBehaviour
 {
-    private Player player;
     public Slider healthBar;
     public Slider wolfBar;
-    void Awake()
-    {
-        player = FindObjectOfType<Player>();
-    }
-
     private void Update()
     {
         UpdateUI();
@@ -21,8 +15,8 @@ public class PlayerHUD : MonoBehaviour
 
     private void UpdateUI()
     {
-        healthBar.value = (float)player.currentHealth / (float)player.maxHealth;
+        healthBar.value = (float)Player.currentHealth / (float)Player.maxHealth;
 
-        wolfBar.value = (float)player.currentWolfBar / (float)player.maxWolfBar;
+        wolfBar.value = (float)Player.currentWolfBar / (float)Player.maxWolfBar;
     }
 }

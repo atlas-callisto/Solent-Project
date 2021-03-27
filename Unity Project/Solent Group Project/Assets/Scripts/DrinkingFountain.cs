@@ -9,21 +9,15 @@ public class DrinkingFountain : MonoBehaviour , Interactable
     [Tooltip("The amount of ticks per second")]
     public int healthRegenRate = 1;
 
-    private Player playerRef;
     private bool healPlayer = false;
     private float healthRegenTimer = 0;
-    
-    void Awake()
-    {
-        playerRef = FindObjectOfType<Player>();
-    }
     private void Update()
     {
         healthRegenTimer += Time.deltaTime;
         if (healPlayer && healthRegenTimer > (1f/ (float)healthRegenRate))
         {
             healthRegenTimer = 0;
-            playerRef.currentHealth += healthRegenAmount;
+            Player.currentHealth += healthRegenAmount;
         }
     }
     public void Interact()

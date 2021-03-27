@@ -34,6 +34,15 @@ public class LordProtector : EnemyAI
     private float groundSlamAttackTimer;
     private int numOfBatsToSpawn = 3;
 
+    protected override void Awake()
+    {
+        base.Awake();
+        if(GameManager.myGameManager.lordProtectorBossDefeated)
+        {
+            Destroy(this.gameObject);
+            return;
+        }
+    }
     protected override void Start()
     {
         base.Start();
@@ -44,7 +53,7 @@ public class LordProtector : EnemyAI
     }
     protected override void Update()
     {
-        if (!base.isAlive) return;
+        if (!isAlive) return;
         AdjustHealthBarOrientation();
         LordProtectorAI();
     }
@@ -123,6 +132,7 @@ public class LordProtector : EnemyAI
                 isAlive = false;
                 PlaySFX(enemyDeathSFX);
                 SpawnHealingPotions();
+                GameManager.myGameManager.lordProtectorBossDefeated = true;
                 Destroy(this.gameObject);
             }
             //Death anim               

@@ -154,7 +154,7 @@ public class EnemyAI : MonoBehaviour, IDamageable
         }
     }
 
-    IEnumerator enemyTookDamageIndicator()
+    protected IEnumerator enemyTookDamageIndicator()
     {
         mySpriteRenderer.color = Color.red;
         yield return new WaitForSeconds(0.1f);

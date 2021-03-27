@@ -7,12 +7,12 @@ public class Player : MonoBehaviour, IDamageable
 {
     //Params
     [Header("Stats")]
-    [SerializeField] public int maxHealth = 10;
-    [SerializeField] public int currentHealth = 10;
-    [SerializeField] public float maxWolfBar = 10;
-    [SerializeField] public float currentWolfBar = 10;
-    [SerializeField] public float wolfBarRegenRate = 0.1f;
-    [SerializeField] public float wolfDegeneRate = 1f;
+    [SerializeField] public static int maxHealth = 10;
+    [SerializeField] public static int currentHealth = 10;
+    [SerializeField] public static float maxWolfBar = 10;
+    [SerializeField] public static float currentWolfBar = 10;
+    [SerializeField] public static float wolfBarRegenRate = 0.1f;
+    [SerializeField] public static float wolfDegeneRate = 1f;
 
     [Header("Cool Downs")]
     [SerializeField] private float basicAttackCoolDown = 2f;
@@ -66,19 +66,20 @@ public class Player : MonoBehaviour, IDamageable
     private Rigidbody2D myRB;
     private Animator myAnimator;
     private SpriteRenderer mySpriteRenderer;
-
-    void Start()
-    {
-        basicAttackTimer = basicAttackCoolDown;
-        heavyAttackTimer = heavyAttackCoolDown;
-        specialAttackTimer = specialAttakCoolDown;
-    }
     private void Awake()
     {
         myRB = GetComponent<Rigidbody2D>();
         myAnimator = GetComponent<Animator>();
-        mySpriteRenderer = GetComponent<SpriteRenderer>();        
+        mySpriteRenderer = GetComponent<SpriteRenderer>();
+    }   
+    void Start()
+    {
+        doubleJumpSkillAcquired = GameManager.myGameManager.airTreaders;
+        basicAttackTimer = basicAttackCoolDown;
+        heavyAttackTimer = heavyAttackCoolDown;
+        specialAttackTimer = specialAttakCoolDown;
     }
+    
     void Update()
     {
         if (!playerAlive)
