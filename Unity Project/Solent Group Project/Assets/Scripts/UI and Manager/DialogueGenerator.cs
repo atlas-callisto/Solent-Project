@@ -5,34 +5,80 @@ using UnityEngine.UI;
 
 public class DialogueGenerator : MonoBehaviour
 {
+    [Header("References")]
     public Text DialogueText;
+    public Text NameText;
+    public Text PageNumberText;
     public GameObject DialoguePanel;
-    public string Dialogue;
-    public int DialogueCloseDelay;
+
+    [Header("Config")]
+    public string NPC_Name;
+
+    [Header("Sentences")]
+    public string Page1_Dialogue;
+    public string Page2_Dialogue;
+    public string Page3_Dialogue;
+
+    [Header("Internal")]
+    private int CurrentPage;
+    private string CurrentSentence;
 
     // Start is called before the first frame update
     void Start()
     {
-        DialogueText.text = Dialogue;
+        CurrentPage = 1;
+        NameText.text = NPC_Name;
     }
 
     private void OnTriggerStay2D(Collider2D collision)
     {
         if (Input.GetButtonDown("Interact"))
         {
-            ReadOutDialogue();
+            ReadNextPage();
         }
     }
 
-    private void ReadOutDialogue()
+    private void ReadNextPage()
     {
         DialoguePanel.SetActive(true);
-        StartCoroutine(CloseDialogue());
+
+        if (CurrentPage > 3)
+        {
+            CloseDialogue();
+        }
+
+        // Yes, this is all hard coded. If you want more pages, 
+        // I'll make a system that lets you have as many as you want.
+        // But it's tedious as hell and I don't want to do it, if not needed.
+        switch (CurrentPage)
+        {
+            case 1:
+                CurrentSentence = Page1_Dialogue;
+                break;
+
+            case 2:
+                CurrentSentence = Page2_Dialogue;
+                break;
+
+            case 3:
+                CurrentSentence = Page3_Dialogue;
+                break;
+
+            default:
+                CurrentSentence = "Error, invalid page assigned";
+                break;
+        }  UpdatePage(); CurrentPage++;
     }
 
-    private IEnumerator CloseDialogue()
+    private void UpdatePage()
     {
-        yield return new WaitForSeconds(DialogueCloseDelay);
+        DialogueText.text = CurrentSentence; 
+        PageNumberText.text = CurrentPage + "/3";
+    }
+
+    private void CloseDialogue()
+    {
+        CurrentPage = 1;
         DialoguePanel.SetActive(false);
     }
 }

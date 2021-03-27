@@ -1,5 +1,165 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &806240129
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 806240130}
+  - component: {fileID: 806240132}
+  - component: {fileID: 806240131}
+  m_Layer: 5
+  m_Name: Page Number Text
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &806240130
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 806240129}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 2.2172008, y: 5.5766063, z: 0}
+  m_Children: []
+  m_Father: {fileID: 5562303957900809433}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 651, y: -308}
+  m_SizeDelta: {x: 40, y: 30}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &806240132
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 806240129}
+  m_CullTransparentMesh: 0
+--- !u!114 &806240131
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 806240129}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: 51a84ff8efb0c5e4fb48a5c278543b69, type: 3}
+    m_FontSize: 18
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 1
+    m_MaxSize: 69
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 0.75
+  m_Text: '0/3
+
+'
+--- !u!1 &1693503191
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1693503192}
+  - component: {fileID: 1693503194}
+  - component: {fileID: 1693503193}
+  m_Layer: 5
+  m_Name: Name Text
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1693503192
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1693503191}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 2.2172008, y: 5.5766063, z: 0}
+  m_Children: []
+  m_Father: {fileID: 5562303957900809433}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -460.6, y: 303}
+  m_SizeDelta: {x: 200, y: 30}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &1693503194
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1693503191}
+  m_CullTransparentMesh: 0
+--- !u!114 &1693503193
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1693503191}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.7169812, g: 0.32474566, b: 0.1724813, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: 51a84ff8efb0c5e4fb48a5c278543b69, type: 3}
+    m_FontSize: 18
+    m_FontStyle: 1
+    m_BestFit: 0
+    m_MinSize: 1
+    m_MaxSize: 69
+    m_Alignment: 3
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 0.75
+  m_Text: NO NAME ASSIGNED
 --- !u!1 &5562303957000903455
 GameObject:
   m_ObjectHideFlags: 0
@@ -78,11 +238,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 0.75
-  m_Text: THIS IS EXAMPLE TEXT OF HOW THIS DIALOGUE WILL LOOKTHIS IS EXAMPLE TEXT
-    OF HOW THIS DIALOGUE WILL LOOKTHIS IS EXAMPLE TEXT OF HOW THIS DIALOGUE WILL
-    LOOKTHIS IS EXAMPLE TEXT OF HOW THIS DIALOGUE WILL LOOKTHIS IS EXAMPLE TEXT OF
-    HOW THIS DIALOGUE WILL LOOKTHIS IS EXAMPLE TEXT OF HOW THIS DIALOGUE WILL LOOKTHIS
-    IS EXAMPLE TEXT OF HOW THIS DIALOGUE WILL LOOK
+  m_Text: IF YOU ARE SEEING THIS IN GAME, IT'S BECAUSE AN ERROR HAS OCCURED. PLEASE
+    CONTACT THE DEVELOPERS TO LET THEM KNOW.
 --- !u!1 &5562303957256457906
 GameObject:
   m_ObjectHideFlags: 0
@@ -130,12 +287,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DialogueText: {fileID: 5562303957000903453}
+  NameText: {fileID: 1693503193}
+  PageNumberText: {fileID: 806240131}
   DialoguePanel: {fileID: 5562303957522117703}
-  Dialogue: This is a test message, you can set this in the "Dialogue Generator"
-    script, inside of the "Dialogue Interactable" game object in the inspector. You
-    can also set the time it takes the dialogue box to close. This is very first
-    stage so don't expect much. It will later support multiple pages and a next button.
-  DialogueCloseDelay: 5
+  NPC_Name: Mr Rock
+  Page1_Dialogue: Hey, Im a rock.
+  Page2_Dialogue: I do rock things.
+  Page3_Dialogue: Like. I dunno. I couldn't think of default text to put here okay!
 --- !u!61 &5562303957256457907
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -342,6 +500,8 @@ RectTransform:
   m_LocalScale: {x: 0.5614228, y: 0.11887664, z: 0}
   m_Children:
   - {fileID: 5562303957000903452}
+  - {fileID: 1693503192}
+  - {fileID: 806240130}
   m_Father: {fileID: 5562303957522117700}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
