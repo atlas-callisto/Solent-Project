@@ -1,46 +1,37 @@
 fileFormatVersion: 2
-guid: 9242b6413c545114186911618ec6e6d2
+guid: 4ae4cfa1bf364eb41ae5f6297e1f6111
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8798550677619067091
-    second: PlayerAnim_1_0
+      213: -6218175440643373551
+    second: WerewolfBossWalk_0
   - first:
-      213: -3029994069113876704
-    second: PlayerAnim_1_1
+      213: 2169863582663377302
+    second: WerewolfBossWalk_1
   - first:
-      213: 5771479395057708012
-    second: PlayerAnim_1_2
+      213: -7505581567068099189
+    second: WerewolfBossWalk_2
   - first:
-      213: -1933687882521780145
-    second: PlayerAnim_1_3
+      213: -7472663854596334614
+    second: WerewolfBossWalk_3
   - first:
-      213: 8421680658910030323
-    second: PlayerAnim_1_4
+      213: -6940050715929917693
+    second: WerewolfBossWalk_4
   - first:
-      213: 1280438623868033977
-    second: PlayerAnim_1_5
+      213: -28032235538025558
+    second: WerewolfBossWalk_5
   - first:
-      213: -3695702212002850077
-    second: PlayerAnim_1_6
+      213: -3551725430139906466
+    second: WerewolfBossWalk_6
   - first:
-      213: 6331169117953488617
-    second: PlayerAnim_1_7
+      213: -6002539525920198719
+    second: WerewolfBossWalk_7
   - first:
-      213: -7390034379382367988
-    second: PlayerAnim_1_8
+      213: -1215154009847720111
+    second: WerewolfBossWalk_8
   - first:
-      213: 4446415973158288169
-    second: PlayerAnim_1_9
-  - first:
-      213: 1740378848233547385
-    second: PlayerAnim_1_10
-  - first:
-      213: -6486128374836351687
-    second: PlayerAnim_1_11
-  - first:
-      213: 1073353963124242941
-    second: PlayerAnim_1_12
+      213: 4124384198302255784
+    second: WerewolfBossWalk_9
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -85,7 +76,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 256
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -124,53 +115,17 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: iPhone
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: PlayerAnim_1_0
+      name: WerewolfBossWalk_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 930
-        width: 320
-        height: 310
+        x: 1
+        y: 139
+        width: 44
+        height: 31
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -178,20 +133,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3d8c1cd793bba1a70800000000000000
-      internalID: 8798550677619067091
+      spriteID: 116c46dc16a94b9a0800000000000000
+      internalID: -6218175440643373551
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PlayerAnim_1_1
+      name: WerewolfBossWalk_1
       rect:
         serializedVersion: 2
-        x: 320
-        y: 930
-        width: 320
-        height: 310
+        x: 47
+        y: 139
+        width: 44
+        height: 31
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -199,20 +154,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 02f4dee927c43f5d0800000000000000
-      internalID: -3029994069113876704
+      spriteID: 69105b79e67ec1e10800000000000000
+      internalID: 2169863582663377302
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PlayerAnim_1_2
+      name: WerewolfBossWalk_2
       rect:
         serializedVersion: 2
-        x: 640
-        y: 930
-        width: 320
-        height: 310
+        x: 93
+        y: 139
+        width: 44
+        height: 31
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -220,20 +175,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ceba6e26ee9681050800000000000000
-      internalID: 5771479395057708012
+      spriteID: b8daf2eb451d6d790800000000000000
+      internalID: -7505581567068099189
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PlayerAnim_1_3
+      name: WerewolfBossWalk_3
       rect:
         serializedVersion: 2
-        x: 960
-        y: 930
-        width: 320
-        height: 310
+        x: 1
+        y: 93
+        width: 44
+        height: 31
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -241,20 +196,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f40efcfad192a25e0800000000000000
-      internalID: -1933687882521780145
+      spriteID: aeb52ece0d3cb4890800000000000000
+      internalID: -7472663854596334614
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PlayerAnim_1_4
+      name: WerewolfBossWalk_4
       rect:
         serializedVersion: 2
-        x: 0
-        y: 620
-        width: 320
-        height: 310
+        x: 47
+        y: 93
+        width: 44
+        height: 31
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -262,20 +217,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3f92c1670f1dfd470800000000000000
-      internalID: 8421680658910030323
+      spriteID: 3074dc1d4acffaf90800000000000000
+      internalID: -6940050715929917693
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PlayerAnim_1_5
+      name: WerewolfBossWalk_5
       rect:
         serializedVersion: 2
-        x: 320
-        y: 620
-        width: 320
-        height: 310
+        x: 95
+        y: 93
+        width: 42
+        height: 38
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -283,20 +238,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9bb1854f42805c110800000000000000
-      internalID: 1280438623868033977
+      spriteID: aa3fe7e84d86c9ff0800000000000000
+      internalID: -28032235538025558
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PlayerAnim_1_6
+      name: WerewolfBossWalk_6
       rect:
         serializedVersion: 2
-        x: 640
-        y: 620
-        width: 320
-        height: 310
+        x: 3
+        y: 47
+        width: 42
+        height: 38
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -304,20 +259,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3ead1f93b6a36bcc0800000000000000
-      internalID: -3695702212002850077
+      spriteID: e561ac40a8cb5bec0800000000000000
+      internalID: -3551725430139906466
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PlayerAnim_1_7
+      name: WerewolfBossWalk_7
       rect:
         serializedVersion: 2
-        x: 960
-        y: 620
-        width: 320
-        height: 310
+        x: 49
+        y: 47
+        width: 42
+        height: 38
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -325,20 +280,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9e67a80d4c4dcd750800000000000000
-      internalID: 6331169117953488617
+      spriteID: 1cfe84f9a12b2bca0800000000000000
+      internalID: -6002539525920198719
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PlayerAnim_1_8
+      name: WerewolfBossWalk_8
       rect:
         serializedVersion: 2
-        x: 0
-        y: 310
-        width: 320
-        height: 310
+        x: 93
+        y: 47
+        width: 44
+        height: 38
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -346,20 +301,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c095df2d2e2517990800000000000000
-      internalID: -7390034379382367988
+      spriteID: 15792afbdd7e22fe0800000000000000
+      internalID: -1215154009847720111
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PlayerAnim_1_9
+      name: WerewolfBossWalk_9
       rect:
         serializedVersion: 2
-        x: 320
-        y: 310
-        width: 320
-        height: 310
+        x: 1
+        y: 1
+        width: 44
+        height: 38
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -367,71 +322,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 92bf8bbf4c7d4bd30800000000000000
-      internalID: 4446415973158288169
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PlayerAnim_1_10
-      rect:
-        serializedVersion: 2
-        x: 640
-        y: 310
-        width: 320
-        height: 310
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 976609f6751172810800000000000000
-      internalID: 1740378848233547385
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PlayerAnim_1_11
-      rect:
-        serializedVersion: 2
-        x: 960
-        y: 310
-        width: 320
-        height: 310
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 93d2c4aab94acf5a0800000000000000
-      internalID: -6486128374836351687
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PlayerAnim_1_12
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 320
-        height: 310
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: df9374a1eb155ee00800000000000000
-      internalID: 1073353963124242941
+      spriteID: 8aa4a019391cc3930800000000000000
+      internalID: 4124384198302255784
       vertices: []
       indices: 
       edges: []

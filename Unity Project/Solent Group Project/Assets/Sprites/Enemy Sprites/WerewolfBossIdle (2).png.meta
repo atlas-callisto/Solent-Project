@@ -1,22 +1,34 @@
 fileFormatVersion: 2
-guid: 648133dc77d33954fb333d818943a9ba
+guid: cca8cf8cc921d0641ba407469215f562
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2246447743936568598
-    second: Wolf Idle_0
+      213: -7795667492066940731
+    second: WerewolfBossIdle (2)_0
   - first:
-      213: 202703864731986880
-    second: Wolf Idle_1
+      213: 4857266534842793103
+    second: WerewolfBossIdle (2)_1
   - first:
-      213: 5779588572275287273
-    second: Wolf Idle_2
+      213: 1750121744623807486
+    second: WerewolfBossIdle (2)_2
   - first:
-      213: -4621086135009358859
-    second: Wolf Idle_3
+      213: 8827786582653961720
+    second: WerewolfBossIdle (2)_3
   - first:
-      213: 5204354466893151799
-    second: Wolf Idle_4
+      213: 6155082981620332474
+    second: WerewolfBossIdle (2)_4
+  - first:
+      213: 6477135387028377387
+    second: WerewolfBossIdle (2)_5
+  - first:
+      213: -7232142837377032886
+    second: WerewolfBossIdle (2)_6
+  - first:
+      213: 5358365851044541478
+    second: WerewolfBossIdle (2)_7
+  - first:
+      213: 6444157863712655986
+    second: WerewolfBossIdle (2)_8
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -61,7 +73,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 512
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -100,53 +112,17 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: iPhone
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Wolf Idle_0
+      name: WerewolfBossIdle (2)_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 460
-        height: 460
+        x: 1
+        y: 93
+        width: 44
+        height: 31
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -154,20 +130,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ae2ee28dda303d0e0800000000000000
-      internalID: -2246447743936568598
+      spriteID: 5c82a4c18b930d390800000000000000
+      internalID: -7795667492066940731
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Wolf Idle_1
+      name: WerewolfBossIdle (2)_1
       rect:
         serializedVersion: 2
-        x: 460
-        y: 0
-        width: 460
-        height: 460
+        x: 47
+        y: 93
+        width: 44
+        height: 31
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -175,20 +151,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0cbe2fb471620d200800000000000000
-      internalID: 202703864731986880
+      spriteID: f8c72b4bd2a786340800000000000000
+      internalID: 4857266534842793103
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Wolf Idle_2
+      name: WerewolfBossIdle (2)_2
       rect:
         serializedVersion: 2
-        x: 920
-        y: 0
-        width: 460
-        height: 460
+        x: 93
+        y: 93
+        width: 44
+        height: 31
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -196,20 +172,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9e420665f29353050800000000000000
-      internalID: 5779588572275287273
+      spriteID: efb2df5447ea94810800000000000000
+      internalID: 1750121744623807486
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Wolf Idle_3
+      name: WerewolfBossIdle (2)_3
       rect:
         serializedVersion: 2
-        x: 1380
-        y: 0
-        width: 460
-        height: 460
+        x: 1
+        y: 47
+        width: 44
+        height: 31
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -217,20 +193,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5fbc84ec4aa9edfb0800000000000000
-      internalID: -4621086135009358859
+      spriteID: 8f58c041029928a70800000000000000
+      internalID: 8827786582653961720
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Wolf Idle_4
+      name: WerewolfBossIdle (2)_4
       rect:
         serializedVersion: 2
-        x: 1840
-        y: 0
-        width: 460
-        height: 460
+        x: 47
+        y: 47
+        width: 44
+        height: 38
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -238,8 +214,92 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 73e326450d4993840800000000000000
-      internalID: 5204354466893151799
+      spriteID: ab7388a5c5f3b6550800000000000000
+      internalID: 6155082981620332474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WerewolfBossIdle (2)_5
+      rect:
+        serializedVersion: 2
+        x: 93
+        y: 47
+        width: 44
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2f40f1315863e950800000000000000
+      internalID: 6477135387028377387
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WerewolfBossIdle (2)_6
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1
+        width: 44
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4d914d286442ab90800000000000000
+      internalID: -7232142837377032886
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WerewolfBossIdle (2)_7
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 1
+        width: 44
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 624f7180a5dbc5a40800000000000000
+      internalID: 5358365851044541478
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WerewolfBossIdle (2)_8
+      rect:
+        serializedVersion: 2
+        x: 93
+        y: 1
+        width: 44
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27a02273f6f3e6950800000000000000
+      internalID: 6444157863712655986
       vertices: []
       indices: 
       edges: []

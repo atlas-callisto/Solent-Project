@@ -1,22 +1,31 @@
 fileFormatVersion: 2
-guid: 648133dc77d33954fb333d818943a9ba
+guid: fd5d062beebc0764aacc79fef8f2ec71
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2246447743936568598
-    second: Wolf Idle_0
+      213: -3649706417823832800
+    second: SkellyRun_0
   - first:
-      213: 202703864731986880
-    second: Wolf Idle_1
+      213: -6966445237634776612
+    second: SkellyRun_1
   - first:
-      213: 5779588572275287273
-    second: Wolf Idle_2
+      213: -3028376089294130101
+    second: SkellyRun_2
   - first:
-      213: -4621086135009358859
-    second: Wolf Idle_3
+      213: 4666529251498760401
+    second: SkellyRun_3
   - first:
-      213: 5204354466893151799
-    second: Wolf Idle_4
+      213: 1354341283678398256
+    second: SkellyRun_4
+  - first:
+      213: 7147308590241104510
+    second: SkellyRun_5
+  - first:
+      213: -6585601287398824128
+    second: SkellyRun_6
+  - first:
+      213: 6311718361670046211
+    second: SkellyRun_7
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -61,7 +70,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 512
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -100,53 +109,101 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: iPhone
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Wolf Idle_0
+      name: SkellyRun_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 51
+        width: 32
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 025a5279953a95dc0800000000000000
+      internalID: -3649706417823832800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SkellyRun_1
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 51
+        width: 32
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd1419757f6325f90800000000000000
+      internalID: -6966445237634776612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SkellyRun_2
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 51
+        width: 32
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b443657edfb09f5d0800000000000000
+      internalID: -3028376089294130101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SkellyRun_3
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 51
+        width: 32
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d89d8141a7d2c040800000000000000
+      internalID: 4666529251498760401
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SkellyRun_4
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 460
-        height: 460
+        width: 32
+        height: 51
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -154,20 +211,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ae2ee28dda303d0e0800000000000000
-      internalID: -2246447743936568598
+      spriteID: 0372c4ec8369bc210800000000000000
+      internalID: 1354341283678398256
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Wolf Idle_1
+      name: SkellyRun_5
       rect:
         serializedVersion: 2
-        x: 460
+        x: 32
         y: 0
-        width: 460
-        height: 460
+        width: 32
+        height: 51
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -175,20 +232,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0cbe2fb471620d200800000000000000
-      internalID: 202703864731986880
+      spriteID: e724b657b47503360800000000000000
+      internalID: 7147308590241104510
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Wolf Idle_2
+      name: SkellyRun_6
       rect:
         serializedVersion: 2
-        x: 920
+        x: 64
         y: 0
-        width: 460
-        height: 460
+        width: 32
+        height: 51
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -196,20 +253,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9e420665f29353050800000000000000
-      internalID: 5779588572275287273
+      spriteID: 047ec38658e3b94a0800000000000000
+      internalID: -6585601287398824128
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Wolf Idle_3
+      name: SkellyRun_7
       rect:
         serializedVersion: 2
-        x: 1380
+        x: 96
         y: 0
-        width: 460
-        height: 460
+        width: 32
+        height: 51
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -217,29 +274,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5fbc84ec4aa9edfb0800000000000000
-      internalID: -4621086135009358859
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Wolf Idle_4
-      rect:
-        serializedVersion: 2
-        x: 1840
-        y: 0
-        width: 460
-        height: 460
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 73e326450d4993840800000000000000
-      internalID: 5204354466893151799
+      spriteID: 30257a5b86ab79750800000000000000
+      internalID: 6311718361670046211
       vertices: []
       indices: 
       edges: []
