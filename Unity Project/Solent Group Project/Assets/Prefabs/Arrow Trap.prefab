@@ -245,4 +245,5 @@ MonoBehaviour:
   Arrow: {fileID: 7747583675736760015, guid: dbdbf00642899684393441b3b7f1969c, type: 3}
   xArrowSpawnOffset: 0.4
   yArrowSpawnOffset: -0.35
+  ReloadCooldown: 2
   Ammo: 3
