@@ -54,6 +54,7 @@ public class Player : MonoBehaviour, IDamageable
 
     internal bool wolf = false; //Transform to wolf, also called by moonlight script
     public bool playerAlive = true;
+    public static bool playerisTalking = false;
 
     internal bool isGrounded = false; // is modified by playerGroundCheck
     internal bool canDoubleJump = false;// is modified by playerGroundCheck
@@ -83,6 +84,12 @@ public class Player : MonoBehaviour, IDamageable
     void Update()
     {
         if (!playerAlive) return;
+        if (playerisTalking)
+        {
+            myRB.velocity = new Vector2(0, myRB.velocity.y); // Stops player from continusously moving
+            return; // Stops control when player is talking to NPC
+        }
+
         PlayerMovement();
         PlayerJump();
         CoolDownChecker();

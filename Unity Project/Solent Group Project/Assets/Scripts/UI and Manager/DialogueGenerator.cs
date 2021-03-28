@@ -23,6 +23,12 @@ public class DialogueGenerator : MonoBehaviour
     private int CurrentPage;
     private string CurrentSentence;
 
+
+
+
+
+    //HUD Dialouge
+
     // Start is called before the first frame update
     void Start()
     {
@@ -36,6 +42,12 @@ public class DialogueGenerator : MonoBehaviour
         {
             ReadNextPage();
         }
+    }
+
+    // Read Page with number()
+    private void ReadPageNumber()
+    {
+
     }
 
     private void ReadNextPage()
