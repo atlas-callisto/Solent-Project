@@ -24,6 +24,7 @@ public class LevelLoader : MonoBehaviour
     }
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
+        LevelTransistion.canTransitionn = true;
         playerRef = FindObjectOfType<Player>().gameObject;
         if (GameObject.Find(playerSpwanLocationName)) playerRef.transform.position = GameObject.Find(playerSpwanLocationName).transform.position;
         SceneManager.sceneLoaded -= OnSceneLoaded;

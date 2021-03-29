@@ -751,10 +751,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Slime Enemy
       objectReference: {fileID: 0}
-    - target: {fileID: 1591418635905663523, guid: f97d2479617edd944bb205e59e61355f, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 1591418635905663526, guid: f97d2479617edd944bb205e59e61355f, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -1417,22 +1413,6 @@ PrefabInstance:
     - target: {fileID: 2160318093421502459, guid: ec9628dc761ae034597c0d60d9cc1e23, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2160318093421502463, guid: ec9628dc761ae034597c0d60d9cc1e23, type: 3}
-      propertyPath: playerMaxHealth
-      value: 30
-      objectReference: {fileID: 0}
-    - target: {fileID: 2160318093421502463, guid: ec9628dc761ae034597c0d60d9cc1e23, type: 3}
-      propertyPath: PlayerMaxWolfBar
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 2160318093421502463, guid: ec9628dc761ae034597c0d60d9cc1e23, type: 3}
-      propertyPath: playerCurrentHealth
-      value: 30
-      objectReference: {fileID: 0}
-    - target: {fileID: 2160318093421502463, guid: ec9628dc761ae034597c0d60d9cc1e23, type: 3}
-      propertyPath: PlayerCurrentWolfBar
-      value: 20
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ec9628dc761ae034597c0d60d9cc1e23, type: 3}
@@ -4693,10 +4673,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: NecroMancerBoss
       objectReference: {fileID: 0}
-    - target: {fileID: 1317257139735436872, guid: 9f7f8ce54823aea409ea9e9bcc5e6cdb, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 1317257139735436885, guid: 9f7f8ce54823aea409ea9e9bcc5e6cdb, type: 3}
       propertyPath: m_RootOrder
       value: 6
@@ -4830,10 +4806,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Skeleton Archer
       objectReference: {fileID: 0}
-    - target: {fileID: 1510952540990081878, guid: 347c5b5dfe88e9c4690fef42b372f24b, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 347c5b5dfe88e9c4690fef42b372f24b, type: 3}
 --- !u!1001 &1939664328074928109
@@ -4952,10 +4924,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Skeleton
       objectReference: {fileID: 0}
-    - target: {fileID: 1951015803762913734, guid: 8a8f7b621564c3847baeafdce185fa24, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8a8f7b621564c3847baeafdce185fa24, type: 3}
 --- !u!1001 &1992317988788073968
@@ -4968,10 +4936,6 @@ PrefabInstance:
     - target: {fileID: 1992317988985449392, guid: 1feaf9578108ea440812e482d25c9eb5, type: 3}
       propertyPath: m_Name
       value: Templar Knight
-      objectReference: {fileID: 0}
-    - target: {fileID: 1992317988985449392, guid: 1feaf9578108ea440812e482d25c9eb5, type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1992317988985449395, guid: 1feaf9578108ea440812e482d25c9eb5, type: 3}
       propertyPath: m_RootOrder
@@ -5091,10 +5055,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: WereWolf Boss
       objectReference: {fileID: 0}
-    - target: {fileID: 1535884609640561563, guid: f492d61ada5c0c54f8f9239dc0b430e5, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 2394158191316727391, guid: f492d61ada5c0c54f8f9239dc0b430e5, type: 3}
       propertyPath: m_RootOrder
       value: 5
@@ -5154,11 +5114,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2691536555842065402, guid: a0235e56299161f449579089f66fc18a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -59.26
+      value: -59.3
       objectReference: {fileID: 0}
     - target: {fileID: 2691536555842065402, guid: a0235e56299161f449579089f66fc18a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.08
+      value: 0.58
       objectReference: {fileID: 0}
     - target: {fileID: 2691536555842065402, guid: a0235e56299161f449579089f66fc18a, type: 3}
       propertyPath: m_LocalPosition.z
@@ -5649,10 +5609,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Spider
       objectReference: {fileID: 0}
-    - target: {fileID: 8412005961085262007, guid: 497d39ca92478ff44a945b66ebc3dc63, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 497d39ca92478ff44a945b66ebc3dc63, type: 3}
 --- !u!1001 &8495587266732704726
@@ -5665,10 +5621,6 @@ PrefabInstance:
     - target: {fileID: 8495587268032491136, guid: 1f075cf188a788a4cb3ddfb745b40d71, type: 3}
       propertyPath: m_Name
       value: bat
-      objectReference: {fileID: 0}
-    - target: {fileID: 8495587268032491136, guid: 1f075cf188a788a4cb3ddfb745b40d71, type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8495587268032491150, guid: 1f075cf188a788a4cb3ddfb745b40d71, type: 3}
       propertyPath: m_RootOrder
@@ -5770,10 +5722,6 @@ PrefabInstance:
     - target: {fileID: 520412956693977299, guid: 9974be9a28dcda9449d1563ba19aaf5c, type: 3}
       propertyPath: m_Name
       value: Lord Protector
-      objectReference: {fileID: 0}
-    - target: {fileID: 520412956693977299, guid: 9974be9a28dcda9449d1563ba19aaf5c, type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8720837921709586767, guid: 9974be9a28dcda9449d1563ba19aaf5c, type: 3}
       propertyPath: batSpawnLocations.Array.data[0]

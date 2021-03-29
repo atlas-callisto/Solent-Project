@@ -7,11 +7,21 @@ public class LevelTransistion : MonoBehaviour
 {
     [SerializeField] private string levelName;
     [SerializeField] private string spawnLocationName;
-    private void OnTriggerEnter2D(Collider2D collision)
+    [SerializeField] private Player playerRef;
+    public static bool canTransitionn = true;
+    void Start()
+    {
+        playerRef = FindObjectOfType<Player>();
+    }
+    private void OnTriggerStay2D(Collider2D collision)
     {
         if(collision.CompareTag("Player"))
         {
-            FindObjectOfType<LevelLoader>().LoadLevelWithName(levelName, spawnLocationName);
+            if (playerRef.canInteract && canTransitionn)
+            {
+                canTransitionn = false;
+                FindObjectOfType<LevelLoader>().LoadLevelWithName(levelName, spawnLocationName);
+            }
         }
     }
 }

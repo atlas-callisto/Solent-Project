@@ -101,12 +101,12 @@ public class TemplarKnight : EnemyAI
     {
         IDamageable iDamageableObj;
         iDamageableObj = collision.gameObject.GetComponent<IDamageable>();
-        if (iDamageableObj != null && collision.gameObject.tag != "Enemy") // Excluding objects with enemy tag of course
+        if (iDamageableObj != null && collision.gameObject.tag != "Enemy")
         {
             iDamageableObj.TakeDamage(collisionDamage);
             if (collision.gameObject.GetComponent<Player>())
             {
-                collision.gameObject.GetComponent<Player>().KnockBackEffect(collision.gameObject.transform.position - this.transform.position);
+                player.KnockBackEffect(GetKnockBackDirection(collision));
             }
         }
     }

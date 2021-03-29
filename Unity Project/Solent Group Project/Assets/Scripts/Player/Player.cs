@@ -7,13 +7,14 @@ public class Player : MonoBehaviour, IDamageable
 {
     //Params
     
-    [SerializeField] public static int maxHealth = 10;
-    [SerializeField] public static int currentHealth = 10;
-    [SerializeField] public static float maxWolfBar = 10;
-    [SerializeField] public static float currentWolfBar = 10;
-    [SerializeField] public static float wolfBarRegenRate = 0.1f;
-    [SerializeField] public static float wolfDegeneRate = 1f;
-    [SerializeField] public static bool initializePlayerStats = true;
+    public static int maxHealth = 10;
+    public static int currentHealth = 10;
+    public static float maxWolfBar = 10;
+    public static float currentWolfBar = 10;
+    public static float wolfBarRegenRate = 0.1f;
+    public static float wolfDegeneRate = 1f;
+    public static bool initializePlayerStats = true;
+    public bool canInteract = false;
 
     [Header("Stats")] // Couldnot expose static variables into the inspector so this is a work around
     [SerializeField] public int playerMaxHealth = 10;
@@ -77,6 +78,7 @@ public class Player : MonoBehaviour, IDamageable
     private Rigidbody2D myRB;
     private Animator myAnimator;
     private SpriteRenderer mySpriteRenderer;
+
     private void Awake()
     {
         myRB = GetComponent<Rigidbody2D>();
@@ -109,7 +111,7 @@ public class Player : MonoBehaviour, IDamageable
             myRB.velocity = new Vector2(0, myRB.velocity.y); // Stops player from continusously moving
             return; // Stops control when player is talking to NPC
         }
-
+        Interaction();
         PlayerMovement();
         PlayerJump();
         CoolDownChecker();
@@ -174,9 +176,6 @@ public class Player : MonoBehaviour, IDamageable
             if (!slowDebuff) currentMoveSpeed = humanMoveSpeed;
         }
     }
-
-
-
     #endregion
 
     #region Player Attacks
@@ -273,7 +272,6 @@ public class Player : MonoBehaviour, IDamageable
                 break;
         }
     }
-
     private void CoolDownChecker()
     {
         basicAttackTimer  = Mathf.Clamp(basicAttackTimer + Time.deltaTime ,0,basicAttackCoolDown);//Clamping values for precise UI display
@@ -292,7 +290,6 @@ public class Player : MonoBehaviour, IDamageable
             wolf = false;
         }
     }
-
     public void ShootProjectile()
     {
         PlaySFX(shootingSFX);
@@ -301,12 +298,18 @@ public class Player : MonoBehaviour, IDamageable
     #endregion
 
     #region Interact System
+    private void Interaction()
+    {
+        if (Input.GetButtonDown("Interact")) canInteract = true;
+        else if (Input.GetButtonUp("Interact")) canInteract = false;
+
+    }
     private void OnTriggerStay2D(Collider2D collision)
     {
         if (collision.tag == "Interactable")
         {
             Interactable interactableObj = collision.GetComponent<Interactable>();
-            if (interactableObj != null && Input.GetButtonDown("Interact"))
+            if (interactableObj != null && canInteract)
             {
                 collision.GetComponent<Interactable>().Interact();
             }

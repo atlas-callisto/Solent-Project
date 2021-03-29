@@ -193,7 +193,6 @@ public class EnemyAI : MonoBehaviour, IDamageable
     #endregion
     protected void PlaySFX(AudioClip clipName)
     {
-        AudioSource.PlayClipAtPoint(clipName, Camera.main.transform.position, 0.5f);
+        AudioSource.PlayClipAtPoint(clipName, Camera.main.transform.position, 0.5f);            
     }
-
 }
