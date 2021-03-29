@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Item : MonoBehaviour , Interactable
 {
+    public GameObject interactableHintText;
     List<GameObject> movingPlatformList = new List<GameObject>();
     void Awake()
     {
@@ -35,5 +36,19 @@ public class Item : MonoBehaviour , Interactable
             }
         }        
         Destroy(gameObject);
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.tag == "Player")
+        {
+            interactableHintText.SetActive(true);
+        }
+    }
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.tag == "Player")
+        {
+            interactableHintText.SetActive(false);
+        }
     }
 }
