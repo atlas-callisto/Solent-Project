@@ -17,8 +17,7 @@ public class NPCDialougeTriggerSystem : MonoBehaviour , Interactable
     }
     private void Start()
     {
-        dialougeStringList = (dialougesList[0].dialouges);
-        
+        dialougeStringList = (dialougesList[0].dialouges);        
     }
     public void Interact()
     {
