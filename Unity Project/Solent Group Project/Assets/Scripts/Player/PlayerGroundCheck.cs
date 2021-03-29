@@ -10,7 +10,7 @@ public class PlayerGroundCheck : MonoBehaviour
         playerRef = FindObjectOfType<Player>();
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerStay2D(Collider2D collision)
     {
         if (collision.gameObject.layer == 8) // 8 = "Ground" layer
         {
