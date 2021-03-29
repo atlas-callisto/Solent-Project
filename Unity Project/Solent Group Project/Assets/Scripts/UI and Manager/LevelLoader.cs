@@ -20,7 +20,7 @@ public class LevelLoader : MonoBehaviour
     }
     public void NewGame() // Load new game
     {
-        SceneManager.LoadScene("level1"); 
+        SceneManager.LoadScene("VerticalSlice"); 
     }
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
@@ -68,7 +68,14 @@ public class LevelLoader : MonoBehaviour
     {
         SceneManager.LoadScene("OptionsMenu");
     }   
-
+    public void LoadHelpMenu()
+    {
+        SceneManager.LoadScene("HelpMenu");
+    }
+    public void LoadCreditsMenu()
+    {
+        SceneManager.LoadScene("CreditsMenu");
+    }
     IEnumerator LoadGameOver()
     {
         yield return new WaitForSeconds(restartSceneDelay);
