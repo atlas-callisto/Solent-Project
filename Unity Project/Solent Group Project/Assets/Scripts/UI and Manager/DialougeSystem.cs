@@ -11,6 +11,7 @@ public class DialougeSystem : MonoBehaviour
     [SerializeField] List<string> dialougeList = new List<string>();
     [SerializeField] private int currentDialougePage = 0;
     [SerializeField] private int totalPages = 2;
+    public bool doOnce = true; // Stops this script from getting called multiple times
 
     private void Start()
     {
@@ -45,6 +46,8 @@ public class DialougeSystem : MonoBehaviour
     }
     public void AddDialougeInfo(Sprite image, string npcName, List<string> dialouges)
     {
+        if (!doOnce) return;
+        doOnce = false;
         gameObject.SetActive(true);
         Player.playerisTalking = true;
         npcImage.sprite = image;
@@ -59,6 +62,7 @@ public class DialougeSystem : MonoBehaviour
         Player.playerisTalking = false;
         currentDialougePage = 0;
         dialougeList.Clear();
+        doOnce = true;
         gameObject.SetActive(false);
     }
 

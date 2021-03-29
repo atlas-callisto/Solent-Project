@@ -1036,10 +1036,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d10b081b667d5634f963c486391c27f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialougeList:
-  - Hello there Stranger
-  - I am papa Franku
-  - Nice to meet you
+  dialougesList:
+  - {fileID: 11400000, guid: 2e66ce7eaf70f8945ae5844be4b4259c, type: 2}
+  - {fileID: 0}
+  dialougeStringList: []
 --- !u!1 &1751187694
 GameObject:
   m_ObjectHideFlags: 0

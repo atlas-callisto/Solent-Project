@@ -106,12 +106,12 @@ public class Player : MonoBehaviour, IDamageable
     void Update()
     {
         if (!playerAlive) return;
+        Interaction(); 
         if (playerisTalking)
         {
             myRB.velocity = new Vector2(0, myRB.velocity.y); // Stops player from continusously moving
             return; // Stops control when player is talking to NPC
         }
-        Interaction();
         PlayerMovement();
         PlayerJump();
         CoolDownChecker();
