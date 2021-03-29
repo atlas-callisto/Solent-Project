@@ -1,0 +1,4030 @@
+fileFormatVersion: 2
+guid: 859a10e37ad12e0488609668f27abd14
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -9172951268983041223
+    second: NecroMancerBoss_0
+  - first:
+      213: 6110626192254015588
+    second: NecroMancerBoss_1
+  - first:
+      213: -9208678319434196453
+    second: NecroMancerBoss_2
+  - first:
+      213: 7178592088163563936
+    second: NecroMancerBoss_3
+  - first:
+      213: -7141231551622948722
+    second: NecroMancerBoss_4
+  - first:
+      213: -6923741389814637394
+    second: NecroMancerBoss_5
+  - first:
+      213: -2047731240625985951
+    second: NecroMancerBoss_6
+  - first:
+      213: 3937884071662000126
+    second: NecroMancerBoss_7
+  - first:
+      213: -3431957599368382707
+    second: NecroMancerBoss_8
+  - first:
+      213: 1912825436900028747
+    second: NecroMancerBoss_9
+  - first:
+      213: -3835601892290368612
+    second: NecroMancerBoss_10
+  - first:
+      213: 6470611787369769202
+    second: NecroMancerBoss_11
+  - first:
+      213: 2655726103497716585
+    second: NecroMancerBoss_12
+  - first:
+      213: -2903105659886117848
+    second: NecroMancerBoss_13
+  - first:
+      213: 7073743239457825340
+    second: NecroMancerBoss_14
+  - first:
+      213: -8744919095813571204
+    second: NecroMancerBoss_15
+  - first:
+      213: -213562265493247457
+    second: NecroMancerBoss_16
+  - first:
+      213: 6190095555363221341
+    second: NecroMancerBoss_17
+  - first:
+      213: -7361314032587426174
+    second: NecroMancerBoss_18
+  - first:
+      213: 4891098009243828642
+    second: NecroMancerBoss_19
+  - first:
+      213: -1564814891085064341
+    second: NecroMancerBoss_20
+  - first:
+      213: 7783437903585854972
+    second: NecroMancerBoss_21
+  - first:
+      213: 5725814387977414986
+    second: NecroMancerBoss_22
+  - first:
+      213: -7940071892723912495
+    second: NecroMancerBoss_23
+  - first:
+      213: -5175243169413330596
+    second: NecroMancerBoss_24
+  - first:
+      213: 1977064234121773470
+    second: NecroMancerBoss_25
+  - first:
+      213: 5321436542249044857
+    second: NecroMancerBoss_26
+  - first:
+      213: -3886693535690433296
+    second: NecroMancerBoss_27
+  - first:
+      213: 9208716588729836760
+    second: NecroMancerBoss_28
+  - first:
+      213: -7882065743838731171
+    second: NecroMancerBoss_29
+  - first:
+      213: 2281328669575903174
+    second: NecroMancerBoss_30
+  - first:
+      213: -731501598288862810
+    second: NecroMancerBoss_31
+  - first:
+      213: -2033412845040000518
+    second: NecroMancerBoss_32
+  - first:
+      213: 8064085676933368775
+    second: NecroMancerBoss_33
+  - first:
+      213: -8186744138171787698
+    second: NecroMancerBoss_34
+  - first:
+      213: -5137381920242921254
+    second: NecroMancerBoss_35
+  - first:
+      213: -3900703574193829037
+    second: NecroMancerBoss_36
+  - first:
+      213: 7593636430834084555
+    second: NecroMancerBoss_37
+  - first:
+      213: 4781046965283239397
+    second: NecroMancerBoss_38
+  - first:
+      213: -3526679468780548416
+    second: NecroMancerBoss_39
+  - first:
+      213: -1463378242866810533
+    second: NecroMancerBoss_40
+  - first:
+      213: -2811793684448964836
+    second: NecroMancerBoss_41
+  - first:
+      213: -2148685873866746222
+    second: NecroMancerBoss_42
+  - first:
+      213: -5619552494979821777
+    second: NecroMancerBoss_43
+  - first:
+      213: -2595817317098258474
+    second: NecroMancerBoss_44
+  - first:
+      213: 7810612873621586513
+    second: NecroMancerBoss_45
+  - first:
+      213: -7502752003221907434
+    second: NecroMancerBoss_46
+  - first:
+      213: 6894607781685832361
+    second: NecroMancerBoss_47
+  - first:
+      213: 1573525532346765884
+    second: NecroMancerBoss_48
+  - first:
+      213: 6894490837946060051
+    second: NecroMancerBoss_49
+  - first:
+      213: -8837936153778797348
+    second: NecroMancerBoss_50
+  - first:
+      213: -2201085764963965535
+    second: NecroMancerBoss_51
+  - first:
+      213: 5932564940669027470
+    second: NecroMancerBoss_52
+  - first:
+      213: 5073640432340112018
+    second: NecroMancerBoss_53
+  - first:
+      213: -4498091463234058818
+    second: NecroMancerBoss_54
+  - first:
+      213: -1824840729646200409
+    second: NecroMancerBoss_55
+  - first:
+      213: -7635048561677614871
+    second: NecroMancerBoss_56
+  - first:
+      213: -1871106454328533674
+    second: NecroMancerBoss_57
+  - first:
+      213: -6117735164430663342
+    second: NecroMancerBoss_58
+  - first:
+      213: 5233133176262260067
+    second: NecroMancerBoss_59
+  - first:
+      213: -1754080109052774095
+    second: NecroMancerBoss_60
+  - first:
+      213: 335184124621800537
+    second: NecroMancerBoss_61
+  - first:
+      213: 3865143822185069710
+    second: NecroMancerBoss_62
+  - first:
+      213: 1923624986358726892
+    second: NecroMancerBoss_63
+  - first:
+      213: 1866999596089358546
+    second: NecroMancerBoss_64
+  - first:
+      213: 3153006373550146189
+    second: NecroMancerBoss_65
+  - first:
+      213: -1654231197476399101
+    second: NecroMancerBoss_66
+  - first:
+      213: 7554617664185039051
+    second: NecroMancerBoss_67
+  - first:
+      213: 9124479811578301962
+    second: NecroMancerBoss_68
+  - first:
+      213: -8811050902488497704
+    second: NecroMancerBoss_69
+  - first:
+      213: 5457676508474008519
+    second: NecroMancerBoss_70
+  - first:
+      213: -5884788192586223364
+    second: NecroMancerBoss_71
+  - first:
+      213: -6237443034093450685
+    second: NecroMancerBoss_72
+  - first:
+      213: -2981111034168943108
+    second: NecroMancerBoss_73
+  - first:
+      213: 8195009409083251134
+    second: NecroMancerBoss_74
+  - first:
+      213: -6087608672127776344
+    second: NecroMancerBoss_75
+  - first:
+      213: -5482612907140501300
+    second: NecroMancerBoss_76
+  - first:
+      213: -4679072466821307168
+    second: NecroMancerBoss_77
+  - first:
+      213: -8892579608078870819
+    second: NecroMancerBoss_78
+  - first:
+      213: -5383818836600681598
+    second: NecroMancerBoss_79
+  - first:
+      213: -1464749632464935045
+    second: NecroMancerBoss_80
+  - first:
+      213: 2473949546461044704
+    second: NecroMancerBoss_81
+  - first:
+      213: -7935025703703352948
+    second: NecroMancerBoss_82
+  - first:
+      213: 3054330653172727181
+    second: NecroMancerBoss_83
+  - first:
+      213: -660948435052259783
+    second: NecroMancerBoss_84
+  - first:
+      213: 3883159670260099244
+    second: NecroMancerBoss_85
+  - first:
+      213: 8026401353439278409
+    second: NecroMancerBoss_86
+  - first:
+      213: 8399736981585207208
+    second: NecroMancerBoss_87
+  - first:
+      213: 2940964749827695451
+    second: NecroMancerBoss_88
+  - first:
+      213: 3088650863656509808
+    second: NecroMancerBoss_89
+  - first:
+      213: -4986219953469691559
+    second: NecroMancerBoss_90
+  - first:
+      213: 6598586858617778391
+    second: NecroMancerBoss_91
+  - first:
+      213: 5386103195562516650
+    second: NecroMancerBoss_92
+  - first:
+      213: 2940818367541829309
+    second: NecroMancerBoss_93
+  - first:
+      213: 2525280955019480389
+    second: NecroMancerBoss_94
+  - first:
+      213: -394787535664129755
+    second: NecroMancerBoss_95
+  - first:
+      213: -2767502882365806063
+    second: NecroMancerBoss_96
+  - first:
+      213: -8676442254662612487
+    second: NecroMancerBoss_97
+  - first:
+      213: -50354630000492293
+    second: NecroMancerBoss_98
+  - first:
+      213: 8272218182640553551
+    second: NecroMancerBoss_99
+  - first:
+      213: 266241299756121513
+    second: NecroMancerBoss_100
+  - first:
+      213: -8714478255792939664
+    second: NecroMancerBoss_101
+  - first:
+      213: -4000605225549977310
+    second: NecroMancerBoss_102
+  - first:
+      213: -5908282334962086585
+    second: NecroMancerBoss_103
+  - first:
+      213: -7422327993096813755
+    second: NecroMancerBoss_104
+  - first:
+      213: 3446982047516717284
+    second: NecroMancerBoss_105
+  - first:
+      213: 4840070263701127981
+    second: NecroMancerBoss_106
+  - first:
+      213: -1477989352942058458
+    second: NecroMancerBoss_107
+  - first:
+      213: -9194389409109411155
+    second: NecroMancerBoss_108
+  - first:
+      213: 491978002340100289
+    second: NecroMancerBoss_109
+  - first:
+      213: -5698887787105123852
+    second: NecroMancerBoss_110
+  - first:
+      213: 2832007775338894702
+    second: NecroMancerBoss_111
+  - first:
+      213: 6482257864213369039
+    second: NecroMancerBoss_112
+  - first:
+      213: -6206334986864038430
+    second: NecroMancerBoss_113
+  - first:
+      213: 3745323249057872
+    second: NecroMancerBoss_114
+  - first:
+      213: -7553040042744235508
+    second: NecroMancerBoss_115
+  - first:
+      213: -5104732132720945367
+    second: NecroMancerBoss_116
+  - first:
+      213: -5765383809958019229
+    second: NecroMancerBoss_117
+  - first:
+      213: -4131143423264334587
+    second: NecroMancerBoss_118
+  - first:
+      213: -195868027324668035
+    second: NecroMancerBoss_119
+  - first:
+      213: 7302982101658301637
+    second: NecroMancerBoss_120
+  - first:
+      213: -4938400179673991379
+    second: NecroMancerBoss_121
+  - first:
+      213: 3850717448215384561
+    second: NecroMancerBoss_122
+  - first:
+      213: 4431866346715058913
+    second: NecroMancerBoss_123
+  - first:
+      213: 870613753629068760
+    second: NecroMancerBoss_124
+  - first:
+      213: -7956187739119399239
+    second: NecroMancerBoss_125
+  - first:
+      213: 5330949822309529343
+    second: NecroMancerBoss_126
+  - first:
+      213: 5692395358820588850
+    second: NecroMancerBoss_127
+  - first:
+      213: -6234351803191406666
+    second: NecroMancerBoss_128
+  - first:
+      213: -4091773030398803020
+    second: NecroMancerBoss_129
+  - first:
+      213: 3816064687431109462
+    second: NecroMancerBoss_130
+  - first:
+      213: 6404720743372866256
+    second: NecroMancerBoss_131
+  - first:
+      213: -1682795352237056134
+    second: NecroMancerBoss_132
+  - first:
+      213: -4399857788705454826
+    second: NecroMancerBoss_133
+  - first:
+      213: -9026791553921771535
+    second: NecroMancerBoss_134
+  - first:
+      213: -8877258024984964784
+    second: NecroMancerBoss_135
+  - first:
+      213: -86019338609009224
+    second: NecroMancerBoss_136
+  - first:
+      213: 3002097303796043322
+    second: NecroMancerBoss_137
+  - first:
+      213: -3214391104386905379
+    second: NecroMancerBoss_138
+  - first:
+      213: 1696254316153561570
+    second: NecroMancerBoss_139
+  - first:
+      213: 1554314579951391879
+    second: NecroMancerBoss_140
+  - first:
+      213: -1169957163437011159
+    second: NecroMancerBoss_141
+  - first:
+      213: -1550064825842114195
+    second: NecroMancerBoss_142
+  - first:
+      213: 8178241842729754754
+    second: NecroMancerBoss_143
+  - first:
+      213: -8991537917424532782
+    second: NecroMancerBoss_144
+  - first:
+      213: 1668361348073808317
+    second: NecroMancerBoss_145
+  - first:
+      213: -4199381444571666440
+    second: NecroMancerBoss_146
+  - first:
+      213: -2615719967627040768
+    second: NecroMancerBoss_147
+  - first:
+      213: 7399374715684822933
+    second: NecroMancerBoss_148
+  - first:
+      213: -1023681333016623174
+    second: NecroMancerBoss_149
+  - first:
+      213: 3404545321759780711
+    second: NecroMancerBoss_150
+  - first:
+      213: -6886665484807787355
+    second: NecroMancerBoss_151
+  - first:
+      213: 6649518622232978758
+    second: NecroMancerBoss_152
+  - first:
+      213: -3398347544428417335
+    second: NecroMancerBoss_153
+  - first:
+      213: -942243719246016569
+    second: NecroMancerBoss_154
+  - first:
+      213: -4140207043615435946
+    second: NecroMancerBoss_155
+  - first:
+      213: 3550768995190384327
+    second: NecroMancerBoss_156
+  - first:
+      213: -8695078786871061676
+    second: NecroMancerBoss_157
+  - first:
+      213: 5488270520840612042
+    second: NecroMancerBoss_158
+  - first:
+      213: -1255889782965811631
+    second: NecroMancerBoss_159
+  - first:
+      213: -7738747392727319442
+    second: NecroMancerBoss_160
+  - first:
+      213: 3940305214488766483
+    second: NecroMancerBoss_161
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: NecroMancerBoss_0
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 490
+        width: 35
+        height: 72
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9331c46db6123b080800000000000000
+      internalID: -9172951268983041223
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecroMancerBoss_1
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 490
+        width: 34
+        height: 72
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4689f78752e4dc450800000000000000
+      internalID: 6110626192254015588
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecroMancerBoss_2
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 490
+        width: 33
+        height: 72
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1a984fabd3343080800000000000000
+      internalID: -9208678319434196453
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecroMancerBoss_3
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 490
+        width: 33
+        height: 72
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a93b6a687b7f9360800000000000000
+      internalID: 7178592088163563936
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecroMancerBoss_4
+      rect:
+        serializedVersion: 2
+        x: 275
+        y: 490
+        width: 34
+        height: 72
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e88d3ba5dbf35ec90800000000000000
+      internalID: -7141231551622948722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecroMancerBoss_5
+      rect:
+        serializedVersion: 2
+        x: 440
+        y: 539
+        width: 39
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eacdd67b3ede9ef90800000000000000
+      internalID: -6923741389814637394
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecroMancerBoss_6
+      rect:
+        serializedVersion: 2
+        x: 563
+        y: 539
+        width: 39
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 166a407394ff493e0800000000000000
+      internalID: -2047731240625985951
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecroMancerBoss_7
+      rect:
+        serializedVersion: 2
+        x: 685
+        y: 539
+        width: 40
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef7151a03bc26a630800000000000000
+      internalID: 3937884071662000126
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecroMancerBoss_8
+      rect:
+        serializedVersion: 2
+        x: 808
+        y: 539
+        width: 40
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d07f1752fbc3f50d0800000000000000
+      internalID: -3431957599368382707
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecroMancerBoss_9
+      rect:
+        serializedVersion: 2
+        x: 439
+        y: 488
+        width: 38
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b41f1cba998bb8a10800000000000000
+      internalID: 1912825436900028747
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecroMancerBoss_10
+      rect:
+        serializedVersion: 2
+        x: 562
+        y: 488
+        width: 38
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9b673e966435cac0800000000000000
+      internalID: -3835601892290368612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecroMancerBoss_11
+      rect:
+        serializedVersion: 2
+        x: 687
+        y: 488
+        width: 55
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f861a9432b3cc950800000000000000
+      internalID: 6470611787369769202
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecroMancerBoss_12
+      rect:
+        serializedVersion: 2
+        x: 795
+        y: 488
+        width: 53
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 963b6bb02d80bd420800000000000000
+      internalID: 2655726103497716585
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecroMancerBoss_13
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 392
+        width: 34
+        height: 72
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82cdf0d98c816b7d0800000000000000
+      internalID: -2903105659886117848
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecroMancerBoss_14
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 392
+        width: 35
+        height: 72
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c32643c7ffbfa2260800000000000000
+      internalID: 7073743239457825340
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecroMancerBoss_15
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 392
+        width: 36
+        height: 72
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7d70883a6ec3a680800000000000000
+      internalID: -8744919095813571204
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecroMancerBoss_16
+      rect:
+        serializedVersion: 2
+        x: 236
+        y: 392
+        width: 35
+        height: 72
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1ae8d34046490df0800000000000000
+      internalID: -213562265493247457
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecroMancerBoss_17
+      rect:
+        serializedVersion: 2
+        x: 305
+        y: 392
+        width: 36
+        height: 72
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5f262f6c13a7e550800000000000000
+      internalID: 6190095555363221341
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecroMancerBoss_18
+      rect:
+        serializedVersion: 2
+        x: 376
+        y: 392
+        width: 38
+        height: 72
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2863787a3eb57d990800000000000000
+      internalID: -7361314032587426174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecroMancerBoss_19
+      rect:
+        serializedVersion: 2
+        x: 452
+        y: 392
+        width: 39
+        height: 72
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a1499aa9bba0e340800000000000000
+      internalID: 4891098009243828642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecroMancerBoss_20
+      rect:
+        serializedVersion: 2
+        x: 532
+        y: 392
+        width: 36
+        height: 72
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6712a5b529a84ae0800000000000000
+      internalID: -1564814891085064341
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecroMancerBoss_21
+      rect:
+        serializedVersion: 2
+        x: 617
+        y: 391
+        width: 35
+        height: 72
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf5cb8ee883540c60800000000000000
+      internalID: 7783437903585854972
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecroMancerBoss_22
+      rect:
+        serializedVersion: 2
+        x: 698
+        y: 391
+        width: 36
+        height: 72
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a49e63569dd267f40800000000000000
+      internalID: 5725814387977414986
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecroMancerBoss_23
+      rect:
+        serializedVersion: 2
+        x: 767
+        y: 391
+        width: 35
+        height: 72
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d0b02f8ea23fc190800000000000000
+      internalID: -7940071892723912495
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecroMancerBoss_24
+      rect:
+        serializedVersion: 2
+        x: 834
+        y: 391
+        width: 36
+        height: 72
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c590adcc1c7dd28b0800000000000000
+      internalID: -5175243169413330596
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecroMancerBoss_25
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 291
+        width: 37
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9145fc2271ff6b10800000000000000
+      internalID: 1977064234121773470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecroMancerBoss_26
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 291
+        width: 36
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97b898b475a89d940800000000000000
+      internalID: 5321436542249044857
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecroMancerBoss_27
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 291
+        width: 34
+        height: 67
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0fc5d5662d0bf0ac0800000000000000
+      internalID: -3886693535690433296
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecroMancerBoss_28
+      rect:
+        serializedVersion: 2
+        x: 237
+        y: 292
+        width: 34
+        height: 71
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d42d7492feebcf70800000000000000
+      internalID: 9208716588729836760
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecroMancerBoss_29
+      rect:
+        serializedVersion: 2
+        x: 324
+        y: 292
+        width: 36
+        height: 67
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d54a73a87f64d9290800000000000000
+      internalID: -7882065743838731171
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecroMancerBoss_30
+      rect:
+        serializedVersion: 2
+        x: 411
+        y: 292
+        width: 37
+        height: 62
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c77cf58658e8af10800000000000000
+      internalID: 2281328669575903174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecroMancerBoss_31
+      rect:
+        serializedVersion: 2
+        x: 482
+        y: 292
+        width: 36
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a1ac590c2f29d5f0800000000000000
+      internalID: -731501598288862810
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecroMancerBoss_32
+      rect:
+        serializedVersion: 2
+        x: 543
+        y: 291
+        width: 38
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af1aca97acdd7c3e0800000000000000
+      internalID: -2033412845040000518
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecroMancerBoss_33
+      rect:
+        serializedVersion: 2
+        x: 609
+        y: 290
+        width: 39
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7cbcde3a23369ef60800000000000000
+      internalID: 8064085676933368775
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecroMancerBoss_34
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 290
+        width: 37
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e465241e497d26e80800000000000000
+      internalID: -8186744138171787698
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecroMancerBoss_35
+      rect:
+        serializedVersion: 2
+        x: 730
+        y: 290
+        width: 33
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad01860dc5a54b8b0800000000000000
+      internalID: -5137381920242921254
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecroMancerBoss_36
+      rect:
+        serializedVersion: 2
+        x: 782
+        y: 290
+        width: 33
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35b841e14caedd9c0800000000000000
+      internalID: -3900703574193829037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecroMancerBoss_37
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 188
+        width: 38
+        height: 71
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bcaa45dd914026960800000000000000
+      internalID: 7593636430834084555
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecroMancerBoss_38
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 188
+        width: 40
+        height: 71
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e5ba2442e0b95240800000000000000
+      internalID: 4781046965283239397
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecroMancerBoss_39
+      rect:
+        serializedVersion: 2
+        x: 189
+        y: 188
+        width: 40
+        height: 71
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ce0ca255b7be0fc0800000000000000
+      internalID: -3526679468780548416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecroMancerBoss_40
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 187
+        width: 40
+        height: 71
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5173edcd3901bbe0800000000000000
+      internalID: -1463378242866810533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecroMancerBoss_41
+      rect:
+        serializedVersion: 2
+        x: 329
+        y: 187
+        width: 40
+        height: 71
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1f8bb0aa808af8d0800000000000000
+      internalID: -2811793684448964836
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecroMancerBoss_42
+      rect:
+        serializedVersion: 2
+        x: 399
+        y: 187
+        width: 40
+        height: 71
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 296d54af4955e22e0800000000000000
+      internalID: -2148685873866746222
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecroMancerBoss_43
+      rect:
+        serializedVersion: 2
+        x: 463
+        y: 187
+        width: 40
+        height: 71
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2f411c87c65302b0800000000000000
+      internalID: -5619552494979821777
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecroMancerBoss_44
+      rect:
+        serializedVersion: 2
+        x: 555
+        y: 187
+        width: 40
+        height: 71
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6dffc8047edc9fbd0800000000000000
+      internalID: -2595817317098258474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecroMancerBoss_45
+      rect:
+        serializedVersion: 2
+        x: 626
+        y: 187
+        width: 45
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 152ce42b60fd46c60800000000000000
+      internalID: 7810612873621586513
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecroMancerBoss_46
+      rect:
+        serializedVersion: 2
+        x: 670
+        y: 247
+        width: 12
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6189b1aedced0e790800000000000000
+      internalID: -7502752003221907434
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecroMancerBoss_47
+      rect:
+        serializedVersion: 2
+        x: 700
+        y: 187
+        width: 45
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9aa270d8f319eaf50800000000000000
+      internalID: 6894607781685832361
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecroMancerBoss_48
+      rect:
+        serializedVersion: 2
+        x: 763
+        y: 188
+        width: 37
+        height: 71
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c325980822946d510800000000000000
+      internalID: 1573525532346765884
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecroMancerBoss_49
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 122
+        width: 8
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31dc5f673e62eaf50800000000000000
+      internalID: 6894490837946060051
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecroMancerBoss_50
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 125
+        width: 15
+        height: 21
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd4ce6eb4e7595580800000000000000
+      internalID: -8837936153778797348
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecroMancerBoss_51
+      rect:
+        serializedVersion: 2
+        x: 124
+        y: 134
+        width: 21
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a5672b982c2471e0800000000000000
+      internalID: -2201085764963965535
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecroMancerBoss_52
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 138
+        width: 25
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e848387a164b45250800000000000000
+      internalID: 5932564940669027470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecroMancerBoss_53
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 138
+        width: 21
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29211b78711396640800000000000000
+      internalID: 5073640432340112018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecroMancerBoss_54
+      rect:
+        serializedVersion: 2
+        x: 213
+        y: 138
+        width: 15
+        height: 21
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb587b665a19391c0800000000000000
+      internalID: -4498091463234058818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecroMancerBoss_55
+      rect:
+        serializedVersion: 2
+        x: 246
+        y: 138
+        width: 8
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a906c9560ddca6e0800000000000000
+      internalID: -1824840729646200409
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecroMancerBoss_56
+      rect:
+        serializedVersion: 2
+        x: 553
+        y: 98
+        width: 40
+        height: 71
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e0495e09cbda0690800000000000000
+      internalID: -7635048561677614871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecroMancerBoss_57
+      rect:
+        serializedVersion: 2
+        x: 612
+        y: 98
+        width: 40
+        height: 71
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65d9ec4e79e7806e0800000000000000
+      internalID: -1871106454328533674
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecroMancerBoss_58
+      rect:
+        serializedVersion: 2
+        x: 666
+        y: 98
+        width: 41
+        height: 71
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 251c136f740791ba0800000000000000
+      internalID: -6117735164430663342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecroMancerBoss_59
+      rect:
+        serializedVersion: 2
+        x: 724
+        y: 98
+        width: 48
+        height: 71
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3657c61c5e2df9840800000000000000
+      internalID: 5233133176262260067
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecroMancerBoss_60
+      rect:
+        serializedVersion: 2
+        x: 776
+        y: 136
+        width: 25
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 139b4503f6148a7e0800000000000000
+      internalID: -1754080109052774095
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecroMancerBoss_61
+      rect:
+        serializedVersion: 2
+        x: 820
+        y: 98
+        width: 48
+        height: 71
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 954ce6a7f20d6a400800000000000000
+      internalID: 335184124621800537
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecroMancerBoss_62
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 75
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8cf22fe3dfb3a530800000000000000
+      internalID: 3865143822185069710
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecroMancerBoss_63
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 75
+        width: 5
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce04af8bbb612ba10800000000000000
+      internalID: 1923624986358726892
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecroMancerBoss_64
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 75
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d834b8ad3ae8e910800000000000000
+      internalID: 1866999596089358546
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecroMancerBoss_65
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 75
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d82cff5679ab1cb20800000000000000
+      internalID: 3153006373550146189
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecroMancerBoss_66
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 75
+        width: 5
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 308dc0a8d7dfa09e0800000000000000
+      internalID: -1654231197476399101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecroMancerBoss_67
+      rect:
+        serializedVersion: 2
+        x: 77
+        y: 75
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc8f3af4db467d860800000000000000
+      internalID: 7554617664185039051
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecroMancerBoss_68
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 75
+        width: 5
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0e09598b0aa0ae70800000000000000
+      internalID: 9124479811578301962
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecroMancerBoss_69
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 75
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d1c94b13ebd8b580800000000000000
+      internalID: -8811050902488497704
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecroMancerBoss_70
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 75
+        width: 5
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c366925edf8dbb40800000000000000
+      internalID: 5457676508474008519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecroMancerBoss_71
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 75
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf03c7a5158055ea0800000000000000
+      internalID: -5884788192586223364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecroMancerBoss_72
+      rect:
+        serializedVersion: 2
+        x: 121
+        y: 75
+        width: 11
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34a002e9b962079a0800000000000000
+      internalID: -6237443034093450685
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecroMancerBoss_73
+      rect:
+        serializedVersion: 2
+        x: 415
+        y: 69
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cfddc5c1f47f0a6d0800000000000000
+      internalID: -2981111034168943108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecroMancerBoss_74
+      rect:
+        serializedVersion: 2
+        x: 426
+        y: 66
+        width: 6
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb9146773a58ab170800000000000000
+      internalID: 8195009409083251134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecroMancerBoss_75
+      rect:
+        serializedVersion: 2
+        x: 434
+        y: 66
+        width: 6
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a98c3e8a28748ba0800000000000000
+      internalID: -6087608672127776344
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecroMancerBoss_76
+      rect:
+        serializedVersion: 2
+        x: 442
+        y: 69
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc03beceb98d9e3b0800000000000000
+      internalID: -5482612907140501300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecroMancerBoss_77
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 69
+        width: 6
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e42ec8d168901fb0800000000000000
+      internalID: -4679072466821307168
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecroMancerBoss_78
+      rect:
+        serializedVersion: 2
+        x: 463
+        y: 69
+        width: 6
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd6939b16f5379480800000000000000
+      internalID: -8892579608078870819
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecroMancerBoss_79
+      rect:
+        serializedVersion: 2
+        x: 471
+        y: 66
+        width: 6
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28b0c55fa45d845b0800000000000000
+      internalID: -5383818836600681598
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecroMancerBoss_80
+      rect:
+        serializedVersion: 2
+        x: 484
+        y: 13
+        width: 49
+        height: 100
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b772b0848f92cabe0800000000000000
+      internalID: -1464749632464935045
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecroMancerBoss_81
+      rect:
+        serializedVersion: 2
+        x: 554
+        y: 8
+        width: 36
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ef9c05410c355220800000000000000
+      internalID: 2473949546461044704
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecroMancerBoss_82
+      rect:
+        serializedVersion: 2
+        x: 615
+        y: 8
+        width: 36
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c89ea2ff92021e190800000000000000
+      internalID: -7935025703703352948
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecroMancerBoss_83
+      rect:
+        serializedVersion: 2
+        x: 669
+        y: 9
+        width: 37
+        height: 69
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8d72f8eb89236a20800000000000000
+      internalID: 3054330653172727181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecroMancerBoss_84
+      rect:
+        serializedVersion: 2
+        x: 726
+        y: 9
+        width: 37
+        height: 69
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9361cd176e6d3d6f0800000000000000
+      internalID: -660948435052259783
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecroMancerBoss_85
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 52
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca8e9ff6521c3e530800000000000000
+      internalID: 3883159670260099244
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecroMancerBoss_86
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 52
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94576785181836f60800000000000000
+      internalID: 8026401353439278409
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecroMancerBoss_87
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 52
+        width: 4
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8af1912f74cd19470800000000000000
+      internalID: 8399736981585207208
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecroMancerBoss_88
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 52
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b53ec6aabd760d820800000000000000
+      internalID: 2940964749827695451
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecroMancerBoss_89
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 52
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 071237b98971dda20800000000000000
+      internalID: 3088650863656509808
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecroMancerBoss_90
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 52
+        width: 5
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9596975de536dcab0800000000000000
+      internalID: -4986219953469691559
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecroMancerBoss_91
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 52
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d0397f79c3e29b50800000000000000
+      internalID: 6598586858617778391
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecroMancerBoss_92
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 52
+        width: 5
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa0a91fc1584fba40800000000000000
+      internalID: 5386103195562516650
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecroMancerBoss_93
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 52
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dbe564269b2efc820800000000000000
+      internalID: 2940818367541829309
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecroMancerBoss_94
+      rect:
+        serializedVersion: 2
+        x: 118
+        y: 49
+        width: 6
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54dcef926a99b0320800000000000000
+      internalID: 2525280955019480389
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecroMancerBoss_95
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 52
+        width: 6
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 529dcf6f3de658af0800000000000000
+      internalID: -394787535664129755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecroMancerBoss_96
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 52
+        width: 4
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11a67b59acad799d0800000000000000
+      internalID: -2767502882365806063
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecroMancerBoss_97
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 52
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f945a83db5179780800000000000000
+      internalID: -8676442254662612487
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecroMancerBoss_98
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 52
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf046061bba1d4ff0800000000000000
+      internalID: -50354630000492293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecroMancerBoss_99
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 52
+        width: 6
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4e41d8eb92dcc270800000000000000
+      internalID: 8272218182640553551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecroMancerBoss_100
+      rect:
+        serializedVersion: 2
+        x: 174
+        y: 52
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ad70803d01e1b300800000000000000
+      internalID: 266241299756121513
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecroMancerBoss_101
+      rect:
+        serializedVersion: 2
+        x: 185
+        y: 52
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07d98989234ff0780800000000000000
+      internalID: -8714478255792939664
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecroMancerBoss_102
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 49
+        width: 9
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 229a5845ebefa78c0800000000000000
+      internalID: -4000605225549977310
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecroMancerBoss_103
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 52
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74d8edf0580910ea0800000000000000
+      internalID: -5908282334962086585
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecroMancerBoss_104
+      rect:
+        serializedVersion: 2
+        x: 217
+        y: 36
+        width: 10
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 543c605f3089ef890800000000000000
+      internalID: -7422327993096813755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecroMancerBoss_105
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 49
+        width: 4
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e0f169c8e326df20800000000000000
+      internalID: 3446982047516717284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecroMancerBoss_106
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 52
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2346d3d2426b2340800000000000000
+      internalID: 4840070263701127981
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecroMancerBoss_107
+      rect:
+        serializedVersion: 2
+        x: 247
+        y: 52
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6244414a3802d7be0800000000000000
+      internalID: -1477989352942058458
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecroMancerBoss_108
+      rect:
+        serializedVersion: 2
+        x: 258
+        y: 52
+        width: 6
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: daa7b6fdb87f66080800000000000000
+      internalID: -9194389409109411155
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecroMancerBoss_109
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 49
+        width: 4
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c8b9c2f26bd3d600800000000000000
+      internalID: 491978002340100289
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecroMancerBoss_110
+      rect:
+        serializedVersion: 2
+        x: 355
+        y: 51
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f189ca60cb79e0b0800000000000000
+      internalID: -5698887787105123852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecroMancerBoss_111
+      rect:
+        serializedVersion: 2
+        x: 355
+        y: 48
+        width: 124
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e65183a21105d4720800000000000000
+      internalID: 2832007775338894702
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecroMancerBoss_112
+      rect:
+        serializedVersion: 2
+        x: 401
+        y: 51
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc09beade2b95f950800000000000000
+      internalID: 6482257864213369039
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecroMancerBoss_113
+      rect:
+        serializedVersion: 2
+        x: 433
+        y: 51
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ede3e6463baed9a0800000000000000
+      internalID: -6206334986864038430
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecroMancerBoss_114
+      rect:
+        serializedVersion: 2
+        x: 458
+        y: 51
+        width: 5
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05044d50a5e4d0000800000000000000
+      internalID: 3745323249057872
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecroMancerBoss_115
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 36
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0abded49163e2790800000000000000
+      internalID: -7553040042744235508
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecroMancerBoss_116
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 36
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92755abdb295829b0800000000000000
+      internalID: -5104732132720945367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecroMancerBoss_117
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 34
+        width: 6
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36ff9ad98fd3dffa0800000000000000
+      internalID: -5765383809958019229
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecroMancerBoss_118
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 36
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50d532cb1fa3ba6c0800000000000000
+      internalID: -4131143423264334587
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecroMancerBoss_119
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 36
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d77e4702113284df0800000000000000
+      internalID: -195868027324668035
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecroMancerBoss_120
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 36
+        width: 9
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c4f0625787695560800000000000000
+      internalID: 7302982101658301637
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecroMancerBoss_121
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 33
+        width: 6
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d277ecb8337477bb0800000000000000
+      internalID: -4938400179673991379
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecroMancerBoss_122
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 36
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f1d64ffd1f707530800000000000000
+      internalID: 3850717448215384561
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecroMancerBoss_123
+      rect:
+        serializedVersion: 2
+        x: 113
+        y: 36
+        width: 4
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e295f716f6218d30800000000000000
+      internalID: 4431866346715058913
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecroMancerBoss_124
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 36
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8dd41a1a89a051c00800000000000000
+      internalID: 870613753629068760
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecroMancerBoss_125
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 36
+        width: 15
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9be487ba761f59190800000000000000
+      internalID: -7956187739119399239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecroMancerBoss_126
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 36
+        width: 5
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff6f03a6e965bf940800000000000000
+      internalID: 5330949822309529343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecroMancerBoss_127
+      rect:
+        serializedVersion: 2
+        x: 157
+        y: 36
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23d55935b637ffe40800000000000000
+      internalID: 5692395358820588850
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecroMancerBoss_128
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 36
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6bfc5f5e0122b79a0800000000000000
+      internalID: -6234351803191406666
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecroMancerBoss_129
+      rect:
+        serializedVersion: 2
+        x: 173
+        y: 36
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b34e85ab1a1737c0800000000000000
+      internalID: -4091773030398803020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecroMancerBoss_130
+      rect:
+        serializedVersion: 2
+        x: 185
+        y: 34
+        width: 6
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65b4e366d9265f430800000000000000
+      internalID: 3816064687431109462
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecroMancerBoss_131
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 36
+        width: 5
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d2c05a159322e850800000000000000
+      internalID: 6404720743372866256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecroMancerBoss_132
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 36
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7f5b300b8285a8e0800000000000000
+      internalID: -1682795352237056134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecroMancerBoss_133
+      rect:
+        serializedVersion: 2
+        x: 213
+        y: 36
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 615c9f117a090f2c0800000000000000
+      internalID: -4399857788705454826
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecroMancerBoss_134
+      rect:
+        serializedVersion: 2
+        x: 335
+        y: 35
+        width: 5
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f71ffe58e46ab280800000000000000
+      internalID: -9026791553921771535
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecroMancerBoss_135
+      rect:
+        serializedVersion: 2
+        x: 342
+        y: 35
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05119492cd4adc480800000000000000
+      internalID: -8877258024984964784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecroMancerBoss_136
+      rect:
+        serializedVersion: 2
+        x: 353
+        y: 35
+        width: 13
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8bd55660ed56ecef0800000000000000
+      internalID: -86019338609009224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecroMancerBoss_137
+      rect:
+        serializedVersion: 2
+        x: 369
+        y: 35
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3ecbed879799a920800000000000000
+      internalID: 3002097303796043322
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecroMancerBoss_138
+      rect:
+        serializedVersion: 2
+        x: 377
+        y: 32
+        width: 6
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ddac7d532503463d0800000000000000
+      internalID: -3214391104386905379
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecroMancerBoss_139
+      rect:
+        serializedVersion: 2
+        x: 385
+        y: 35
+        width: 4
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e16e0b305e4a8710800000000000000
+      internalID: 1696254316153561570
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecroMancerBoss_140
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 35
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 784963710e8029510800000000000000
+      internalID: 1554314579951391879
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecroMancerBoss_141
+      rect:
+        serializedVersion: 2
+        x: 398
+        y: 35
+        width: 5
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92fc9e6982a73cfe0800000000000000
+      internalID: -1169957163437011159
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecroMancerBoss_142
+      rect:
+        serializedVersion: 2
+        x: 405
+        y: 33
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d616ad4e0401d7ae0800000000000000
+      internalID: -1550064825842114195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecroMancerBoss_143
+      rect:
+        serializedVersion: 2
+        x: 418
+        y: 32
+        width: 6
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 280a42330a3fe7170800000000000000
+      internalID: 8178241842729754754
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecroMancerBoss_144
+      rect:
+        serializedVersion: 2
+        x: 426
+        y: 35
+        width: 9
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d2847f37e3a73380800000000000000
+      internalID: -8991537917424532782
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecroMancerBoss_145
+      rect:
+        serializedVersion: 2
+        x: 437
+        y: 35
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db16ee48ec5372710800000000000000
+      internalID: 1668361348073808317
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecroMancerBoss_146
+      rect:
+        serializedVersion: 2
+        x: 452
+        y: 35
+        width: 10
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f760ff43dcc8b5c0800000000000000
+      internalID: -4199381444571666440
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecroMancerBoss_147
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 35
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 008a1b15c8813bbd0800000000000000
+      internalID: -2615719967627040768
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecroMancerBoss_148
+      rect:
+        serializedVersion: 2
+        x: 472
+        y: 35
+        width: 9
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59f9660b91cdfa660800000000000000
+      internalID: 7399374715684822933
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecroMancerBoss_149
+      rect:
+        serializedVersion: 2
+        x: 349
+        y: 16
+        width: 16
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab7885650472bc1f0800000000000000
+      internalID: -1023681333016623174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecroMancerBoss_150
+      rect:
+        serializedVersion: 2
+        x: 367
+        y: 19
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76fa53d9eef5f3f20800000000000000
+      internalID: 3404545321759780711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecroMancerBoss_151
+      rect:
+        serializedVersion: 2
+        x: 375
+        y: 19
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5aca61b8a36ad60a0800000000000000
+      internalID: -6886665484807787355
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecroMancerBoss_152
+      rect:
+        serializedVersion: 2
+        x: 383
+        y: 19
+        width: 5
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 645aa8dc4f5d74c50800000000000000
+      internalID: 6649518622232978758
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecroMancerBoss_153
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 19
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9cee50fd9e4a6d0d0800000000000000
+      internalID: -3398347544428417335
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecroMancerBoss_154
+      rect:
+        serializedVersion: 2
+        x: 403
+        y: 16
+        width: 9
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7cf8f7e545a7ce2f0800000000000000
+      internalID: -942243719246016569
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecroMancerBoss_155
+      rect:
+        serializedVersion: 2
+        x: 414
+        y: 19
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6535bbc21a70b86c0800000000000000
+      internalID: -4140207043615435946
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecroMancerBoss_156
+      rect:
+        serializedVersion: 2
+        x: 422
+        y: 19
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c62bcd969dd64130800000000000000
+      internalID: 3550768995190384327
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecroMancerBoss_157
+      rect:
+        serializedVersion: 2
+        x: 435
+        y: 19
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 453148e69efd45780800000000000000
+      internalID: -8695078786871061676
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecroMancerBoss_158
+      rect:
+        serializedVersion: 2
+        x: 443
+        y: 19
+        width: 4
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac8e3f9e5f04a2c40800000000000000
+      internalID: 5488270520840612042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecroMancerBoss_159
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 19
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 156c74975ee229ee0800000000000000
+      internalID: -1255889782965811631
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecroMancerBoss_160
+      rect:
+        serializedVersion: 2
+        x: 456
+        y: 19
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6cf10a7f327a9490800000000000000
+      internalID: -7738747392727319442
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecroMancerBoss_161
+      rect:
+        serializedVersion: 2
+        x: 467
+        y: 19
+        width: 11
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 318e83847b6cea630800000000000000
+      internalID: 3940305214488766483
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

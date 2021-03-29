@@ -11,8 +11,6 @@ public class Bullet : MonoBehaviour
     {
         Destroy(this.gameObject, bulletLifeDuration);
     }
-
-    // Update is called once per frame
     void Update()
     {
         transform.Translate(Vector3.right * bulletSpeed * Time.deltaTime);
@@ -22,8 +20,12 @@ public class Bullet : MonoBehaviour
         IDamageable iDamageable = collision.GetComponent<IDamageable>();
         if (iDamageable != null)
         {
-            iDamageable.Damage(bulletDamage);
+            iDamageable.TakeDamage(bulletDamage);
+            Destroy(this.gameObject);
         }
-        Destroy(this.gameObject);
+        if (collision.gameObject.layer == 8) // Colliding with the ground layer
+        {
+            Destroy(this.gameObject);
+        }
     }
 }

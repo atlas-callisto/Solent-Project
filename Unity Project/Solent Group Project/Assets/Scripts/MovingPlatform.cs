@@ -7,14 +7,20 @@ public class MovingPlatform : MonoBehaviour
     public Transform pointA;
     public Transform pointB;
     public float moveSpeed = 2f;
-    public bool moveTowardspointB = true;
-    // Start is called before the first frame update
+    public bool isEnabled = false;
+
+    private bool moveTowardspointB = true;
+    private SpriteRenderer mySpriteRenderer;
+
+    void Awake()
+    {
+        this.gameObject.SetActive(isEnabled);
+    }
     void Start()
     {
         transform.position = pointA.transform.position;        
     }
 
-    // Update is called once per frame
     void Update()
     {
         PlatformMovement();
