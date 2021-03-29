@@ -127,11 +127,13 @@ public class EnemyAI : MonoBehaviour, IDamageable
         if (iDamageableObj != null && collision.gameObject.tag != "Enemy") // Excluding objects with enemy tag of course
         {
             iDamageableObj.TakeDamage(collisionDamage);
-            if(collision.gameObject.GetComponent<Player>())
-            {
-                collision.gameObject.GetComponent<Player>().KnockBackEffect(collision.gameObject.transform.position - this.transform.position);
-            }
+            player.KnockBackEffect(GetKnockBackDirection(collision));
         }
+    }
+    virtual protected Vector2 GetKnockBackDirection(Collision2D collision)
+    {
+        if (collision.gameObject.transform.position.x > this.transform.position.x) return Vector2.right;
+        else return Vector2.left;
     }
     virtual public void TakeDamage(int damage) //Take Damage
     {

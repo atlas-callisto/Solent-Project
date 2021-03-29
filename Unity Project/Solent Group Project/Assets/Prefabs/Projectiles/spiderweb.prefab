@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 3604200460031099885}
   - component: {fileID: 6626716746753704872}
-  - component: {fileID: 7131996798834834836}
   - component: {fileID: 5266804427105660328}
+  - component: {fileID: 7131996798834834836}
   - component: {fileID: 186628136879367771}
   m_Layer: 11
   m_Name: spiderweb
@@ -85,21 +85,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &7131996798834834836
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5958209697578809459}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 05b0ef783b593a74d8fd847d13e53d9b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bulletSpeed: 1
-  bulletDamage: 1
-  bulletLifeDuration: 6
 --- !u!58 &5266804427105660328
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -116,6 +101,21 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.32
+--- !u!114 &7131996798834834836
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5958209697578809459}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05b0ef783b593a74d8fd847d13e53d9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletSpeed: 1
+  bulletDamage: 1
+  bulletLifeDuration: 6
 --- !u!114 &186628136879367771
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -14,6 +14,5 @@ public class Acid : MonoBehaviour
         {
             iDamageableObj.TakeDamage(acidDamage);
         }
-    }
-    
+    }    
 }

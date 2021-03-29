@@ -28,6 +28,11 @@ public class TemplarSpear : MonoBehaviour
             }
         }
     }
+    private Vector2 GetKnockBackDirection(Collider2D collision)
+    {
+        if (collision.gameObject.transform.position.x > this.transform.position.x) return Vector2.right;
+        else return Vector2.left;
+    }
     public void FinishedAttacking() //called by animation event
     {
         this.gameObject.SetActive(false);

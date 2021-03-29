@@ -6,13 +6,23 @@ using UnityEngine.SceneManagement;
 public class Player : MonoBehaviour, IDamageable
 {
     //Params
-    [Header("Stats")]
+    
     [SerializeField] public static int maxHealth = 10;
     [SerializeField] public static int currentHealth = 10;
     [SerializeField] public static float maxWolfBar = 10;
     [SerializeField] public static float currentWolfBar = 10;
     [SerializeField] public static float wolfBarRegenRate = 0.1f;
     [SerializeField] public static float wolfDegeneRate = 1f;
+    [SerializeField] public static bool initializePlayerStats = true;
+
+    [Header("Stats")] // Couldnot expose static variables into the inspector so this is a work around
+    [SerializeField] public int playerMaxHealth = 10;
+    [SerializeField] public int playerCurrentHealth = 10;
+    [SerializeField] public float playerMaxWolfBar = 10;
+    [SerializeField] public float playerCurrentWolfBar = 10;
+    [SerializeField] public float playerWolfBarRegenRate = 0.1f;
+    [SerializeField] public float playerWolfDegeneRate = 1f;
+    [SerializeField] private float collisionKnockBackForce = 500f;
 
     [Header("Cool Downs")]
     [SerializeField] private float basicAttackCoolDown = 2f;
@@ -72,6 +82,16 @@ public class Player : MonoBehaviour, IDamageable
         myRB = GetComponent<Rigidbody2D>();
         myAnimator = GetComponent<Animator>();
         mySpriteRenderer = GetComponent<SpriteRenderer>();
+        if(initializePlayerStats)
+        {
+            maxHealth = playerMaxHealth;
+            currentHealth = playerCurrentHealth;
+            maxWolfBar = playerMaxWolfBar;
+            currentWolfBar = playerCurrentWolfBar;
+            wolfBarRegenRate = playerWolfBarRegenRate;
+            wolfDegeneRate = playerWolfDegeneRate;
+            initializePlayerStats = false;
+        }
     }   
     void Start()
     {
@@ -315,7 +335,7 @@ public class Player : MonoBehaviour, IDamageable
     }
     public void KnockBackEffect(Vector2 direction)
     {
-        myRB.AddForce(100f * direction);
+        myRB.AddForce(collisionKnockBackForce * direction);
     }
     IEnumerator playerTookDamageIndicator()
     {
