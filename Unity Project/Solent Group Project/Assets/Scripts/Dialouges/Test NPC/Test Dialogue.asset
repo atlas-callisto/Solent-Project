@@ -10,9 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c848945c3ffe6eb4382402f38ad7d649, type: 3}
-  m_Name: New Dialouges
+  m_Name: Test Dialogue
   m_EditorClassIdentifier: 
   dialouges:
-  - Hello
-  - Hello22222
-  - Hello 33333
+  - Hello, I am an NPC.
+  - I am a 2nd Page
+  - 3rd Page
+  - Hello number 4
