@@ -399,7 +399,7 @@ MonoBehaviour:
   playerCurrentWolfBar: 10
   playerWolfBarRegenRate: 0.1
   playerWolfDegeneRate: 1
-  collisionKnockBackForce: 1600
+  collisionKnockBackForce: 100
   canInteract: 0
   basicAttackCoolDown: 0.8
   heavyAttackCoolDown: 3
