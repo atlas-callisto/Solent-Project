@@ -11,14 +11,10 @@ public class MovingPlatform : MonoBehaviour
 
     private bool moveTowardspointB = true;
     private SpriteRenderer mySpriteRenderer;
-
-    void Awake()
-    {
-        this.gameObject.SetActive(isEnabled);
-    }
     void Start()
     {
-        transform.position = pointA.transform.position;        
+        transform.position = pointA.transform.position;
+        this.gameObject.SetActive(isEnabled);
     }
 
     void Update()
