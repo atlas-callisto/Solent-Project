@@ -7,7 +7,7 @@ public class LevelTransistion : MonoBehaviour
 {
     [SerializeField] private string levelName;
     [SerializeField] private string spawnLocationName;
-    [SerializeField] private Player playerRef;
+    private Player playerRef;
     public static bool canTransitionn = true;
     void Start()
     {

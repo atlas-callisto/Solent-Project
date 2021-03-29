@@ -14,7 +14,6 @@ public class Player : MonoBehaviour, IDamageable
     public static float wolfBarRegenRate = 0.1f;
     public static float wolfDegeneRate = 1f;
     public static bool initializePlayerStats = true;
-    public bool canInteract = false;
 
     [Header("Stats")] // Couldnot expose static variables into the inspector so this is a work around
     [SerializeField] public int playerMaxHealth = 10;
@@ -24,6 +23,7 @@ public class Player : MonoBehaviour, IDamageable
     [SerializeField] public float playerWolfBarRegenRate = 0.1f;
     [SerializeField] public float playerWolfDegeneRate = 1f;
     [SerializeField] private float collisionKnockBackForce = 500f;
+    [SerializeField] public bool canInteract = false;
 
     [Header("Cool Downs")]
     [SerializeField] private float basicAttackCoolDown = 2f;
