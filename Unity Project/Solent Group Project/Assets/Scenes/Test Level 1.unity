@@ -676,6 +676,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1145630666, guid: 0ad1d7dc4b3a90e4a8d064e68dc03984, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 107.319824
+      objectReference: {fileID: 0}
+    - target: {fileID: 1145630666, guid: 0ad1d7dc4b3a90e4a8d064e68dc03984, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 426.33008
+      objectReference: {fileID: 0}
     - target: {fileID: 7404633846740169340, guid: 0ad1d7dc4b3a90e4a8d064e68dc03984, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -1036,10 +1044,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d10b081b667d5634f963c486391c27f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialougeList:
-  - Hello there Stranger
-  - I am papa Franku
-  - Nice to meet you
+  dialougesList:
+  - {fileID: 11400000, guid: 2e66ce7eaf70f8945ae5844be4b4259c, type: 2}
+  - {fileID: 0}
+  dialougeStringList: []
 --- !u!1 &1751187694
 GameObject:
   m_ObjectHideFlags: 0
