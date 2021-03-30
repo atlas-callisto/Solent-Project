@@ -5,7 +5,7 @@ using UnityEngine;
 public class WheelActivation : MonoBehaviour, Interactable
 {
     private Animator myAnimator;
-    public bool WheelActivated; 
+    public bool WheelActivated;
 
     private void Start()
     {
@@ -15,6 +15,10 @@ public class WheelActivation : MonoBehaviour, Interactable
     {
         myAnimator.SetTrigger("Interact");
         WheelActivated = true;
-        
+        var fountains = FindObjectsOfType<WaterFlowActivation>();
+        foreach(var fountain in fountains)
+        {
+            fountain.ActivateWaterFlowAnimation();
+        }
     }
 }
