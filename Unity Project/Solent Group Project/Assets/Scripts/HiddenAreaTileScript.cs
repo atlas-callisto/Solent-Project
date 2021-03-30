@@ -27,6 +27,10 @@ public class HiddenAreaTileScript : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        HubHiddenArea.GetComponent<TilemapRenderer>().enabled = true;
+        if (collision.gameObject.tag == ("Player"))
+        {
+            HubHiddenArea.GetComponent<TilemapRenderer>().enabled = true;
+        }
+        
     }
 }
