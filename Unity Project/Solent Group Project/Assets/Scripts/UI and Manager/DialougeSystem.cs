@@ -8,10 +8,10 @@ public class DialougeSystem : MonoBehaviour
     [SerializeField] Image npcImage;
     [SerializeField] Text npcNameText;
     [SerializeField] Text dialougeText;
-    [SerializeField] List<string> dialougeList = new List<string>();
-    [SerializeField] private int currentDialougePage = 0;
-    [SerializeField] private int totalPages = 2;
-    public bool doOnce = true; // Stops this script from getting called multiple times
+    private List<string> dialougeList = new List<string>();
+    private int currentDialougePage = 0;
+    private int totalPages = 2;
+    private bool doOnce = true; // Stops this script from getting called multiple times
 
     private void Start()
     {
@@ -55,7 +55,7 @@ public class DialougeSystem : MonoBehaviour
         foreach(string dialouge in dialouges) dialougeList.Add(dialouge);
         dialougeText.text = dialougeList[currentDialougePage];
         currentDialougePage = 0; //page number starts from 0
-        totalPages = dialougeList.Count;
+        totalPages = dialougeList.Count - 1;
     }
     public void CloseDialougeBox()
     {
