@@ -24,9 +24,24 @@ EditorBuildSettings:
     path: Assets/Scenes/BossScene.unity
     guid: 2b0b72bf19ef2ac479f19dedd4ae7d4b
   - enabled: 1
-    path: Assets/Scenes/Test Level 1.unity
-    guid: 7597cd3a0ba9c6442a456ec7f12f7426
+    path: Assets/Scenes/Catacombs.unity
+    guid: 95c4d56ead0f7f14f930578b2eadc077
   - enabled: 1
-    path: Assets/Scenes/Test Level.unity
-    guid: b587685b2479da7479a4fa8ff72e8154
+    path: Assets/Scenes/Cathedral.unity
+    guid: 2fa067cf3779abc4385db4f31240d200
+  - enabled: 1
+    path: Assets/Scenes/CathedralBossRoom.unity
+    guid: be0f2eefe47537d4ba9af81669a66014
+  - enabled: 1
+    path: Assets/Scenes/CathedralOutside.unity
+    guid: 9ab8532d0b2f66b4a9d1329d407e7bc2
+  - enabled: 1
+    path: Assets/Scenes/Hub.unity
+    guid: cb958487384a88d44acd1f0b6769049c
+  - enabled: 1
+    path: Assets/Scenes/NecromancerRoom.unity
+    guid: 0d787d6d311e5ec4b9ecefb22d75bff1
+  - enabled: 1
+    path: Assets/Scenes/WolfBossToHubConnector.unity
+    guid: 0d3f569ee9850664e9701a7d46717106
   m_configObjects: {}
