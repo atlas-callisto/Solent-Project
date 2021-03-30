@@ -37,21 +37,7 @@ SpriteAtlas:
   m_MasterAtlas: {fileID: 0}
   m_PackedSprites:
   - {fileID: 21300000, guid: 04b44c00004ce65498a45c63bd00e792, type: 3}
-  - {fileID: 7261508668902590421, guid: dad61f30f907c2d48b68bdd56801457d, type: 3}
-  - {fileID: -6565531674631511022, guid: dad61f30f907c2d48b68bdd56801457d, type: 3}
-  - {fileID: 3383975647093796566, guid: dad61f30f907c2d48b68bdd56801457d, type: 3}
-  - {fileID: 5770465022365830590, guid: dad61f30f907c2d48b68bdd56801457d, type: 3}
-  - {fileID: -4397232422999263961, guid: dad61f30f907c2d48b68bdd56801457d, type: 3}
-  - {fileID: -6886470366468981042, guid: dad61f30f907c2d48b68bdd56801457d, type: 3}
-  - {fileID: -9168772663879604468, guid: dad61f30f907c2d48b68bdd56801457d, type: 3}
-  - {fileID: -2567130081364276022, guid: dad61f30f907c2d48b68bdd56801457d, type: 3}
-  - {fileID: 7954731696784067181, guid: dad61f30f907c2d48b68bdd56801457d, type: 3}
   - {fileID: 21300000, guid: f154aa40b2939444baac5dfe5a6b14df, type: 3}
-  - {fileID: 4560836764580927238, guid: 03e6b09058184194fbf5aea52345bc68, type: 3}
-  - {fileID: -7453813129039635998, guid: 03e6b09058184194fbf5aea52345bc68, type: 3}
-  - {fileID: 5155225245991160961, guid: 03e6b09058184194fbf5aea52345bc68, type: 3}
-  - {fileID: 8470628218577470065, guid: 03e6b09058184194fbf5aea52345bc68, type: 3}
-  - {fileID: 7157391481637560022, guid: 03e6b09058184194fbf5aea52345bc68, type: 3}
   - {fileID: -8589390498045426667, guid: c9ab6690ca76ceb418a0dc6f137fffc0, type: 3}
   - {fileID: -4239856131904496917, guid: c9ab6690ca76ceb418a0dc6f137fffc0, type: 3}
   - {fileID: 4841228728987925895, guid: c9ab6690ca76ceb418a0dc6f137fffc0, type: 3}
@@ -202,6 +188,7 @@ SpriteAtlas:
   - {fileID: -6585601287398824128, guid: fd5d062beebc0764aacc79fef8f2ec71, type: 3}
   - {fileID: 7147308590241104510, guid: fd5d062beebc0764aacc79fef8f2ec71, type: 3}
   - {fileID: 1354341283678398256, guid: fd5d062beebc0764aacc79fef8f2ec71, type: 3}
+  - {fileID: 21300000, guid: 724f403b636aa4a46a190b134aef1c57, type: 3}
   - {fileID: 21300000, guid: 7eda1e9b9f43819458f9fe378910b4f0, type: 3}
   - {fileID: 21300000, guid: 74b0e8bbb0a286543b6f22243c52ae7a, type: 3}
   - {fileID: -1640616325338317110, guid: 161be2db952e077498a034d0ceea7f35, type: 3}
@@ -259,12 +246,35 @@ SpriteAtlas:
   - {fileID: 7134392658926055337, guid: 1134f82d56234dc46927688501fc670d, type: 3}
   - {fileID: 4264410159867503848, guid: 1134f82d56234dc46927688501fc670d, type: 3}
   - {fileID: 21300000, guid: 37e4415d9b384244696c6cefd2ff39a0, type: 3}
+  - {fileID: -7319335538402113653, guid: f6d494ad0b3c1b54cbb1167d91bfcc2b, type: 3}
+  - {fileID: 1558830623434083912, guid: f6d494ad0b3c1b54cbb1167d91bfcc2b, type: 3}
+  - {fileID: -9153315739969965111, guid: f6d494ad0b3c1b54cbb1167d91bfcc2b, type: 3}
+  - {fileID: -7004450706067252048, guid: f6d494ad0b3c1b54cbb1167d91bfcc2b, type: 3}
+  - {fileID: -1052624642233294820, guid: f6d494ad0b3c1b54cbb1167d91bfcc2b, type: 3}
   - {fileID: 3727447608914176434, guid: 0476cb0e0e8a97945aca69aaeef3a729, type: 3}
   - {fileID: -794276876243802291, guid: 0476cb0e0e8a97945aca69aaeef3a729, type: 3}
   - {fileID: 9202598557091573938, guid: 0476cb0e0e8a97945aca69aaeef3a729, type: 3}
   - {fileID: -4571326579220214711, guid: 0476cb0e0e8a97945aca69aaeef3a729, type: 3}
   - {fileID: -851441894914036630, guid: 0476cb0e0e8a97945aca69aaeef3a729, type: 3}
   - {fileID: 21300000, guid: 7236315eec5a02e419a31b1f6af3771d, type: 3}
+  - {fileID: -8988823226882471717, guid: 66ac2a6eac07a264ebbf4e2f2047d0c5, type: 3}
+  - {fileID: -8469656004967123088, guid: 66ac2a6eac07a264ebbf4e2f2047d0c5, type: 3}
+  - {fileID: -6324899483953165666, guid: 66ac2a6eac07a264ebbf4e2f2047d0c5, type: 3}
+  - {fileID: 5567258191084726351, guid: 66ac2a6eac07a264ebbf4e2f2047d0c5, type: 3}
+  - {fileID: 5838978557272064466, guid: 66ac2a6eac07a264ebbf4e2f2047d0c5, type: 3}
+  - {fileID: -8276451962683193024, guid: 66ac2a6eac07a264ebbf4e2f2047d0c5, type: 3}
+  - {fileID: 6001758832453141032, guid: 66ac2a6eac07a264ebbf4e2f2047d0c5, type: 3}
+  - {fileID: -7960836068195693155, guid: 66ac2a6eac07a264ebbf4e2f2047d0c5, type: 3}
+  - {fileID: -4300095074399327697, guid: 66ac2a6eac07a264ebbf4e2f2047d0c5, type: 3}
+  - {fileID: 4696076505235272034, guid: 799c9dcee0040ae4691ec602903a488d, type: 3}
+  - {fileID: 4601072331575126507, guid: 799c9dcee0040ae4691ec602903a488d, type: 3}
+  - {fileID: -5884906820062225404, guid: 799c9dcee0040ae4691ec602903a488d, type: 3}
+  - {fileID: 3209919196315219244, guid: 799c9dcee0040ae4691ec602903a488d, type: 3}
+  - {fileID: -3565612510257882668, guid: 799c9dcee0040ae4691ec602903a488d, type: 3}
+  - {fileID: -8371532592506735365, guid: 799c9dcee0040ae4691ec602903a488d, type: 3}
+  - {fileID: -5960082746199065720, guid: 799c9dcee0040ae4691ec602903a488d, type: 3}
+  - {fileID: 9135932993727085955, guid: 799c9dcee0040ae4691ec602903a488d, type: 3}
+  - {fileID: -7400529704170610313, guid: 799c9dcee0040ae4691ec602903a488d, type: 3}
   - {fileID: 21300000, guid: de076d4f6b1add048b03dddd34c7d5c9, type: 3}
   - {fileID: 21300000, guid: ded39e4ffa18afa499c42a6a4f19d0fe, type: 3}
   - {fileID: 21300000, guid: b49f2e6f522c0f5499ff6b4426a5af45, type: 3}
@@ -272,21 +282,7 @@ SpriteAtlas:
   - {fileID: 21300000, guid: 462cf9bf47075e14c9563228524f8b7a, type: 3}
   m_PackedSpriteNamesToIndex:
   - E
-  - WerewolfBossSpecialAttack_8
-  - WerewolfBossSpecialAttack_1
-  - WerewolfBossSpecialAttack_0
-  - WerewolfBossSpecialAttack_3
-  - WerewolfBossSpecialAttack_2
-  - WerewolfBossSpecialAttack_5
-  - WerewolfBossSpecialAttack_4
-  - WerewolfBossSpecialAttack_7
-  - WerewolfBossSpecialAttack_6
   - crossbow
-  - WerewolfMeleeAttack_1
-  - WerewolfMeleeAttack_0
-  - WerewolfMeleeAttack_3
-  - WerewolfMeleeAttack_2
-  - WerewolfMeleeAttack_4
   - WerewolfBasicAttack_3
   - WerewolfBasicAttack_2
   - WerewolfBasicAttack_1
@@ -437,6 +433,7 @@ SpriteAtlas:
   - SkellyRun_6
   - SkellyRun_5
   - SkellyRun_4
+  - NPC5
   - Barrel
   - NPC3
   - WerewolfBossDeath_12
@@ -494,12 +491,35 @@ SpriteAtlas:
   - NecromancerIdle_1_1
   - NecromancerIdle_1_0
   - werewolf potion
+  - WerewolfMeleeAttack (1)_4
+  - WerewolfMeleeAttack (1)_3
+  - WerewolfMeleeAttack (1)_2
+  - WerewolfMeleeAttack (1)_1
+  - WerewolfMeleeAttack (1)_0
   - bat_spritesheet_0
   - bat_spritesheet_1
   - bat_spritesheet_2
   - bat_spritesheet_3
   - bat_spritesheet_4
   - Sword Final
+  - WerewolfBossIdle (4)_1
+  - WerewolfBossIdle (4)_0
+  - WerewolfBossIdle (4)_3
+  - WerewolfBossIdle (4)_2
+  - WerewolfBossIdle (4)_5
+  - WerewolfBossIdle (4)_4
+  - WerewolfBossIdle (4)_7
+  - WerewolfBossIdle (4)_6
+  - WerewolfBossIdle (4)_8
+  - WerewolfSpecialAttack (1)_8
+  - WerewolfSpecialAttack (1)_2
+  - WerewolfSpecialAttack (1)_3
+  - WerewolfSpecialAttack (1)_0
+  - WerewolfSpecialAttack (1)_1
+  - WerewolfSpecialAttack (1)_6
+  - WerewolfSpecialAttack (1)_7
+  - WerewolfSpecialAttack (1)_4
+  - WerewolfSpecialAttack (1)_5
   - 32_x_32_pink_gem
   - NPC4
   - Bloody axe
