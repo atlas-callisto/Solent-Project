@@ -7,7 +7,7 @@ public class NPCDialougeTriggerSystem : MonoBehaviour , Interactable
     Sprite nPCSprite;
     string nPCName;
     [SerializeField] List<Dialouges> dialougesList = new List<Dialouges>();
-    [SerializeField] List<string> dialougeStringList = new List<string>();
+    private List<string> dialougeStringList = new List<string>();
     // List of scriptable objs // note to self Use Scriptable objs in the future,
     DialougeSystem dialougeSystemRef;
     

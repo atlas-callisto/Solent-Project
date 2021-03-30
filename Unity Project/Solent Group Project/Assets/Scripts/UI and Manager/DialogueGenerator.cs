@@ -33,7 +33,7 @@ public class DialogueGenerator : MonoBehaviour
     void Start()
     {
         CurrentPage = 1;
-        NameText.text = NPC_Name;
+        //NameText.text = NPC_Name;
     }
 
     private void OnTriggerStay2D(Collider2D collision)

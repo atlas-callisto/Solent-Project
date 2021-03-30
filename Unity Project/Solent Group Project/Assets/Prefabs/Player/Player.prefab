@@ -400,19 +400,20 @@ MonoBehaviour:
   playerWolfBarRegenRate: 0.1
   playerWolfDegeneRate: 1
   collisionKnockBackForce: 100
-  canInteract: 0
+  playerInvunerabletimer: 0.3
   basicAttackCoolDown: 0.8
   heavyAttackCoolDown: 3
   specialAttakCoolDown: 5
+  afterAttackPause: 0.5
   humanMoveSpeed: 4
   humanJumpForce: 12
   wolfMoveSpeed: 6
   wolfJumpForce: 14
-  screamDuration: 2
-  attackSFX: {fileID: 8300000, guid: 5e609659a1cd01a42a39c6c7114e10a3, type: 3}
+  humanAttackSFX: {fileID: 8300000, guid: 5e609659a1cd01a42a39c6c7114e10a3, type: 3}
   deathSFX: {fileID: 8300000, guid: d76de2e90c0452c4a915580e3d81aefc, type: 3}
   takingDamageSFX: {fileID: 8300000, guid: 9137607a1fbffd94990a30c0f427dda3, type: 3}
   shootingSFX: {fileID: 8300000, guid: 87fe6a750abcab548a1cb062ca2897be, type: 3}
+  wolfRoarSFX: {fileID: 8300000, guid: f678d4bb36b67fd41b2babb9e61a4b87, type: 3}
   projectilePrefab: {fileID: 3099315621163623433, guid: 1e9b4710b01bbe747aa64808885a852a, type: 3}
   playerWep: {fileID: 1911803656}
   playerWolfWep: {fileID: 726638109}
@@ -790,7 +791,7 @@ Transform:
   m_GameObject: {fileID: 7569787777642004425}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.0642, y: -0.016, z: 0}
-  m_LocalScale: {x: 80, y: 80, z: 1}
+  m_LocalScale: {x: 120, y: 120, z: 1}
   m_Children: []
   m_Father: {fileID: 2160318093421502459}
   m_RootOrder: 3
@@ -802,7 +803,7 @@ SpriteRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7569787777642004425}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1

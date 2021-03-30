@@ -16,6 +16,7 @@ public class PlayerGroundCheck : MonoBehaviour
         {
             playerRef.isGrounded = true;
             playerRef.canDoubleJump = true;
+            playerRef.GetComponent<Animator>().SetBool("OnAir", false);
         }
     }
     private void OnTriggerExit2D(Collider2D collision)
@@ -23,6 +24,7 @@ public class PlayerGroundCheck : MonoBehaviour
         if (collision.gameObject.layer == 8)
         {
             playerRef.isGrounded = false;
+            playerRef.GetComponent<Animator>().SetBool("OnAir", true);
         }
     }
 }
