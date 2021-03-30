@@ -5,6 +5,7 @@ using UnityEngine;
 public class WheelActivation : MonoBehaviour, Interactable
 {
     private Animator myAnimator;
+    public bool WheelActivated; 
 
     private void Start()
     {
@@ -13,5 +14,7 @@ public class WheelActivation : MonoBehaviour, Interactable
     public void Interact()
     {
         myAnimator.SetTrigger("Interact");
+        WheelActivated = true;
+        
     }
 }

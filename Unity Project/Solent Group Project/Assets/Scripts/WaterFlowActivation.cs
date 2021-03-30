@@ -2,11 +2,17 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class WaterFlowActivation : MonoBehaviour
+public class WaterFlowActivation : WheelActivation, Interactable
 {
-    
-    void Update()
+    private Animator myAnimator;
+
+
+    public void Update()
     {
-        //if wheel is activated, play animation
+        if (WheelActivated == true)
+        {
+        myAnimator.SetTrigger("WaterFlow");
+        }
+        
     }
 }

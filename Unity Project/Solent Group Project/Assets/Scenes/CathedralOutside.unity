@@ -22540,6 +22540,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d0a5fc75c5669984fa4c298bb135bcdd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  WheelActivated: 0
 --- !u!61 &698739587
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -25482,6 +25483,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad9f8f5fa14421b428c611b040287e1d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  WheelActivated: 0
 --- !u!212 &1388843358
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -25640,6 +25642,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad9f8f5fa14421b428c611b040287e1d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  WheelActivated: 0
 --- !u!212 &1431620971
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -25840,11 +25843,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2160318093421502459, guid: ec9628dc761ae034597c0d60d9cc1e23, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 150.18
+      value: 239.11
       objectReference: {fileID: 0}
     - target: {fileID: 2160318093421502459, guid: ec9628dc761ae034597c0d60d9cc1e23, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 79.1
+      value: 89.5
       objectReference: {fileID: 0}
     - target: {fileID: 2160318093421502459, guid: ec9628dc761ae034597c0d60d9cc1e23, type: 3}
       propertyPath: m_LocalPosition.z
