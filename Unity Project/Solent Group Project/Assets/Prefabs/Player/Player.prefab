@@ -393,8 +393,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b39cd6d1fb0a3674aa7508c7cea763a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerMaxHealth: 20
-  playerCurrentHealth: 20
+  playerMaxHealth: 12
+  playerCurrentHealth: 12
   playerMaxWolfBar: 10
   playerCurrentWolfBar: 10
   playerWolfBarRegenRate: 0.1
@@ -419,7 +419,6 @@ MonoBehaviour:
   playerWolfWep: {fileID: 726638109}
   fearDebuffApplier: {fileID: 7569787777642004425}
   playerRespawnDelay: 2
-  playerAlive: 1
 --- !u!1 &4439046340874876529
 GameObject:
   m_ObjectHideFlags: 0
