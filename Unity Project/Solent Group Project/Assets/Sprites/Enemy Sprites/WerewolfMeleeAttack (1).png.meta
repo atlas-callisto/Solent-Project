@@ -1,34 +1,22 @@
 fileFormatVersion: 2
-guid: dad61f30f907c2d48b68bdd56801457d
+guid: f6d494ad0b3c1b54cbb1167d91bfcc2b
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3383975647093796566
-    second: WerewolfBossSpecialAttack_0
+      213: -1052624642233294820
+    second: WerewolfMeleeAttack (1)_0
   - first:
-      213: -6565531674631511022
-    second: WerewolfBossSpecialAttack_1
+      213: -7004450706067252048
+    second: WerewolfMeleeAttack (1)_1
   - first:
-      213: -4397232422999263961
-    second: WerewolfBossSpecialAttack_2
+      213: -9153315739969965111
+    second: WerewolfMeleeAttack (1)_2
   - first:
-      213: 5770465022365830590
-    second: WerewolfBossSpecialAttack_3
+      213: 1558830623434083912
+    second: WerewolfMeleeAttack (1)_3
   - first:
-      213: -9168772663879604468
-    second: WerewolfBossSpecialAttack_4
-  - first:
-      213: -6886470366468981042
-    second: WerewolfBossSpecialAttack_5
-  - first:
-      213: 7954731696784067181
-    second: WerewolfBossSpecialAttack_6
-  - first:
-      213: -2567130081364276022
-    second: WerewolfBossSpecialAttack_7
-  - first:
-      213: 7261508668902590421
-    second: WerewolfBossSpecialAttack_8
+      213: -7319335538402113653
+    second: WerewolfMeleeAttack (1)_4
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -116,34 +104,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: WerewolfBossSpecialAttack_0
+      name: WerewolfMeleeAttack (1)_0
       rect:
         serializedVersion: 2
-        x: 2
-        y: 129
-        width: 44
-        height: 31
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6de29950ceb46fe20800000000000000
-      internalID: 3383975647093796566
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: WerewolfBossSpecialAttack_1
-      rect:
-        serializedVersion: 2
-        x: 48
+        x: 0
         y: 128
-        width: 44
-        height: 44
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -151,20 +118,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 21463044abb82e4a0800000000000000
-      internalID: -6565531674631511022
+      spriteID: c10acd507735461f0800000000000000
+      internalID: -1052624642233294820
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WerewolfBossSpecialAttack_2
+      name: WerewolfMeleeAttack (1)_1
       rect:
         serializedVersion: 2
-        x: 97
+        x: 64
         y: 128
-        width: 41
-        height: 50
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -172,41 +139,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7257c48a864e9f2c0800000000000000
-      internalID: -4397232422999263961
+      spriteID: 0bc902aa1313bce90800000000000000
+      internalID: -7004450706067252048
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WerewolfBossSpecialAttack_3
+      name: WerewolfMeleeAttack (1)_2
       rect:
         serializedVersion: 2
-        x: 143
-        y: 128
-        width: 41
-        height: 50
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ebd8ee65d5fc41050800000000000000
-      internalID: 5770465022365830590
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: WerewolfBossSpecialAttack_4
-      rect:
-        serializedVersion: 2
-        x: 5
+        x: 0
         y: 64
-        width: 41
-        height: 50
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -214,20 +160,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c07e42727d9f1c080800000000000000
-      internalID: -9168772663879604468
+      spriteID: 9c33912b4d3e8f080800000000000000
+      internalID: -9153315739969965111
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WerewolfBossSpecialAttack_5
+      name: WerewolfMeleeAttack (1)_3
       rect:
         serializedVersion: 2
-        x: 48
+        x: 64
         y: 64
-        width: 44
-        height: 44
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -235,20 +181,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ecebc5210b75e60a0800000000000000
-      internalID: -6886470366468981042
+      spriteID: 84e0ac6613412a510800000000000000
+      internalID: 1558830623434083912
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WerewolfBossSpecialAttack_6
+      name: WerewolfMeleeAttack (1)_4
       rect:
         serializedVersion: 2
-        x: 94
-        y: 65
-        width: 44
-        height: 31
+        x: 0
+        y: 0
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -256,50 +202,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d6aca5e0552e46e60800000000000000
-      internalID: 7954731696784067181
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: WerewolfBossSpecialAttack_7
-      rect:
-        serializedVersion: 2
-        x: 140
-        y: 65
-        width: 44
-        height: 31
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: acc0010dac8bf5cd0800000000000000
-      internalID: -2567130081364276022
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: WerewolfBossSpecialAttack_8
-      rect:
-        serializedVersion: 2
-        x: 2
-        y: 1
-        width: 44
-        height: 31
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5d7cb5749af06c460800000000000000
-      internalID: 7261508668902590421
+      spriteID: b8746a97b1f7c6a90800000000000000
+      internalID: -7319335538402113653
       vertices: []
       indices: 
       edges: []
