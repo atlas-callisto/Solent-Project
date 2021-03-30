@@ -14,11 +14,17 @@ public class GameManager : MonoBehaviour
     public bool werewolfBossDefeated;
     public bool necromancerBossDefeated;
     public bool lordProtectorBossDefeated;
+    public bool allGemsCollected;
 
     [Header("Unlocked Abilities")]
     public bool airTreaders;
     public bool moonsEyeMonacle;
     public static GameManager myGameManager;
+
+    [Header("Progression")]
+    public int gemsCollected;
+    public int gemsRequired;
+
     private void Awake()
     {
         if (myGameManager != null)
@@ -28,5 +34,14 @@ public class GameManager : MonoBehaviour
         }
         myGameManager = this;
         DontDestroyOnLoad(this.gameObject);
+    }
+
+    public bool CheckCollectedGems()
+    {
+        if (gemsCollected >= gemsRequired)
+        {
+            return allGemsCollected = true;
+        }
+        else return allGemsCollected = false;
     }
 }
