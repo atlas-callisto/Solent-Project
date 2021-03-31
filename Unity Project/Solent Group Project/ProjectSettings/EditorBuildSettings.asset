@@ -44,4 +44,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/WolfBossToHubConnector.unity
     guid: 0d3f569ee9850664e9701a7d46717106
+  - enabled: 1
+    path: Assets/Scenes/LoadingScreen.unity
+    guid: 8cbca001b536cce4c9ab5b0eec898af2
+  - enabled: 1
+    path: Assets/Scenes/HubLockedRoom.unity
+    guid: 0cb965f8990b3574d9b8d5d04594346d
   m_configObjects: {}

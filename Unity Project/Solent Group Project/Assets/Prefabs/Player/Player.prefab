@@ -403,7 +403,7 @@ MonoBehaviour:
   playerInvunerabletimer: 1
   basicAttackCoolDown: 0.6
   heavyAttackCoolDown: 2.5
-  specialAttakCoolDown: 3
+  specialAttakCoolDown: 2.5
   afterAttackPause: 0.5
   humanMoveSpeed: 4
   humanJumpForce: 12
