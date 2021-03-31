@@ -47,6 +47,7 @@ public class Player : MonoBehaviour, IDamageable
     public AudioClip takingDamageSFX;
     public AudioClip shootingSFX;
     public AudioClip wolfRoarSFX;
+    public AudioClip JumpSFX;
 
     [Header("Objects Ref")]
     public GameObject projectilePrefab; // bullet to spwan during attack 2
@@ -145,10 +146,12 @@ public class Player : MonoBehaviour, IDamageable
     {
         if (Input.GetButtonDown("Jump") && isGrounded)
         {
+            PlaySFX(JumpSFX);
             myRB.velocity = new Vector2(myRB.velocity.x, jumpForce);
         }
         else if (Input.GetButtonDown("Jump") && canDoubleJump && doubleJumpSkillAcquired)
         {
+            PlaySFX(JumpSFX);
             myRB.velocity = new Vector2(myRB.velocity.x, jumpForce);
             canDoubleJump = false;
         }
