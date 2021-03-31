@@ -177,7 +177,7 @@ MonoBehaviour:
   chaseDistance: 10
   healthPotions: {fileID: 1187938275048797783, guid: ba123d3fc0894404f8a1e689890c7d44, type: 3}
   chanceToSpawnHealthPotions: 30
-  enemyDeathSFX: {fileID: 8300000, guid: 77cf491a979e6f24d9717005cd117c0b, type: 3}
+  enemyDeathSFX: {fileID: 8300000, guid: 902fbfb2599c5834487f24b44e368994, type: 3}
   heatlhBarGameObject: {fileID: 8615974271420538703}
   healthBar: {fileID: 2682962261822439412}
   attackRange: 6

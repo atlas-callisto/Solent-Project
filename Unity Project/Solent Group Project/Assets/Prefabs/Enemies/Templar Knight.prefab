@@ -353,8 +353,8 @@ MonoBehaviour:
   afterChargeWaitDuration: 2
   spear: {fileID: 1992317989043536006}
   shield: {fileID: 1992317988688520422}
-  chargeAttackSFX: {fileID: 8300000, guid: 96b78efad5ec5e6459152e6c09bf3893, type: 3}
-  shieldAttackSFX: {fileID: 8300000, guid: 84f5742d349a0264a93eedd21cdd1c62, type: 3}
+  chargeAttackSFX: {fileID: 8300000, guid: 67e269cd95bd8794b83a549b1fc5eac4, type: 3}
+  shieldAttackSFX: {fileID: 8300000, guid: e5361df29feaa2a4d834d3d73c6c8215, type: 3}
   chargingTowardsPlayer: 0
 --- !u!114 &1992317988985449399
 MonoBehaviour:

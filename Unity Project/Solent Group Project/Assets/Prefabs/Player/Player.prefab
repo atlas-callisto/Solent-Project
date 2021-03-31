@@ -412,8 +412,8 @@ MonoBehaviour:
   humanAttackSFX: {fileID: 8300000, guid: 5e609659a1cd01a42a39c6c7114e10a3, type: 3}
   deathSFX: {fileID: 8300000, guid: d76de2e90c0452c4a915580e3d81aefc, type: 3}
   takingDamageSFX: {fileID: 8300000, guid: 9137607a1fbffd94990a30c0f427dda3, type: 3}
-  shootingSFX: {fileID: 8300000, guid: 87fe6a750abcab548a1cb062ca2897be, type: 3}
-  wolfRoarSFX: {fileID: 8300000, guid: f678d4bb36b67fd41b2babb9e61a4b87, type: 3}
+  shootingSFX: {fileID: 8300000, guid: 5b064574088bffd48a67d2abbdc15ddc, type: 3}
+  wolfRoarSFX: {fileID: 8300000, guid: b8e0925df70175747a1c4d7375ab067d, type: 3}
   JumpSFX: {fileID: 8300000, guid: 3b5840d878613d248afc5c269afe298c, type: 3}
   projectilePrefab: {fileID: 3099315621163623433, guid: 1e9b4710b01bbe747aa64808885a852a, type: 3}
   playerWep: {fileID: 1911803656}
