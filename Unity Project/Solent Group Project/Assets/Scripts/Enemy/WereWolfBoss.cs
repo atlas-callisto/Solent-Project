@@ -20,6 +20,7 @@ public class WereWolfBoss : EnemyAI
     private float boulderAttackTimer;
     private float rockYOffset = 10;
     private float rockXOffset = 1;
+    private bool isDoingSpecialAttack = false;
 
     //WereWolfBoss Created. The Boss Patrols between two points, 
     //if the player moves within its boulder attack range, 
@@ -52,43 +53,58 @@ public class WereWolfBoss : EnemyAI
         MeasureDistanceToThePlayer();
         clawAttackTimer += Time.deltaTime;
         boulderAttackTimer += Time.deltaTime;
-
-        if (distanceToThePlayer > boulderAttackRange)
+        if(isDoingSpecialAttack)
+        {
+            myRB.velocity = new Vector2(0, myRB.velocity.y);
+        }
+        else if (distanceToThePlayer > boulderAttackRange)
         {
             base.EnemyAIChaseOrPatrol();
+            myAnimator.SetBool("IsWalking" , true);
         }
         else if (distanceToThePlayer <= boulderAttackRange && distanceToThePlayer > clawAttackRange && boulderAttackTimer >= boulderAttackInterval) // Player is within boulder attack range but outside melee range
         {
             TurnTowardsPlayer();
             myRB.velocity = new Vector2(0, myRB.velocity.y);
-            if(boulderAttackTimer >= boulderAttackInterval)
+            myAnimator.SetBool("IsWalking", false);
+            if (boulderAttackTimer >= boulderAttackInterval)
             {
-                myCam.StartCoroutine(myCam.CameraShake(1f, 0.5f));
+                isDoingSpecialAttack = true;
                 boulderAttackTimer = 0;
-                for(int i = 0; i < numberOfRocksToSpawn; i++)
-                {
-                    rockYOffset = UnityEngine.Random.Range(8, 16);
-                    rockXOffset = UnityEngine.Random.Range(-5, 5); // Spawn boulder with this Offset on top of players x axis.
-                    Instantiate(fallingRockPrefab, player.transform.position + new Vector3(rockXOffset, rockYOffset), Quaternion.identity);
-                }
+                myAnimator.SetTrigger("SpecialAttack");
             }
-
         }
         else if (distanceToThePlayer > clawAttackRange && boulderAttackTimer < boulderAttackInterval)
         {
             base.EnemyAIChaseOrPatrol();
+            myAnimator.SetBool("IsWalking", true);
         }
         else if (distanceToThePlayer <= clawAttackRange)
         {
             TurnTowardsPlayer();
             myRB.velocity = new Vector2(0, myRB.velocity.y);
-            if(clawAttackTimer >= clawAttackInterval)
+            myAnimator.SetBool("IsWalking", false);
+            if (clawAttackTimer >= clawAttackInterval)
             {
+                myAnimator.SetTrigger("BasicAttack");
                 clawAttackTimer = 0;
                 weapon.SetActive(true);
             }
         }
     }
+
+    private void BoulderAttack() // called through animation events
+    {
+        isDoingSpecialAttack = false;
+        myCam.StartCoroutine(myCam.CameraShake(1f, 0.5f));
+        for (int i = 0; i < numberOfRocksToSpawn; i++)
+        {
+            rockYOffset = UnityEngine.Random.Range(8, 16);
+            rockXOffset = UnityEngine.Random.Range(-5, 5); // Spawn boulder with this Offset on top of players x axis.
+            Instantiate(fallingRockPrefab, player.transform.position + new Vector3(rockXOffset, rockYOffset), Quaternion.identity);
+        }
+    }
+
     public override void TakeDamage(int damage) //Take Damage
     {
         if (currentHealth > 0 && isAlive)
@@ -102,6 +118,7 @@ public class WereWolfBoss : EnemyAI
             if (currentHealth <= 0)
             {
                 isAlive = false;
+                myAnimator.SetTrigger("Dead");
                 PlaySFX(enemyDeathSFX);
                 SpawnHealingPotions();
                 GameManager.myGameManager.werewolfBossDefeated = true;
