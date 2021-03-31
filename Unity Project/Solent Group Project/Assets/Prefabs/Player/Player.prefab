@@ -393,17 +393,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b39cd6d1fb0a3674aa7508c7cea763a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerMaxHealth: 14
-  playerCurrentHealth: 14
+  playerMaxHealth: 20
+  playerCurrentHealth: 20
   playerMaxWolfBar: 10
   playerCurrentWolfBar: 10
   playerWolfBarRegenRate: 0.1
   playerWolfDegeneRate: 1
   collisionKnockBackForce: 100
   playerInvunerabletimer: 1
-  basicAttackCoolDown: 0.8
-  heavyAttackCoolDown: 3
-  specialAttakCoolDown: 5
+  basicAttackCoolDown: 0.6
+  heavyAttackCoolDown: 2.5
+  specialAttakCoolDown: 3
   afterAttackPause: 0.5
   humanMoveSpeed: 4
   humanJumpForce: 12

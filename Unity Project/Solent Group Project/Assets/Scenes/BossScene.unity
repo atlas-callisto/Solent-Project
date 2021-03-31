@@ -9277,6 +9277,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7727796109809495301, guid: f492d61ada5c0c54f8f9239dc0b430e5, type: 3}
+      propertyPath: maxHealth
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 7727796109809495301, guid: f492d61ada5c0c54f8f9239dc0b430e5, type: 3}
+      propertyPath: currentHealth
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 7727796109809495301, guid: f492d61ada5c0c54f8f9239dc0b430e5, type: 3}
+      propertyPath: clawAttackRange
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7727796109809495301, guid: f492d61ada5c0c54f8f9239dc0b430e5, type: 3}
+      propertyPath: chanceToSpawnHealthPotions
+      value: 30
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f492d61ada5c0c54f8f9239dc0b430e5, type: 3}
 --- !u!1001 &1994788990
