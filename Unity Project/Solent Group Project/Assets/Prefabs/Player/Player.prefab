@@ -414,6 +414,7 @@ MonoBehaviour:
   takingDamageSFX: {fileID: 8300000, guid: 9137607a1fbffd94990a30c0f427dda3, type: 3}
   shootingSFX: {fileID: 8300000, guid: 87fe6a750abcab548a1cb062ca2897be, type: 3}
   wolfRoarSFX: {fileID: 8300000, guid: f678d4bb36b67fd41b2babb9e61a4b87, type: 3}
+  JumpSFX: {fileID: 8300000, guid: 3b5840d878613d248afc5c269afe298c, type: 3}
   projectilePrefab: {fileID: 3099315621163623433, guid: 1e9b4710b01bbe747aa64808885a852a, type: 3}
   playerWep: {fileID: 1911803656}
   playerWolfWep: {fileID: 726638109}
