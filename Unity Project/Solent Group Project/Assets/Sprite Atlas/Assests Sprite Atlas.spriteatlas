@@ -74,6 +74,7 @@ SpriteAtlas:
   - {fileID: -8607868822749264456, guid: a1fee381f4a460c40bfc354abf0974ad, type: 3}
   - {fileID: -5237309120061643940, guid: a1fee381f4a460c40bfc354abf0974ad, type: 3}
   - {fileID: -5892539471028197031, guid: a1fee381f4a460c40bfc354abf0974ad, type: 3}
+  - {fileID: 847370008248263160, guid: 40d1c4a1a646d5b4799de88ae403c7ce, type: 3}
   - {fileID: 4124384198302255784, guid: 4ae4cfa1bf364eb41ae5f6297e1f6111, type: 3}
   - {fileID: -1215154009847720111, guid: 4ae4cfa1bf364eb41ae5f6297e1f6111, type: 3}
   - {fileID: -28032235538025558, guid: 4ae4cfa1bf364eb41ae5f6297e1f6111, type: 3}
@@ -122,6 +123,8 @@ SpriteAtlas:
   - {fileID: 3534744277296590147, guid: b5d167c2b7027ed4d8cd909f3c4a5f09, type: 3}
   - {fileID: 2163501582910588449, guid: b5d167c2b7027ed4d8cd909f3c4a5f09, type: 3}
   - {fileID: -330561799001575990, guid: b5d167c2b7027ed4d8cd909f3c4a5f09, type: 3}
+  - {fileID: 7022061533728335380, guid: b7faf2d23b8d5f748965a0cf228f49f9, type: 3}
+  - {fileID: -3568887357862171860, guid: c9840f334d2407c4bb37c9a9ef14ad81, type: 3}
   - {fileID: 21300000, guid: b835b6838bd434f4897c43ed1048591a, type: 3}
   - {fileID: 21300000, guid: 0272c3146d7df504aa0c4a476de7468e, type: 3}
   - {fileID: 21300000, guid: 450565347ef2e49418af97ab5aaef5f7, type: 3}
@@ -155,6 +158,7 @@ SpriteAtlas:
   - {fileID: -4160665311821346163, guid: 803f1ab62680e134c9f0ae5b31013c9e, type: 3}
   - {fileID: -8196616383959980753, guid: 803f1ab62680e134c9f0ae5b31013c9e, type: 3}
   - {fileID: 21300000, guid: c4c11317532cbf44ca5f656d4779677e, type: 3}
+  - {fileID: 5123486847398651115, guid: 95c62457ae75dd142ba2444fafd1a7f6, type: 3}
   - {fileID: 21300000, guid: 0a3b7b875cd0c084996a2a3e4d1b9426, type: 3}
   - {fileID: 21300000, guid: 586484b753877b14984aac43abd021aa, type: 3}
   - {fileID: 21300000, guid: 9b2253f79fabe8047bde012610736228, type: 3}
@@ -179,6 +183,7 @@ SpriteAtlas:
   - {fileID: 1238927833779498331, guid: 0d1f85d8f33178b44a74942b1da5ebc7, type: 3}
   - {fileID: -5928017017823161478, guid: 0d1f85d8f33178b44a74942b1da5ebc7, type: 3}
   - {fileID: 21300000, guid: 316adca98f0c0e4488f777fc9a4667b5, type: 3}
+  - {fileID: 4137594001643917647, guid: 97d0852aa819dfd4bb39352990268429, type: 3}
   - {fileID: 21300000, guid: 01acbada3fb031345bcba1aaa9416a65, type: 3}
   - {fileID: 4666529251498760401, guid: fd5d062beebc0764aacc79fef8f2ec71, type: 3}
   - {fileID: -3028376089294130101, guid: fd5d062beebc0764aacc79fef8f2ec71, type: 3}
@@ -319,6 +324,7 @@ SpriteAtlas:
   - PlayerDeath_1_8
   - PlayerDeath_1_10
   - PlayerDeath_1_11
+  - NPC3 Portait_0
   - WerewolfBossWalk_9
   - WerewolfBossWalk_8
   - WerewolfBossWalk_5
@@ -367,6 +373,8 @@ SpriteAtlas:
   - WerewolfDeath (1)_6
   - WerewolfDeath (1)_9
   - WerewolfDeath (1)_8
+  - NPC5 Portrait_0
+  - NPC4 Portrait_0
   - Crossbow_cocked
   - WaterwheelBroken
   - 32_x_32_blue_gem
@@ -400,6 +408,7 @@ SpriteAtlas:
   - BasicClawAttack_0
   - BasicClawAttack_4
   - Skelly
+  - NPC2 Portrait_0
   - pixil-layer-Background
   - Health
   - Axe 2
@@ -424,6 +433,7 @@ SpriteAtlas:
   - SmallerClawAttack_5
   - SmallerClawAttack_4
   - Axe_2
+  - NPC1 Portrait_0
   - Platform
   - SkellyRun_3
   - SkellyRun_2
