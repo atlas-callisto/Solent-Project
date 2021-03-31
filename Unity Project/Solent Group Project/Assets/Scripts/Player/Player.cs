@@ -1,13 +1,10 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour, IDamageable
 {
-    //Params
-    
-    public static int maxHealth = 10;
+    //Params    
+    public static int maxHealth = 10; // Making static variable so that it can persists through different game levels
     public static int currentHealth = 10;
     public static float maxWolfBar = 10;
     public static float currentWolfBar = 10;
@@ -23,12 +20,14 @@ public class Player : MonoBehaviour, IDamageable
     [SerializeField] public float playerWolfBarRegenRate = 0.1f;
     [SerializeField] public float playerWolfDegeneRate = 1f;
     [SerializeField] private float collisionKnockBackForce = 500f;
-    [SerializeField] public bool canInteract = false;
+    [SerializeField] private float playerInvunerabletimer = 0.3f; // timer to stop player playing from getting damage after taking a hit
+
 
     [Header("Cool Downs")]
     [SerializeField] private float basicAttackCoolDown = 2f;
     [SerializeField] private float heavyAttackCoolDown = 5f;
     [SerializeField] private float specialAttakCoolDown = 10f;
+    [Tooltip("It is a pause after attacks so that player cannot spam multiple attacks at once")] [SerializeField] private float afterAttackPause = 2f;
 
     [Header("Human Stats")]
     [SerializeField] float humanMoveSpeed = 4f;
@@ -37,17 +36,18 @@ public class Player : MonoBehaviour, IDamageable
     [Header("Wolf Stats")]
     [SerializeField] float wolfMoveSpeed = 6f;
     [SerializeField] float wolfJumpForce = 8f;
-    [Tooltip("Duration of the Wolf Special Attack")] [SerializeField] float screamDuration = 2f; // Remove it later... Use the animation for the scream duration
-       
+    
     private float jumpForce = 5f;
     private bool slowDebuff = false;
 
     //Ref Objs
     [Header("Audio SFX")]
-    public AudioClip attackSFX;
+    public AudioClip humanAttackSFX;
     public AudioClip deathSFX;
     public AudioClip takingDamageSFX;
     public AudioClip shootingSFX;
+    public AudioClip wolfRoarSFX;
+    public AudioClip JumpSFX;
 
     [Header("Objects Ref")]
     public GameObject projectilePrefab; // bullet to spwan during attack 2
@@ -60,25 +60,25 @@ public class Player : MonoBehaviour, IDamageable
     private float heavyAttackTimer = 0f;
     private float specialAttackTimer = 0f;
     private float currentMoveSpeed;
+    [Tooltip("This delay gives enough time to show the player death animation before restarting the level")]
     public float playerRespawnDelay;
-
+    private bool canAttack = true; //this is to stop player from using multiple attacks at once;
 
     internal bool wolf = false; //Transform to wolf, also called by moonlight script
-    public bool playerAlive = true;
+    internal bool playerAlive = true;
     public static bool playerisTalking = false;
 
     internal bool isGrounded = false; // is modified by playerGroundCheck
     internal bool canDoubleJump = false;// is modified by playerGroundCheck
+    internal bool canInteract = false;
 
     internal bool doubleJumpSkillAcquired = false; // enable double jump after skill is unlocked??? for later use
-    private bool playerCanTakeDmg = true;
-    private float playerInvunerabletimer = 1.5f; // timer to stop player playing from getting damage after taking a hit
+    private bool playerCanTakeDmg = true;    
 
     //Comp Ref
     private Rigidbody2D myRB;
     private Animator myAnimator;
     private SpriteRenderer mySpriteRenderer;
-
     private void Awake()
     {
         myRB = GetComponent<Rigidbody2D>();
@@ -101,16 +101,19 @@ public class Player : MonoBehaviour, IDamageable
         basicAttackTimer = basicAttackCoolDown;
         heavyAttackTimer = heavyAttackCoolDown;
         specialAttackTimer = specialAttakCoolDown;
-    }
-    
+    }    
     void Update()
     {
-        if (!playerAlive) return;
+        if (!playerAlive)
+        {
+            myRB.velocity = new Vector2(0, myRB.velocity.y); // Stops player corpse from sliding
+            return;
+        }
         Interaction(); 
         if (playerisTalking)
         {
             myRB.velocity = new Vector2(0, myRB.velocity.y); // Stops player from continusously moving
-            return; // Stops control when player is talking to NPC
+            return; // Stops user control when player is talking to NPC
         }
         PlayerMovement();
         PlayerJump();
@@ -143,10 +146,12 @@ public class Player : MonoBehaviour, IDamageable
     {
         if (Input.GetButtonDown("Jump") && isGrounded)
         {
+            PlaySFX(JumpSFX);
             myRB.velocity = new Vector2(myRB.velocity.x, jumpForce);
         }
         else if (Input.GetButtonDown("Jump") && canDoubleJump && doubleJumpSkillAcquired)
         {
+            PlaySFX(JumpSFX);
             myRB.velocity = new Vector2(myRB.velocity.x, jumpForce);
             canDoubleJump = false;
         }
@@ -156,10 +161,7 @@ public class Player : MonoBehaviour, IDamageable
     #region Wolf Transformation
     private void Transform() // Wolf Transformation
     {
-        if (Input.GetButtonDown("Transform"))
-        {
-            wolf = !wolf;
-        }
+        if (Input.GetButtonDown("Transform")) wolf = !wolf;
         myAnimator.SetBool("Transform", wolf);
     }
 
@@ -181,63 +183,34 @@ public class Player : MonoBehaviour, IDamageable
     #region Player Attacks
     private void PlayerAttack()
     {
-        if(!wolf)
+        if (!canAttack) return; // stops player from spaming multiple attacks at once.
+        if (Input.GetButtonDown("Basic Attack"))  // 1 = Basic attack, 2 = heavy attack, 3 = special attack
         {
-            if (Input.GetButtonDown("Basic Attack"))  // 1 = Basic attack, 2 = heavy attack, 3 = special attack
-            {
-                if(basicAttackTimer >= basicAttackCoolDown)
-                {
-                    myAnimator.SetTrigger("Attack");
-                    PlaySFX(attackSFX);
-                    AttackWithType(1);// 1 = Basic attack, sending the type of attack it is supposed to be
-                }                
-            }
-            if (Input.GetButtonDown("Heavy Attack"))
-            {
-                if (heavyAttackTimer >= heavyAttackCoolDown)
-                {
-                    myAnimator.SetTrigger("Attack");
-                    PlaySFX(attackSFX);
-                    AttackWithType(2); // 2 = heavy attack, Sending the type of attack it is supposed to be
-                }                
-            }
+            if (basicAttackTimer >= basicAttackCoolDown) AttackWithType(1);
+        }
+        if (Input.GetButtonDown("Heavy Attack"))
+        {
+            if (heavyAttackTimer >= heavyAttackCoolDown) AttackWithType(2);
+        }
+        if (!wolf)        
+        {            
             if (Input.GetButtonDown("Special Attack"))
             {
-                if (specialAttackTimer >= specialAttakCoolDown)
-                {
-                    //shooting animation
-                    PlaySFX(shootingSFX);
-                    ShootProjectile();
-                    specialAttackTimer = 0;
-                }
+                if (specialAttackTimer >= specialAttakCoolDown) ShootProjectile();
             }
         }
         else // If player has transformed to wolf
         {
-            if (Input.GetButtonDown("Basic Attack"))
-            {
-                if (basicAttackTimer >= basicAttackCoolDown)
-                {
-                    playerWolfWep.gameObject.SetActive(true);
-                    playerWolfWep.SetDamage(1);
-                    playerWolfWep.Attack(1);
-                }
-            }
-            if (Input.GetButtonDown("Heavy Attack"))
-            {
-                if (heavyAttackTimer >= heavyAttackCoolDown)
-                {
-                    playerWolfWep.gameObject.SetActive(true);
-                    playerWolfWep.SetDamage(2);
-                    playerWolfWep.Attack(2);
-                }
-            }
             if (Input.GetButtonDown("Special Attack"))
             {
                 if (specialAttackTimer >= specialAttakCoolDown)
                 {
-                    // fearDebuffApplier.SetActive(true); // Later On I won't need Coroutine
-                    StartCoroutine(UseWolfSpecialAttack());
+                    PlaySFX(wolfRoarSFX);
+                    myAnimator.SetTrigger("Roar");
+                    fearDebuffApplier.SetActive(true);
+                    specialAttackTimer = 0;
+                    StartCoroutine(AttackCoolDown());
+                    // StartCoroutine(UseWolfSpecialAttack());
                 }
             }
         }       
@@ -246,17 +219,30 @@ public class Player : MonoBehaviour, IDamageable
     {
         fearDebuffApplier.SetActive(false);
     }
-    private IEnumerator UseWolfSpecialAttack()
+    private IEnumerator AttackCoolDown()
     {
-        fearDebuffApplier.SetActive(true);
-        yield return new WaitForSeconds(screamDuration);
-        fearDebuffApplier.SetActive(false);
+        canAttack = false;
+        yield return new WaitForSeconds(afterAttackPause);
+        canAttack = true;
     }
     private void AttackWithType(int attackType)
     {
-        playerWep.gameObject.SetActive(true);
-        playerWep.SetDamage(attackType); // 2 = heavy attack, Sending the type of attack it is supposed to be
-        playerWep.Attack(attackType);
+        StartCoroutine(AttackCoolDown());
+        myAnimator.SetTrigger("Attack");
+        if (!wolf)
+        {
+            PlaySFX(humanAttackSFX);
+            playerWep.gameObject.SetActive(true);
+            playerWep.SetDamage(attackType);
+            playerWep.Attack(attackType);
+        }
+        if(wolf)
+        {
+            //PlaySFX(wolfAttackSFX)
+            playerWolfWep.gameObject.SetActive(true);
+            playerWolfWep.SetDamage(attackType);
+            playerWolfWep.Attack(attackType);
+        }
         switch (attackType) //Sets the attack timer to 0 depending on the type of attack used
         {
             case 1:
@@ -292,8 +278,11 @@ public class Player : MonoBehaviour, IDamageable
     }
     public void ShootProjectile()
     {
+        //shooting animation
         PlaySFX(shootingSFX);
         GameObject projectile = Instantiate(projectilePrefab, transform.position, transform.localRotation);
+        specialAttackTimer = 0;
+        StartCoroutine(AttackCoolDown());
     }
     #endregion
 
@@ -302,7 +291,6 @@ public class Player : MonoBehaviour, IDamageable
     {
         if (Input.GetButtonDown("Interact")) canInteract = true;
         else if (Input.GetButtonUp("Interact")) canInteract = false;
-
     }
     private void OnTriggerStay2D(Collider2D collision)
     {
@@ -327,11 +315,9 @@ public class Player : MonoBehaviour, IDamageable
             StartCoroutine(playerInvunerableDuration());
             if (currentHealth <= 0)
             {
-                myRB.velocity = new Vector2(0, myRB.velocity.y); // Stops player corpse from sliding
                 PlaySFX(deathSFX);                
                 playerAlive = false;
-                myAnimator.SetTrigger("Dead");                
-                // Needs fixing - keeps not assigning reference
+                myAnimator.SetTrigger("Dead");          
                 FindObjectOfType<LevelLoader>().RestartLevelAfterAPause();
             }
         }
@@ -367,7 +353,6 @@ public class Player : MonoBehaviour, IDamageable
         slowDebuff = false;
     }
     #endregion
-
     private void PlaySFX(AudioClip clipName)
     {
         AudioSource.PlayClipAtPoint(clipName, Camera.main.transform.position, 0.5f);

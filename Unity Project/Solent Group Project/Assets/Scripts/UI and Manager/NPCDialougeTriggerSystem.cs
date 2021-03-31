@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class NPCDialougeTriggerSystem : MonoBehaviour , Interactable
 {
-    Sprite nPCSprite;
-    string nPCName;
+    [SerializeField] Sprite nPCSprite;
+    [SerializeField] string nPCName;
     [SerializeField] List<Dialouges> dialougesList = new List<Dialouges>();
-    [SerializeField] List<string> dialougeStringList = new List<string>();
+    private List<string> dialougeStringList = new List<string>();
     // List of scriptable objs // note to self Use Scriptable objs in the future,
     DialougeSystem dialougeSystemRef;
     
@@ -17,8 +17,7 @@ public class NPCDialougeTriggerSystem : MonoBehaviour , Interactable
     }
     private void Start()
     {
-        dialougeStringList = (dialougesList[0].dialouges);
-        
+        dialougeStringList = (dialougesList[0].dialouges);        
     }
     public void Interact()
     {

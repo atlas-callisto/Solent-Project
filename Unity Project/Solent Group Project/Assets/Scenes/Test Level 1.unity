@@ -852,11 +852,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2160318093421502459, guid: ec9628dc761ae034597c0d60d9cc1e23, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -45.81
+      value: -17.57
       objectReference: {fileID: 0}
     - target: {fileID: 2160318093421502459, guid: ec9628dc761ae034597c0d60d9cc1e23, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 6.72
+      value: 8.97
       objectReference: {fileID: 0}
     - target: {fileID: 2160318093421502459, guid: ec9628dc761ae034597c0d60d9cc1e23, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1044,10 +1044,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d10b081b667d5634f963c486391c27f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  nPCSprite: {fileID: 21300000, guid: 974e92be988c53b44b06d6afe71b72a1, type: 3}
+  nPCName: asd
   dialougesList:
-  - {fileID: 11400000, guid: 2e66ce7eaf70f8945ae5844be4b4259c, type: 2}
-  - {fileID: 0}
-  dialougeStringList: []
+  - {fileID: 11400000, guid: bdb1e31d268fc214db4853a4bf6d29be, type: 2}
 --- !u!1 &1751187694
 GameObject:
   m_ObjectHideFlags: 0

@@ -142,7 +142,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 11
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -164,7 +164,7 @@ TextureImporter:
     textureFormat: -1
     textureCompression: 0
     compressionQuality: 50
-    crunchedCompression: 1
+    crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
@@ -176,7 +176,43 @@ TextureImporter:
     textureFormat: -1
     textureCompression: 0
     compressionQuality: 50
-    crunchedCompression: 1
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
@@ -189,9 +225,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 230
-        width: 46
-        height: 46
+        y: 320
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -209,10 +245,10 @@ TextureImporter:
       name: WerewolfBossDeath_1
       rect:
         serializedVersion: 2
-        x: 46
-        y: 230
-        width: 46
-        height: 46
+        x: 64
+        y: 320
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -230,10 +266,10 @@ TextureImporter:
       name: WerewolfBossDeath_2
       rect:
         serializedVersion: 2
-        x: 92
-        y: 230
-        width: 46
-        height: 46
+        x: 128
+        y: 320
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -251,10 +287,10 @@ TextureImporter:
       name: WerewolfBossDeath_3
       rect:
         serializedVersion: 2
-        x: 138
-        y: 230
-        width: 46
-        height: 46
+        x: 192
+        y: 320
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -272,10 +308,10 @@ TextureImporter:
       name: WerewolfBossDeath_4
       rect:
         serializedVersion: 2
-        x: 184
-        y: 230
-        width: 46
-        height: 46
+        x: 256
+        y: 320
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -293,10 +329,10 @@ TextureImporter:
       name: WerewolfBossDeath_5
       rect:
         serializedVersion: 2
-        x: 230
-        y: 230
-        width: 46
-        height: 46
+        x: 320
+        y: 320
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -315,9 +351,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 184
-        width: 46
-        height: 46
+        y: 256
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -335,10 +371,10 @@ TextureImporter:
       name: WerewolfBossDeath_7
       rect:
         serializedVersion: 2
-        x: 46
-        y: 184
-        width: 46
-        height: 46
+        x: 64
+        y: 256
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -356,10 +392,10 @@ TextureImporter:
       name: WerewolfBossDeath_8
       rect:
         serializedVersion: 2
-        x: 92
-        y: 184
-        width: 46
-        height: 46
+        x: 128
+        y: 256
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -377,10 +413,10 @@ TextureImporter:
       name: WerewolfBossDeath_9
       rect:
         serializedVersion: 2
-        x: 138
-        y: 184
-        width: 46
-        height: 46
+        x: 192
+        y: 256
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -398,10 +434,10 @@ TextureImporter:
       name: WerewolfBossDeath_10
       rect:
         serializedVersion: 2
-        x: 184
-        y: 184
-        width: 46
-        height: 46
+        x: 256
+        y: 256
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -419,10 +455,10 @@ TextureImporter:
       name: WerewolfBossDeath_11
       rect:
         serializedVersion: 2
-        x: 230
-        y: 184
-        width: 46
-        height: 46
+        x: 320
+        y: 256
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -441,9 +477,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 138
-        width: 46
-        height: 46
+        y: 192
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -461,10 +497,10 @@ TextureImporter:
       name: WerewolfBossDeath_13
       rect:
         serializedVersion: 2
-        x: 46
-        y: 138
-        width: 46
-        height: 46
+        x: 64
+        y: 192
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -482,10 +518,10 @@ TextureImporter:
       name: WerewolfBossDeath_14
       rect:
         serializedVersion: 2
-        x: 92
-        y: 138
-        width: 46
-        height: 46
+        x: 128
+        y: 192
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -503,10 +539,10 @@ TextureImporter:
       name: WerewolfBossDeath_15
       rect:
         serializedVersion: 2
-        x: 138
-        y: 138
-        width: 46
-        height: 46
+        x: 192
+        y: 192
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -524,10 +560,10 @@ TextureImporter:
       name: WerewolfBossDeath_16
       rect:
         serializedVersion: 2
-        x: 184
-        y: 138
-        width: 46
-        height: 46
+        x: 256
+        y: 192
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -545,10 +581,10 @@ TextureImporter:
       name: WerewolfBossDeath_17
       rect:
         serializedVersion: 2
-        x: 230
-        y: 138
-        width: 46
-        height: 46
+        x: 320
+        y: 192
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -567,9 +603,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 92
-        width: 46
-        height: 46
+        y: 128
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -587,10 +623,10 @@ TextureImporter:
       name: WerewolfBossDeath_19
       rect:
         serializedVersion: 2
-        x: 46
-        y: 92
-        width: 46
-        height: 46
+        x: 64
+        y: 128
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -608,10 +644,10 @@ TextureImporter:
       name: WerewolfBossDeath_20
       rect:
         serializedVersion: 2
-        x: 92
-        y: 92
-        width: 46
-        height: 46
+        x: 128
+        y: 128
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -629,10 +665,10 @@ TextureImporter:
       name: WerewolfBossDeath_21
       rect:
         serializedVersion: 2
-        x: 138
-        y: 92
-        width: 46
-        height: 46
+        x: 192
+        y: 128
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -650,10 +686,10 @@ TextureImporter:
       name: WerewolfBossDeath_22
       rect:
         serializedVersion: 2
-        x: 184
-        y: 92
-        width: 46
-        height: 46
+        x: 256
+        y: 128
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -671,10 +707,10 @@ TextureImporter:
       name: WerewolfBossDeath_23
       rect:
         serializedVersion: 2
-        x: 230
-        y: 92
-        width: 46
-        height: 46
+        x: 320
+        y: 128
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -693,9 +729,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 46
-        width: 46
-        height: 46
+        y: 64
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -713,10 +749,10 @@ TextureImporter:
       name: WerewolfBossDeath_25
       rect:
         serializedVersion: 2
-        x: 46
-        y: 46
-        width: 46
-        height: 46
+        x: 64
+        y: 64
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -734,10 +770,10 @@ TextureImporter:
       name: WerewolfBossDeath_26
       rect:
         serializedVersion: 2
-        x: 92
-        y: 46
-        width: 46
-        height: 46
+        x: 128
+        y: 64
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -755,10 +791,10 @@ TextureImporter:
       name: WerewolfBossDeath_27
       rect:
         serializedVersion: 2
-        x: 138
-        y: 46
-        width: 46
-        height: 46
+        x: 192
+        y: 64
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -776,10 +812,10 @@ TextureImporter:
       name: WerewolfBossDeath_28
       rect:
         serializedVersion: 2
-        x: 184
-        y: 46
-        width: 46
-        height: 46
+        x: 256
+        y: 64
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -797,10 +833,10 @@ TextureImporter:
       name: WerewolfBossDeath_29
       rect:
         serializedVersion: 2
-        x: 230
-        y: 46
-        width: 46
-        height: 46
+        x: 320
+        y: 64
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -820,8 +856,8 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 46
-        height: 46
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -839,10 +875,10 @@ TextureImporter:
       name: WerewolfBossDeath_31
       rect:
         serializedVersion: 2
-        x: 46
+        x: 64
         y: 0
-        width: 46
-        height: 46
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
