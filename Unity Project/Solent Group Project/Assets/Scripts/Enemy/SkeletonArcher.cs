@@ -67,7 +67,7 @@ public class SkeletonArcher : EnemyAI
             //}
 
         }
-        else if (distanceToThePlayer <= runAwayRange && !wallChecker.IsTouchingLayers(LayerMask.GetMask("Ground"))) // Player is too close so runaway from the player. Unless near the wall
+        else if (distanceToThePlayer <= runAwayRange && !wallChecker.IsTouchingLayers(LayerMask.GetMask("Ground")) && !wallChecker.IsTouchingLayers(LayerMask.GetMask("EnemyLedgeGuard"))) // Player is too close so runaway from the player. Unless near the wall
         {
             RunAwayFromPlayer();
         }

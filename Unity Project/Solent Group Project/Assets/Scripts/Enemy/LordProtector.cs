@@ -63,8 +63,7 @@ public class LordProtector : EnemyAI
         swordAttackTimer += Time.deltaTime;
         crossbowAttackTimer += Time.deltaTime;
         groundSlamAttackTimer += Time.deltaTime;
-
-        if (distanceToThePlayer > crossbowAttackRange && distanceToThePlayer > swordAttackRange)
+        if (distanceToThePlayer > swordAttackRange && crossbowAttackTimer >= crossbowAttackInterval)
         {
             base.EnemyAIChaseOrPatrol();
         }

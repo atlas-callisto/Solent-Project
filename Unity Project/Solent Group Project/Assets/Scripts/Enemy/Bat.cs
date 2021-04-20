@@ -5,7 +5,6 @@ using UnityEngine;
 public class Bat : EnemyAI
 {
     [Header("Bat Stats")]
-    [SerializeField] public float aggroDistance;
     [SerializeField] private float horizontalFlightSpeed;
     [SerializeField] private float verticalFlightSpeed;
     [SerializeField] private float runAwaySpeed;
@@ -33,7 +32,7 @@ public class Bat : EnemyAI
             myRB.gravityScale = 1;
             myRB.velocity = new Vector2(0, myRB.velocity.y);
         }
-        else if (distanceToThePlayer <= aggroDistance && chasePlayer)
+        else if (distanceToThePlayer <= chaseDistance && chasePlayer)
         {
             myRB.gravityScale = 0;
             TurnTowardsPlayer();
@@ -48,7 +47,7 @@ public class Bat : EnemyAI
                 myRB.velocity = new Vector2(-horizontalFlightSpeed, verticalFlightSpeed);
             }
         }
-        else if (distanceToThePlayer <= aggroDistance && !chasePlayer) // Return to original point when player out of range
+        else if (distanceToThePlayer <= chaseDistance && !chasePlayer) // Return to original point when player out of range
         {
             myRB.gravityScale = 0;
             myRB.velocity = Vector3.zero;

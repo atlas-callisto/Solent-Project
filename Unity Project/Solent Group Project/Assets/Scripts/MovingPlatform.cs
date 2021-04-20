@@ -14,7 +14,7 @@ public class MovingPlatform : MonoBehaviour
     void Start()
     {
         transform.position = pointA.transform.position;
-        this.gameObject.SetActive(isEnabled);
+        this.gameObject.SetActive(GameManager.myGameManager.moonsEyeMonacle);
     }
 
     void Update()
