@@ -747,8 +747,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c74865e18c084f244a6c4ae1eb6dc34e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 8
-  currentHealth: 8
+  maxHealth: 6
+  currentHealth: 6
   moveSpeed: 2
   collisionDamage: 1
   chaseDistance: 4
