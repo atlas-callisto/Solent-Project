@@ -101,7 +101,8 @@ public class WereWolfBoss : EnemyAI
         {
             rockYOffset = UnityEngine.Random.Range(8, 16);
             rockXOffset = UnityEngine.Random.Range(-5, 5); // Spawn boulder with this Offset on top of players x axis.
-            Instantiate(fallingRockPrefab, player.transform.position + new Vector3(rockXOffset, rockYOffset), Quaternion.identity);
+            Vector3 boulderRotation = new Vector3(0, 0, Random.Range(0,360));
+            Instantiate(fallingRockPrefab, player.transform.position + new Vector3(rockXOffset, rockYOffset), Quaternion.Euler(boulderRotation));
         }
     }
 
