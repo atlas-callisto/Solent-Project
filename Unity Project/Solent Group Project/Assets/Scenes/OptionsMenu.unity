@@ -282,18 +282,15 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Blah Blah Blah Options here Blah blah here
+  m_text: 'Sorry, we haven''t got round to implimenting our settings yet, but our
+    game is only 2D, so you should be okay.
 
-    Some more stuff
 
-    123214214
+    You can edit the volume in the
+    volume mixer built into Windows or your current OS.
 
-    asdfew
-    tg dausog dnas
 
-    ASHF GISNJO;AWHEP9HWOI
-
-    asdhanfpoasn'
+    Apologies'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 30e92e902499cf8439ebf761b0c791b3, type: 2}
   m_sharedMaterial: {fileID: 6332949721282580491, guid: 30e92e902499cf8439ebf761b0c791b3, type: 2}
@@ -327,7 +324,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
+  m_HorizontalAlignment: 2
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
