@@ -25,6 +25,9 @@ public class GameManager : MonoBehaviour
     public int gemsCollected;
     public int gemsRequired;
 
+    [Header("Boss Arena Mechanic")]
+    public bool HasWheelTurned = false;
+
     private void Awake()
     {
         if (myGameManager != null)
@@ -45,41 +48,4 @@ public class GameManager : MonoBehaviour
         else return allGemsCollected = false;
     }
 
-    public enum lockCondition
-    {
-        WereWolfBossDead,
-        NecromancerBossDead,
-        LordProtectorDead,
-        GemsCollected,
-        KeyCollected
-
-    };
-    public bool UnLockDoorCondition(lockCondition recievedLockCondition )
-    {
-        bool unlockdoor = false;
-        switch (recievedLockCondition)
-        {
-            case lockCondition.WereWolfBossDead:
-                unlockdoor = werewolfBossDefeated;
-                break;
-
-            case lockCondition.NecromancerBossDead:
-                unlockdoor = necromancerBossDefeated;
-                break;
-
-            case lockCondition.LordProtectorDead:
-                unlockdoor = lordProtectorBossDefeated;
-                break;
-
-            case lockCondition.GemsCollected:
-                unlockdoor = false; //gotta add this
-                break;
-
-            case lockCondition.KeyCollected:
-                unlockdoor = false; //gotta add this
-                break;
-        }
-        return unlockdoor;
-        
-    }
 }
