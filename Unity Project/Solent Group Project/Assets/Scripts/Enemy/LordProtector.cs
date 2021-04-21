@@ -8,6 +8,7 @@ public class LordProtector : EnemyAI
     [SerializeField] private float swordAttackRange;
     [SerializeField] private float swordAttackInterval;
     [SerializeField] private float crossbowAttackRange;
+    [SerializeField] private float crossbowAttackInterval = 4;
     [SerializeField] private float groundSlamAttackRange;
     [SerializeField] private float groundSlamAttackInterval;
 
@@ -30,7 +31,6 @@ public class LordProtector : EnemyAI
     private CameraScript myCam;
     private float swordAttackTimer;
     private float crossbowAttackTimer;
-    private float crossbowAttackInterval = 4;
     private float groundSlamAttackTimer;
     private int numOfBatsToSpawn = 3;
 

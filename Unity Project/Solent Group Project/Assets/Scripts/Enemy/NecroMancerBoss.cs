@@ -58,7 +58,8 @@ public class NecroMancerBoss : EnemyAI
     protected override void Update()
     {
         if (!isAlive) return;
-        if(summoningMinions)
+        AdjustHealthBarOrientation();
+        if (summoningMinions)
         {
             myRB.velocity = Vector3.zero;
         }
