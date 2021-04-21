@@ -24,9 +24,9 @@ public class WheelActivation : MonoBehaviour, Interactable
             fountain.ActivateWaterFlowAnimation();
         }
 
-        if (WheelActivated == true)
+        //if (WheelActivated == true)
         {
-            GM.HasWheelTurned = true;
+            //GM.HasWheelTurned = true;
         }
     }
 

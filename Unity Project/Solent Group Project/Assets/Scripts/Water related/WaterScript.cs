@@ -13,9 +13,9 @@ public class WaterScript : MonoBehaviour
     {
         playerRef = FindObjectOfType<Player>();
 
-        if (GM.HasWheelTurned == true)
+        //if (GM.HasWheelTurned == true)
         {
-            gameObject.SetActive(!WheelActivation.WheelActivated);
+            //gameObject.SetActive(!WheelActivation.WheelActivated);
         }
       
     }

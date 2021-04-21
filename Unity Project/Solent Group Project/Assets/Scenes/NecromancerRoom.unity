@@ -10548,11 +10548,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f17316e0135dce24f86a2fb2b3e28e70, type: 3}
---- !u!20 &667623534 stripped
-Camera:
-  m_CorrespondingSourceObject: {fileID: 1939664326529868541, guid: d80aedd3dd36db54aad8c9b73e228c9d, type: 3}
-  m_PrefabInstance: {fileID: 795415607}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &745076442
 GameObject:
   m_ObjectHideFlags: 0
@@ -13506,17 +13501,13 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1151988978, guid: d2c0f6287fd1297419a537342e38ad3f, type: 3}
+      propertyPath: myLockCondition
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3472351062308451686, guid: d2c0f6287fd1297419a537342e38ad3f, type: 3}
       propertyPath: m_Name
       value: Level Transistion Prefab
-      objectReference: {fileID: 0}
-    - target: {fileID: 3472351062308451687, guid: d2c0f6287fd1297419a537342e38ad3f, type: 3}
-      propertyPath: levelName
-      value: Catacombs
-      objectReference: {fileID: 0}
-    - target: {fileID: 3472351062308451687, guid: d2c0f6287fd1297419a537342e38ad3f, type: 3}
-      propertyPath: spawnLocationName
-      value: CatacombsSpawnReturn
       objectReference: {fileID: 0}
     - target: {fileID: 3472351062308451737, guid: d2c0f6287fd1297419a537342e38ad3f, type: 3}
       propertyPath: m_RootOrder
@@ -13571,22 +13562,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 999434847, guid: 0ad1d7dc4b3a90e4a8d064e68dc03984, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -141.79999
-      objectReference: {fileID: 0}
-    - target: {fileID: 1145630666, guid: 0ad1d7dc4b3a90e4a8d064e68dc03984, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 107.319824
-      objectReference: {fileID: 0}
-    - target: {fileID: 1145630666, guid: 0ad1d7dc4b3a90e4a8d064e68dc03984, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 426.33008
-      objectReference: {fileID: 0}
-    - target: {fileID: 1712545885, guid: 0ad1d7dc4b3a90e4a8d064e68dc03984, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -141.79999
-      objectReference: {fileID: 0}
     - target: {fileID: 7404633846740169340, guid: 0ad1d7dc4b3a90e4a8d064e68dc03984, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -13687,10 +13662,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 9077408339570631769, guid: 0ad1d7dc4b3a90e4a8d064e68dc03984, type: 3}
-      propertyPath: m_Camera
-      value: 
-      objectReference: {fileID: 667623534}
     - target: {fileID: 9077408339570631772, guid: 0ad1d7dc4b3a90e4a8d064e68dc03984, type: 3}
       propertyPath: m_Name
       value: Player HUD Canvas
