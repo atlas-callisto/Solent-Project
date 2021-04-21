@@ -5,12 +5,15 @@ using UnityEngine;
 public class WheelActivation : MonoBehaviour, Interactable
 {
     private Animator myAnimator;
-    public bool WheelActivated;
+    public static bool WheelActivated;
+    public GameManager GM;
 
-    private void Start()
+    public void Start()
     {
         myAnimator = GetComponent<Animator>();
+
     }
+
     public void Interact()
     {
         myAnimator.SetTrigger("Interact");
@@ -20,5 +23,12 @@ public class WheelActivation : MonoBehaviour, Interactable
         {
             fountain.ActivateWaterFlowAnimation();
         }
+
+        if (WheelActivated == true)
+        {
+            GM.HasWheelTurned = true;
+        }
     }
+
+   
 }

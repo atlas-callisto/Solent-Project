@@ -25,6 +25,9 @@ public class GameManager : MonoBehaviour
     public int gemsCollected;
     public int gemsRequired;
 
+    [Header("Boss Arena Mechanic")]
+    public bool HasWheelTurned = false;
+
     private void Awake()
     {
         if (myGameManager != null)
@@ -44,4 +47,5 @@ public class GameManager : MonoBehaviour
         }
         else return allGemsCollected = false;
     }
+
 }
