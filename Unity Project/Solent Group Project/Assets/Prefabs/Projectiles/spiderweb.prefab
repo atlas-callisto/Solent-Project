@@ -113,9 +113,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05b0ef783b593a74d8fd847d13e53d9b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletSpeed: 1
+  bulletSpeed: 3
   bulletDamage: 1
-  bulletLifeDuration: 6
+  bulletLifeDuration: 3
 --- !u!114 &186628136879367771
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -128,6 +128,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e2dc1917a85c2044b0b30a434376f52, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeedSlowPercentage: 50
-  slowDuration: 4
+  moveSpeedSlowPercentage: 40
+  slowDuration: 3
   playerRef: {fileID: 0}
