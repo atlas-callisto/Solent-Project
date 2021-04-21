@@ -29932,9 +29932,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 610957d1b20028248a2d73f782a89fd0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timer: 0
-  damageTickRate: 0
-  damage: 0
+  timer: 0.1
+  damageTickRate: 0.1
+  damage: 3
 --- !u!19719996 &2099791813
 TilemapCollider2D:
   m_ObjectHideFlags: 0
