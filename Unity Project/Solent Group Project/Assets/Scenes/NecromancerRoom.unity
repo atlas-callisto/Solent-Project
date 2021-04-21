@@ -10258,6 +10258,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6728815063806566277, guid: 0a24de0e2e07ba54c8b4650e49cc57c3, type: 3}
+      propertyPath: necromancerBossDefeated
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6728815063806566278, guid: 0a24de0e2e07ba54c8b4650e49cc57c3, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -13505,6 +13509,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1151988978, guid: d2c0f6287fd1297419a537342e38ad3f, type: 3}
+      propertyPath: doorIsUnLocked
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1151988978, guid: d2c0f6287fd1297419a537342e38ad3f, type: 3}
       propertyPath: myLockCondition
       value: 1

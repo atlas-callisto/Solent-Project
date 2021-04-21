@@ -23,10 +23,12 @@ public class LevelLoader : MonoBehaviour
     }
     public void NewGame() // Load new game
     {
+        Time.timeScale = 1;
         SceneManager.LoadScene("VerticalSlice"); 
     }
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
+        Time.timeScale = 1;
         LevelTransistion.canTransitionn = true;
         loadingScreenCanvas.SetActive(false);
         playerRef = FindObjectOfType<Player>().gameObject;
@@ -36,6 +38,7 @@ public class LevelLoader : MonoBehaviour
 
     public void RestartLevel()
     {
+        Time.timeScale = 1;
         currentScene = SceneManager.GetActiveScene().buildIndex;
         SceneManager.LoadScene(currentScene);
     }
@@ -49,11 +52,13 @@ public class LevelLoader : MonoBehaviour
         yield return new WaitForSeconds(restartSceneDelay);
         Player.currentHealth = Player.maxHealth;
         Player.currentWolfBar = Player.maxWolfBar;
+        Time.timeScale = 1;
         SceneManager.LoadScene(currentScene);
     }
    
     public void LoadLevelWithName(string levelName , string spawnLocation)
     {
+        Time.timeScale = 1;
         loadingScreenCanvas.SetActive(true);
         for(int i = 0; i < SceneManager.sceneCountInBuildSettings; i++)
         {
@@ -70,11 +75,13 @@ public class LevelLoader : MonoBehaviour
     }
     private IEnumerator LoadNextLevel(string levelName)
     {
-        yield return new WaitForSeconds(sceneTransitionDelay);
+        Time.timeScale = 1;
+        yield return new WaitForSeconds(sceneTransitionDelay);        
         SceneManager.LoadScene(levelName);
     }
     private IEnumerator LoadSceneAsync()
     {
+        Time.timeScale = 1;
         AsyncOperation operation = SceneManager.LoadSceneAsync(currentScene);
         while(!operation.isDone)
         {
@@ -86,22 +93,27 @@ public class LevelLoader : MonoBehaviour
 
     public void LoadMainMenu()
     {
+        Time.timeScale = 1;
         SceneManager.LoadScene("MainMenu");
     }
     public void LoadOptionsMenu()
     {
+        Time.timeScale = 1;
         SceneManager.LoadScene("OptionsMenu");
     }   
     public void LoadHelpMenu()
     {
+        Time.timeScale = 1;
         SceneManager.LoadScene("HelpMenu");
     }
     public void LoadCreditsMenu()
     {
+        Time.timeScale = 1;
         SceneManager.LoadScene("CreditsMenu");
     }
     IEnumerator LoadGameOver()
     {
+        Time.timeScale = 1;
         yield return new WaitForSeconds(restartSceneDelay);
         SceneManager.LoadScene("GameOverScene");
     }

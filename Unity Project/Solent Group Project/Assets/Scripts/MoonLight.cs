@@ -21,8 +21,12 @@ public class MoonLight : MonoBehaviour
     {        
         if (collision.tag == "Player")
         {
-            player.wolf = true;
             playerIsOnMoonlight = true;
+            if(!Player.canTransformIntoWolf)
+            {
+                Player.canTransformIntoWolf = true;
+                player.wolf = true;
+            }
         }         
     }
     private void OnTriggerExit2D(Collider2D collision)

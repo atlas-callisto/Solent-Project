@@ -5,8 +5,8 @@ using UnityEngine;
 public class WheelActivation : MonoBehaviour, Interactable
 {
     private Animator myAnimator;
+    public GameObject interactableHintText;
     public static bool WheelActivated;
-    public GameManager GM;
 
     public void Start()
     {
@@ -23,12 +23,21 @@ public class WheelActivation : MonoBehaviour, Interactable
         {
             fountain.ActivateWaterFlowAnimation();
         }
-
-        //if (WheelActivated == true)
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.tag == "Player")
         {
-            //GM.HasWheelTurned = true;
+            interactableHintText.SetActive(true);
+        }
+    }
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.tag == "Player")
+        {
+            interactableHintText.SetActive(false);
         }
     }
 
-   
+
 }

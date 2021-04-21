@@ -10,6 +10,7 @@ public class Player : MonoBehaviour, IDamageable
     public static float currentWolfBar = 10;
     public static float wolfBarRegenRate = 0.1f;
     public static float wolfDegeneRate = 1f;
+    internal static bool canTransformIntoWolf = false;
     public static bool initializePlayerStats = true;
 
     [Header("Stats")] // Couldnot expose static variables into the inspector so this is a work around
@@ -64,6 +65,7 @@ public class Player : MonoBehaviour, IDamageable
     public float playerRespawnDelay;
     private bool canAttack = true; //this is to stop player from using multiple attacks at once;
 
+    
     internal bool wolf = false; //Transform to wolf, also called by moonlight script
     internal bool playerAlive = true;
     public static bool playerisTalking = false;
@@ -161,6 +163,7 @@ public class Player : MonoBehaviour, IDamageable
     #region Wolf Transformation
     private void Transform() // Wolf Transformation
     {
+        if (!canTransformIntoWolf) return;
         if (Input.GetButtonDown("Transform")) wolf = !wolf;
         myAnimator.SetBool("Transform", wolf);
     }
@@ -341,6 +344,14 @@ public class Player : MonoBehaviour, IDamageable
     #endregion
 
     #region Debuff
+    public void SlowDebuffWater(float SlowPercentage, bool isSlowed)
+    {
+        slowDebuff = isSlowed;
+        if(isSlowed)
+        currentMoveSpeed = currentMoveSpeed * (SlowPercentage / 100);
+
+    }
+
     public void SlowMoveSpeedDebuff(float SlowPercentage, float slowDuration)
     {
         StartCoroutine(SlowMoveSpeed(SlowPercentage, slowDuration));
