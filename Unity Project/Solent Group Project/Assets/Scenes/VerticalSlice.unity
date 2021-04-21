@@ -6937,7 +6937,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 74
-      m_TileSpriteIndex: 29
+      m_TileSpriteIndex: 52
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -6947,7 +6947,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 71
-      m_TileSpriteIndex: 28
+      m_TileSpriteIndex: 29
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -9580,10 +9580,10 @@ Tilemap:
     m_Data: {fileID: 0}
   - m_RefCount: 0
     m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   - m_RefCount: 1
     m_Data: {fileID: 1146526383176082725, guid: ff25e84af5afc344e9e1937adb646bb3, type: 3}
-  - m_RefCount: 1
-    m_Data: {fileID: -6501820539926104199, guid: ff25e84af5afc344e9e1937adb646bb3, type: 3}
   - m_RefCount: 4
     m_Data: {fileID: -2269283660760207313, guid: a2e19815d0b0f67409d67f0433cc7b76, type: 3}
   - m_RefCount: 2
@@ -9628,8 +9628,8 @@ Tilemap:
     m_Data: {fileID: -4015204524367683362, guid: b38a071256acc2346b523c0a02cd4c6c, type: 3}
   - m_RefCount: 135
     m_Data: {fileID: -4596558747353680599, guid: 91223d55f88f3ef4a9151fd7e58b7f4d, type: 3}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
+  - m_RefCount: 1
+    m_Data: {fileID: -6501820539926104199, guid: ff25e84af5afc344e9e1937adb646bb3, type: 3}
   - m_RefCount: 2
     m_Data: {fileID: 990389496100763858, guid: 9c36a411dd18f1e41b53a31c4bd38ace, type: 3}
   - m_RefCount: 2
@@ -71485,6 +71485,10 @@ PrefabInstance:
     - target: {fileID: 2160318093421502459, guid: ec9628dc761ae034597c0d60d9cc1e23, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2160318093421502460, guid: ec9628dc761ae034597c0d60d9cc1e23, type: 3}
+      propertyPath: m_SortingOrder
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ec9628dc761ae034597c0d60d9cc1e23, type: 3}
