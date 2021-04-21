@@ -464,7 +464,7 @@ MonoBehaviour:
   collisionDamage: 1
   chaseDistance: 16
   healthPotions: {fileID: 1187938275048797783, guid: ba123d3fc0894404f8a1e689890c7d44, type: 3}
-  chanceToSpawnHealthPotions: 30
+  chanceToSpawnHealthPotions: 100
   enemyDeathSFX: {fileID: 8300000, guid: 89f286b69e8a9f948bd186b066516f27, type: 3}
   heatlhBarGameObject: {fileID: 3525205437488983147}
   healthBar: {fileID: 1993335711711989401}
