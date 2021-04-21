@@ -35171,6 +35171,8 @@ GameObject:
   - component: {fileID: 1003610829}
   - component: {fileID: 1003610828}
   - component: {fileID: 1003610827}
+  - component: {fileID: 1003610830}
+  - component: {fileID: 1003610831}
   m_Layer: 5
   m_Name: Wrong Way Hint
   m_TagString: Untagged
@@ -35210,8 +35212,11 @@ MonoBehaviour:
     m_RichText: 1
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
-    m_LineSpacing: 0
-  m_Text: Hmm... Maybe you need something else before you can continue...
+    m_LineSpacing: 0.8
+  m_Text: 'Hmm... I can''t seem to make this jump...
+
+    Maybe I need something
+    else before I can continue...'
 --- !u!222 &1003610828
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -35239,6 +35244,45 @@ RectTransform:
   m_AnchoredPosition: {x: 34.31, y: -0.81}
   m_SizeDelta: {x: 7.880378, y: 2}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1003610830
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1003610826}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03f705ee857f4654f9c4eea939ff0130, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GM: {fileID: 1115570906}
+--- !u!61 &1003610831
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1003610826}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -12.706226, y: -0.30968952}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 47.96676, y: 9.134504}
+  m_EdgeRadius: 0
 --- !u!1001 &1008893084
 PrefabInstance:
   m_ObjectHideFlags: 0
