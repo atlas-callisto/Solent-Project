@@ -18,5 +18,12 @@ public class FallingRock : MonoBehaviour
         {
             iDamageable.TakeDamage(damage);
         }
+
+        // So that rocks break when touching the ground,
+        // you will need to remove this when doing animations in the future
+        if(collision.gameObject.name == "Rock Catcher")
+        {
+            Destroy(gameObject);
+        }
     }
 }
