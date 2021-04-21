@@ -124,6 +124,7 @@ SpriteAtlas:
   - {fileID: 2163501582910588449, guid: b5d167c2b7027ed4d8cd909f3c4a5f09, type: 3}
   - {fileID: -330561799001575990, guid: b5d167c2b7027ed4d8cd909f3c4a5f09, type: 3}
   - {fileID: 7022061533728335380, guid: b7faf2d23b8d5f748965a0cf228f49f9, type: 3}
+  - {fileID: 21300000, guid: 1d65b5030ab25b048b398a956d0d239a, type: 3}
   - {fileID: -3568887357862171860, guid: c9840f334d2407c4bb37c9a9ef14ad81, type: 3}
   - {fileID: 21300000, guid: b835b6838bd434f4897c43ed1048591a, type: 3}
   - {fileID: 21300000, guid: 0272c3146d7df504aa0c4a476de7468e, type: 3}
@@ -374,6 +375,7 @@ SpriteAtlas:
   - WerewolfDeath (1)_9
   - WerewolfDeath (1)_8
   - NPC5 Portrait_0
+  - cursor
   - NPC4 Portrait_0
   - Crossbow_cocked
   - WaterwheelBroken
