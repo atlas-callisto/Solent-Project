@@ -751,7 +751,7 @@ GameObject:
   - component: {fileID: 1187228861}
   - component: {fileID: 1187228863}
   - component: {fileID: 1187228862}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BG-1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -893,7 +893,7 @@ GameObject:
   - component: {fileID: 1324011608}
   - component: {fileID: 1324011610}
   - component: {fileID: 1324011609}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: LevelFill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1962,7 +1962,7 @@ GameObject:
   - component: {fileID: 1776935344}
   - component: {fileID: 1776935346}
   - component: {fileID: 1776935345}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BG-3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2704,7 +2704,7 @@ GameObject:
   - component: {fileID: 2043905677}
   - component: {fileID: 2043905679}
   - component: {fileID: 2043905678}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BG-2
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -181,7 +181,7 @@ GameObject:
   - component: {fileID: 275751625}
   - component: {fileID: 275751627}
   - component: {fileID: 275751626}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Notquitesobackground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1875,7 +1875,7 @@ GameObject:
   - component: {fileID: 1274617922}
   - component: {fileID: 1274617924}
   - component: {fileID: 1274617923}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9420,7 +9420,7 @@ GameObject:
   - component: {fileID: 2030451198}
   - component: {fileID: 2030451200}
   - component: {fileID: 2030451199}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Floor tops
   m_TagString: Untagged
   m_Icon: {fileID: 0}

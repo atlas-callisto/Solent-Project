@@ -134,7 +134,7 @@ GameObject:
   - component: {fileID: 173211174}
   - component: {fileID: 173211176}
   - component: {fileID: 173211175}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BG-1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -300,7 +300,7 @@ GameObject:
   - component: {fileID: 212634167}
   - component: {fileID: 212634169}
   - component: {fileID: 212634168}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: TileToppers
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1046,7 +1046,7 @@ GameObject:
   - component: {fileID: 400860128}
   - component: {fileID: 400860130}
   - component: {fileID: 400860129}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BG-3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6499,7 +6499,7 @@ GameObject:
   - component: {fileID: 518676995}
   - component: {fileID: 518676997}
   - component: {fileID: 518676996}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: FG+1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6938,7 +6938,7 @@ GameObject:
   - component: {fileID: 1034433982}
   - component: {fileID: 1034433984}
   - component: {fileID: 1034433983}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BG-2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11672,7 +11672,7 @@ GameObject:
   - component: {fileID: 2074604922}
   - component: {fileID: 2074604924}
   - component: {fileID: 2074604923}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: LevelFill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
