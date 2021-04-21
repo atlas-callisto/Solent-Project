@@ -45,6 +45,7 @@ SpriteAtlas:
   - {fileID: 3554576370489049658, guid: c9ab6690ca76ceb418a0dc6f137fffc0, type: 3}
   - {fileID: -2461093342602902623, guid: c9ab6690ca76ceb418a0dc6f137fffc0, type: 3}
   - {fileID: 21300000, guid: a1467db083646a84ba7810cd54e36927, type: 3}
+  - {fileID: 21300000, guid: 146fb501785947f47b0db58208099c74, type: 3}
   - {fileID: 3224865096114143723, guid: d5ecd721f2d86fc41b8efe1c79ef94f9, type: 3}
   - {fileID: -7142313012644983897, guid: d5ecd721f2d86fc41b8efe1c79ef94f9, type: 3}
   - {fileID: -1061987463487483466, guid: d5ecd721f2d86fc41b8efe1c79ef94f9, type: 3}
@@ -296,6 +297,7 @@ SpriteAtlas:
   - WerewolfBasicAttack_5
   - WerewolfBasicAttack_4
   - pixil-layer-KeyHolder BG (2)
+  - TintSquare
   - WerewolfRoar_1
   - WerewolfRoar_0
   - WerewolfRoar_3
