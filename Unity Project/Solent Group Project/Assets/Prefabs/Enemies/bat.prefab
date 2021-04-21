@@ -644,15 +644,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 1
   currentHealth: 1
-  moveSpeed: 1
+  moveSpeed: 1.5
   collisionDamage: 1
   chaseDistance: 4
   healthPotions: {fileID: 1187938275048797783, guid: ba123d3fc0894404f8a1e689890c7d44, type: 3}
-  chanceToSpawnHealthPotions: 30
+  chanceToSpawnHealthPotions: 10
   enemyDeathSFX: {fileID: 8300000, guid: 552d838fb6d6cd245b819f91cc34ff43, type: 3}
   heatlhBarGameObject: {fileID: 2138744542641299440}
   healthBar: {fileID: 103388771586508528}
-  aggroDistance: 4
   horizontalFlightSpeed: 2
   verticalFlightSpeed: 3
   runAwaySpeed: 2
