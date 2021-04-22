@@ -13,7 +13,6 @@ public class WheelActivation : MonoBehaviour, Interactable
         myAnimator = GetComponent<Animator>();
 
     }
-
     public void Interact()
     {
         myAnimator.SetTrigger("Interact");

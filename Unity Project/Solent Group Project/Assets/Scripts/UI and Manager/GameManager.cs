@@ -29,6 +29,10 @@ public class GameManager : MonoBehaviour
     [Header("Boss Arena Mechanic")]
     public bool HasWheelTurned = false;
 
+    //Options Parameters used in Player Prefs
+    public const string PP_SFXVolume = "SFX Volume";
+    public const string PP_MusicVolume = "Music Volume";
+
     private void Awake()
     {
         if (myGameManager != null)
@@ -39,7 +43,6 @@ public class GameManager : MonoBehaviour
         myGameManager = this;
         DontDestroyOnLoad(this.gameObject);
     }
-
     public void CheckCollectedGems()
     {
         gemsCollected++;
@@ -81,8 +84,19 @@ public class GameManager : MonoBehaviour
                 break;
         }
         return unlockdoor;
-
     }
 
-
+    public void UpdatePlayerPrefs(float sfxVolume, float musicVolume)
+    {
+        PlayerPrefs.SetFloat(PP_SFXVolume, sfxVolume);
+        PlayerPrefs.SetFloat(PP_MusicVolume, musicVolume);
+    }
+    public float GetSFXVolume()
+    {
+        return PlayerPrefs.GetFloat(PP_SFXVolume);
+    }
+    public float GetMusicVolume()
+    {
+        return PlayerPrefs.GetFloat(PP_MusicVolume);
+    }
 }

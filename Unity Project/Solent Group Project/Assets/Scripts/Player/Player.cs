@@ -366,6 +366,9 @@ public class Player : MonoBehaviour, IDamageable
     #endregion
     private void PlaySFX(AudioClip clipName)
     {
-        AudioSource.PlayClipAtPoint(clipName, Camera.main.transform.position, 0.5f);
+        var sfx = new GameObject();
+        sfx.AddComponent<AudioSource>();
+        sfx.GetComponent<AudioSource>().PlayOneShot(clipName, GameManager.myGameManager.GetSFXVolume());
+        Destroy(sfx, clipName.length);
     }
 }

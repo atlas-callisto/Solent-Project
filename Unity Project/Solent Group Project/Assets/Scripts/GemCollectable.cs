@@ -15,10 +15,7 @@ public class GemCollectable : MonoBehaviour , Interactable
         {
             storeRefOnce = true;
             var totalGemsFound = FindObjectsOfType<GemCollectable>();
-            foreach (var gem in totalGemsFound)
-            {
-                gemCollectables.Add(gem.gameObject.name);
-            }
+            foreach (var gem in totalGemsFound) gemCollectables.Add(gem.gameObject.name);
         }
         if (!gemCollectables.Contains(this.gameObject.name)) gameObject.SetActive(false);
     }

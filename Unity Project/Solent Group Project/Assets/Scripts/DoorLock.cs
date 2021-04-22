@@ -13,9 +13,7 @@ public class DoorLock : MonoBehaviour
 
     [Header("Object Ref")]
     public GameObject interactMsg;
-    public GameObject doorLockedMsg;
-
-    
+    public GameObject doorLockedMsg;   
 
     private LevelTransistion myLevelTransistionScript;
 
@@ -30,10 +28,7 @@ public class DoorLock : MonoBehaviour
     {
         if (collision.tag == "Player")
         {
-            if (!doorIsUnLocked)
-            {
-                doorIsUnLocked = GameManager.myGameManager.UnLockDoorCondition(myLockCondition);
-            }
+            if (!doorIsUnLocked) doorIsUnLocked = GameManager.myGameManager.UnLockDoorCondition(myLockCondition);
             myLevelTransistionScript.enabled = doorIsUnLocked;
             if (doorIsUnLocked)interactMsg.SetActive(true);
             if (!doorIsUnLocked) doorLockedMsg.SetActive(true);
@@ -47,8 +42,4 @@ public class DoorLock : MonoBehaviour
             doorLockedMsg.SetActive(false);
         }
     }
-
-
-
-
 }
