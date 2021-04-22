@@ -635,8 +635,12 @@ MonoBehaviour:
   werewolfBossDefeated: 0
   necromancerBossDefeated: 0
   lordProtectorBossDefeated: 0
+  allGemsCollected: 0
   airTreaders: 0
   moonsEyeMonacle: 0
+  gemsCollected: 0
+  gemsRequired: 4
+  HasWheelTurned: 0
 --- !u!114 &6728815063806566276
 MonoBehaviour:
   m_ObjectHideFlags: 0

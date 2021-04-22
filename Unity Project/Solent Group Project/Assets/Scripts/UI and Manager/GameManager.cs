@@ -16,6 +16,7 @@ public class GameManager : MonoBehaviour
     public bool lordProtectorBossDefeated;
     public bool allGemsCollected;
 
+
     [Header("Unlocked Abilities")]
     public bool airTreaders;
     public bool moonsEyeMonacle;
@@ -39,13 +40,10 @@ public class GameManager : MonoBehaviour
         DontDestroyOnLoad(this.gameObject);
     }
 
-    public bool CheckCollectedGems()
+    public void CheckCollectedGems()
     {
-        if (gemsCollected >= gemsRequired)
-        {
-            return allGemsCollected = true;
-        }
-        else return allGemsCollected = false;
+        gemsCollected++;
+        if (gemsCollected >= gemsRequired) allGemsCollected = true;
     }
 
     public enum lockCondition
@@ -75,7 +73,7 @@ public class GameManager : MonoBehaviour
                 break;
 
             case lockCondition.GemsCollected:
-                unlockdoor = false; //gotta add this
+                unlockdoor = allGemsCollected; //gotta add this
                 break;
 
             case lockCondition.KeyCollected:
