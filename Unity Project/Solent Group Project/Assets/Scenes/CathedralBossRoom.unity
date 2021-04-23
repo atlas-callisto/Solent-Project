@@ -187,9 +187,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1193212024, guid: fcb701af505e78545a8895aed60c323e, type: 3}
+      propertyPath: myAudioClipStructLib.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1193212024, guid: fcb701af505e78545a8895aed60c323e, type: 3}
+      propertyPath: myAudioClipStructLib.Array.data[0].audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 803651d222236fa4399def262183ee9a, type: 3}
     - target: {fileID: 63648517579906807, guid: fcb701af505e78545a8895aed60c323e, type: 3}
       propertyPath: m_Name
       value: Music Box
+      objectReference: {fileID: 0}
+    - target: {fileID: 63648517579906807, guid: fcb701af505e78545a8895aed60c323e, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 63648517579906809, guid: fcb701af505e78545a8895aed60c323e, type: 3}
       propertyPath: m_RootOrder
@@ -234,6 +246,10 @@ PrefabInstance:
     - target: {fileID: 63648517579906809, guid: fcb701af505e78545a8895aed60c323e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 63648517579906810, guid: fcb701af505e78545a8895aed60c323e, type: 3}
+      propertyPath: m_Volume
+      value: 0.793
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fcb701af505e78545a8895aed60c323e, type: 3}
