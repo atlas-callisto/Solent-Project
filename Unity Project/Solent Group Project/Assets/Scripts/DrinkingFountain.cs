@@ -8,6 +8,7 @@ public class DrinkingFountain : MonoBehaviour , Interactable
     public int healthRegenAmount = 1;
     [Tooltip("The amount of ticks per second")]
     public int healthRegenRate = 1;
+    public GameObject interactableHint;
 
     private bool healPlayer = false;
     private float healthRegenTimer = 0;
@@ -26,6 +27,17 @@ public class DrinkingFountain : MonoBehaviour , Interactable
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if(collision.gameObject.tag == "Player") healPlayer = false;
+        if (collision.gameObject.tag == "Player")
+        {
+            interactableHint.SetActive(false);
+            healPlayer = false;
+        }
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Player")
+        {
+            interactableHint.SetActive(true);
+        }
     }
 }

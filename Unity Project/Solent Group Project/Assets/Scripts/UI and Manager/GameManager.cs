@@ -16,6 +16,7 @@ public class GameManager : MonoBehaviour
     public bool lordProtectorBossDefeated;
     public bool allGemsCollected;
 
+
     [Header("Unlocked Abilities")]
     public bool airTreaders;
     public bool moonsEyeMonacle;
@@ -28,6 +29,10 @@ public class GameManager : MonoBehaviour
     [Header("Boss Arena Mechanic")]
     public bool HasWheelTurned = false;
 
+    //Options Parameters used in Player Prefs
+    public const string PP_SFXVolume = "SFX Volume";
+    public const string PP_MusicVolume = "Music Volume";
+
     private void Awake()
     {
         if (myGameManager != null)
@@ -38,14 +43,10 @@ public class GameManager : MonoBehaviour
         myGameManager = this;
         DontDestroyOnLoad(this.gameObject);
     }
-
-    public bool CheckCollectedGems()
+    public void CheckCollectedGems()
     {
-        if (gemsCollected >= gemsRequired)
-        {
-            return allGemsCollected = true;
-        }
-        else return allGemsCollected = false;
+        gemsCollected++;
+        if (gemsCollected >= gemsRequired) allGemsCollected = true;
     }
 
     public enum lockCondition
@@ -75,7 +76,7 @@ public class GameManager : MonoBehaviour
                 break;
 
             case lockCondition.GemsCollected:
-                unlockdoor = false; //gotta add this
+                unlockdoor = allGemsCollected; //gotta add this
                 break;
 
             case lockCondition.KeyCollected:
@@ -83,8 +84,19 @@ public class GameManager : MonoBehaviour
                 break;
         }
         return unlockdoor;
-
     }
 
-
+    public void UpdatePlayerPrefs(float sfxVolume, float musicVolume)
+    {
+        PlayerPrefs.SetFloat(PP_SFXVolume, sfxVolume);
+        PlayerPrefs.SetFloat(PP_MusicVolume, musicVolume);
+    }
+    public float GetSFXVolume()
+    {
+        return PlayerPrefs.GetFloat(PP_SFXVolume);
+    }
+    public float GetMusicVolume()
+    {
+        return PlayerPrefs.GetFloat(PP_MusicVolume);
+    }
 }
