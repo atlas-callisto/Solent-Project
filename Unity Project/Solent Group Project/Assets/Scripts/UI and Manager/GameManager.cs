@@ -20,7 +20,6 @@ public class GameManager : MonoBehaviour
     [Header("Unlocked Abilities")]
     public bool airTreaders;
     public bool moonsEyeMonacle;
-    public static GameManager myGameManager;
 
     [Header("Progression")]
     public int gemsCollected;
@@ -33,6 +32,8 @@ public class GameManager : MonoBehaviour
     public const string PP_SFXVolume = "SFX Volume";
     public const string PP_MusicVolume = "Music Volume";
 
+
+    public static GameManager myGameManager;
     private void Awake()
     {
         if (myGameManager != null)

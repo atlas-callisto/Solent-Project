@@ -3,40 +3,67 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+
 public class MusicBox : MonoBehaviour
 {
     private AudioSource myAudioSource;
-    private List<string> ScenesInGame;
-    public Dictionary<string, AudioClip> audioDictionaryList= new Dictionary<string, AudioClip>();
-    private AudioClip audioClip;
-    void Awake()
+    private AudioClip myAudioClip;
+    private Dictionary<string, AudioClip> myAudioDictionary = new Dictionary<string, AudioClip>();
+    //Volume to adjust music is in player prefs but can be accessed by a function 
+
+    public static MusicBox myMusicBox;
+    private void Awake()
     {
-        SetUpSingleton();
-        myAudioSource = GetComponent<AudioSource>();
-        for (int i = 0; i < SceneManager.sceneCountInBuildSettings; i++)
+        if (myMusicBox != null)
         {
-            string path = SceneUtility.GetScenePathByBuildIndex(i);
-            string sceneName = path.Substring(0, path.Length - 6).Substring(path.LastIndexOf('/') + 1);
-            ScenesInGame.Add(sceneName);
+            Destroy(this.gameObject);
+            return;
         }
+        myMusicBox = this;
+        DontDestroyOnLoad(this.gameObject);        
     }
+
     void Start()
     {
-        myAudioSource.volume = GameManager.myGameManager.GetMusicVolume();
+        myAudioSource = GetComponent<AudioSource>();
+        UpdateMusic();
+        myMusicBox.myAudioSource.Play();
+        myMusicBox.myAudioSource.volume = GameManager.myGameManager.GetMusicVolume();
     }
+
+    private static void UpdateMusic()
+    {
+        myMusicBox.myAudioDictionary  = FindObjectOfType<MusicLibrary>().myAudioClipDicLib;
+
+        string currentLevelName = SceneManager.GetActiveScene().name;
+        foreach (var levelName in myMusicBox.myAudioDictionary.Keys)
+        {
+            if(levelName == currentLevelName)
+            {
+                myMusicBox.myAudioClip = myMusicBox.myAudioDictionary[levelName];
+            }
+        }
+        print(myMusicBox.myAudioClip);
+        if(myMusicBox.myAudioSource.clip != myMusicBox.myAudioClip)
+        {
+            myMusicBox.myAudioSource.clip = myMusicBox.myAudioClip;
+            myMusicBox.myAudioSource.Play();
+        }        
+    }
+
     private void SetUpSingleton()
     {
         if (FindObjectsOfType(GetType()).Length > 1)
         {
-            Destroy(gameObject);
+            Destroy(this.gameObject);
         }
         else
         {
-            DontDestroyOnLoad(gameObject);
+            DontDestroyOnLoad(this.gameObject);
         }
     }
     public void UpdateMusicVolume(float musicVolume)
     {
-        myAudioSource.volume = musicVolume;
+        myMusicBox.myAudioSource.volume = musicVolume;
     }
 }
