@@ -19,12 +19,14 @@ public class GamePauser : MonoBehaviour
         Time.timeScale = 0;
         pausePanel.SetActive(true);
         optionsPanel.SetActive(false);
+        Cursor.visible = true;
     }
     public void ResumeGame()
     {
         Time.timeScale = 1;
         pausePanel.SetActive(false);
         optionsPanel.SetActive(false);
+        Cursor.visible = false;
     }
     public void OptionsMenu()
     {
