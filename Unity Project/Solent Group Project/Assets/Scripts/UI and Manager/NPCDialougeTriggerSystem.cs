@@ -10,18 +10,15 @@ public class NPCDialougeTriggerSystem : MonoBehaviour , Interactable
     private List<string> dialougeStringList = new List<string>();
     // List of scriptable objs // note to self Use Scriptable objs in the future,
     DialougeSystem dialougeSystemRef;
-    
     private void Awake()
     {
         dialougeSystemRef = FindObjectOfType<DialougeSystem>();
-    }
-    private void Start()
-    {
         dialougeStringList = (dialougesList[0].dialouges);        
     }
     public void Interact()
     {
         // Depending on the condition different Dialouges will be prompt into the system.
+        print(dialougeSystemRef);
         dialougeSystemRef.AddDialougeInfo(nPCSprite, nPCName, dialougeStringList);
     }
 

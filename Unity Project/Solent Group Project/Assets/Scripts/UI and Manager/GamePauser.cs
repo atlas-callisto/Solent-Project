@@ -11,22 +11,23 @@ public class GamePauser : MonoBehaviour
     [SerializeField] Slider musicVolumeSlider;
     void Update()
     {
+        if (Player.playerisTalking) return;
         if (Input.GetKeyDown(KeyCode.Escape)) PauseGame();
-        
     }
+
     public void PauseGame()
     {
+        Cursor.visible = true;
         Time.timeScale = 0;
         pausePanel.SetActive(true);
         optionsPanel.SetActive(false);
-        Cursor.visible = true;
     }
     public void ResumeGame()
     {
+        Cursor.visible = false;
         Time.timeScale = 1;
         pausePanel.SetActive(false);
         optionsPanel.SetActive(false);
-        Cursor.visible = false;
     }
     public void OptionsMenu()
     {
