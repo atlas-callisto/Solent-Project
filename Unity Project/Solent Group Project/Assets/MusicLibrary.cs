@@ -3,12 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-[ExecuteInEditMode]
+//[ExecuteInEditMode]
+[ExecuteAlways]
 public class MusicLibrary : MonoBehaviour
 {
-    public List<string> sceneNamesList = new List<string>();
+    public bool clearLib = false;
+    private bool updateMusicDictionary = false;
+    private List<string> sceneNamesList = new List<string>();
     private List<AudioClip> audioClipList = new List<AudioClip>();
-
 
     [System.Serializable]
     public struct audioClipLibrary
@@ -26,18 +28,37 @@ public class MusicLibrary : MonoBehaviour
 
     public Dictionary<string, AudioClip> myAudioClipDicLib = new Dictionary<string, AudioClip>();
     void Start()
-    {        
-        UpdateAudioLibrary();        
+    {
+        updateMusicDictionary = true;
+        UpdateAudioLibrary();
+        if (updateMusicDictionary)
+        {
+            updateMusicDictionary = !updateMusicDictionary;
+            myAudioClipDicLib.Clear();            
+            UpdateAudioDictionary();
+        }
+    }
+
+    void Update()
+    {
+        UpdateAudioLibrary();
+        if (updateMusicDictionary)
+        {
+            updateMusicDictionary = !updateMusicDictionary;
+            myAudioClipDicLib.Clear();
+            UpdateAudioDictionary();
+        }
     }
     private void UpdateAudioLibrary()
     {
-        if (sceneNamesList.Count > 0)
+        if(clearLib)
         {
             sceneNamesList.Clear();
             myAudioClipStructLib.Clear();
-
+            myAudioClipDicLib.Clear();
             return;
         }
+        if (myAudioClipStructLib.Count > 0) return;
         for (int i = 0; i < SceneManager.sceneCountInBuildSettings; i++)
         {
             string path = SceneUtility.GetScenePathByBuildIndex(i);

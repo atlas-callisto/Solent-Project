@@ -7,7 +7,7 @@ public class DrinkingFountain : MonoBehaviour , Interactable
     [Tooltip("The amount of health the player regenerates per tick")]
     public int healthRegenAmount = 1;
     [Tooltip("The amount of ticks per second")]
-    public int healthRegenRate = 1;
+    public float healthRegenRate = 1;
     public GameObject interactableHint;
 
     private bool healPlayer = false;
@@ -15,10 +15,10 @@ public class DrinkingFountain : MonoBehaviour , Interactable
     private void Update()
     {
         healthRegenTimer += Time.deltaTime;
-        if (healPlayer && healthRegenTimer > (1f/ (float)healthRegenRate))
+        if (healPlayer && healthRegenTimer > (1f/healthRegenRate))
         {
             healthRegenTimer = 0;
-            Player.currentHealth += healthRegenAmount;
+            Player.currentHealth = Mathf.Clamp (Player.currentHealth + healthRegenAmount, 0 , Player.maxHealth);
         }
     }
     public void Interact()
