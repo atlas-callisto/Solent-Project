@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: c9840f334d2407c4bb37c9a9ef14ad81
+guid: 1adb14b17f85fd04e8489857ee9061ee
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3568887357862171860
-    second: NPC4 Portrait_0
+      213: -2838728253706169066
+    second: Joey 1_0
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -88,11 +88,47 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Lumin
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: NPC4 Portrait_0
+      name: Joey 1_0
       rect:
         serializedVersion: 2
         x: 1
@@ -100,14 +136,14 @@ TextureImporter:
         width: 10
         height: 8
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c2b2e375bd3c87ec0800000000000000
-      internalID: -3568887357862171860
+      spriteID: 6159af781bfca98d0800000000000000
+      internalID: -2838728253706169066
       vertices: []
       indices: 
       edges: []
