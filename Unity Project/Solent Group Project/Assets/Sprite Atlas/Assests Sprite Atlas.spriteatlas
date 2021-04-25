@@ -127,6 +127,16 @@ SpriteAtlas:
   - {fileID: 7022061533728335380, guid: b7faf2d23b8d5f748965a0cf228f49f9, type: 3}
   - {fileID: -3568887357862171860, guid: c9840f334d2407c4bb37c9a9ef14ad81, type: 3}
   - {fileID: 21300000, guid: b835b6838bd434f4897c43ed1048591a, type: 3}
+  - {fileID: 2993204745995301593, guid: 4dfa5da37eefac34782a5764a0982e70, type: 3}
+  - {fileID: -4832811933933318412, guid: 4dfa5da37eefac34782a5764a0982e70, type: 3}
+  - {fileID: 5769466503581575837, guid: 4dfa5da37eefac34782a5764a0982e70, type: 3}
+  - {fileID: 8849696945381844742, guid: 4dfa5da37eefac34782a5764a0982e70, type: 3}
+  - {fileID: 2596482221575083386, guid: 4dfa5da37eefac34782a5764a0982e70, type: 3}
+  - {fileID: -4135920974577956680, guid: 4dfa5da37eefac34782a5764a0982e70, type: 3}
+  - {fileID: 4606731583040906882, guid: 4dfa5da37eefac34782a5764a0982e70, type: 3}
+  - {fileID: 478072196564460630, guid: 4dfa5da37eefac34782a5764a0982e70, type: 3}
+  - {fileID: 6210083084147237359, guid: 4dfa5da37eefac34782a5764a0982e70, type: 3}
+  - {fileID: 6363430588628567630, guid: 4dfa5da37eefac34782a5764a0982e70, type: 3}
   - {fileID: 21300000, guid: 0272c3146d7df504aa0c4a476de7468e, type: 3}
   - {fileID: 21300000, guid: 450565347ef2e49418af97ab5aaef5f7, type: 3}
   - {fileID: 21300000, guid: 0d6f1e64b67d9704094ecee6fe61b880, type: 3}
@@ -378,6 +388,16 @@ SpriteAtlas:
   - NPC5 Portrait_0
   - NPC4 Portrait_0
   - Crossbow_cocked
+  - New_Piskel_5_9
+  - New_Piskel_5_8
+  - New_Piskel_5_3
+  - New_Piskel_5_2
+  - New_Piskel_5_1
+  - New_Piskel_5_0
+  - New_Piskel_5_7
+  - New_Piskel_5_6
+  - New_Piskel_5_5
+  - New_Piskel_5_4
   - WaterwheelBroken
   - 32_x_32_blue_gem
   - NPC1
