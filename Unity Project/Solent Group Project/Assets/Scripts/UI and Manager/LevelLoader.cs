@@ -33,6 +33,7 @@ public class LevelLoader : MonoBehaviour
         loadingScreenCanvas.SetActive(false);
         playerRef = FindObjectOfType<Player>().gameObject;
         if (GameObject.Find(playerSpwanLocationName)) playerRef.transform.position = GameObject.Find(playerSpwanLocationName).transform.position;
+        FindObjectOfType<MusicBox>().UpdateAudioSource();
         SceneManager.sceneLoaded -= OnSceneLoaded;
     }
 

@@ -86,6 +86,8 @@ SpriteAtlas:
   - {fileID: -6218175440643373551, guid: 4ae4cfa1bf364eb41ae5f6297e1f6111, type: 3}
   - {fileID: -7472663854596334614, guid: 4ae4cfa1bf364eb41ae5f6297e1f6111, type: 3}
   - {fileID: -7505581567068099189, guid: 4ae4cfa1bf364eb41ae5f6297e1f6111, type: 3}
+  - {fileID: -2838728253706169066, guid: 1adb14b17f85fd04e8489857ee9061ee, type: 3}
+  - {fileID: 21300000, guid: 9c26c0d19fad43645b9e95bb302cbbca, type: 3}
   - {fileID: 5694982840196921735, guid: 345ea1d118f78be43803b4e8c2e46373, type: 3}
   - {fileID: 4570341960801087774, guid: 345ea1d118f78be43803b4e8c2e46373, type: 3}
   - {fileID: -5337496555841825671, guid: 345ea1d118f78be43803b4e8c2e46373, type: 3}
@@ -125,7 +127,6 @@ SpriteAtlas:
   - {fileID: 2163501582910588449, guid: b5d167c2b7027ed4d8cd909f3c4a5f09, type: 3}
   - {fileID: -330561799001575990, guid: b5d167c2b7027ed4d8cd909f3c4a5f09, type: 3}
   - {fileID: 7022061533728335380, guid: b7faf2d23b8d5f748965a0cf228f49f9, type: 3}
-  - {fileID: -3568887357862171860, guid: c9840f334d2407c4bb37c9a9ef14ad81, type: 3}
   - {fileID: 21300000, guid: b835b6838bd434f4897c43ed1048591a, type: 3}
   - {fileID: 2993204745995301593, guid: 4dfa5da37eefac34782a5764a0982e70, type: 3}
   - {fileID: -4832811933933318412, guid: 4dfa5da37eefac34782a5764a0982e70, type: 3}
@@ -292,7 +293,6 @@ SpriteAtlas:
   - {fileID: 9135932993727085955, guid: 799c9dcee0040ae4691ec602903a488d, type: 3}
   - {fileID: -7400529704170610313, guid: 799c9dcee0040ae4691ec602903a488d, type: 3}
   - {fileID: 21300000, guid: de076d4f6b1add048b03dddd34c7d5c9, type: 3}
-  - {fileID: 21300000, guid: ded39e4ffa18afa499c42a6a4f19d0fe, type: 3}
   - {fileID: 21300000, guid: b49f2e6f522c0f5499ff6b4426a5af45, type: 3}
   - {fileID: 21300000, guid: 8a8afa9fb0f5ddb4aae832e5383f8c8c, type: 3}
   - {fileID: 21300000, guid: 462cf9bf47075e14c9563228524f8b7a, type: 3}
@@ -347,6 +347,8 @@ SpriteAtlas:
   - WerewolfBossWalk_0
   - WerewolfBossWalk_3
   - WerewolfBossWalk_2
+  - Joey 1_0
+  - NPC4
   - In game items_0
   - In game items_3
   - In game items_2
@@ -386,7 +388,6 @@ SpriteAtlas:
   - WerewolfDeath (1)_9
   - WerewolfDeath (1)_8
   - NPC5 Portrait_0
-  - NPC4 Portrait_0
   - Crossbow_cocked
   - New_Piskel_5_9
   - New_Piskel_5_8
@@ -553,7 +554,6 @@ SpriteAtlas:
   - WerewolfSpecialAttack (1)_4
   - WerewolfSpecialAttack (1)_5
   - 32_x_32_pink_gem
-  - NPC4
   - Bloody axe
   - PlayerJump (1)
   - crate

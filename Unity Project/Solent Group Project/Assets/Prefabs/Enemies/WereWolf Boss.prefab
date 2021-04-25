@@ -319,8 +319,9 @@ MonoBehaviour:
   moveSpeed: 1
   collisionDamage: 1
   chaseDistance: 10
-  healthPotions: {fileID: 1187938275048797783, guid: ba123d3fc0894404f8a1e689890c7d44, type: 3}
-  chanceToSpawnHealthPotions: 30
+  healthPotion: {fileID: 1187938275048797783, guid: ba123d3fc0894404f8a1e689890c7d44, type: 3}
+  manaPotion: {fileID: 4904413054879432976, guid: 666124242542e3b44bd47073ef0b26fd, type: 3}
+  chanceToSpawnPotions: 20
   enemyDeathSFX: {fileID: 8300000, guid: a1c98b0af276d6e4fbc9f2ed1ce9085e, type: 3}
   heatlhBarGameObject: {fileID: 480970034535725297}
   healthBar: {fileID: 8506386478277363702}
