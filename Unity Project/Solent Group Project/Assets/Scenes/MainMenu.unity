@@ -11068,7 +11068,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2746094285916634502}
-  - {fileID: 938685048}
   - {fileID: 393224394}
   - {fileID: 608604678}
   m_Father: {fileID: 0}
@@ -11418,7 +11417,6 @@ GameObject:
   - component: {fileID: 393224392}
   - component: {fileID: 393224391}
   - component: {fileID: 393224390}
-  - component: {fileID: 393224389}
   - component: {fileID: 393224395}
   m_Layer: 11
   m_Name: bat (1)
@@ -11427,31 +11425,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &393224389
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 393224388}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 68300b5363335704180b8e330d6f5c36, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxHealth: 1
-  currentHealth: 1
-  moveSpeed: 1.5
-  collisionDamage: 1
-  chaseDistance: 4
-  healthPotions: {fileID: 1187938275048797783, guid: ba123d3fc0894404f8a1e689890c7d44, type: 3}
-  chanceToSpawnHealthPotions: 10
-  enemyDeathSFX: {fileID: 8300000, guid: 552d838fb6d6cd245b819f91cc34ff43, type: 3}
-  heatlhBarGameObject: {fileID: 518992441}
-  healthBar: {fileID: 401264228}
-  horizontalFlightSpeed: 2
-  verticalFlightSpeed: 3
-  runAwaySpeed: 2
 --- !u!95 &393224390
 Animator:
   serializedVersion: 3
@@ -11572,7 +11545,7 @@ Transform:
   m_Children:
   - {fileID: 518992442}
   m_Father: {fileID: 245384689}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &393224395
 MonoBehaviour:
@@ -12029,7 +12002,6 @@ GameObject:
   - component: {fileID: 608604676}
   - component: {fileID: 608604675}
   - component: {fileID: 608604674}
-  - component: {fileID: 608604673}
   - component: {fileID: 608604679}
   m_Layer: 11
   m_Name: bat (2)
@@ -12038,31 +12010,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &608604673
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 608604672}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 68300b5363335704180b8e330d6f5c36, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxHealth: 1
-  currentHealth: 1
-  moveSpeed: 1.5
-  collisionDamage: 1
-  chaseDistance: 4
-  healthPotions: {fileID: 1187938275048797783, guid: ba123d3fc0894404f8a1e689890c7d44, type: 3}
-  chanceToSpawnHealthPotions: 10
-  enemyDeathSFX: {fileID: 8300000, guid: 552d838fb6d6cd245b819f91cc34ff43, type: 3}
-  heatlhBarGameObject: {fileID: 758484714}
-  healthBar: {fileID: 391558693}
-  horizontalFlightSpeed: 2
-  verticalFlightSpeed: 3
-  runAwaySpeed: 2
 --- !u!95 &608604674
 Animator:
   serializedVersion: 3
@@ -12183,7 +12130,7 @@ Transform:
   m_Children:
   - {fileID: 758484715}
   m_Father: {fileID: 245384689}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &608604679
 MonoBehaviour:
@@ -34389,11 +34336,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 938685045}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -122.01643, y: -59.060043, z: 459.88034}
-  m_LocalScale: {x: 19.294554, y: 19.294554, z: 19.294554}
+  m_LocalPosition: {x: -64.95, y: 10.68, z: -0.37203875}
+  m_LocalScale: {x: 0.88405246, y: 0.88405246, z: 0.88405246}
   m_Children: []
-  m_Father: {fileID: 245384689}
-  m_RootOrder: 1
+  m_Father: {fileID: 1146319642}
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &974229215
 GameObject:
@@ -36747,6 +36694,7 @@ Transform:
   - {fileID: 152724406}
   - {fileID: 1104776573}
   - {fileID: 1254533471}
+  - {fileID: 938685048}
   m_Father: {fileID: 128812749}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -51725,31 +51673,6 @@ Transform:
   m_Father: {fileID: 245384689}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2746094285916634503
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2746094285916634504}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 68300b5363335704180b8e330d6f5c36, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxHealth: 1
-  currentHealth: 1
-  moveSpeed: 1.5
-  collisionDamage: 1
-  chaseDistance: 4
-  healthPotions: {fileID: 1187938275048797783, guid: ba123d3fc0894404f8a1e689890c7d44, type: 3}
-  chanceToSpawnHealthPotions: 10
-  enemyDeathSFX: {fileID: 8300000, guid: 552d838fb6d6cd245b819f91cc34ff43, type: 3}
-  heatlhBarGameObject: {fileID: 5644186242323221752}
-  healthBar: {fileID: 5950726417364784632}
-  horizontalFlightSpeed: 2
-  verticalFlightSpeed: 3
-  runAwaySpeed: 2
 --- !u!1 &2746094285916634504
 GameObject:
   m_ObjectHideFlags: 0
@@ -51763,7 +51686,6 @@ GameObject:
   - component: {fileID: 2746094285916634500}
   - component: {fileID: 2746094285916634501}
   - component: {fileID: 4368920691046887401}
-  - component: {fileID: 2746094285916634503}
   - component: {fileID: 2746094285916634506}
   m_Layer: 11
   m_Name: bat
