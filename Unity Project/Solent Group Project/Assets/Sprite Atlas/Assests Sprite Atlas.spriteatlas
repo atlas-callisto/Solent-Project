@@ -163,6 +163,7 @@ SpriteAtlas:
   - {fileID: 3291024073344894140, guid: 43c6b006ba861c64694ff98b6e4ca15b, type: 3}
   - {fileID: 21300000, guid: 64255206530fb0449b3c52cc2336d367, type: 3}
   - {fileID: 21300000, guid: 5806ae16b1f97694db2dc2ef4fb762a7, type: 3}
+  - {fileID: 21300000, guid: 898b0e46b26254045a4cf19e0b591bf1, type: 3}
   - {fileID: 21300000, guid: 95773a86877a28f46a5b217040baac57, type: 3}
   - {fileID: 395678657157902612, guid: 803f1ab62680e134c9f0ae5b31013c9e, type: 3}
   - {fileID: -8004497838903323380, guid: 803f1ab62680e134c9f0ae5b31013c9e, type: 3}
@@ -424,6 +425,7 @@ SpriteAtlas:
   - PlayerAttack_4
   - bat
   - Crownofthorns-1.png
+  - GameplayUI
   - Gem_Sprite
   - BasicClawAttack_3
   - BasicClawAttack_2
