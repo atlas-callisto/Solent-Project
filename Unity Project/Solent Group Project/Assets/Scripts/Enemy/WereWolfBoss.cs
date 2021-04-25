@@ -121,7 +121,7 @@ public class WereWolfBoss : EnemyAI
                 isAlive = false;
                 myAnimator.SetTrigger("Dead");
                 PlaySFX(enemyDeathSFX);
-                SpawnHealingPotions();
+                SpawnHealingOrManaPotions();
                 GameManager.myGameManager.werewolfBossDefeated = true;
                 Destroy(gameObject);
             }

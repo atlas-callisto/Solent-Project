@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-//[ExecuteInEditMode]
-[ExecuteAlways]
+[ExecuteInEditMode]
+//[ExecuteAlways]
 public class MusicLibrary : MonoBehaviour
 {
-    public bool clearLib = false;
+    public bool clearMusicLibrary = false;
     private bool updateMusicDictionary = false;
     private List<string> sceneNamesList = new List<string>();
     private List<AudioClip> audioClipList = new List<AudioClip>();
@@ -51,7 +51,7 @@ public class MusicLibrary : MonoBehaviour
     }
     private void UpdateAudioLibrary()
     {
-        if(clearLib)
+        if(clearMusicLibrary)
         {
             sceneNamesList.Clear();
             myAudioClipStructLib.Clear();

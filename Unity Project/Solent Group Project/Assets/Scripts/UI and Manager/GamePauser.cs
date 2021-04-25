@@ -12,6 +12,9 @@ public class GamePauser : MonoBehaviour
     [SerializeField] Slider musicVolumeSlider;
     public bool gameIsPaused = false;
 
+    public AudioClip SFXVolumeChangeTestAudioClip;
+    private bool mouseButtonDown = false; // Used to play SFX
+
     void Start()
     {
         gameIsPaused = false;
@@ -29,8 +32,9 @@ public class GamePauser : MonoBehaviour
             {
                 ResumeGame();
             }
-
         }
+        SFXVolumeSlider.value = GameManager.myGameManager.GetSFXVolume();
+        musicVolumeSlider.value = GameManager.myGameManager.GetMusicVolume();
     }
 
     public void PauseGame()
@@ -53,11 +57,10 @@ public class GamePauser : MonoBehaviour
     }
     public void OptionsMenu()
     {
-        SFXVolumeSlider.value = GameManager.myGameManager.GetSFXVolume();
-        musicVolumeSlider.value = GameManager.myGameManager.GetMusicVolume();
-
         pausePanel.SetActive(false);
         optionsPanel.SetActive(true);
+        SFXVolumeSlider.value = GameManager.myGameManager.GetSFXVolume();
+        musicVolumeSlider.value = GameManager.myGameManager.GetMusicVolume();        
     }
     public void QuitWarningMenu()
     {
@@ -68,5 +71,24 @@ public class GamePauser : MonoBehaviour
         GameManager.myGameManager.UpdatePlayerPrefs(SFXVolumeSlider.value, musicVolumeSlider.value);
         pausePanel.SetActive(true);
         optionsPanel.SetActive(false);
+    }
+    public void SaveChangesInMusicVolumeSLider()
+    {
+        GameManager.myGameManager.UpdatePlayerPrefs(SFXVolumeSlider.value, musicVolumeSlider.value);
+    }
+    public void SaveChangesInSFXVolumeSLider()
+    {
+        GameManager.myGameManager.UpdatePlayerPrefs(SFXVolumeSlider.value, musicVolumeSlider.value);
+        if (Input.GetMouseButton(0)) mouseButtonDown = true;
+        else mouseButtonDown = false;
+        PlaySFX();
+    }
+    private void PlaySFX()
+    {
+        if (!mouseButtonDown) return;
+        var sfx = new GameObject();
+        sfx.AddComponent<AudioSource>();
+        sfx.GetComponent<AudioSource>().PlayOneShot(SFXVolumeChangeTestAudioClip, GameManager.myGameManager.GetSFXVolume());
+        Destroy(sfx, SFXVolumeChangeTestAudioClip.length);
     }
 }

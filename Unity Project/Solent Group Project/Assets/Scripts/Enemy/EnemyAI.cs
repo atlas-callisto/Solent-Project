@@ -12,10 +12,11 @@ public class EnemyAI : MonoBehaviour, IDamageable
     [SerializeField] [Tooltip("The damage the enemy does to the player when touching the player")]
     protected int collisionDamage = 1;    
     [SerializeField] public float chaseDistance = 4f;
-    [SerializeField] protected GameObject healthPotions;
+    [SerializeField] protected GameObject healthPotion;
+    [SerializeField] protected GameObject manaPotion;
 
     [Header("Chance is in Percentage from 0 to 100")]
-    [SerializeField] float chanceToSpawnHealthPotions = 20f; // percentage from 1 to 100
+    [SerializeField] float chanceToSpawnPotions = 20f; // percentage from 1 to 100
 
     [Header("SFX Lists")]
     [SerializeField] protected AudioClip enemyDeathSFX;
@@ -149,7 +150,7 @@ public class EnemyAI : MonoBehaviour, IDamageable
             {
                 isAlive = false;
                 PlaySFX(enemyDeathSFX);
-                SpawnHealingPotions();
+                SpawnHealingOrManaPotions();
                 Destroy(this.gameObject);
             }
             //Death anim           
@@ -175,12 +176,14 @@ public class EnemyAI : MonoBehaviour, IDamageable
 
         heatlhBarGameObject.SetActive(false);
     }
-    virtual protected void SpawnHealingPotions()
+    virtual protected void SpawnHealingOrManaPotions()
     {
         float i = Random.Range(0, 100);
-        if(i < chanceToSpawnHealthPotions)
+        if(i < chanceToSpawnPotions)
         {
-            Instantiate(healthPotions, transform.position, Quaternion.identity);
+            float j = Random.Range(0, 100);
+            if(j >=50) Instantiate(healthPotion, transform.position, Quaternion.identity);
+            else Instantiate(manaPotion, transform.position, Quaternion.identity);
         }        
     }
 

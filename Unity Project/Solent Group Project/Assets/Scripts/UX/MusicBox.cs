@@ -75,17 +75,6 @@ public class MusicBox : MonoBehaviour
         }        
     }
 
-    private void SetUpSingleton()
-    {
-        if (FindObjectsOfType(GetType()).Length > 1)
-        {
-            Destroy(this.gameObject);
-        }
-        else
-        {
-            DontDestroyOnLoad(this.gameObject);
-        }
-    }
     public void UpdateMusicVolume(float musicVolume)
     {
         myMusicBox.myAudioSource.volume = musicVolume;

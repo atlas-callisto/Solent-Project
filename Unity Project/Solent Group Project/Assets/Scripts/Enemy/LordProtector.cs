@@ -130,7 +130,7 @@ public class LordProtector : EnemyAI
             {
                 isAlive = false;
                 PlaySFX(enemyDeathSFX);
-                SpawnHealingPotions();
+                SpawnHealingOrManaPotions();
                 GameManager.myGameManager.lordProtectorBossDefeated = true;
                 Destroy(this.gameObject);
             }

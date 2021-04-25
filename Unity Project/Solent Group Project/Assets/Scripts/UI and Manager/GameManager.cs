@@ -91,6 +91,7 @@ public class GameManager : MonoBehaviour
     {
         PlayerPrefs.SetFloat(PP_SFXVolume, sfxVolume);
         PlayerPrefs.SetFloat(PP_MusicVolume, musicVolume);
+        if(MusicBox.myMusicBox) MusicBox.myMusicBox.GetComponent<AudioSource>().volume = musicVolume;
     }
     public float GetSFXVolume()
     {

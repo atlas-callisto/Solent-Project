@@ -191,7 +191,7 @@ public class NecroMancerBoss : EnemyAI
             {
                 isAlive = false;
                 PlaySFX(enemyDeathSFX);
-                SpawnHealingPotions();
+                SpawnHealingOrManaPotions();
                 GameManager.myGameManager.necromancerBossDefeated = true;
                 Destroy(gameObject);
             }        

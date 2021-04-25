@@ -400,14 +400,16 @@ MonoBehaviour:
   moveSpeed: 2
   collisionDamage: 1
   chaseDistance: 20
-  healthPotions: {fileID: 1187938275048797783, guid: ba123d3fc0894404f8a1e689890c7d44, type: 3}
-  chanceToSpawnHealthPotions: 20
+  healthPotion: {fileID: 1187938275048797783, guid: ba123d3fc0894404f8a1e689890c7d44, type: 3}
+  manaPotion: {fileID: 4904413054879432976, guid: 666124242542e3b44bd47073ef0b26fd, type: 3}
+  chanceToSpawnPotions: 20
   enemyDeathSFX: {fileID: 8300000, guid: 088bc57eff346c04dab14577a52b976e, type: 3}
   heatlhBarGameObject: {fileID: 7739872789978662986}
   healthBar: {fileID: 2107712799199172258}
   swordAttackRange: 2
   swordAttackInterval: 2
   crossbowAttackRange: 6
+  crossbowAttackInterval: 4
   groundSlamAttackRange: 6
   groundSlamAttackInterval: 8
   sword: {fileID: 1928135544715233332}

@@ -11472,30 +11472,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1665780019569191382, guid: 0ad1d7dc4b3a90e4a8d064e68dc03984, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1665780019569191382, guid: 0ad1d7dc4b3a90e4a8d064e68dc03984, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1757586635703016126, guid: 0ad1d7dc4b3a90e4a8d064e68dc03984, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1757586635703016126, guid: 0ad1d7dc4b3a90e4a8d064e68dc03984, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5435577764453000430, guid: 0ad1d7dc4b3a90e4a8d064e68dc03984, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 1.7797852
-      objectReference: {fileID: 0}
-    - target: {fileID: 5435577764453000430, guid: 0ad1d7dc4b3a90e4a8d064e68dc03984, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -2.0302734
-      objectReference: {fileID: 0}
     - target: {fileID: 7404633846740169340, guid: 0ad1d7dc4b3a90e4a8d064e68dc03984, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -18624,6 +18600,10 @@ PrefabInstance:
     - target: {fileID: 63648517579906807, guid: fcb701af505e78545a8895aed60c323e, type: 3}
       propertyPath: m_Name
       value: Music Box
+      objectReference: {fileID: 0}
+    - target: {fileID: 63648517579906807, guid: fcb701af505e78545a8895aed60c323e, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 63648517579906809, guid: fcb701af505e78545a8895aed60c323e, type: 3}
       propertyPath: m_RootOrder

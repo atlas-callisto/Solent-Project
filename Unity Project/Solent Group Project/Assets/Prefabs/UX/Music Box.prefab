@@ -153,7 +153,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e869b2a5f465eef4cb349940afe9fc5a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  clearLib: 0
+  clearMusicLibrary: 0
   myAudioClipStructLib:
   - levelName: MainMenu
     audioClip: {fileID: 0}
@@ -172,7 +172,7 @@ MonoBehaviour:
   - levelName: Cathedral
     audioClip: {fileID: 8300000, guid: 6fa2471d9aa4ef84c91de1b877ff7ab0, type: 3}
   - levelName: CathedralBossRoom
-    audioClip: {fileID: 8300000, guid: 6fa2471d9aa4ef84c91de1b877ff7ab0, type: 3}
+    audioClip: {fileID: 8300000, guid: 803651d222236fa4399def262183ee9a, type: 3}
   - levelName: CathedralOutside
     audioClip: {fileID: 0}
   - levelName: Hub

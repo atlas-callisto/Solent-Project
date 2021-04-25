@@ -1461,9 +1461,69 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 9077408339570631768}
     m_Modifications:
+    - target: {fileID: 882554062042460534, guid: 949ea1d69a09f80468b7a31835560b77, type: 3}
+      propertyPath: m_text
+      value: No
+      objectReference: {fileID: 0}
+    - target: {fileID: 1526730463276991391, guid: 949ea1d69a09f80468b7a31835560b77, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1526730463276991391, guid: 949ea1d69a09f80468b7a31835560b77, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1885971414348126351, guid: 949ea1d69a09f80468b7a31835560b77, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1894380357599670519, guid: 949ea1d69a09f80468b7a31835560b77, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1894380357599670519, guid: 949ea1d69a09f80468b7a31835560b77, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3247703780729106972, guid: 949ea1d69a09f80468b7a31835560b77, type: 3}
       propertyPath: m_Name
       value: Pause Canvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 4638751578604683134, guid: 949ea1d69a09f80468b7a31835560b77, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4880016505279001189, guid: 949ea1d69a09f80468b7a31835560b77, type: 3}
+      propertyPath: SFXVolumeChangeTestAudioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: d76de2e90c0452c4a915580e3d81aefc, type: 3}
+    - target: {fileID: 4942143061772076554, guid: 949ea1d69a09f80468b7a31835560b77, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4942143061772076554, guid: 949ea1d69a09f80468b7a31835560b77, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4942143061772076554, guid: 949ea1d69a09f80468b7a31835560b77, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 4726332618231732268}
+    - target: {fileID: 4942143061772076554, guid: 949ea1d69a09f80468b7a31835560b77, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4942143061772076554, guid: 949ea1d69a09f80468b7a31835560b77, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SaveChangesInSFXVolumeSLider
+      objectReference: {fileID: 0}
+    - target: {fileID: 4942143061772076554, guid: 949ea1d69a09f80468b7a31835560b77, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: GamePauser, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4942143061772076554, guid: 949ea1d69a09f80468b7a31835560b77, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 5278516128828772007, guid: 949ea1d69a09f80468b7a31835560b77, type: 3}
       propertyPath: m_Pivot.x
@@ -1535,7 +1595,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5278516128828772007, guid: 949ea1d69a09f80468b7a31835560b77, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -2.0300293
+      value: -2.0302734
       objectReference: {fileID: 0}
     - target: {fileID: 5278516128828772007, guid: 949ea1d69a09f80468b7a31835560b77, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -1549,6 +1609,38 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6946912229293795741, guid: 949ea1d69a09f80468b7a31835560b77, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6946912229293795741, guid: 949ea1d69a09f80468b7a31835560b77, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6946912229293795741, guid: 949ea1d69a09f80468b7a31835560b77, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 4726332618231732268}
+    - target: {fileID: 6946912229293795741, guid: 949ea1d69a09f80468b7a31835560b77, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6946912229293795741, guid: 949ea1d69a09f80468b7a31835560b77, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SaveChangesInMusicVolumeSLider
+      objectReference: {fileID: 0}
+    - target: {fileID: 6946912229293795741, guid: 949ea1d69a09f80468b7a31835560b77, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: GamePauser, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6946912229293795741, guid: 949ea1d69a09f80468b7a31835560b77, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 7349257348102558025, guid: 949ea1d69a09f80468b7a31835560b77, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 949ea1d69a09f80468b7a31835560b77, type: 3}
 --- !u!224 &5435577764453000430 stripped
@@ -1556,3 +1648,14 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 5278516128828772007, guid: 949ea1d69a09f80468b7a31835560b77, type: 3}
   m_PrefabInstance: {fileID: 157066740729768521}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &4726332618231732268 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4880016505279001189, guid: 949ea1d69a09f80468b7a31835560b77, type: 3}
+  m_PrefabInstance: {fileID: 157066740729768521}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f430fc11aa07e5468f59fc6a8ee5943, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
