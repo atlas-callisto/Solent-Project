@@ -13,7 +13,6 @@ public class GamePauser : MonoBehaviour
     public bool gameIsPaused = false;
 
     public List<AudioClip> SFXVolumeChangeTestAudioClip;
-    private bool mouseButtonDown = false; // Used to play SFX
     private AudioSource myAudioSource;
 
     void Start()

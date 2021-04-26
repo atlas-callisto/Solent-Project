@@ -402,7 +402,7 @@ MonoBehaviour:
   playerWolfDegeneRate: 1
   collisionKnockBackForce: 300
   playerInvunerabletimer: 0.4
-  playerKnockBackInvunerabletimer: 1
+  playerKnockBackInvunerableTimer: 0.5
   basicAttackCoolDown: 0.6
   heavyAttackCoolDown: 2.5
   specialAttakCoolDown: 2.5

@@ -8,7 +8,6 @@ public class OptionsMenuUpdater : MonoBehaviour
     [SerializeField] Slider SFXVolumeSlider;
     [SerializeField] Slider musicVolumeSlider;
     [SerializeField] List<AudioClip> SFXVolumeChangeTestAudioClip;
-    private bool mouseButtonDown = false; // Used to play SFX
     AudioSource myAudioSource;
     void Start()
     {
