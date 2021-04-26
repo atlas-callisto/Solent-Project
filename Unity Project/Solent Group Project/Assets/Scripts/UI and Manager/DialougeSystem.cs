@@ -11,15 +11,19 @@ public class DialougeSystem : MonoBehaviour
     private List<string> dialougeList = new List<string>();
     private int currentDialougePage = 0;
     private int totalPages = 2;
+    private bool NPCTalking = false;
     private bool doOnce = true; // Stops this script from getting called multiple times
-
+    private IEnumerator typeWriter;
+    AudioSource myAudioSource;
     private void Start()
     {
+        myAudioSource = GetComponent<AudioSource>();
         gameObject.SetActive(false);
     }
     private void Update()
     {
         SrollDialougeBox();
+        PlaySFX();
     }
 
     private void SrollDialougeBox()
@@ -42,7 +46,11 @@ public class DialougeSystem : MonoBehaviour
 
     private void PlayDialouge()
     {
-        dialougeText.text = dialougeList[currentDialougePage];
+        string currentPage = dialougeList[currentDialougePage];
+        if (typeWriter != null) StopCoroutine(typeWriter);
+        typeWriter = StylizedDialougeTypeWriterSystem(currentPage);
+        dialougeText.text = "";
+        StartCoroutine(typeWriter);
     }
     public void AddDialougeInfo(Sprite image, string npcName, List<string> dialouges)
     {
@@ -53,17 +61,36 @@ public class DialougeSystem : MonoBehaviour
         npcImage.sprite = image;
         npcNameText.text = npcName;
         foreach(string dialouge in dialouges) dialougeList.Add(dialouge);
-        dialougeText.text = dialougeList[currentDialougePage];
         currentDialougePage = 0; //page number starts from 0
         totalPages = dialougeList.Count - 1;
+        PlayDialouge();
     }
     public void CloseDialougeBox()
     {
         Player.playerisTalking = false;
+        NPCTalking = false;
         currentDialougePage = 0;
         dialougeList.Clear();
         doOnce = true;
         gameObject.SetActive(false);
+    }
+
+    IEnumerator StylizedDialougeTypeWriterSystem(string sentence)
+    {
+        NPCTalking = true;
+        foreach (char alpha in sentence)
+        {
+            myAudioSource.pitch = Random.Range(0f, 1f);
+            dialougeText.text += alpha;
+            yield return new WaitForSeconds(0.05f);
+        }
+        NPCTalking = false;
+    }
+    private void PlaySFX()
+    {
+        myAudioSource.volume = GameManager.myGameManager.GetSFXVolume();
+        if(NPCTalking && !myAudioSource.isPlaying)myAudioSource.Play();
+        else myAudioSource.Stop();
     }
 
 }
