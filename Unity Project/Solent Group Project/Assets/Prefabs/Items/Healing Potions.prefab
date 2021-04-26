@@ -131,6 +131,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 256
   groundCheckDown: {fileID: 4516116895876295383}
+  potionConsumeSFX: {fileID: 8300000, guid: d76de2e90c0452c4a915580e3d81aefc, type: 3}
 --- !u!50 &-5458451165831931294
 Rigidbody2D:
   serializedVersion: 4

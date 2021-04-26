@@ -23,7 +23,7 @@ public class Player : MonoBehaviour, IDamageable
     [SerializeField] private float collisionKnockBackForce = 500f;
     [SerializeField] private float playerInvunerabletimer = 0.3f; // timer to stop player playing from getting damage after taking a hit
     [SerializeField] [Tooltip("After getting knocked back, player won't get knocked back again for this duration")]
-    private float playerKnockBackInvunerabletimer = 0.5f; // timer to stop player playing from getting damage after taking a hit
+    private float playerKnockBackInvunerableTimer = 0.5f; // timer to stop player playing from getting damage after taking a hit
 
 
     [Header("Cool Downs")]
@@ -144,11 +144,11 @@ public class Player : MonoBehaviour, IDamageable
 
         if (horizontalMov > 0)
         {
-            transform.localRotation = Quaternion.Euler(new Vector3(0, 0, 0));
+            transform.rotation = Quaternion.Euler(new Vector3(0, 0, 0));
         }
         if (horizontalMov < 0)
         {
-            transform.localRotation = Quaternion.Euler(new Vector3(0, 180, 0));
+            transform.rotation = Quaternion.Euler(new Vector3(0, 180, 0));
         }
         myRB.velocity = new Vector2(horizontalMov * currentMoveSpeed, myRB.velocity.y);
     }
@@ -363,7 +363,7 @@ public class Player : MonoBehaviour, IDamageable
     IEnumerator PlayerKnockBackInvunerableEffect()
     {
         playerCanBeKnockedBack = false;
-        yield return new WaitForSeconds(playerKnockBackInvunerabletimer);
+        yield return new WaitForSeconds(playerKnockBackInvunerableTimer);
         playerCanBeKnockedBack = true;
     }
     #endregion

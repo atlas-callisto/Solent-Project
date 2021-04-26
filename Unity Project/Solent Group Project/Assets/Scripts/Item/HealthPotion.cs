@@ -10,12 +10,14 @@ public class HealthPotion : MonoBehaviour
     [SerializeField] float groundCheckRadius;
     [SerializeField] LayerMask groundLayer;
     [SerializeField] Transform groundCheckDown;
+    [SerializeField] AudioClip potionConsumeSFX;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.tag == "Player")
         {
             Player.currentHealth = Mathf.Clamp(Player.currentHealth + healingAmount, 0, Player.maxHealth);
+            PlaySFX(potionConsumeSFX);
             Destroy(this.gameObject);
         }
     }
@@ -28,5 +30,11 @@ public class HealthPotion : MonoBehaviour
             potionrb.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Static;
         }
     }
-
+    protected void PlaySFX(AudioClip clipName)
+    {
+        var sfx = new GameObject();
+        sfx.AddComponent<AudioSource>();
+        sfx.GetComponent<AudioSource>().PlayOneShot(clipName, GameManager.myGameManager.GetSFXVolume());
+        Destroy(sfx, clipName.length);
+    }
 }
