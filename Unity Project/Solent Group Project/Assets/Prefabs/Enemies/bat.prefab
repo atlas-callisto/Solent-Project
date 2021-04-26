@@ -645,12 +645,13 @@ MonoBehaviour:
   maxHealth: 1
   currentHealth: 1
   moveSpeed: 1.5
-  collisionDamage: 1
+  collisionDamage: 2
+  deathAnimDuration: 0
   chaseDistance: 4
   healthPotion: {fileID: 1187938275048797783, guid: ba123d3fc0894404f8a1e689890c7d44, type: 3}
   manaPotion: {fileID: 4904413054879432976, guid: 666124242542e3b44bd47073ef0b26fd, type: 3}
   chanceToSpawnPotions: 20
-  enemyDeathSFX: {fileID: 8300000, guid: 552d838fb6d6cd245b819f91cc34ff43, type: 3}
+  enemyDeathSFX: {fileID: 8300000, guid: 2fb1e132edc11fc48aa13b4183efbc80, type: 3}
   heatlhBarGameObject: {fileID: 2138744542641299440}
   healthBar: {fileID: 103388771586508528}
   horizontalFlightSpeed: 2
