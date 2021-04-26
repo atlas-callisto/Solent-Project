@@ -114,6 +114,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   webSpeed: 3
   webDamage: 1
-  webLifeDuration: 3
+  webLifeDuration: 2
   moveSpeedSlowPercentage: 40
   slowDuration: 3
