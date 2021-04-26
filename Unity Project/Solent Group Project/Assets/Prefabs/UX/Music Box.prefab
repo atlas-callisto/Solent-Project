@@ -156,32 +156,32 @@ MonoBehaviour:
   clearMusicLibrary: 0
   myAudioClipStructLib:
   - levelName: MainMenu
-    audioClip: {fileID: 0}
+    audioClip: {fileID: 8300000, guid: 1757747f15cd3f64e99cc7ad6fae95a7, type: 3}
   - levelName: OptionsMenu
-    audioClip: {fileID: 0}
+    audioClip: {fileID: 8300000, guid: 1757747f15cd3f64e99cc7ad6fae95a7, type: 3}
   - levelName: HelpMenu
-    audioClip: {fileID: 0}
+    audioClip: {fileID: 8300000, guid: 1757747f15cd3f64e99cc7ad6fae95a7, type: 3}
   - levelName: CreditsMenu
-    audioClip: {fileID: 0}
+    audioClip: {fileID: 8300000, guid: 1757747f15cd3f64e99cc7ad6fae95a7, type: 3}
   - levelName: VerticalSlice
-    audioClip: {fileID: 0}
+    audioClip: {fileID: 8300000, guid: b6b76336578c811428f677a6f1b9625d, type: 3}
   - levelName: BossScene
-    audioClip: {fileID: 0}
-  - levelName: Catacombs
-    audioClip: {fileID: 0}
-  - levelName: Cathedral
-    audioClip: {fileID: 8300000, guid: 6fa2471d9aa4ef84c91de1b877ff7ab0, type: 3}
-  - levelName: CathedralBossRoom
     audioClip: {fileID: 8300000, guid: 803651d222236fa4399def262183ee9a, type: 3}
+  - levelName: Catacombs
+    audioClip: {fileID: 8300000, guid: a6615323598d7d244ad77307ccf0f384, type: 3}
+  - levelName: Cathedral
+    audioClip: {fileID: 8300000, guid: e221bbcf43e46e74b825360d9a32413a, type: 3}
+  - levelName: CathedralBossRoom
+    audioClip: {fileID: 8300000, guid: e221bbcf43e46e74b825360d9a32413a, type: 3}
   - levelName: CathedralOutside
-    audioClip: {fileID: 0}
+    audioClip: {fileID: 8300000, guid: e221bbcf43e46e74b825360d9a32413a, type: 3}
   - levelName: Hub
-    audioClip: {fileID: 0}
+    audioClip: {fileID: 8300000, guid: 7274cbda753d18d4c9966840d077fa9c, type: 3}
   - levelName: NecromancerRoom
-    audioClip: {fileID: 0}
+    audioClip: {fileID: 8300000, guid: 5a0ebc6be59cca74982e953a049d896f, type: 3}
   - levelName: WolfBossToHubConnector
-    audioClip: {fileID: 0}
+    audioClip: {fileID: 8300000, guid: 7274cbda753d18d4c9966840d077fa9c, type: 3}
   - levelName: LoadingScreen
-    audioClip: {fileID: 0}
+    audioClip: {fileID: 8300000, guid: 4b5c863a20b2fb644b32825d8f404b6d, type: 3}
   - levelName: HubLockedRoom
-    audioClip: {fileID: 0}
+    audioClip: {fileID: 8300000, guid: 7274cbda753d18d4c9966840d077fa9c, type: 3}
