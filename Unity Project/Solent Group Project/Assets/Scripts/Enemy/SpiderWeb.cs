@@ -7,6 +7,7 @@ public class SpiderWeb : MonoBehaviour
     [SerializeField] private float webSpeed;
     [SerializeField] private int webDamage;
     [SerializeField] private float webLifeDuration;
+    [SerializeField] private bool WebIsDying;
     [SerializeField] float moveSpeedSlowPercentage;
     [SerializeField] float slowDuration;
     Player playerRef;
@@ -15,7 +16,7 @@ public class SpiderWeb : MonoBehaviour
     private void Start()
     {
         myWebSprite = GetComponent<SpriteRenderer>().sprite;
-        Destroy(this.gameObject, webLifeDuration);
+        StartCoroutine(Die(webLifeDuration));
         playerRef = FindObjectOfType<Player>();
     }
     void Update()
@@ -34,11 +35,11 @@ public class SpiderWeb : MonoBehaviour
                 WebSLowEffectVisual(collision.gameObject);
 
             }
-            Destroy(this.gameObject);
+            StartCoroutine(Die(0));
         }
         if (collision.gameObject.layer == 8) // Colliding with the ground layer
         {
-            Destroy(this.gameObject);
+            StartCoroutine(Die(0));
         }
     }
 
@@ -51,5 +52,22 @@ public class SpiderWeb : MonoBehaviour
         vfx.transform.SetParent(collision.transform);
         vfx.transform.localPosition = Vector3.zero;
         Destroy(vfx, slowDuration);
+    }
+
+    // If you want a web to shrink immediately on impact, set delay to 0
+    private IEnumerator Die(float Delay)
+    {
+        if (!WebIsDying)
+        {
+            WebIsDying = true;
+            yield return new WaitForSeconds(Delay);
+
+            for (int i = 0; i < 100; i++)
+            {
+                transform.localScale -= new Vector3(0.01f, 0.01f, 0.01f);
+                yield return new WaitForSeconds(0.001f);
+            }
+            Destroy(gameObject);
+        }
     }
 }
