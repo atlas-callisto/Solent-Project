@@ -44,6 +44,7 @@ GameObject:
   - component: {fileID: 1510952540990081876}
   - component: {fileID: 1510952540990081877}
   - component: {fileID: 8294235922042652332}
+  - component: {fileID: 6264497786394133128}
   m_Layer: 11
   m_Name: Skeleton Archer
   m_TagString: Enemy
@@ -174,6 +175,7 @@ MonoBehaviour:
   currentHealth: 4
   moveSpeed: 2
   collisionDamage: 1
+  deathAnimDuration: 0
   chaseDistance: 10
   healthPotion: {fileID: 1187938275048797783, guid: ba123d3fc0894404f8a1e689890c7d44, type: 3}
   manaPotion: {fileID: 4904413054879432976, guid: 666124242542e3b44bd47073ef0b26fd, type: 3}
@@ -202,6 +204,25 @@ MonoBehaviour:
   rightPatrolPoint: {fileID: 1510952540428723396}
   shouldPatrol: 1
   patrolmoveSpeed: 1
+--- !u!95 &6264497786394133128
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1510952540990081878}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1510952542114923627
 GameObject:
   m_ObjectHideFlags: 0

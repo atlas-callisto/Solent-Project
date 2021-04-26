@@ -605,7 +605,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!82 &355623760
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1938,6 +1938,63 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d80aedd3dd36db54aad8c9b73e228c9d, type: 3}
+--- !u!1001 &1266398203
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 63648517579906807, guid: fcb701af505e78545a8895aed60c323e, type: 3}
+      propertyPath: m_Name
+      value: Music Box
+      objectReference: {fileID: 0}
+    - target: {fileID: 63648517579906809, guid: fcb701af505e78545a8895aed60c323e, type: 3}
+      propertyPath: m_RootOrder
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 63648517579906809, guid: fcb701af505e78545a8895aed60c323e, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 63648517579906809, guid: fcb701af505e78545a8895aed60c323e, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 63648517579906809, guid: fcb701af505e78545a8895aed60c323e, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 63648517579906809, guid: fcb701af505e78545a8895aed60c323e, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 63648517579906809, guid: fcb701af505e78545a8895aed60c323e, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 63648517579906809, guid: fcb701af505e78545a8895aed60c323e, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 63648517579906809, guid: fcb701af505e78545a8895aed60c323e, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 63648517579906809, guid: fcb701af505e78545a8895aed60c323e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 63648517579906809, guid: fcb701af505e78545a8895aed60c323e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 63648517579906809, guid: fcb701af505e78545a8895aed60c323e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: fcb701af505e78545a8895aed60c323e, type: 3}
 --- !u!1 &1274617921
 GameObject:
   m_ObjectHideFlags: 0
@@ -9360,10 +9417,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: WereWolf Boss
       objectReference: {fileID: 0}
-    - target: {fileID: 2355551223218138997, guid: f492d61ada5c0c54f8f9239dc0b430e5, type: 3}
-      propertyPath: m_SortingOrder
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 2394158191316727391, guid: f492d61ada5c0c54f8f9239dc0b430e5, type: 3}
       propertyPath: m_RootOrder
       value: 7
@@ -9374,7 +9427,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2394158191316727391, guid: f492d61ada5c0c54f8f9239dc0b430e5, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 22.89
+      value: 23.98
       objectReference: {fileID: 0}
     - target: {fileID: 2394158191316727391, guid: f492d61ada5c0c54f8f9239dc0b430e5, type: 3}
       propertyPath: m_LocalPosition.z
@@ -9407,22 +9460,6 @@ PrefabInstance:
     - target: {fileID: 2394158191316727391, guid: f492d61ada5c0c54f8f9239dc0b430e5, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7727796109809495301, guid: f492d61ada5c0c54f8f9239dc0b430e5, type: 3}
-      propertyPath: maxHealth
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 7727796109809495301, guid: f492d61ada5c0c54f8f9239dc0b430e5, type: 3}
-      propertyPath: currentHealth
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 7727796109809495301, guid: f492d61ada5c0c54f8f9239dc0b430e5, type: 3}
-      propertyPath: clawAttackRange
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 7727796109809495301, guid: f492d61ada5c0c54f8f9239dc0b430e5, type: 3}
-      propertyPath: chanceToSpawnHealthPotions
-      value: 30
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f492d61ada5c0c54f8f9239dc0b430e5, type: 3}

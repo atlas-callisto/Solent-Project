@@ -3,8 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-[ExecuteInEditMode]
-//[ExecuteAlways]
+[ExecuteAlways]
 public class MusicLibrary : MonoBehaviour
 {
     public bool clearMusicLibrary = false;
@@ -27,7 +26,7 @@ public class MusicLibrary : MonoBehaviour
     public List<audioClipLibrary> myAudioClipStructLib = new List<audioClipLibrary>();
 
     public Dictionary<string, AudioClip> myAudioClipDicLib = new Dictionary<string, AudioClip>();
-    void Start()
+    void Start() // this sets up the library and is called before MusicBox script
     {
         updateMusicDictionary = true;
         UpdateAudioLibrary();
@@ -39,7 +38,7 @@ public class MusicLibrary : MonoBehaviour
         }
     }
 
-    void Update()
+    void Update() // this is for updaing the library in edit mode
     {
         UpdateAudioLibrary();
         if (updateMusicDictionary)

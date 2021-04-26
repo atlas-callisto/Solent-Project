@@ -10,7 +10,10 @@ public class EnemyAI : MonoBehaviour, IDamageable
     [SerializeField] protected int currentHealth = 4;
     [SerializeField] public float moveSpeed = 1f;
     [SerializeField] [Tooltip("The damage the enemy does to the player when touching the player")]
-    protected int collisionDamage = 1;    
+    protected int collisionDamage = 1;
+    [SerializeField] [Tooltip("For this duration the enemy will remain in the scene after dying inorder to play the death animation")] 
+    protected float deathAnimDuration;
+
     [SerializeField] public float chaseDistance = 4f;
     [SerializeField] protected GameObject healthPotion;
     [SerializeField] protected GameObject manaPotion;
@@ -130,7 +133,6 @@ public class EnemyAI : MonoBehaviour, IDamageable
             iDamageableObj.TakeDamage(collisionDamage);
             if (collision.gameObject.tag == "Player")
             {
-                print("knockback called");
                 player.KnockBackEffect(GetKnockBackDirection(collision));
             }
         }
@@ -153,10 +155,11 @@ public class EnemyAI : MonoBehaviour, IDamageable
             StartCoroutine(healthDisplayer);
             if (currentHealth <= 0)
             {
-                isAlive = false;
-                PlaySFX(enemyDeathSFX);
-                SpawnHealingOrManaPotions();
-                Destroy(this.gameObject);
+                EnemyDied();
+                //isAlive = false;
+                //PlaySFX(enemyDeathSFX);
+                //SpawnHealingOrManaPotions();
+                //Destroy(this.gameObject);
             }
             //Death anim           
         }
@@ -205,5 +208,16 @@ public class EnemyAI : MonoBehaviour, IDamageable
         sfx.AddComponent<AudioSource>();
         sfx.GetComponent<AudioSource>().PlayOneShot(clipName, GameManager.myGameManager.GetSFXVolume());
         Destroy(sfx, clipName.length);
+    }
+
+    virtual protected void EnemyDied()
+    {
+        isAlive = false;
+        myAnimator.SetTrigger("Dead");
+        PlaySFX(enemyDeathSFX);
+        SpawnHealingOrManaPotions();
+        gameObject.layer = 15; // The player won't collide with the enemy after the enemy dies by switching layer
+        myRB.velocity = new Vector2(0, myRB.velocity.y); // Stops enemy from sliding after dying
+        Destroy(gameObject, deathAnimDuration);
     }
 }

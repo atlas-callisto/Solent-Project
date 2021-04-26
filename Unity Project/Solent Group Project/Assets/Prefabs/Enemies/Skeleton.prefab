@@ -619,6 +619,7 @@ GameObject:
   - component: {fileID: 1951015803762913731}
   - component: {fileID: 1951015803762913730}
   - component: {fileID: 3269948144137032260}
+  - component: {fileID: 998863023}
   - component: {fileID: 1951015803762913732}
   - component: {fileID: 1951015803762913735}
   m_Layer: 11
@@ -687,7 +688,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: c4c11317532cbf44ca5f656d4779677e, type: 3}
+  m_Sprite: {fileID: -3649706417823832800, guid: fd5d062beebc0764aacc79fef8f2ec71, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -735,6 +736,25 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 0.96, y: 1.53}
   m_Direction: 0
+--- !u!95 &998863023
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1951015803762913734}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: ebd2d4d841789f2438168852b3196d69, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &1951015803762913732
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -751,6 +771,7 @@ MonoBehaviour:
   currentHealth: 6
   moveSpeed: 2
   collisionDamage: 1
+  deathAnimDuration: 0
   chaseDistance: 4
   healthPotion: {fileID: 1187938275048797783, guid: ba123d3fc0894404f8a1e689890c7d44, type: 3}
   manaPotion: {fileID: 4904413054879432976, guid: 666124242542e3b44bd47073ef0b26fd, type: 3}

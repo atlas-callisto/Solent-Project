@@ -32,6 +32,7 @@ public class Skeleton : EnemyAI
         }
         else if (distanceToThePlayer > attackRange)
         {
+            myAnimator.SetBool("IsWalking", true);
             base.EnemyAIChaseOrPatrol();
         }
         else if (distanceToThePlayer <= attackRange)

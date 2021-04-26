@@ -117,13 +117,9 @@ public class WereWolfBoss : EnemyAI
             healthDisplayer = UpdateHealthBar();
             StartCoroutine(healthDisplayer);
             if (currentHealth <= 0)
-            {
-                isAlive = false;
-                myAnimator.SetTrigger("Dead");
-                PlaySFX(enemyDeathSFX);
-                SpawnHealingOrManaPotions();
+            {                
                 GameManager.myGameManager.werewolfBossDefeated = true;
-                Destroy(gameObject);
+                EnemyDied();                
             }
         }
     }

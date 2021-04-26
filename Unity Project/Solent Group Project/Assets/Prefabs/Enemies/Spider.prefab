@@ -499,6 +499,7 @@ GameObject:
   - component: {fileID: 8412005961085261962}
   - component: {fileID: 8027500909484550645}
   - component: {fileID: 8412005961085262006}
+  - component: {fileID: 1859960244791070669}
   m_Layer: 11
   m_Name: Spider
   m_TagString: Enemy
@@ -626,6 +627,7 @@ MonoBehaviour:
   currentHealth: 3
   moveSpeed: 1
   collisionDamage: 1
+  deathAnimDuration: 0
   chaseDistance: 6
   healthPotion: {fileID: 1187938275048797783, guid: ba123d3fc0894404f8a1e689890c7d44, type: 3}
   manaPotion: {fileID: 4904413054879432976, guid: 666124242542e3b44bd47073ef0b26fd, type: 3}
@@ -639,3 +641,22 @@ MonoBehaviour:
   maxVerticalMoveDistance: 5
   webPrefab: {fileID: 5958209697578809459, guid: f7d0718bcb25a884ca6194d05b7176c9, type: 3}
   shootingInterval: 4
+--- !u!95 &1859960244791070669
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8412005961085262007}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 72338147079506155}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Health Bar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40,7 +40,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3997275752564861786}
-  m_Layer: 5
+  m_Layer: 11
   m_Name: Fill Area
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -78,7 +78,7 @@ GameObject:
   - component: {fileID: 1527142675266914859}
   - component: {fileID: 7392069563910604717}
   - component: {fileID: 7383537901563271405}
-  m_Layer: 5
+  m_Layer: 11
   m_Name: Fill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -222,7 +222,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: -8469656004967123088, guid: 66ac2a6eac07a264ebbf4e2f2047d0c5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 1
@@ -314,10 +314,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3539413813de9e47898b4935317ae28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 30
-  currentHealth: 30
+  maxHealth: 20
+  currentHealth: 20
   moveSpeed: 1
   collisionDamage: 1
+  deathAnimDuration: 2
   chaseDistance: 10
   healthPotion: {fileID: 1187938275048797783, guid: ba123d3fc0894404f8a1e689890c7d44, type: 3}
   manaPotion: {fileID: 4904413054879432976, guid: 666124242542e3b44bd47073ef0b26fd, type: 3}
@@ -325,7 +326,7 @@ MonoBehaviour:
   enemyDeathSFX: {fileID: 8300000, guid: a1c98b0af276d6e4fbc9f2ed1ce9085e, type: 3}
   heatlhBarGameObject: {fileID: 480970034535725297}
   healthBar: {fileID: 8506386478277363702}
-  clawAttackRange: 3.5
+  clawAttackRange: 3
   clawAttackInterval: 2
   boulderAttackRange: 10
   boulderAttackInterval: 6
@@ -377,7 +378,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1797712332019984658}
   - component: {fileID: 9164865750877843299}
-  m_Layer: 13
+  m_Layer: 11
   m_Name: 'MiniMap UI '
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -461,7 +462,7 @@ GameObject:
   - component: {fileID: 3096851135439699427}
   - component: {fileID: 6219949880183131810}
   - component: {fileID: 7079688925548067039}
-  m_Layer: 5
+  m_Layer: 11
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -558,7 +559,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2550192725583693750}
   - component: {fileID: 8506386478277363702}
-  m_Layer: 5
+  m_Layer: 11
   m_Name: Health bar Slider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -902,7 +903,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5189756410745341815}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Left Patrol Point
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -932,7 +933,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 364392778928097636}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Right Patrol Point
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -964,7 +965,7 @@ GameObject:
   - component: {fileID: 6152357477440908010}
   - component: {fileID: 6539113611892759936}
   - component: {fileID: 8644190500790285144}
-  m_Layer: 5
+  m_Layer: 11
   m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
