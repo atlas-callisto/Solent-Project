@@ -253,7 +253,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!82 &37992281
 AudioSource:
   m_ObjectHideFlags: 0
@@ -11262,6 +11262,63 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8495587268032491150, guid: 1f075cf188a788a4cb3ddfb745b40d71, type: 3}
   m_PrefabInstance: {fileID: 2022907899}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &605482036
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 63648517579906807, guid: fcb701af505e78545a8895aed60c323e, type: 3}
+      propertyPath: m_Name
+      value: Music Box
+      objectReference: {fileID: 0}
+    - target: {fileID: 63648517579906809, guid: fcb701af505e78545a8895aed60c323e, type: 3}
+      propertyPath: m_RootOrder
+      value: 21
+      objectReference: {fileID: 0}
+    - target: {fileID: 63648517579906809, guid: fcb701af505e78545a8895aed60c323e, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 63648517579906809, guid: fcb701af505e78545a8895aed60c323e, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 63648517579906809, guid: fcb701af505e78545a8895aed60c323e, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 63648517579906809, guid: fcb701af505e78545a8895aed60c323e, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 63648517579906809, guid: fcb701af505e78545a8895aed60c323e, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 63648517579906809, guid: fcb701af505e78545a8895aed60c323e, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 63648517579906809, guid: fcb701af505e78545a8895aed60c323e, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 63648517579906809, guid: fcb701af505e78545a8895aed60c323e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 63648517579906809, guid: fcb701af505e78545a8895aed60c323e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 63648517579906809, guid: fcb701af505e78545a8895aed60c323e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: fcb701af505e78545a8895aed60c323e, type: 3}
 --- !u!1 &642058792
 GameObject:
   m_ObjectHideFlags: 0
@@ -43795,7 +43852,7 @@ GameObject:
   - component: {fileID: 773011467}
   - component: {fileID: 773011466}
   - component: {fileID: 773011465}
-  m_Layer: 8
+  m_Layer: 10
   m_Name: SecretArea
   m_TagString: Untagged
   m_Icon: {fileID: 0}
