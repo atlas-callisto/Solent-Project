@@ -12,11 +12,13 @@ public class GamePauser : MonoBehaviour
     [SerializeField] Slider musicVolumeSlider;
     public bool gameIsPaused = false;
 
-    public AudioClip SFXVolumeChangeTestAudioClip;
+    public List<AudioClip> SFXVolumeChangeTestAudioClip;
     private bool mouseButtonDown = false; // Used to play SFX
+    private AudioSource myAudioSource;
 
     void Start()
     {
+        myAudioSource = GetComponent<AudioSource>();
         gameIsPaused = false;
     }
     void Update()
@@ -33,27 +35,27 @@ public class GamePauser : MonoBehaviour
                 ResumeGame();
             }
         }
-        SFXVolumeSlider.value = GameManager.myGameManager.GetSFXVolume();
-        musicVolumeSlider.value = GameManager.myGameManager.GetMusicVolume();
     }
 
     public void PauseGame()
     {
         gameIsPaused = true;
-        Cursor.visible = true;
-        Time.timeScale = 0;
+        Cursor.visible = true;        
         pausePanel.SetActive(true);
         optionsPanel.SetActive(false);
         quitWarningPanel.SetActive(false);
+        Time.timeScale = 0;
     }
     public void ResumeGame()
     {
         gameIsPaused = false;
         Cursor.visible = false;
-        Time.timeScale = 1;
         pausePanel.SetActive(false);
         optionsPanel.SetActive(false);
         quitWarningPanel.SetActive(false);
+        MusicBox.myMusicBox.UpdateMusicVolume(GameManager.myGameManager.GetMusicVolume()); 
+        // this is to stop a bug where when player press escape, the music volume doesnot revert back
+        Time.timeScale = 1;
     }
     public void OptionsMenu()
     {
@@ -74,21 +76,19 @@ public class GamePauser : MonoBehaviour
     }
     public void SaveChangesInMusicVolumeSLider()
     {
-        GameManager.myGameManager.UpdatePlayerPrefs(SFXVolumeSlider.value, musicVolumeSlider.value);
+        MusicBox.myMusicBox.UpdateMusicVolume(musicVolumeSlider.value);
     }
     public void SaveChangesInSFXVolumeSLider()
     {
-        GameManager.myGameManager.UpdatePlayerPrefs(SFXVolumeSlider.value, musicVolumeSlider.value);
-        if (Input.GetMouseButton(0)) mouseButtonDown = true;
-        else mouseButtonDown = false;
-        PlaySFX();
-    }
-    private void PlaySFX()
-    {
-        if (!mouseButtonDown) return;
-        var sfx = new GameObject();
-        sfx.AddComponent<AudioSource>();
-        sfx.GetComponent<AudioSource>().PlayOneShot(SFXVolumeChangeTestAudioClip, GameManager.myGameManager.GetSFXVolume());
-        Destroy(sfx, SFXVolumeChangeTestAudioClip.length);
-    }
+        if(SFXVolumeSlider.value == GameManager.myGameManager.GetSFXVolume()) return; // stops sfx from playing in the beggning
+        myAudioSource.volume = SFXVolumeSlider.value;
+        if (myAudioSource.isPlaying) return;
+        else
+        {
+            int i = Random.Range(0, SFXVolumeChangeTestAudioClip.Count);
+            AudioClip cliptoPlay = SFXVolumeChangeTestAudioClip[i];
+            myAudioSource.clip = cliptoPlay;
+            myAudioSource.Play();
+        }
+    }   
 }
