@@ -97,19 +97,6 @@ public class TemplarKnight : EnemyAI
         chargingTowardsPlayer = false;
         myRB.velocity = new Vector2(0, myRB.velocity.y);        
     }
-    protected override void OnCollisionStay2D(Collision2D collision)
-    {
-        IDamageable iDamageableObj;
-        iDamageableObj = collision.gameObject.GetComponent<IDamageable>();
-        if (iDamageableObj != null && collision.gameObject.tag != "Enemy")
-        {
-            iDamageableObj.TakeDamage(collisionDamage);
-            if (collision.gameObject.GetComponent<Player>())
-            {
-                player.KnockBackEffect(GetKnockBackDirection(collision));
-            }
-        }
-    }
 
     public override void TakeDamage(int damage)
     {

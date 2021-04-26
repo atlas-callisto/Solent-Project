@@ -22,9 +22,15 @@ public class TemplarSpear : MonoBehaviour
             {
                 playerWasHit = true;
                 myTemplarKnightRef.StopChargingTowardsPlayer();
+                collision.GetComponent<Player>().KnockBackEffect(GetKnockBackDirection(collision.gameObject));
                 gameObject.SetActive(false);
             }
         }
+    }
+    private Vector2 GetKnockBackDirection(GameObject collision)
+    {
+        if (collision.transform.position.x > this.transform.position.x) return Vector2.right;
+        else return Vector2.left;
     }
     public void FinishedAttacking() //called by animation event
     {

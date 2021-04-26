@@ -12,7 +12,16 @@ public class SkeletonSword : MonoBehaviour
         if (iDamageable != null)
         {
             iDamageable.TakeDamage(damage);
+            if(collision.gameObject.CompareTag("Player"))
+            {
+                collision.gameObject.GetComponent<Player>().KnockBackEffect(GetKnockBackDirection(collision.gameObject));
+            }
         }
+    }
+    private Vector2 GetKnockBackDirection(GameObject collision)
+    {
+        if (collision.transform.position.x > this.transform.position.x) return Vector2.right;
+        else return Vector2.left;
     }
     public void FinishedAttacking() //called by animation event
     {

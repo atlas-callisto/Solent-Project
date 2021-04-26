@@ -22,6 +22,8 @@ public class Player : MonoBehaviour, IDamageable
     [SerializeField] public float playerWolfDegeneRate = 1f;
     [SerializeField] private float collisionKnockBackForce = 500f;
     [SerializeField] private float playerInvunerabletimer = 0.3f; // timer to stop player playing from getting damage after taking a hit
+    [SerializeField] [Tooltip("After getting knocked back, player won't get knocked back again for this duration")]
+    private float playerKnockBackInvunerabletimer = 0.5f; // timer to stop player playing from getting damage after taking a hit
 
 
     [Header("Cool Downs")]
@@ -73,6 +75,9 @@ public class Player : MonoBehaviour, IDamageable
     internal bool isGrounded = false; // is modified by playerGroundCheck
     internal bool canDoubleJump = false;// is modified by playerGroundCheck
     internal bool canInteract = false;
+    private bool playerCanBeKnockedBack = true;
+    private bool playerIsKnockedBack = false;
+    private float knockBackDuration = 0.2f;
 
     internal bool doubleJumpSkillAcquired = false; // enable double jump after skill is unlocked??? for later use
     private bool playerCanTakeDmg = true;    
@@ -81,6 +86,7 @@ public class Player : MonoBehaviour, IDamageable
     private Rigidbody2D myRB;
     private Animator myAnimator;
     private SpriteRenderer mySpriteRenderer;
+
     private void Awake()
     {
         myRB = GetComponent<Rigidbody2D>();
@@ -115,11 +121,13 @@ public class Player : MonoBehaviour, IDamageable
         if (playerisTalking)
         {
             myRB.velocity = new Vector2(0, myRB.velocity.y); // Stops player from continusously moving
+            myAnimator.SetBool("IsWalking", false);
             return; // Stops user control when player is talking to NPC
         }
+        CoolDownChecker();
+        if (playerIsKnockedBack) return;
         PlayerMovement();
         PlayerJump();
-        CoolDownChecker();
         PlayerAttack();
         Transform();
         AdjustTransformStats();
@@ -327,8 +335,12 @@ public class Player : MonoBehaviour, IDamageable
     }
     public void KnockBackEffect(Vector2 direction)
     {
+        if (!playerCanBeKnockedBack) return;
         myRB.AddForce(collisionKnockBackForce * direction);
+        StartCoroutine(PlayerKnockBackDuration());
+        StartCoroutine(PlayerKnockBackInvunerableEffect());
     }
+
     IEnumerator playerTookDamageIndicator()
     {
         mySpriteRenderer.color = Color.red;
@@ -340,6 +352,19 @@ public class Player : MonoBehaviour, IDamageable
         playerCanTakeDmg = false;
         yield return new WaitForSeconds(playerInvunerabletimer);
         playerCanTakeDmg = true;
+        
+    }
+    IEnumerator PlayerKnockBackDuration()
+    {
+        playerIsKnockedBack = true;
+        yield return new WaitForSeconds(knockBackDuration);
+        playerIsKnockedBack = false;
+    }
+    IEnumerator PlayerKnockBackInvunerableEffect()
+    {
+        playerCanBeKnockedBack = false;
+        yield return new WaitForSeconds(playerKnockBackInvunerabletimer);
+        playerCanBeKnockedBack = true;
     }
     #endregion
 

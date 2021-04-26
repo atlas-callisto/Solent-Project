@@ -400,8 +400,9 @@ MonoBehaviour:
   playerCurrentWolfBar: 10
   playerWolfBarRegenRate: 0.1
   playerWolfDegeneRate: 1
-  collisionKnockBackForce: 100
-  playerInvunerabletimer: 1
+  collisionKnockBackForce: 300
+  playerInvunerabletimer: 0.4
+  playerKnockBackInvunerabletimer: 1
   basicAttackCoolDown: 0.6
   heavyAttackCoolDown: 2.5
   specialAttakCoolDown: 2.5

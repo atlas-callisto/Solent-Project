@@ -121,16 +121,21 @@ public class EnemyAI : MonoBehaviour, IDamageable
     #endregion
 
     #region Enemy Damage
-    virtual protected void OnCollisionStay2D(Collision2D collision) // Enemy damages anything that have hp when it collides
+    virtual protected void OnCollisionStay2D(Collision2D collision)
     {
         IDamageable iDamageableObj;
         iDamageableObj = collision.gameObject.GetComponent<IDamageable>();
-        if (iDamageableObj != null && collision.gameObject.tag != "Enemy") // Excluding objects with enemy tag of course
+        if (iDamageableObj != null && collision.gameObject.tag != "Enemy")
         {
             iDamageableObj.TakeDamage(collisionDamage);
-            player.KnockBackEffect(GetKnockBackDirection(collision));
+            if (collision.gameObject.tag == "Player")
+            {
+                print("knockback called");
+                player.KnockBackEffect(GetKnockBackDirection(collision));
+            }
         }
     }
+
     virtual protected Vector2 GetKnockBackDirection(Collision2D collision)
     {
         if (collision.gameObject.transform.position.x > this.transform.position.x) return Vector2.right;
