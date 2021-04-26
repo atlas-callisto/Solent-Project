@@ -14,7 +14,6 @@ public class LevelLoader : MonoBehaviour
     public static LevelLoader myLevelLoader;
     public GameObject loadingScreenCanvas;
     public Slider loadingSliderBar;
-
     private void Awake()
     {
         myLevelLoader = this;
@@ -24,16 +23,22 @@ public class LevelLoader : MonoBehaviour
     public void NewGame() // Load new game
     {
         Time.timeScale = 1;
+        playerSpwanLocationName = "GameStartPoint";
+        SceneManager.sceneLoaded += OnSceneLoaded;
         SceneManager.LoadScene("VerticalSlice"); 
     }
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
         Time.timeScale = 1;
+        UpdateMusicBox();
+        if (SceneManager.GetActiveScene().name == "MainMenu" ||
+           SceneManager.GetActiveScene().name == "OptionsMenu" ||
+           SceneManager.GetActiveScene().name == "HelpMenu" ||
+           SceneManager.GetActiveScene().name == "CreditsMenu") return;
         LevelTransistion.canTransitionn = true;
-        loadingScreenCanvas.SetActive(false);
         playerRef = FindObjectOfType<Player>().gameObject;
-        if (GameObject.Find(playerSpwanLocationName)) playerRef.transform.position = GameObject.Find(playerSpwanLocationName).transform.position;
-        FindObjectOfType<MusicBox>().UpdateAudioSource();
+        if (GameObject.Find(playerSpwanLocationName)) playerRef.transform.position = GameObject.Find(playerSpwanLocationName).transform.position;     
+        loadingScreenCanvas.SetActive(false);
         SceneManager.sceneLoaded -= OnSceneLoaded;
     }
 
@@ -41,9 +46,10 @@ public class LevelLoader : MonoBehaviour
     {
         Time.timeScale = 1;
         currentScene = SceneManager.GetActiveScene().buildIndex;
+        SceneManager.sceneLoaded += OnSceneLoaded;
         SceneManager.LoadScene(currentScene);
     }
-    public void RestartLevelAfterAPause()
+    public void RestartLevelAfterAPause() // After player dies, this is called
     {
         StartCoroutine(RestartLevelAfterPause());
     }
@@ -54,6 +60,7 @@ public class LevelLoader : MonoBehaviour
         Player.currentHealth = Player.maxHealth;
         Player.currentWolfBar = Player.maxWolfBar;
         Time.timeScale = 1;
+        SceneManager.sceneLoaded += OnSceneLoaded;
         SceneManager.LoadScene(currentScene);
     }
    
@@ -77,7 +84,8 @@ public class LevelLoader : MonoBehaviour
     private IEnumerator LoadNextLevel(string levelName)
     {
         Time.timeScale = 1;
-        yield return new WaitForSeconds(sceneTransitionDelay);        
+        yield return new WaitForSeconds(sceneTransitionDelay);
+        SceneManager.sceneLoaded += OnSceneLoaded;
         SceneManager.LoadScene(levelName);
     }
     private IEnumerator LoadSceneAsync()
@@ -95,21 +103,25 @@ public class LevelLoader : MonoBehaviour
     public void LoadMainMenu()
     {
         Time.timeScale = 1;
+        SceneManager.sceneLoaded += OnSceneLoaded;
         SceneManager.LoadScene("MainMenu");
     }
     public void LoadOptionsMenu()
     {
         Time.timeScale = 1;
+        SceneManager.sceneLoaded += OnSceneLoaded;
         SceneManager.LoadScene("OptionsMenu");
     }   
     public void LoadHelpMenu()
     {
         Time.timeScale = 1;
+        SceneManager.sceneLoaded += OnSceneLoaded;
         SceneManager.LoadScene("HelpMenu");
     }
     public void LoadCreditsMenu()
     {
         Time.timeScale = 1;
+        SceneManager.sceneLoaded += OnSceneLoaded;
         SceneManager.LoadScene("CreditsMenu");
     }
     IEnumerator LoadGameOver()
@@ -117,6 +129,11 @@ public class LevelLoader : MonoBehaviour
         Time.timeScale = 1;
         yield return new WaitForSeconds(restartSceneDelay);
         SceneManager.LoadScene("GameOverScene");
+    }
+
+    private void UpdateMusicBox()
+    {
+        MusicBox.myMusicBox.UpdateAudioSource();
     }
     public void QuitGame()
     {
