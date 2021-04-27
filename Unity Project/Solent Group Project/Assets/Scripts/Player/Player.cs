@@ -45,7 +45,7 @@ public class Player : MonoBehaviour, IDamageable
     
     private float jumpForce = 5f;
     private bool slowDebuff = false;
-    [SerializeField] private bool run = false;
+    private bool run = false;
 
     //Ref Objs
     [Header("Audio SFX")]
