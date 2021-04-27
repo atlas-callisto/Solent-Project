@@ -378,7 +378,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1797712332019984658}
   - component: {fileID: 9164865750877843299}
-  m_Layer: 11
+  m_Layer: 13
   m_Name: 'MiniMap UI '
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -132,6 +132,7 @@ public class LordProtector : EnemyAI
                 PlaySFX(enemyDeathSFX);
                 SpawnHealingOrManaPotions();
                 GameManager.myGameManager.lordProtectorBossDefeated = true;
+                FindObjectOfType<LevelLoader>().FinishGame();                
                 Destroy(this.gameObject);
             }
             //Death anim               

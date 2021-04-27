@@ -646,7 +646,7 @@ MonoBehaviour:
   currentHealth: 1
   moveSpeed: 1.5
   collisionDamage: 2
-  deathAnimDuration: 0
+  deathAnimDuration: 2
   chaseDistance: 4
   healthPotion: {fileID: 1187938275048797783, guid: ba123d3fc0894404f8a1e689890c7d44, type: 3}
   manaPotion: {fileID: 4904413054879432976, guid: 666124242542e3b44bd47073ef0b26fd, type: 3}

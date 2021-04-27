@@ -6782,10 +6782,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Lord Protector
       objectReference: {fileID: 0}
-    - target: {fileID: 520412956693977299, guid: 9974be9a28dcda9449d1563ba19aaf5c, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 8720837921709586767, guid: 9974be9a28dcda9449d1563ba19aaf5c, type: 3}
       propertyPath: batSpawnLocations.Array.data[0]
       value: 

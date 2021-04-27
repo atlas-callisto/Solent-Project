@@ -99,7 +99,18 @@ public class LevelLoader : MonoBehaviour
             yield return (null);
         }
     }
-
+    public void FinishGame()
+    {
+        StartCoroutine(FinishGameTimer());
+    }
+    private IEnumerator FinishGameTimer()
+    {
+        yield return new WaitForSeconds(2f);
+        Time.timeScale = 1;
+        SceneManager.sceneLoaded += OnSceneLoaded;
+        Cursor.visible = true;
+        SceneManager.LoadScene("CreditsMenu");
+    }
     public void LoadMainMenu()
     {
         Time.timeScale = 1;
