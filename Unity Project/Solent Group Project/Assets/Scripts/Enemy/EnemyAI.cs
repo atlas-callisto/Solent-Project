@@ -156,12 +156,7 @@ public class EnemyAI : MonoBehaviour, IDamageable
             if (currentHealth <= 0)
             {
                 EnemyDied();
-                //isAlive = false;
-                //PlaySFX(enemyDeathSFX);
-                //SpawnHealingOrManaPotions();
-                //Destroy(this.gameObject);
-            }
-            //Death anim           
+            }   
         }
     }
 
@@ -217,6 +212,7 @@ public class EnemyAI : MonoBehaviour, IDamageable
         PlaySFX(enemyDeathSFX);
         SpawnHealingOrManaPotions();
         gameObject.layer = 15; // The player won't collide with the enemy after the enemy dies by switching layer
+        //mySpriteRenderer.sortingOrder = 10;
         myRB.velocity = new Vector2(0, myRB.velocity.y); // Stops enemy from sliding after dying
         myRB.gravityScale = 1;
         heatlhBarGameObject.SetActive(false);
