@@ -409,11 +409,10 @@ MonoBehaviour:
   specialAttakCoolDown: 2.5
   afterAttackPause: 0.5
   humanWalkSpeed: 4
-  humanRunSpeed: 5
+  humanRunSpeed: 6
   humanJumpForce: 12
   wolfMoveSpeed: 6
   wolfJumpForce: 14
-  run: 0
   humanAttackSFX: {fileID: 8300000, guid: 5e609659a1cd01a42a39c6c7114e10a3, type: 3}
   deathSFX: {fileID: 8300000, guid: d76de2e90c0452c4a915580e3d81aefc, type: 3}
   takingDamageSFX: {fileID: 8300000, guid: 9137607a1fbffd94990a30c0f427dda3, type: 3}
