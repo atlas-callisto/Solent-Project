@@ -6,9 +6,10 @@ public class Player : MonoBehaviour, IDamageable
     //Params    
     public static int maxHealth = 10; // Making static variable so that it can persists through different game levels
     public static int currentHealth = 10;
+    public static float runningWolfBarDegenRate = 0.1f;
     public static float maxWolfBar = 10;
     public static float currentWolfBar = 10;
-    public static float wolfBarRegenRate = 0.1f;
+    public static float wolfBarRegenRate = 1f;
     public static float wolfDegeneRate = 1f;
     internal static bool canTransformIntoWolf = false;
     public static bool initializePlayerStats = true;
@@ -16,9 +17,10 @@ public class Player : MonoBehaviour, IDamageable
     [Header("Stats")] // Couldnot expose static variables into the inspector so this is a work around
     [SerializeField] public int playerMaxHealth = 10;
     [SerializeField] public int playerCurrentHealth = 10;
+    [SerializeField] public float playerRunningWolfBarDegenRate = 0.1f;
     [SerializeField] public float playerMaxWolfBar = 10;
     [SerializeField] public float playerCurrentWolfBar = 10;
-    [SerializeField] public float playerWolfBarRegenRate = 0.1f;
+    [SerializeField] public float playerWolfBarRegenRate = 1f;
     [SerializeField] public float playerWolfDegeneRate = 1f;
     [SerializeField] private float collisionKnockBackForce = 500f;
     [SerializeField] private float playerInvunerabletimer = 0.3f; // timer to stop player playing from getting damage after taking a hit
@@ -33,7 +35,8 @@ public class Player : MonoBehaviour, IDamageable
     [Tooltip("It is a pause after attacks so that player cannot spam multiple attacks at once")] [SerializeField] private float afterAttackPause = 2f;
 
     [Header("Human Stats")]
-    [SerializeField] float humanMoveSpeed = 4f;
+    [SerializeField] float humanWalkSpeed = 4f;
+    [SerializeField] float humanRunSpeed = 4f;
     [SerializeField] float humanJumpForce = 5f;
 
     [Header("Wolf Stats")]
@@ -42,6 +45,7 @@ public class Player : MonoBehaviour, IDamageable
     
     private float jumpForce = 5f;
     private bool slowDebuff = false;
+    [SerializeField] private bool run = false;
 
     //Ref Objs
     [Header("Audio SFX")]
@@ -136,6 +140,8 @@ public class Player : MonoBehaviour, IDamageable
     #region Player Movement
     private void PlayerMovement()
     {
+        if (Input.GetKey(KeyCode.LeftShift) && currentWolfBar > 1) run = true;
+        else run = false;
         float horizontalMov = Input.GetAxisRaw("Horizontal");
         float verticalMov = Input.GetAxisRaw("Vertical"); // Unused game mechanics at the moment.
 
@@ -186,7 +192,19 @@ public class Player : MonoBehaviour, IDamageable
         else if(!wolf)
         {
             jumpForce = humanJumpForce;
-            if (!slowDebuff) currentMoveSpeed = humanMoveSpeed;
+            if (!slowDebuff)
+            {
+                if(run)
+                {
+                    currentMoveSpeed = humanRunSpeed;
+                    currentWolfBar = Mathf.Clamp(currentWolfBar -= (Time.deltaTime * playerRunningWolfBarDegenRate), 0, maxWolfBar);
+                }
+                else
+                {
+                    currentMoveSpeed = humanWalkSpeed;
+                }
+            }
+            
         }
     }
     #endregion

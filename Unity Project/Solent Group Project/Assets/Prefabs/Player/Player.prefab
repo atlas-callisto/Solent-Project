@@ -396,6 +396,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerMaxHealth: 20
   playerCurrentHealth: 20
+  playerRunningWolfBarDegenRate: 0.02
   playerMaxWolfBar: 10
   playerCurrentWolfBar: 10
   playerWolfBarRegenRate: 0.1
@@ -407,7 +408,8 @@ MonoBehaviour:
   heavyAttackCoolDown: 2.5
   specialAttakCoolDown: 2.5
   afterAttackPause: 0.5
-  humanMoveSpeed: 4
+  humanWalkSpeed: 4
+  humanRunSpeed: 5
   humanJumpForce: 12
   wolfMoveSpeed: 6
   wolfJumpForce: 14
