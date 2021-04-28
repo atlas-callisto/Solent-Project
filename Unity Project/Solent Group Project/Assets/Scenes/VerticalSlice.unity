@@ -51724,6 +51724,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   GM: {fileID: 1115570906}
+  MyText: {fileID: 1003610827}
 --- !u!1001 &1008893084
 PrefabInstance:
   m_ObjectHideFlags: 0
