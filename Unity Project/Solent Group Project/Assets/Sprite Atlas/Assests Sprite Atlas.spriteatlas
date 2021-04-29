@@ -108,6 +108,7 @@ SpriteAtlas:
   - {fileID: -73967763957566922, guid: 345ea1d118f78be43803b4e8c2e46373, type: 3}
   - {fileID: 7673672891167588788, guid: 345ea1d118f78be43803b4e8c2e46373, type: 3}
   - {fileID: -985218388685868466, guid: 345ea1d118f78be43803b4e8c2e46373, type: 3}
+  - {fileID: 21300000, guid: 76791f0240b57664bb76457fb790cb70, type: 3}
   - {fileID: 21300000, guid: 04057e229463bb94b983d56b5adcf33b, type: 3}
   - {fileID: 21300000, guid: 26beea5247ed3994d8b5032cf5dc24d2, type: 3}
   - {fileID: 21300000, guid: 5abf4462e6a069641906042516df2fe9, type: 3}
@@ -371,6 +372,7 @@ SpriteAtlas:
   - In game items_7
   - In game items_6
   - In game items_1
+  - portrait
   - Spider
   - 32x32_emerald
   - NPC2
