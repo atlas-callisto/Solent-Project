@@ -42,9 +42,11 @@ public class LevelLoader : MonoBehaviour
         SceneManager.sceneLoaded -= OnSceneLoaded;
     }
 
-    public void RestartLevel()
+    public void RestartLevel() // restart level on pause menu
     {
         Time.timeScale = 1;
+        Player.currentHealth = Player.maxHealth;
+        Player.currentWolfBar = Player.maxWolfBar;
         currentScene = SceneManager.GetActiveScene().buildIndex;
         SceneManager.sceneLoaded += OnSceneLoaded;
         SceneManager.LoadScene(currentScene);

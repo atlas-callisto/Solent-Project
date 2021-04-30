@@ -8,6 +8,8 @@ public class NPCDialougeTriggerSystem : MonoBehaviour , Interactable
     [SerializeField] string nPCName;
     [SerializeField] List<Dialouges> dialougesList = new List<Dialouges>();
     private List<string> dialougeStringList = new List<string>();
+
+    public GameObject interactableHint;
     // List of scriptable objs // note to self Use Scriptable objs in the future,
     DialougeSystem dialougeSystemRef;
     private void Awake()
@@ -20,6 +22,14 @@ public class NPCDialougeTriggerSystem : MonoBehaviour , Interactable
         // Depending on the condition different Dialouges will be prompt into the system.
         print(dialougeSystemRef);
         dialougeSystemRef.AddDialougeInfo(nPCSprite, nPCName, dialougeStringList);
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Player")) interactableHint.SetActive(true);
+    }
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Player")) interactableHint.SetActive(false);
     }
 
 }

@@ -21,7 +21,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 9c19f937abcb4174c87ed0119a31c0ef, type: 2}
+  m_Motion: {fileID: 7400000, guid: d81d794952fd41c44b1038518f57db91, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -259,7 +259,7 @@ AnimatorStateMachine:
     m_Position: {x: 390, y: 30, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 3318888105242667827}
-    m_Position: {x: 100, y: -120, z: 0}
+    m_Position: {x: 40, y: -130, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -6482413094722807720}
     m_Position: {x: 720, y: -40, z: 0}
@@ -284,7 +284,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: NecroMancer Tempo Idle Animation
+  m_Name: NecroMancer Idle Animation
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:

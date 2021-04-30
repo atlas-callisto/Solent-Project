@@ -6803,6 +6803,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1151988978, guid: d2c0f6287fd1297419a537342e38ad3f, type: 3}
+      propertyPath: doorIsUnLocked
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1151988978, guid: d2c0f6287fd1297419a537342e38ad3f, type: 3}
+      propertyPath: myLockCondition
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 3472351062308451686, guid: d2c0f6287fd1297419a537342e38ad3f, type: 3}
       propertyPath: m_Name
       value: Level Transistion Prefab
