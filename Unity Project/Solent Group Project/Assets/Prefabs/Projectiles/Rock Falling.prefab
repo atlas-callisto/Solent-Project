@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 2408889429486835052}
   - component: {fileID: 2665090457946046708}
+  - component: {fileID: 3670417126206109705}
   - component: {fileID: 949082228}
-  - component: {fileID: 949082227}
   - component: {fileID: 1254746623159771870}
   m_Layer: 11
   m_Name: Rock Falling
@@ -74,7 +74,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 10
-  m_Sprite: {fileID: 21300000, guid: fb59e2d8fcb162b49a717b85c5be6633, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 68197f78fda389b438a530a72c1c2b5b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -85,6 +85,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!58 &3670417126206109705
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 544664676110184732}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.05, y: -0.06}
+  serializedVersion: 2
+  m_Radius: 0.5
 --- !u!50 &949082228
 Rigidbody2D:
   serializedVersion: 4
@@ -106,32 +122,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!61 &949082227
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 544664676110184732}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.0015563965, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.9716797, y: 0.7841797}
-    newSize: {x: 9.95, y: 8.03}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.97817993, y: 0.781826}
-  m_EdgeRadius: 0
 --- !u!114 &1254746623159771870
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -146,3 +136,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 1
   lifeDuration: 5
+  rockRubble1: {fileID: 131867712445571965, guid: b00f150a492f7e240bf5fc52a966d08b, type: 3}
+  rockRubble2: {fileID: 8032064932870165982, guid: 8999a4ab577a24f43afc501f6d7d303d, type: 3}
+  minNumberOfRubbles: 3
+  maxNumberOfRubbles: 7
+  rubbleLifeDuration: 5

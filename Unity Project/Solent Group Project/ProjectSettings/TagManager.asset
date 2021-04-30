@@ -8,6 +8,7 @@ TagManager:
   - Interactable
   - Enemy
   - PlayerWep
+  - RockCatcher
   layers:
   - Default
   - TransparentFX

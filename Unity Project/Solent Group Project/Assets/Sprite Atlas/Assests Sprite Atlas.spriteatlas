@@ -160,6 +160,7 @@ SpriteAtlas:
   - {fileID: 9148986582825522165, guid: 4f464e646ccfab142b84d083cc754eac, type: 3}
   - {fileID: 1781032853021085694, guid: 4f464e646ccfab142b84d083cc754eac, type: 3}
   - {fileID: -56580184637456305, guid: 4f464e646ccfab142b84d083cc754eac, type: 3}
+  - {fileID: 21300000, guid: 09e2fcf4957aabb4199f37dc04fd64e5, type: 3}
   - {fileID: 6154053532485138405, guid: 9dc0af5579276b945971afc99434f79f, type: 3}
   - {fileID: 7663506617681442653, guid: 9dc0af5579276b945971afc99434f79f, type: 3}
   - {fileID: -1755976028950264946, guid: 9dc0af5579276b945971afc99434f79f, type: 3}
@@ -176,6 +177,7 @@ SpriteAtlas:
   - {fileID: -403862787636015564, guid: 43c6b006ba861c64694ff98b6e4ca15b, type: 3}
   - {fileID: 3291024073344894140, guid: 43c6b006ba861c64694ff98b6e4ca15b, type: 3}
   - {fileID: 21300000, guid: 64255206530fb0449b3c52cc2336d367, type: 3}
+  - {fileID: 21300000, guid: a7cd871665764154c99dea051ecaa5b8, type: 3}
   - {fileID: 21300000, guid: 5806ae16b1f97694db2dc2ef4fb762a7, type: 3}
   - {fileID: 21300000, guid: 898b0e46b26254045a4cf19e0b591bf1, type: 3}
   - {fileID: 21300000, guid: 95773a86877a28f46a5b217040baac57, type: 3}
@@ -185,6 +187,7 @@ SpriteAtlas:
   - {fileID: -4160665311821346163, guid: 803f1ab62680e134c9f0ae5b31013c9e, type: 3}
   - {fileID: -8196616383959980753, guid: 803f1ab62680e134c9f0ae5b31013c9e, type: 3}
   - {fileID: 21300000, guid: c4c11317532cbf44ca5f656d4779677e, type: 3}
+  - {fileID: 21300000, guid: b72de637bb9c2714f9bd136304c9cc9b, type: 3}
   - {fileID: 5123486847398651115, guid: 95c62457ae75dd142ba2444fafd1a7f6, type: 3}
   - {fileID: 21300000, guid: 0a3b7b875cd0c084996a2a3e4d1b9426, type: 3}
   - {fileID: 21300000, guid: 586484b753877b14984aac43abd021aa, type: 3}
@@ -198,6 +201,7 @@ SpriteAtlas:
   - {fileID: 3499389992042037492, guid: d6ff6518d3ce09c41ae5f2626effa530, type: 3}
   - {fileID: 978942612559604503, guid: d6ff6518d3ce09c41ae5f2626effa530, type: 3}
   - {fileID: -7875682809517558336, guid: d6ff6518d3ce09c41ae5f2626effa530, type: 3}
+  - {fileID: 21300000, guid: 68197f78fda389b438a530a72c1c2b5b, type: 3}
   - {fileID: -2630651103560969867, guid: f7f24588d3be1504295a68a35e0725c9, type: 3}
   - {fileID: 5544580900228457242, guid: f7f24588d3be1504295a68a35e0725c9, type: 3}
   - {fileID: -365181530044701808, guid: f7f24588d3be1504295a68a35e0725c9, type: 3}
@@ -283,6 +287,7 @@ SpriteAtlas:
   - {fileID: -9153315739969965111, guid: f6d494ad0b3c1b54cbb1167d91bfcc2b, type: 3}
   - {fileID: -7004450706067252048, guid: f6d494ad0b3c1b54cbb1167d91bfcc2b, type: 3}
   - {fileID: -1052624642233294820, guid: f6d494ad0b3c1b54cbb1167d91bfcc2b, type: 3}
+  - {fileID: 21300000, guid: 821973dda0a1eb64a9457f76e2d8fe16, type: 3}
   - {fileID: 3727447608914176434, guid: 0476cb0e0e8a97945aca69aaeef3a729, type: 3}
   - {fileID: -794276876243802291, guid: 0476cb0e0e8a97945aca69aaeef3a729, type: 3}
   - {fileID: 9202598557091573938, guid: 0476cb0e0e8a97945aca69aaeef3a729, type: 3}
@@ -424,6 +429,7 @@ SpriteAtlas:
   - NecromancerMove_3
   - NecromancerMove_0
   - NecromancerMove_1
+  - rubble 32x32 3(1)
   - FountainWaterFlow_5
   - FountainWaterFlow_4
   - FountainWaterFlow_7
@@ -440,6 +446,7 @@ SpriteAtlas:
   - PlayerAttack_5
   - PlayerAttack_4
   - bat
+  - Rubble 32x32(1)
   - Crownofthorns-1.png
   - GameplayUI
   - Gem_Sprite
@@ -449,6 +456,7 @@ SpriteAtlas:
   - BasicClawAttack_0
   - BasicClawAttack_4
   - Skelly
+  - 32x32 zombie head
   - NPC2 Portrait_0
   - pixil-layer-Background
   - Health
@@ -462,6 +470,7 @@ SpriteAtlas:
   - PlayerIdle_1
   - PlayerIdle_0
   - PlayerIdle_8
+  - rock 32x32
   - WerewolfTransform_4
   - WerewolfTransform_1
   - WerewolfTransform_0
@@ -547,6 +556,7 @@ SpriteAtlas:
   - WerewolfMeleeAttack (1)_2
   - WerewolfMeleeAttack (1)_1
   - WerewolfMeleeAttack (1)_0
+  - Zombie 32x32(1)
   - bat_spritesheet_0
   - bat_spritesheet_1
   - bat_spritesheet_2
