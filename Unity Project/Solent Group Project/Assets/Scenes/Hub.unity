@@ -21214,42 +21214,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ba46e37b89f1218439f8fa20ce0b52a4, type: 3}
---- !u!1 &494437592 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1939664326529868515, guid: d80aedd3dd36db54aad8c9b73e228c9d, type: 3}
-  m_PrefabInstance: {fileID: 576195180}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &494437597
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 494437592}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_RenderShadows: 1
-  m_RequiresDepthTextureOption: 2
-  m_RequiresOpaqueTextureOption: 2
-  m_CameraType: 0
-  m_Cameras: []
-  m_RendererIndex: -1
-  m_VolumeLayerMask:
-    serializedVersion: 2
-    m_Bits: 1
-  m_VolumeTrigger: {fileID: 0}
-  m_RenderPostProcessing: 0
-  m_Antialiasing: 0
-  m_AntialiasingQuality: 2
-  m_StopNaN: 0
-  m_Dithering: 0
-  m_ClearDepth: 1
-  m_RequiresDepthTexture: 0
-  m_RequiresColorTexture: 0
-  m_Version: 2
 --- !u!1001 &550705711
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -77768,6 +77732,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1151988978, guid: d2c0f6287fd1297419a537342e38ad3f, type: 3}
+      propertyPath: doorIsUnLocked
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1151988978, guid: d2c0f6287fd1297419a537342e38ad3f, type: 3}
+      propertyPath: myLockCondition
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1151988978, guid: d2c0f6287fd1297419a537342e38ad3f, type: 3}
+      propertyPath: lockedReasonMessage
+      value: Looks like the door is locked by an invisible force
+      objectReference: {fileID: 0}
     - target: {fileID: 3472351062308451686, guid: d2c0f6287fd1297419a537342e38ad3f, type: 3}
       propertyPath: m_Name
       value: Level Transistion Prefab (2)
