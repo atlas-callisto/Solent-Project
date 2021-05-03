@@ -93,8 +93,6 @@ public class EnemyAI : MonoBehaviour, IDamageable
 
     protected virtual void TurnTowardsPlayer()
     {
-        print(playerIsOnRightSide);
-        print(distanceVect);
         distanceVect = player.transform.position - transform.position;
         playerIsOnRightSide = distanceVect.x > 0 ? true : false;
         if (playerIsOnRightSide)

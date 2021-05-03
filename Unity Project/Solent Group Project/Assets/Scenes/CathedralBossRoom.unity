@@ -6782,6 +6782,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Lord Protector
       objectReference: {fileID: 0}
+    - target: {fileID: 8720837921709586767, guid: 9974be9a28dcda9449d1563ba19aaf5c, type: 3}
+      propertyPath: batSpawnLocations.Array.data[0]
+      value: 
+      objectReference: {fileID: 1780918718}
+    - target: {fileID: 8720837921709586767, guid: 9974be9a28dcda9449d1563ba19aaf5c, type: 3}
+      propertyPath: batSpawnLocations.Array.data[1]
+      value: 
+      objectReference: {fileID: 374002389}
+    - target: {fileID: 8720837921709586767, guid: 9974be9a28dcda9449d1563ba19aaf5c, type: 3}
+      propertyPath: batSpawnLocations.Array.data[2]
+      value: 
+      objectReference: {fileID: 620622388}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9974be9a28dcda9449d1563ba19aaf5c, type: 3}
 --- !u!1001 &888994656
