@@ -108,6 +108,7 @@ SpriteAtlas:
   - {fileID: -73967763957566922, guid: 345ea1d118f78be43803b4e8c2e46373, type: 3}
   - {fileID: 7673672891167588788, guid: 345ea1d118f78be43803b4e8c2e46373, type: 3}
   - {fileID: -985218388685868466, guid: 345ea1d118f78be43803b4e8c2e46373, type: 3}
+  - {fileID: 21300000, guid: 0b4d03e1d17e5ac4389c546beb291ec4, type: 3}
   - {fileID: 21300000, guid: 76791f0240b57664bb76457fb790cb70, type: 3}
   - {fileID: 21300000, guid: 04057e229463bb94b983d56b5adcf33b, type: 3}
   - {fileID: 21300000, guid: 26beea5247ed3994d8b5032cf5dc24d2, type: 3}
@@ -160,6 +161,7 @@ SpriteAtlas:
   - {fileID: 9148986582825522165, guid: 4f464e646ccfab142b84d083cc754eac, type: 3}
   - {fileID: 1781032853021085694, guid: 4f464e646ccfab142b84d083cc754eac, type: 3}
   - {fileID: -56580184637456305, guid: 4f464e646ccfab142b84d083cc754eac, type: 3}
+  - {fileID: 21300000, guid: 19af5ee47299b454e9f48c214667eb12, type: 3}
   - {fileID: 21300000, guid: 09e2fcf4957aabb4199f37dc04fd64e5, type: 3}
   - {fileID: 6154053532485138405, guid: 9dc0af5579276b945971afc99434f79f, type: 3}
   - {fileID: 7663506617681442653, guid: 9dc0af5579276b945971afc99434f79f, type: 3}
@@ -186,6 +188,7 @@ SpriteAtlas:
   - {fileID: -1805989387100628188, guid: 803f1ab62680e134c9f0ae5b31013c9e, type: 3}
   - {fileID: -4160665311821346163, guid: 803f1ab62680e134c9f0ae5b31013c9e, type: 3}
   - {fileID: -8196616383959980753, guid: 803f1ab62680e134c9f0ae5b31013c9e, type: 3}
+  - {fileID: 21300000, guid: f1682ac6a334c50498ceeaab2201715f, type: 3}
   - {fileID: 21300000, guid: c4c11317532cbf44ca5f656d4779677e, type: 3}
   - {fileID: 21300000, guid: b72de637bb9c2714f9bd136304c9cc9b, type: 3}
   - {fileID: 5123486847398651115, guid: 95c62457ae75dd142ba2444fafd1a7f6, type: 3}
@@ -214,6 +217,7 @@ SpriteAtlas:
   - {fileID: 1238927833779498331, guid: 0d1f85d8f33178b44a74942b1da5ebc7, type: 3}
   - {fileID: -5928017017823161478, guid: 0d1f85d8f33178b44a74942b1da5ebc7, type: 3}
   - {fileID: 21300000, guid: 316adca98f0c0e4488f777fc9a4667b5, type: 3}
+  - {fileID: 21300000, guid: c8a8dbd98ac636a438e0b28ed1a60895, type: 3}
   - {fileID: 4137594001643917647, guid: 97d0852aa819dfd4bb39352990268429, type: 3}
   - {fileID: 21300000, guid: 01acbada3fb031345bcba1aaa9416a65, type: 3}
   - {fileID: 4666529251498760401, guid: fd5d062beebc0764aacc79fef8f2ec71, type: 3}
@@ -377,6 +381,7 @@ SpriteAtlas:
   - In game items_7
   - In game items_6
   - In game items_1
+  - ABow
   - portrait
   - Spider
   - 32x32_emerald
@@ -429,6 +434,7 @@ SpriteAtlas:
   - NecromancerMove_3
   - NecromancerMove_0
   - NecromancerMove_1
+  - Knight
   - rubble 32x32 3(1)
   - FountainWaterFlow_5
   - FountainWaterFlow_4
@@ -455,6 +461,7 @@ SpriteAtlas:
   - BasicClawAttack_1
   - BasicClawAttack_0
   - BasicClawAttack_4
+  - Shield
   - Skelly
   - 32x32 zombie head
   - NPC2 Portrait_0
@@ -483,6 +490,7 @@ SpriteAtlas:
   - SmallerClawAttack_5
   - SmallerClawAttack_4
   - Axe_2
+  - New_Piskel_10
   - NPC1 Portrait_0
   - Platform
   - SkellyRun_3

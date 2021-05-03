@@ -627,7 +627,7 @@ MonoBehaviour:
   currentHealth: 3
   moveSpeed: 1
   collisionDamage: 1
-  deathAnimDuration: 0
+  deathAnimDuration: 1
   chaseDistance: 6
   healthPotion: {fileID: 1187938275048797783, guid: ba123d3fc0894404f8a1e689890c7d44, type: 3}
   manaPotion: {fileID: 4904413054879432976, guid: 666124242542e3b44bd47073ef0b26fd, type: 3}
@@ -651,7 +651,7 @@ Animator:
   m_GameObject: {fileID: 8412005961085262007}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 73dd6679cd038614dbf02f4f32ba7676, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

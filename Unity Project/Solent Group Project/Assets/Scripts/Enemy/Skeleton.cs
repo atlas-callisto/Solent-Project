@@ -28,6 +28,7 @@ public class Skeleton : EnemyAI
         attackTimer += Time.deltaTime;
         if(fearDebuff)
         {
+            print("fear");
             RunAwayFromPlayer();
         }
         else if (distanceToThePlayer > attackRange)
