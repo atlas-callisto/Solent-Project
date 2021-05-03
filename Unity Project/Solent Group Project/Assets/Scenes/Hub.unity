@@ -77742,7 +77742,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1151988978, guid: d2c0f6287fd1297419a537342e38ad3f, type: 3}
       propertyPath: lockedReasonMessage
-      value: Looks like the door is locked by an invisible force
+      value: Looks like the door is blocked by an invisible force...
       objectReference: {fileID: 0}
     - target: {fileID: 3472351062308451686, guid: d2c0f6287fd1297419a537342e38ad3f, type: 3}
       propertyPath: m_Name
